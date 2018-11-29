@@ -1,0 +1,12 @@
+$(common-objpfx)nss/db-init.os: \
+ nss_db/db-init.c ../include/stdc-predef.h ../include/libc-symbols.h \
+ $(common-objpfx)config.h \
+ ../sysdeps/generic/symbol-hacks.h
+
+../include/stdc-predef.h:
+
+../include/libc-symbols.h:
+
+$(common-objpfx)config.h:
+
+../sysdeps/generic/symbol-hacks.h:

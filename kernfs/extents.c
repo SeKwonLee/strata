@@ -9,6 +9,16 @@
 #include "migrate.h"
 #endif
 
+#ifdef MLFS_HASH
+void mlfs_level_resize(level_hash *level, handle_t *handle,
+        struct inode *inode, unsigned int flags);
+level_hash *mlfs_level_init(uint64_t level_size,
+        handle_t *handle, struct inode *inode, unsigned int flags);
+uint64_t level_dynamic_query(level_hash *level, uint8_t *key);
+uint8_t* level_static_query(level_hash *level, uint8_t *key);
+uint8_t level_insert(level_hash *level, uint8_t *key, uint8_t *value);
+#endif
+
 /*
  * used by extent splitting.
  */
@@ -116,7 +126,7 @@ int mlfs_ext_alloc_blocks(handle_t *handle, struct inode *inode,
 	int retry_count = 0;
 #ifdef BALLOC
 	enum alloc_type a_type;
-	
+
 	if (flags & MLFS_GET_BLOCKS_CREATE_DATA_LOG)
 		a_type = DATA_LOG;
 	else if (flags & MLFS_GET_BLOCKS_CREATE_META)
@@ -201,7 +211,7 @@ static inline mlfs_fsblk_t mlfs_inode_to_goal_block(struct inode *inode)
 }
 
 /* used for file data blocks in extent tree */
-static mlfs_fsblk_t mlfs_new_data_blocks(handle_t *handle,
+mlfs_fsblk_t mlfs_new_data_blocks(handle_t *handle,
 		struct inode *inode, int goal, unsigned int flags,
 		mlfs_lblk_t *count, int *errp) 
 {
@@ -219,7 +229,7 @@ static mlfs_fsblk_t mlfs_new_data_blocks(handle_t *handle,
 }
 
 /* used for internal node blocks in extent tree */
-static mlfs_fsblk_t mlfs_new_meta_blocks(handle_t *handle,
+mlfs_fsblk_t mlfs_new_meta_blocks(handle_t *handle,
 		struct inode *inode, mlfs_fsblk_t goal, unsigned int flags,
 		mlfs_lblk_t *count, int *errp) 
 {
@@ -237,7 +247,7 @@ static mlfs_fsblk_t mlfs_new_meta_blocks(handle_t *handle,
 	return block;
 }
 
-static void mlfs_free_blocks(handle_t *handle, struct inode *inode,
+void mlfs_free_blocks(handle_t *handle, struct inode *inode,
 		void *fake, mlfs_fsblk_t block, int count, int flags) 
 {
 #ifdef KERNFS
@@ -380,7 +390,7 @@ int mlfs_ext_tree_init(handle_t *handle, struct inode *inode)
 	eh->eh_entries = 0;
 	eh->eh_magic = cpu_to_le16(MLFS_EXT_MAGIC);
 	eh->eh_max = cpu_to_le16(mlfs_ext_space_root(inode, 0));
-	mlfs_mark_inode_dirty(inode);
+    mlfs_mark_inode_dirty(inode);
 	return 0;
 }
 
@@ -2732,245 +2742,306 @@ static mlfs_lblk_t mlfs_ext_determine_hole(handle_t *handle, struct inode *inode
 int mlfs_ext_get_blocks(handle_t *handle, struct inode *inode, 
 			struct mlfs_map_blocks *map, int flags)
 {
-	struct mlfs_ext_path *path = NULL;
-	struct mlfs_ext_path *_path = NULL;
-	struct mlfs_extent newex, *ex;
-	int goal, err = 0, depth;
-	mlfs_lblk_t allocated = 0;
-	mlfs_fsblk_t next, newblock;
-	int create;
-	uint64_t tsc_start = 0;
+    struct mlfs_ext_path *path = NULL;
+    struct mlfs_ext_path *_path = NULL;
+    struct mlfs_extent newex, *ex;
+    int goal, err = 0, depth;
+    mlfs_lblk_t allocated = 0;
+    mlfs_fsblk_t next, newblock;
+    int create;
+    uint64_t tsc_start = 0;
 
-	mlfs_assert(handle !=  NULL);
+    mlfs_assert(handle !=  NULL);
+    // flag == 0
+    // flag == MLFS_GET_BLOCKS_CREATE (0x0001)
+#ifdef MLFS_HASH
+    if (handle->dev == g_root_dev) {
+#ifdef KERNFS
+        if (inode->_dinode->level == NULL) {
+            inode->_dinode->level = mlfs_level_init(16, handle,
+                    inode, flags);
+            assert(inode->_dinode->level != NULL);
+            mlfs_mark_inode_dirty(inode);
+        }
+#endif
+        if (inode->_dinode->level == NULL) {
+            struct dinode dip;
+            read_ondisk_inode(g_root_dev, inode->inum, &dip);
+            mlfs_assert(dip.itype != 0);
+            sync_inode_from_dinode(inode, &dip);
+            mlfs_assert(dip.dev != 0);
+            mlfs_mark_inode_dirty(inode);
+        }
 
-	create = flags & MLFS_GET_BLOCKS_CREATE_DATA;
+        uint8_t key[16];
+        snprintf(key, 16, "%lu", map->m_lblk);
+        inode->_dinode->level = g_bdev[handle->dev]->map_base_addr + (inode->_dinode->root_blk << g_block_size_shift);
+        inode->_dinode->level->buckets[0] = g_bdev[handle->dev]->map_base_addr + (inode->_dinode->bucket_blk0 << g_block_size_shift);
+        inode->_dinode->level->buckets[1] = g_bdev[handle->dev]->map_base_addr + (inode->_dinode->bucket_blk1 << g_block_size_shift);
+        newblock = level_dynamic_query(inode->_dinode->level, key);
 
-	/*mutex_lock(&inode->truncate_mutex);*/
+        if (flags == MLFS_GET_BLOCKS_CREATE && newblock == 0) {
+            newblock = 0;
+            allocated = 1;
+            newblock = mlfs_new_data_blocks(handle, inode, 
+                    goal, flags, &allocated, &err);
 
-	if (create) {
-		inode->previous_path = NULL;
-		goto find_ext_path;
-	}
+            if (!newblock) {
+                allocated = 0;
+                goto hash_out;
+            }
+
+            uint8_t value[15];
+            snprintf(key, 16, "%lu", map->m_lblk);
+            snprintf(value, 15, "%lu", newblock);
+
+            if (level_insert(inode->_dinode->level, key, value)) {
+                printf("Rehashing\n");
+                mlfs_level_resize(inode->_dinode->level, handle, inode, flags);
+                level_insert(inode->_dinode->level, key, value);
+            }
+        } else {
+            allocated = 1;
+        }
+
+        if (allocated > map->m_len)
+            allocated = map->m_len;
+
+        map->m_pblk = newblock;
+        map->m_len = allocated;
+hash_out:
+        return allocated;
+        //return err ? err : allocated;
+    } else {
+#endif
+        create = flags & MLFS_GET_BLOCKS_CREATE_DATA;
+
+        /*mutex_lock(&inode->truncate_mutex);*/
+
+        if (create) {
+            inode->previous_path = NULL;
+            goto find_ext_path;
+        }
 
 #ifdef REUSE_PREVIOUS_PATH 
-	if (!inode->previous_path || (map->m_flags & MLFS_MAP_LOG_ALLOC))
-		goto find_ext_path;
+        if (!inode->previous_path || (map->m_flags & MLFS_MAP_LOG_ALLOC))
+            goto find_ext_path;
 
-	_path = inode->previous_path;
-	depth = ext_depth(handle, inode);
-	ex = _path[depth].p_ext;
-	if (ex) {
-		mlfs_lblk_t ee_block = le32_to_cpu(ex->ee_block);
-		mlfs_fsblk_t ee_start = mlfs_ext_pblock(ex);
-		unsigned short ee_len;
-		
-		/*
-		 * unwritten extents are treated as holes, except that
-		 * we split out initialized portions during a write.
-		 */
-		ee_len = mlfs_ext_get_actual_len(ex);
+        _path = inode->previous_path;
+        depth = ext_depth(handle, inode);
+        ex = _path[depth].p_ext;
+        if (ex) {
+            mlfs_lblk_t ee_block = le32_to_cpu(ex->ee_block);
+            mlfs_fsblk_t ee_start = mlfs_ext_pblock(ex);
+            unsigned short ee_len;
 
-		/* find extent covers block. simply return the extent */
-		if (in_range(map->m_lblk, ee_block, ee_len)) {
-			allocated = ee_len + ee_block - map->m_lblk;
+            /*
+             * unwritten extents are treated as holes, except that
+             * we split out initialized portions during a write.
+             */
+            ee_len = mlfs_ext_get_actual_len(ex);
 
-			if (!mlfs_ext_is_unwritten(ex)) {
-				newblock = map->m_lblk - ee_block + ee_start;
-				inode->invalidate_path = 0;
-				goto out;
-			}
-		}
-	} 
+            /* find extent covers block. simply return the extent */
+            if (in_range(map->m_lblk, ee_block, ee_len)) {
+                allocated = ee_len + ee_block - map->m_lblk;
 
-	mlfs_ext_drop_refs(_path);
-	mlfs_free(_path);
-	inode->previous_path = NULL;
+                if (!mlfs_ext_is_unwritten(ex)) {
+                    newblock = map->m_lblk - ee_block + ee_start;
+                    inode->invalidate_path = 0;
+                    goto out;
+                }
+            }
+        } 
+
+        mlfs_ext_drop_refs(_path);
+        mlfs_free(_path);
+        inode->previous_path = NULL;
 
 #endif
 find_ext_path:
 
 #ifdef KERNFS
-	if (enable_perf_stats) 
-		tsc_start = asm_rdtscp();
+        if (enable_perf_stats) 
+            tsc_start = asm_rdtscp();
 #endif
 
-	/* find extent for this block */
-	path = mlfs_find_extent(handle, inode, map->m_lblk, NULL, 0);
-	if (IS_ERR(path)) {
-		err = PTR_ERR(path);
-		path = NULL;
-		goto out2;
-	}
+        /* find extent for this block */
+        path = mlfs_find_extent(handle, inode, map->m_lblk, NULL, 0);
+        if (IS_ERR(path)) {
+            err = PTR_ERR(path);
+            path = NULL;
+            goto out2;
+        }
 
 #ifdef KERNFS
-	if (enable_perf_stats) 
-		g_perf_stats.path_search_tsc += (asm_rdtscp() - tsc_start);
+        if (enable_perf_stats) 
+            g_perf_stats.path_search_tsc += (asm_rdtscp() - tsc_start);
 #endif
 
-	depth = ext_depth(handle, inode);
+        depth = ext_depth(handle, inode);
 
-	/*
-	 * consistent leaf must not be empty
-	 * this situations is possible, though, _during_ tree modification
-	 * this is why assert can't be put in mlfs_ext_find_extent()
-	 */
-	BUG_ON(path[depth].p_ext == NULL && depth != 0);
+        /*
+         * consistent leaf must not be empty
+         * this situations is possible, though, _during_ tree modification
+         * this is why assert can't be put in mlfs_ext_find_extent()
+         */
+        BUG_ON(path[depth].p_ext == NULL && depth != 0);
 
-	ex = path[depth].p_ext;
-	if (ex) {
-		mlfs_lblk_t ee_block = le32_to_cpu(ex->ee_block);
-		mlfs_fsblk_t ee_start = mlfs_ext_pblock(ex);
-		unsigned short ee_len;
-		
-		/*
-		 * unwritten extents are treated as holes, except that
-		 * we split out initialized portions during a write.
-		 */
-		ee_len = mlfs_ext_get_actual_len(ex);
+        ex = path[depth].p_ext;
+        if (ex) {
+            mlfs_lblk_t ee_block = le32_to_cpu(ex->ee_block);
+            mlfs_fsblk_t ee_start = mlfs_ext_pblock(ex);
+            unsigned short ee_len;
 
-		/* find extent covers block. simply return the extent */
-		if (in_range(map->m_lblk, ee_block, ee_len)) {
-			/* number of remain blocks in the extent */
-			allocated = ee_len + ee_block - map->m_lblk;
+            /*
+             * unwritten extents are treated as holes, except that
+             * we split out initialized portions during a write.
+             */
+            ee_len = mlfs_ext_get_actual_len(ex);
 
-			// Delete original block and update extent tree for log-structured updates
-			// and garbage collection of SSD.
-			// FIXME: this is slightly inefficient since it searches mlfs_ext_path repeatedly
-			// Deletion of original block and allocating new block could be merged
-			// by a new API.
-			if (map->m_flags & MLFS_MAP_LOG_ALLOC) {
-				int ret;
-				ret = mlfs_ext_truncate(handle, inode, map->m_lblk, 
-						map->m_lblk + map->m_len - 1);
-				// Set flags to block allocator to do log-structured allocation.
-				//flags &= ~MLFS_GET_BLOCKS_CREATE_DATA;
-				//flags |= MLFS_GET_BLOCKS_CREATE_DATA_LOG;
-				mlfs_assert(ret == 0);
+            /* find extent covers block. simply return the extent */
+            if (in_range(map->m_lblk, ee_block, ee_len)) {
+                /* number of remain blocks in the extent */
+                allocated = ee_len + ee_block - map->m_lblk;
 
-				// TODO: optimize this! Figure out a way to reuse the path
-				mlfs_ext_drop_refs(path);
-				mlfs_free(path);
-				path = mlfs_find_extent(handle, inode, map->m_lblk, NULL, 0);
-				mlfs_assert(!IS_ERR(path));
-			} else if (mlfs_ext_is_unwritten(ex)) {
-				if (create) {
-					newblock = map->m_lblk - ee_block + ee_start;
-					err = mlfs_ext_convert_to_initialized(handle, inode, 
-							&path, map->m_lblk , allocated, flags);
-					if (err) {
-						goto out2;
-					}
-				} else {
-					newblock = 0;
-				}
-				goto out;
-			} else {
-				newblock = map->m_lblk - ee_block + ee_start;
-				goto out;
-			}
-		}
-	}
+                // Delete original block and update extent tree for log-structured updates
+                // and garbage collection of SSD.
+                // FIXME: this is slightly inefficient since it searches mlfs_ext_path repeatedly
+                // Deletion of original block and allocating new block could be merged
+                // by a new API.
+                if (map->m_flags & MLFS_MAP_LOG_ALLOC) {
+                    int ret;
+                    ret = mlfs_ext_truncate(handle, inode, map->m_lblk, 
+                            map->m_lblk + map->m_len - 1);
+                    // Set flags to block allocator to do log-structured allocation.
+                    //flags &= ~MLFS_GET_BLOCKS_CREATE_DATA;
+                    //flags |= MLFS_GET_BLOCKS_CREATE_DATA_LOG;
+                    mlfs_assert(ret == 0);
 
-	/*
-	 * requested block isn't allocated yet
-	 * we couldn't try to create block if create flag is zero
-	 */
-	if (!create) {
-		mlfs_lblk_t hole_start, hole_len;
+                    // TODO: optimize this! Figure out a way to reuse the path
+                    mlfs_ext_drop_refs(path);
+                    mlfs_free(path);
+                    path = mlfs_find_extent(handle, inode, map->m_lblk, NULL, 0);
+                    mlfs_assert(!IS_ERR(path));
+                } else if (mlfs_ext_is_unwritten(ex)) {
+                    if (create) {
+                        newblock = map->m_lblk - ee_block + ee_start;
+                        err = mlfs_ext_convert_to_initialized(handle, inode, 
+                                &path, map->m_lblk , allocated, flags);
+                        if (err) {
+                            goto out2;
+                        }
+                    } else {
+                        newblock = 0;
+                    }
+                    goto out;
+                } else {
+                    newblock = map->m_lblk - ee_block + ee_start;
+                    goto out;
+                }
+            }
+        }
 
-		hole_start = map->m_lblk;
-		hole_len = mlfs_ext_determine_hole(handle, inode, path, &hole_start);
+        /*
+         * requested block isn't allocated yet
+         * we couldn't try to create block if create flag is zero
+         */
+        if (!create) {
+            mlfs_lblk_t hole_start, hole_len;
 
-		/* Update hole_len to reflect hole size after map->m_lblk */
-		if (hole_start != map->m_lblk)
-			hole_len -= map->m_lblk - hole_start;
+            hole_start = map->m_lblk;
+            hole_len = mlfs_ext_determine_hole(handle, inode, path, &hole_start);
 
-		map->m_pblk = 0;
-		map->m_len = min_t(unsigned int, map->m_len, hole_len);
-		err = 0;
-		goto out2;
-	}
+            /* Update hole_len to reflect hole size after map->m_lblk */
+            if (hole_start != map->m_lblk)
+                hole_len -= map->m_lblk - hole_start;
 
-	/* find next allocated block so that we know how many
-	 * blocks we can allocate without ovelapping next extent */
-	next = mlfs_ext_next_allocated_block(path);
-	BUG_ON(next <= map->m_lblk);
+            map->m_pblk = 0;
+            map->m_len = min_t(unsigned int, map->m_len, hole_len);
+            err = 0;
+            goto out2;
+        }
 
-	allocated = next - map->m_lblk;
+        /* find next allocated block so that we know how many
+         * blocks we can allocate without ovelapping next extent */
+        next = mlfs_ext_next_allocated_block(path);
+        BUG_ON(next <= map->m_lblk);
 
-	if ((flags & MLFS_GET_BLOCKS_PRE_IO) && 
-			map->m_len > EXT_UNWRITTEN_MAX_LEN)
-		map->m_len = EXT_UNWRITTEN_MAX_LEN;
+        allocated = next - map->m_lblk;
 
-	if (allocated > map->m_len) 
-		allocated = map->m_len;
+        if ((flags & MLFS_GET_BLOCKS_PRE_IO) && 
+                map->m_len > EXT_UNWRITTEN_MAX_LEN)
+            map->m_len = EXT_UNWRITTEN_MAX_LEN;
 
-	//goal = mlfs_ext_find_goal(inode, path, map->m_lblk);
-	
-	newblock = mlfs_new_data_blocks(handle, inode, 
-			goal, flags, &allocated, &err);
+        if (allocated > map->m_len) 
+            allocated = map->m_len;
 
-	if (!newblock) 
-		goto out2;
+        newblock = mlfs_new_data_blocks(handle, inode, 
+                goal, flags, &allocated, &err);
 
-	/* try to insert new extent into found leaf and return */
-	newex.ee_block = cpu_to_le32(map->m_lblk);
-	mlfs_ext_store_pblock(&newex, newblock);
-	newex.ee_len = cpu_to_le16(allocated);
+        if (!newblock) 
+            goto out2;
 
-	/* if it's fallocate, mark ex as unwritten */
-	if (flags & MLFS_GET_BLOCKS_PRE_IO) {
-		mlfs_ext_mark_unwritten(&newex);
-	}
+        /* try to insert new extent into found leaf and return */
+        newex.ee_block = cpu_to_le32(map->m_lblk);
+        mlfs_ext_store_pblock(&newex, newblock);
+        newex.ee_len = cpu_to_le16(allocated);
 
-	err = mlfs_ext_insert_extent(handle, inode, &path, &newex,
-			flags & MLFS_GET_BLOCKS_PRE_IO);
+        /* if it's fallocate, mark ex as unwritten */
+        if (flags & MLFS_GET_BLOCKS_PRE_IO) {
+            mlfs_ext_mark_unwritten(&newex);
+        }
 
-	if (err) {
-		/* free data blocks we just allocated */
-		mlfs_free_blocks(handle, inode, NULL, mlfs_ext_pblock(&newex),
-				le16_to_cpu(newex.ee_len),
-				get_default_free_blocks_flags(inode));
-		goto out2;
-	}
+        err = mlfs_ext_insert_extent(handle, inode, &path, &newex,
+                flags & MLFS_GET_BLOCKS_PRE_IO);
 
-	mlfs_mark_inode_dirty(inode);
+        if (err) {
+            /* free data blocks we just allocated */
+            mlfs_free_blocks(handle, inode, NULL, mlfs_ext_pblock(&newex),
+                    le16_to_cpu(newex.ee_len),
+                    get_default_free_blocks_flags(inode));
+            goto out2;
+        }
 
-	/* previous routine could use block we allocated */
-	if (mlfs_ext_is_unwritten(&newex))
-		newblock = 0;
-	else
-		newblock = mlfs_ext_pblock(&newex);
+        mlfs_mark_inode_dirty(inode);
+
+        /* previous routine could use block we allocated */
+        if (mlfs_ext_is_unwritten(&newex))
+            newblock = 0;
+        else
+            newblock = mlfs_ext_pblock(&newex);
 
 out:
-	if (allocated > map->m_len) 
-		allocated = map->m_len;
+        if (allocated > map->m_len) 
+            allocated = map->m_len;
 
-	//mlfs_ext_show_leaf(inode, path);
+        //mlfs_ext_show_leaf(inode, path);
 
-	map->m_pblk = newblock;
-	map->m_len = allocated;
+        map->m_pblk = newblock;
+        map->m_len = allocated;
 out2:
 #ifdef REUSE_PREVIOUS_PATH
-	if (inode->invalidate_path) {
-		inode->invalidate_path = 0;
-		inode->previous_path = NULL;
-	}
-	else {
-		inode->previous_path = path;
-		path = NULL;
-	}
+        if (inode->invalidate_path) {
+            inode->invalidate_path = 0;
+            inode->previous_path = NULL;
+        }
+        else {
+            inode->previous_path = path;
+            path = NULL;
+        }
 
 #endif
-	if (path) {
-		/* write back tree changes (internal/leaf nodes) */
-		mlfs_ext_drop_refs(path);
-		mlfs_free(path);
-	}
+        if (path) {
+            /* write back tree changes (internal/leaf nodes) */
+            mlfs_ext_drop_refs(path);
+            mlfs_free(path);
+        }
 
-	/*mutex_unlock(&inode->truncate_mutex);*/
-
-	return err ? err : allocated;
+        /*mutex_unlock(&inode->truncate_mutex);*/
+        return err ? err : allocated;
+#ifdef MLFS_HASH
+    }
+#endif
 }
 
 int mlfs_ext_truncate(handle_t *handle, struct inode *inode, 

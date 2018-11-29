@@ -1369,7 +1369,6 @@ do_global_search:
 	if (ret == -EAGAIN) {
 		bitmap_clear(io_bitmap, bitmap_pos, bmap_req.blk_count_found);
 		io_to_be_done += bmap_req.blk_count_found;
-
 		goto do_global_search;
 	} else {
 		bitmap_clear(io_bitmap, bitmap_pos, bmap_req.blk_count_found);

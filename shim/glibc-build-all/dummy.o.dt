@@ -1,0 +1,13 @@
+/home/sekwon/strata_sekwon/shim/glibc-build-all/dummy.o: \
+ /home/sekwon/strata_sekwon/shim/glibc-build-all/dummy.c \
+ ../include/stdc-predef.h ../include/libc-symbols.h \
+ /home/sekwon/strata_sekwon/shim/glibc-build-all/config.h \
+ ../sysdeps/generic/symbol-hacks.h
+
+../include/stdc-predef.h:
+
+../include/libc-symbols.h:
+
+/home/sekwon/strata_sekwon/shim/glibc-build-all/config.h:
+
+../sysdeps/generic/symbol-hacks.h:

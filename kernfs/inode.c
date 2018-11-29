@@ -73,7 +73,6 @@ int write_ondisk_inode(uint8_t dev, struct inode *ip)
 	bh = bh_get_sync_IO(dev, inode_block, BH_NO_DATA_ALLOC);
 
 	if (dev == g_root_dev) {
-
 		bh->b_size = sizeof(struct dinode);
 		bh->b_data = (uint8_t *)dip;
 		bh->b_offset = sizeof(struct dinode) * (ip->inum % IPB);

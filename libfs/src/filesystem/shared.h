@@ -8,6 +8,10 @@
 #include "ds/bitmap.h"
 #include "ds/khash.h"
 
+#ifdef MLFS_HASH
+#include "ds/level_hashing.h"
+#endif
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -161,7 +165,13 @@ struct dinode {
 
 	addr_t l1_addrs[NDIRECT+1];	//direct block addresses: 64 B
 	addr_t l2_addrs[NDIRECT+1];	
-	addr_t l3_addrs[NDIRECT+1];	
+	addr_t l3_addrs[NDIRECT-3];
+#ifdef MLFS_HASH
+    addr_t root_blk;
+    addr_t bucket_blk0;
+    addr_t bucket_blk1;
+    level_hash *level;
+#endif
 }; // 256 bytes.
 
 #define setup_ondisk_inode(dip, dev, type) \
@@ -286,6 +296,7 @@ struct inode {
 	/* for testing */
 	struct db_handle *i_db; 
 	int (*i_writeback)(struct inode *inode);
+
 	///////////////////////////////////////////////////////////////////
 };
 

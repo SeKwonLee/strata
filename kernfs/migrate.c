@@ -115,6 +115,8 @@ int do_migrate_blocks(uint8_t from_dev, uint8_t to_dev, uint32_t file_inum,
 	uint32_t nr_blocks = 0, nr_digested_blocks = 0;
 	offset_t cur_offset;
 
+    printf("%s\n", __func__);
+
 	/* block migration is much simpler case than file digest */
 	mlfs_assert((length >= g_block_size_bytes) && 
 			(offset % g_block_size_bytes == 0) &&
@@ -326,6 +328,8 @@ int migrate_blocks(uint8_t from_dev, uint8_t to_dev, isolated_list_t *migrate_li
 	uint8_t lower_dev;
 	struct list_head migrate_success_list;
 	handle_t handle = {.dev = from_dev};
+
+    printf("%s\n", __func__);
 
 	INIT_LIST_HEAD(&migrate_success_list);
 

@@ -1,0 +1,1533 @@
+Archive member included to satisfy reference by file (symbol)
+
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(check_fds.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os (__libc_check_standard_fds)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(errno.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(check_fds.os) (__libc_errno)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(setjmp.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os (__sigsetjmp)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(__longjmp.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os (__longjmp)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strchr.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os (strchr)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcmp.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os (strcmp)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcpy.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os (strcpy)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strlen.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os (strlen)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strnlen.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os (strnlen)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memchr.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os (memchr)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcmp.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os (memcmp)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memmove.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os (memmove)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memset.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os (memset)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mempcpy.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os (mempcpy)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(stpcpy.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os (stpcpy)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcpy.os)
+                              (memcpy@@GLIBC_2.14)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(wordcopy.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memmove.os) (_wordcopy_fwd_aligned)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(rawmemchr.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os (rawmemchr)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcmp-ssse3.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcmp.os) (__strcmp_ssse3)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcmp-sse2-unaligned.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcmp.os) (__strcmp_sse2_unaligned)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcmp-sse4.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcmp.os) (__memcmp_sse4_1)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcpy-ssse3.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcpy.os) (__memcpy_ssse3)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcpy-sse2-unaligned.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcpy.os) (__memcpy_sse2_unaligned)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mempcpy-ssse3.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mempcpy.os) (__mempcpy_ssse3)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memmove-ssse3.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memmove.os) (__memmove_ssse3)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mempcpy-ssse3-back.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mempcpy.os) (__mempcpy_ssse3_back)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memmove-ssse3-back.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memmove.os) (__memmove_ssse3_back)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcpy-ssse3.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcpy.os) (__strcpy_ssse3)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(stpcpy-ssse3.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(stpcpy.os) (__stpcpy_ssse3)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcpy-sse2-unaligned.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcpy.os) (__strcpy_sse2_unaligned)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(stpcpy-sse2-unaligned.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(stpcpy.os) (__stpcpy_sse2_unaligned)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strchr-sse2-no-bsf.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strchr.os) (__strchr_sse2_no_bsf)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcmp-ssse3.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcmp.os) (__memcmp_ssse3)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cacheinfo.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mempcpy-ssse3-back.os) (__x86_data_cache_size)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(closedir.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os (__closedir)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(readdir.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os (__readdir)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(rewinddir.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os (rewinddir)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(getdents.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(readdir.os) (__getdents)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(fdopendir.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os (__fdopendir)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(uname.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os (__uname)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(_exit.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os (_exit)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(getpid.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os (__getpid)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(environ.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os (__environ)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(xstat.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os (__GI___xstat64)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(fxstat.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os (__GI___fxstat64)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(lxstat.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os (__GI___lxstat64)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(open.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(check_fds.os) (__open_nocancel)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(read.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os (__libc_read)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(write.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os (__libc_write)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(access.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os (__access)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(fcntl.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(check_fds.os) (__GI___libc_fcntl)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(close.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(closedir.os) (__close_nocancel)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mmap.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os (__mmap)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(munmap.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os (__munmap)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mprotect.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os (__mprotect)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(llseek.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os (__lseek)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(profil.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os (__profil)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(prof-freq.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(profil.os) (__GI___profile_frequency)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(libc-lowlevellock.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(readdir.os) (__lll_lock_wait_private)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(libc-cancellation.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(open.os) (__libc_enable_asynccancel)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(libc_multiple_threads.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(readdir.os) (__libc_multiple_threads)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(init-arch.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strchr.os) (__init_cpu_features)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(sigaction.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(profil.os) (__GI___sigaction)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(setitimer.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(profil.os) (__setitimer)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(forward.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(libc-cancellation.os) (__pthread_unwind)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(exit.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(forward.os) (__GI_exit)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cxa_atexit.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(exit.os) (__exit_funcs)
+/home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cxa_thread_atexit_impl.os)
+                              /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(exit.os) (__GI___call_tls_dtors)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+START GROUP
+LOAD /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os
+LOAD /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a
+LOAD /usr/lib/gcc/x86_64-linux-gnu/5/libgcc.a
+END GROUP
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rela.init
+ *(.rela.init)
+
+.rela.text
+ *(.rela.text)
+
+.rela.fini
+ *(.rela.fini)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rela.data
+ *(.rela.data)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rela.got
+ *(.rela.got)
+
+.rela.bss
+ *(.rela.bss)
+
+.rela.ldata
+ *(.rela.ldata)
+
+.rela.lbss
+ *(.rela.lbss)
+
+.rela.lrodata
+ *(.rela.lrodata)
+
+.rela.ifunc
+ *(.rela.ifunc)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(SORT(.init))
+
+.plt
+ *(.plt)
+ *(.iplt)
+
+.plt.got
+ *(.plt.got)
+
+.plt.bnd
+ *(.plt.bnd)
+
+.text           0x0000000000000000    0x1d8dd
+ *(.text .stub)
+ .text          0x0000000000000000    0x16a21 /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os
+                0x0000000000000000                _start
+                0x0000000000000008                _dl_start_user
+                0x0000000000000050                _dl_initial_error_catch_tsd
+                0x0000000000006680                _dl_dst_count
+                0x0000000000006730                _dl_dst_substitute
+                0x0000000000007040                _dl_init_paths
+                0x0000000000007480                _dl_map_object
+                0x0000000000007dd0                _dl_rtld_di_serinfo
+                0x0000000000008aa0                _dl_lookup_symbol_x
+                0x0000000000009bd0                _dl_setup_hash
+                0x0000000000009c80                _dl_add_to_namespace_list
+                0x0000000000009d10                _dl_new_object
+                0x000000000000a0b0                _dl_try_allocate_static_tls
+                0x000000000000a190                _dl_allocate_static_tls
+                0x000000000000a1c0                _dl_nothread_init_static_tls
+                0x000000000000a250                _dl_protect_relro
+                0x000000000000a2b0                _dl_reloc_bad_type
+                0x000000000000a380                _dl_relocate_object
+                0x000000000000baa0                _dl_map_object_deps
+                0x000000000000cd30                _dl_important_hwcaps
+                0x000000000000d490                _dl_fixup
+                0x000000000000d6a0                _dl_profile_fixup
+                0x000000000000dca0                _dl_call_pltexit
+                0x000000000000ddb0                _dl_signal_error
+                0x000000000000df50                _dl_signal_cerror
+                0x000000000000dfe0                _dl_catch_error
+                0x000000000000e0b0                _dl_receive_error
+                0x000000000000e230                _dl_init_internal
+                0x000000000000e230                _dl_init
+                0x000000000000e360                _dl_sort_fini
+                0x000000000000e5a0                _dl_fini
+                0x000000000000e990                _dl_debug_state
+                0x000000000000e990                __GI__dl_debug_state
+                0x000000000000e9a0                _dl_debug_initialize
+                0x000000000000f020                _dl_sysdep_read_whole_file
+                0x000000000000f0b0                _dl_debug_printf
+                0x000000000000f110                _dl_debug_printf_c
+                0x000000000000f170                _dl_dprintf
+                0x000000000000f1c0                _dl_name_match_p
+                0x000000000000f230                _dl_higher_prime_number
+                0x000000000000f6a0                _dl_check_map_versions
+                0x000000000000fb40                _dl_check_all_versions
+                0x000000000000fbb0                _dl_start_profile
+                0x0000000000010390                _dl_mcount_internal
+                0x0000000000010390                _dl_mcount
+                0x00000000000105f0                _dl_resolve_conflicts
+                0x0000000000010930                _dl_next_tls_modid
+                0x0000000000010a30                _dl_determine_tlsoffset
+                0x0000000000010c00                __GI__dl_tls_setup
+                0x0000000000010c00                _dl_tls_setup
+                0x0000000000010cb0                _dl_get_tls_static_info
+                0x0000000000010cd0                _dl_allocate_tls_storage
+                0x0000000000010d70                __GI__dl_allocate_tls_init
+                0x0000000000010d70                _dl_allocate_tls_init
+                0x0000000000010fb0                __GI__dl_allocate_tls
+                0x0000000000010fb0                _dl_allocate_tls
+                0x0000000000010ff0                _dl_deallocate_tls
+                0x0000000000010ff0                __GI__dl_deallocate_tls
+                0x0000000000011080                _dl_update_slotinfo
+                0x00000000000113e0                __tls_get_addr
+                0x0000000000011420                _dl_tls_get_addr_soft
+                0x00000000000114a0                _dl_add_to_slotinfo
+                0x0000000000011580                _dl_get_origin
+                0x0000000000011700                _dl_scope_free
+                0x00000000000117d0                _dl_make_stack_executable
+                0x00000000000117d0                __GI__dl_make_stack_executable
+                0x0000000000011860                _dl_check_caller
+                0x0000000000011c90                __GI__dl_find_dso_for_object
+                0x0000000000011c90                _dl_find_dso_for_object
+                0x0000000000011d80                _dl_open
+                0x0000000000012160                _dl_show_scope
+                0x0000000000012c60                _dl_addr_inside_object
+                0x0000000000012e10                _dl_close_worker
+                0x0000000000013c90                _dl_close
+                0x0000000000013d20                _dl_runtime_resolve
+                0x0000000000013d90                _dl_runtime_profile
+                0x00000000000142f0                _dl_x86_64_save_sse
+                0x00000000000143e0                _dl_x86_64_restore_sse
+                0x0000000000014490                register_library
+                0x00000000000144a0                glibc_option
+                0x00000000000144a8                syscalldb
+                0x00000000000144b0                _dl_cache_libcmp
+                0x0000000000014590                _dl_load_cache_lookup
+                0x0000000000014b40                _dl_unload_cache
+                0x0000000000014b80                _dl_sysdep_start
+                0x0000000000014ef0                _dl_sysdep_start_cleanup
+                0x0000000000014f00                _dl_show_auxv
+                0x00000000000150b0                _dl_discover_osversion
+                0x0000000000015280                _dl_next_ld_env_entry
+                0x00000000000152d0                unsetenv
+                0x0000000000015340                __libc_memalign
+                0x0000000000015440                malloc
+                0x0000000000015450                calloc
+                0x0000000000015490                free
+                0x00000000000154c0                __sigjmp_save
+                0x00000000000154d0                __strerror_r
+                0x00000000000155b0                __GI___assert_fail
+                0x00000000000155b0                __assert_fail
+                0x0000000000015600                realloc
+                0x0000000000015690                __GI___assert_perror_fail
+                0x0000000000015690                __assert_perror_fail
+                0x0000000000015700                __strtoul_internal
+                0x00000000000158d0                _itoa
+                0x0000000000015920                __strsep
+                0x0000000000015920                strsep
+                0x0000000000015920                __strsep_g
+                0x00000000000159b0                __GI___chk_fail
+                0x00000000000159b0                __chk_fail
+                0x00000000000159c0                __brk
+                0x00000000000159c0                brk
+                0x0000000000015a30                sbrk
+                0x0000000000015a30                __sbrk
+                0x0000000000015ac0                __getcwd
+                0x0000000000015ac0                getcwd
+                0x00000000000160f0                openat64
+                0x0000000000016150                __alloc_dir
+                0x0000000000016260                __opendirat
+                0x00000000000162e0                __opendir
+                0x00000000000162e0                opendir
+                0x00000000000162f0                __fxstatat
+                0x00000000000162f0                __fxstatat64
+                0x00000000000162f0                __GI___fxstatat64
+                0x0000000000016340                _dl_make_tlsdesc_dynamic
+                0x0000000000016600                _dl_tlsdesc_resolve_rela_fixup
+                0x00000000000167c0                _dl_tlsdesc_resolve_hold_fixup
+                0x0000000000016800                _dl_unmap
+                0x0000000000016880                _dl_tlsdesc_return
+                0x0000000000016890                _dl_tlsdesc_undefweak
+                0x00000000000168a0                _dl_tlsdesc_dynamic
+                0x0000000000016940                _dl_tlsdesc_resolve_rela
+                0x00000000000169b0                _dl_tlsdesc_resolve_hold
+ *fill*         0x0000000000016a21        0xf 
+ .text          0x0000000000016a30       0xe2 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(check_fds.os)
+                0x0000000000016ae0                __libc_check_standard_fds
+ .text          0x0000000000016b12        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(errno.os)
+ *fill*         0x0000000000016b12        0xe 
+ .text          0x0000000000016b20       0x57 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(setjmp.os)
+                0x0000000000016b20                __sigsetjmp
+                0x0000000000016b20                __GI___sigsetjmp
+ *fill*         0x0000000000016b77        0x9 
+ .text          0x0000000000016b80       0x50 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(__longjmp.os)
+                0x0000000000016b80                __longjmp
+ .text          0x0000000000016bd0      0x24a /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strchr.os)
+                0x0000000000016bd0                index
+                0x0000000000016bd0                strchr
+                0x0000000000016c00                __strchr_sse2
+                0x0000000000016c00                __GI_strchr
+ *fill*         0x0000000000016e1a        0x6 
+ .text          0x0000000000016e20     0x1479 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcmp.os)
+                0x0000000000016e20                strcmp
+                0x0000000000016e60                __strcmp_sse2
+                0x0000000000016e60                __GI_strcmp
+ *fill*         0x0000000000018299        0x7 
+ .text          0x00000000000182a0      0x11c /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcpy.os)
+                0x00000000000182a0                strcpy
+                0x00000000000182e0                __GI_strcpy
+                0x00000000000182e0                __strcpy_sse2
+ *fill*         0x00000000000183bc        0x4 
+ .text          0x00000000000183c0      0x1b4 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strlen.os)
+                0x00000000000183c0                strlen
+                0x00000000000183c0                __GI_strlen
+ *fill*         0x0000000000018574        0xc 
+ .text          0x0000000000018580      0x220 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strnlen.os)
+                0x0000000000018580                __strnlen
+                0x0000000000018580                strnlen
+                0x0000000000018580                __GI___strnlen
+                0x0000000000018580                __GI_strnlen
+ .text          0x00000000000187a0      0x344 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memchr.os)
+                0x00000000000187a0                __GI_memchr
+                0x00000000000187a0                memchr
+                0x00000000000187a0                __memchr
+ *fill*         0x0000000000018ae4        0xc 
+ .text          0x0000000000018af0      0x440 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcmp.os)
+                0x0000000000018af0                bcmp
+                0x0000000000018af0                memcmp
+                0x0000000000018b30                __GI_memcmp
+                0x0000000000018b30                __memcmp_sse2
+ .text          0x0000000000018f30      0x19d /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memmove.os)
+                0x0000000000018f30                __GI_memmove
+                0x0000000000018f30                __memmove_sse2
+                0x000000000001908a                memmove
+                0x000000000001908a                memcpy@GLIBC_2.2.5
+                0x000000000001908a                __libc_memmove
+ *fill*         0x00000000000190cd        0x3 
+ .text          0x00000000000190d0      0x137 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memset.os)
+                0x00000000000190d0                __bzero
+                0x00000000000190d0                bzero
+                0x00000000000190e0                __memset_tail
+                0x0000000000019100                __memset_chk
+                0x0000000000019110                __GI_memset
+                0x0000000000019110                memset
+ *fill*         0x0000000000019207        0x9 
+ .text          0x0000000000019210      0x4a2 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mempcpy.os)
+                0x0000000000019210                mempcpy
+                0x0000000000019210                __mempcpy
+                0x0000000000019250                __mempcpy_chk_sse2
+                0x0000000000019260                __GI_mempcpy
+                0x0000000000019260                __mempcpy_sse2
+                0x0000000000019260                __GI___mempcpy
+ *fill*         0x00000000000196b2        0xe 
+ .text          0x00000000000196c0      0x11c /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(stpcpy.os)
+                0x00000000000196c0                stpcpy
+                0x00000000000196c0                __stpcpy
+                0x0000000000019700                __GI_stpcpy
+                0x0000000000019700                __GI___stpcpy
+                0x0000000000019700                __stpcpy_sse2
+ *fill*         0x00000000000197dc        0x4 
+ .text          0x00000000000197e0      0x4b5 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcpy.os)
+                0x00000000000197e0                __new_memcpy
+                0x00000000000197e0                memcpy@@GLIBC_2.14
+                0x0000000000019820                __memcpy_chk_sse2
+                0x0000000000019830                __memcpy_sse2
+                0x0000000000019830                __GI_memcpy
+ *fill*         0x0000000000019c95        0xb 
+ .text          0x0000000000019ca0      0x556 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(wordcopy.os)
+                0x0000000000019ca0                _wordcopy_fwd_aligned
+                0x0000000000019de0                _wordcopy_fwd_dest_aligned
+                0x0000000000019f10                _wordcopy_bwd_aligned
+                0x000000000001a0a0                _wordcopy_bwd_dest_aligned
+ *fill*         0x000000000001a1f6        0xa 
+ .text          0x000000000001a200      0x204 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(rawmemchr.os)
+                0x000000000001a200                __GI___rawmemchr
+                0x000000000001a200                __rawmemchr
+                0x000000000001a200                rawmemchr
+ .text          0x000000000001a404        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcmp-ssse3.os)
+ *fill*         0x000000000001a404        0xc 
+ .text          0x000000000001a410      0x2a3 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcmp-sse2-unaligned.os)
+                0x000000000001a410                __strcmp_sse2_unaligned
+ .text          0x000000000001a6b3        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcmp-sse4.os)
+ .text          0x000000000001a6b3        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcpy-ssse3.os)
+ *fill*         0x000000000001a6b3        0xd 
+ .text          0x000000000001a6c0      0x217 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcpy-sse2-unaligned.os)
+                0x000000000001a6c0                __memcpy_sse2_unaligned
+ .text          0x000000000001a8d7        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mempcpy-ssse3.os)
+ .text          0x000000000001a8d7        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memmove-ssse3.os)
+ .text          0x000000000001a8d7        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mempcpy-ssse3-back.os)
+ .text          0x000000000001a8d7        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memmove-ssse3-back.os)
+ .text          0x000000000001a8d7        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcpy-ssse3.os)
+ .text          0x000000000001a8d7        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(stpcpy-ssse3.os)
+ *fill*         0x000000000001a8d7        0x9 
+ .text          0x000000000001a8e0      0x630 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcpy-sse2-unaligned.os)
+                0x000000000001a8e0                __strcpy_sse2_unaligned
+ .text          0x000000000001af10      0x6b0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(stpcpy-sse2-unaligned.os)
+                0x000000000001af10                __stpcpy_sse2_unaligned
+ .text          0x000000000001b5c0        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strchr-sse2-no-bsf.os)
+ .text          0x000000000001b5c0        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcmp-ssse3.os)
+ .text          0x000000000001b5c0      0x5d7 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cacheinfo.os)
+                0x000000000001bb40                __cache_sysconf
+ *fill*         0x000000000001bb97        0x9 
+ .text          0x000000000001bba0       0x2c /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(closedir.os)
+                0x000000000001bba0                __closedir
+                0x000000000001bba0                closedir
+ *fill*         0x000000000001bbcc        0x4 
+ .text          0x000000000001bbd0      0x106 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(readdir.os)
+                0x000000000001bbd0                readdir
+                0x000000000001bbd0                __readdir64
+                0x000000000001bbd0                __readdir
+                0x000000000001bbd0                readdir64
+ *fill*         0x000000000001bcd6        0xa 
+ .text          0x000000000001bce0       0x97 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(rewinddir.os)
+                0x000000000001bce0                rewinddir
+                0x000000000001bce0                __GI_rewinddir
+ *fill*         0x000000000001bd77        0x9 
+ .text          0x000000000001bd80       0x9d /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(getdents.os)
+                0x000000000001bd80                __getdents
+                0x000000000001bd80                __getdents64
+ *fill*         0x000000000001be1d        0x3 
+ .text          0x000000000001be20       0x9a /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(fdopendir.os)
+                0x000000000001be20                fdopendir
+                0x000000000001be20                __fdopendir
+ *fill*         0x000000000001beba        0x6 
+ .text          0x000000000001bec0       0x2a /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(uname.os)
+                0x000000000001bec0                uname
+                0x000000000001bec0                __GI_uname
+                0x000000000001bec0                __uname
+                0x000000000001bec0                __GI___uname
+ *fill*         0x000000000001beea        0x6 
+ .text          0x000000000001bef0       0x68 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(_exit.os)
+                0x000000000001bef0                _Exit
+                0x000000000001bef0                __GI__exit
+                0x000000000001bef0                _exit
+ *fill*         0x000000000001bf58        0x8 
+ .text          0x000000000001bf60       0x44 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(getpid.os)
+                0x000000000001bf60                __getpid
+                0x000000000001bf60                getpid
+                0x000000000001bf60                __GI_getpid
+                0x000000000001bf60                __GI___getpid
+ .text          0x000000000001bfa4        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(environ.os)
+ *fill*         0x000000000001bfa4        0xc 
+ .text          0x000000000001bfb0       0x5c /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(xstat.os)
+                0x000000000001bfb0                _xstat
+                0x000000000001bfb0                __xstat64
+                0x000000000001bfb0                __GI___xstat64
+                0x000000000001bfb0                __GI___xstat
+                0x000000000001bfb0                __xstat
+ *fill*         0x000000000001c00c        0x4 
+ .text          0x000000000001c010       0x5c /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(fxstat.os)
+                0x000000000001c010                __GI___fxstat
+                0x000000000001c010                __GI___fxstat64
+                0x000000000001c010                __fxstat64
+                0x000000000001c010                _fxstat
+                0x000000000001c010                __fxstat
+ *fill*         0x000000000001c06c        0x4 
+ .text          0x000000000001c070       0x5c /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(lxstat.os)
+                0x000000000001c070                __GI___lxstat
+                0x000000000001c070                _lxstat
+                0x000000000001c070                __lxstat
+                0x000000000001c070                __lxstat64
+                0x000000000001c070                __GI___lxstat64
+ *fill*         0x000000000001c0cc        0x4 
+ .text          0x000000000001c0d0       0x6c /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(open.os)
+                0x000000000001c0d0                __GI___open64
+                0x000000000001c0d0                __open
+                0x000000000001c0d0                __GI_open
+                0x000000000001c0d0                __GI___open
+                0x000000000001c0d0                __GI_open64
+                0x000000000001c0d0                __libc_open
+                0x000000000001c0d0                open64
+                0x000000000001c0d0                __GI___libc_open
+                0x000000000001c0d0                open
+                0x000000000001c0d0                __open64
+                0x000000000001c0d9                __open_nocancel
+ *fill*         0x000000000001c13c        0x4 
+ .text          0x000000000001c140       0x6c /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(read.os)
+                0x000000000001c140                __read
+                0x000000000001c140                __GI_read
+                0x000000000001c140                __libc_read
+                0x000000000001c140                __GI___read
+                0x000000000001c140                read
+                0x000000000001c140                __GI___libc_read
+                0x000000000001c149                __read_nocancel
+ *fill*         0x000000000001c1ac        0x4 
+ .text          0x000000000001c1b0       0x6c /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(write.os)
+                0x000000000001c1b0                __write
+                0x000000000001c1b0                __GI_write
+                0x000000000001c1b0                write
+                0x000000000001c1b0                __GI___libc_write
+                0x000000000001c1b0                __GI___write
+                0x000000000001c1b0                __libc_write
+                0x000000000001c1b9                __write_nocancel
+ *fill*         0x000000000001c21c        0x4 
+ .text          0x000000000001c220       0x2a /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(access.os)
+                0x000000000001c220                __GI_access
+                0x000000000001c220                __GI___access
+                0x000000000001c220                access
+                0x000000000001c220                __access
+ *fill*         0x000000000001c24a        0x6 
+ .text          0x000000000001c250      0x186 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(fcntl.os)
+                0x000000000001c330                __fcntl_nocancel
+                0x000000000001c360                __libc_fcntl
+                0x000000000001c360                __GI___libc_fcntl
+                0x000000000001c360                __GI___fcntl
+                0x000000000001c360                __fcntl
+                0x000000000001c360                fcntl
+ *fill*         0x000000000001c3d6        0xa 
+ .text          0x000000000001c3e0       0x6c /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(close.os)
+                0x000000000001c3e0                __GI_close
+                0x000000000001c3e0                __GI___libc_close
+                0x000000000001c3e0                __libc_close
+                0x000000000001c3e0                __close
+                0x000000000001c3e0                __GI___close
+                0x000000000001c3e0                close
+                0x000000000001c3e9                __close_nocancel
+ *fill*         0x000000000001c44c        0x4 
+ .text          0x000000000001c450       0x2d /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mmap.os)
+                0x000000000001c450                __GI___mmap
+                0x000000000001c450                __GI_mmap64
+                0x000000000001c450                __mmap
+                0x000000000001c450                mmap
+                0x000000000001c450                __GI___mmap64
+                0x000000000001c450                __mmap64
+                0x000000000001c450                __GI_mmap
+                0x000000000001c450                mmap64
+ *fill*         0x000000000001c47d        0x3 
+ .text          0x000000000001c480       0x2a /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(munmap.os)
+                0x000000000001c480                munmap
+                0x000000000001c480                __GI___munmap
+                0x000000000001c480                __GI_munmap
+                0x000000000001c480                __munmap
+ *fill*         0x000000000001c4aa        0x6 
+ .text          0x000000000001c4b0       0x2a /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mprotect.os)
+                0x000000000001c4b0                __mprotect
+                0x000000000001c4b0                __GI___mprotect
+                0x000000000001c4b0                __GI_mprotect
+                0x000000000001c4b0                mprotect
+ *fill*         0x000000000001c4da        0x6 
+ .text          0x000000000001c4e0       0x6c /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(llseek.os)
+                0x000000000001c4e0                __GI___lseek
+                0x000000000001c4e0                __GI_lseek64
+                0x000000000001c4e0                __llseek
+                0x000000000001c4e0                __GI_llseek
+                0x000000000001c4e0                __lseek64
+                0x000000000001c4e0                lseek
+                0x000000000001c4e0                __libc_lseek64
+                0x000000000001c4e0                __GI___libc_lseek64
+                0x000000000001c4e0                __GI___libc_lseek
+                0x000000000001c4e0                llseek
+                0x000000000001c4e0                __lseek
+                0x000000000001c4e0                __GI___lseek64
+                0x000000000001c4e0                __libc_lseek
+                0x000000000001c4e0                __GI___llseek
+                0x000000000001c4e0                __GI_lseek
+                0x000000000001c4e0                lseek64
+                0x000000000001c4e9                __lseek_nocancel
+ *fill*         0x000000000001c54c        0x4 
+ .text          0x000000000001c550      0x1ce /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(profil.os)
+                0x000000000001c5a0                __profil
+                0x000000000001c5a0                profil
+ *fill*         0x000000000001c71e        0x2 
+ .text          0x000000000001c720        0xb /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(prof-freq.os)
+                0x000000000001c720                __GI___profile_frequency
+                0x000000000001c720                __profile_frequency
+ *fill*         0x000000000001c72b        0x5 
+ .text          0x000000000001c730       0x52 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(libc-lowlevellock.os)
+                0x000000000001c730                __lll_lock_wait_private
+                0x000000000001c760                __lll_unlock_wake_private
+ *fill*         0x000000000001c782        0xe 
+ .text          0x000000000001c790       0xbc /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(libc-cancellation.os)
+                0x000000000001c790                __libc_enable_asynccancel
+                0x000000000001c7f0                __libc_disable_asynccancel
+ .text          0x000000000001c84c        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(libc_multiple_threads.os)
+ *fill*         0x000000000001c84c        0x4 
+ .text          0x000000000001c850      0x2a7 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(init-arch.os)
+                0x000000000001c850                __init_cpu_features
+                0x000000000001cae0                __get_cpu_features
+ *fill*         0x000000000001caf7        0x9 
+ .text          0x000000000001cb00      0x284 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(sigaction.os)
+                0x000000000001cb20                __libc_sigaction
+                0x000000000001cb20                __GI___libc_sigaction
+                0x000000000001cd60                sigaction
+                0x000000000001cd60                __GI___sigaction
+                0x000000000001cd60                __sigaction
+ *fill*         0x000000000001cd84        0xc 
+ .text          0x000000000001cd90       0x2a /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(setitimer.os)
+                0x000000000001cd90                setitimer
+                0x000000000001cd90                __setitimer
+                0x000000000001cd90                __GI_setitimer
+                0x000000000001cd90                __GI___setitimer
+ *fill*         0x000000000001cdba        0x6 
+ .text          0x000000000001cdc0      0x5c6 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(forward.os)
+                0x000000000001cdc0                pthread_equal
+                0x000000000001cdf0                pthread_attr_destroy
+                0x000000000001ce20                pthread_attr_init@@GLIBC_2.2.5
+                0x000000000001ce20                __pthread_attr_init_2_1
+                0x000000000001ce50                pthread_attr_getdetachstate
+                0x000000000001ce80                pthread_attr_setdetachstate
+                0x000000000001ceb0                pthread_attr_getinheritsched
+                0x000000000001cee0                pthread_attr_setinheritsched
+                0x000000000001cf10                pthread_attr_getschedparam
+                0x000000000001cf40                pthread_attr_setschedparam
+                0x000000000001cf70                pthread_attr_getschedpolicy
+                0x000000000001cfa0                pthread_attr_setschedpolicy
+                0x000000000001cfd0                pthread_attr_getscope
+                0x000000000001d000                pthread_attr_setscope
+                0x000000000001d030                pthread_condattr_destroy
+                0x000000000001d060                pthread_condattr_init
+                0x000000000001d090                pthread_cond_broadcast@@GLIBC_2.3.2
+                0x000000000001d090                __pthread_cond_broadcast
+                0x000000000001d0c0                pthread_cond_destroy@@GLIBC_2.3.2
+                0x000000000001d0c0                __pthread_cond_destroy
+                0x000000000001d0f0                pthread_cond_init@@GLIBC_2.3.2
+                0x000000000001d0f0                __pthread_cond_init
+                0x000000000001d120                pthread_cond_signal@@GLIBC_2.3.2
+                0x000000000001d120                __pthread_cond_signal
+                0x000000000001d150                pthread_cond_wait@@GLIBC_2.3.2
+                0x000000000001d150                __pthread_cond_wait
+                0x000000000001d180                pthread_cond_timedwait@@GLIBC_2.3.2
+                0x000000000001d180                __pthread_cond_timedwait
+                0x000000000001d1b0                pthread_exit
+                0x000000000001d1b0                __pthread_exit
+                0x000000000001d1e0                pthread_getschedparam
+                0x000000000001d210                pthread_setschedparam
+                0x000000000001d240                pthread_mutex_destroy
+                0x000000000001d270                pthread_mutex_init
+                0x000000000001d2a0                pthread_mutex_lock
+                0x000000000001d2d0                pthread_mutex_unlock
+                0x000000000001d300                pthread_self
+                0x000000000001d330                pthread_setcancelstate
+                0x000000000001d360                pthread_setcanceltype
+ *fill*         0x000000000001d386        0xa 
+ .text          0x000000000001d390      0x135 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(exit.os)
+                0x000000000001d390                __run_exit_handlers
+                0x000000000001d4b0                __GI_exit
+                0x000000000001d4b0                exit
+ *fill*         0x000000000001d4c5        0xb 
+ .text          0x000000000001d4d0      0x24d /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cxa_atexit.os)
+                0x000000000001d4d0                __new_exitfn
+                0x000000000001d640                __internal_atexit
+                0x000000000001d690                __cxa_atexit_internal
+                0x000000000001d690                __cxa_atexit
+ *fill*         0x000000000001d71d        0x3 
+ .text          0x000000000001d720      0x1bd /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cxa_thread_atexit_impl.os)
+                0x000000000001d720                __cxa_thread_atexit_impl
+                0x000000000001d830                __GI___call_tls_dtors
+                0x000000000001d830                __call_tls_dtors
+ *(.gnu.warning)
+
+.text.unlikely  0x0000000000000000      0x255
+ .text.unlikely
+                0x0000000000000000      0x255 /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os
+ .text.unlikely
+                0x0000000000000255        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(check_fds.os)
+ .text.unlikely
+                0x0000000000000255        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memmove.os)
+ .text.unlikely
+                0x0000000000000255        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(wordcopy.os)
+ .text.unlikely
+                0x0000000000000255        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cacheinfo.os)
+ .text.unlikely
+                0x0000000000000255        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(closedir.os)
+ .text.unlikely
+                0x0000000000000255        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(readdir.os)
+ .text.unlikely
+                0x0000000000000255        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(rewinddir.os)
+ .text.unlikely
+                0x0000000000000255        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(getdents.os)
+ .text.unlikely
+                0x0000000000000255        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(fdopendir.os)
+ .text.unlikely
+                0x0000000000000255        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(_exit.os)
+ .text.unlikely
+                0x0000000000000255        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(getpid.os)
+ .text.unlikely
+                0x0000000000000255        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(xstat.os)
+ .text.unlikely
+                0x0000000000000255        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(fxstat.os)
+ .text.unlikely
+                0x0000000000000255        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(lxstat.os)
+ .text.unlikely
+                0x0000000000000255        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(fcntl.os)
+ .text.unlikely
+                0x0000000000000255        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(profil.os)
+ .text.unlikely
+                0x0000000000000255        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(prof-freq.os)
+ .text.unlikely
+                0x0000000000000255        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(init-arch.os)
+ .text.unlikely
+                0x0000000000000255        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(sigaction.os)
+ .text.unlikely
+                0x0000000000000255        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(forward.os)
+ .text.unlikely
+                0x0000000000000255        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(exit.os)
+ .text.unlikely
+                0x0000000000000255        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cxa_atexit.os)
+ .text.unlikely
+                0x0000000000000255        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cxa_thread_atexit_impl.os)
+
+.text.sse4.2    0x0000000000000000      0xda9
+ .text.sse4.2   0x0000000000000000      0xda9 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcmp.os)
+                0x0000000000000000                __strcmp_sse42
+
+.text.ssse3     0x0000000000000000    0x11723
+ .text.ssse3    0x0000000000000000     0x1259 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcmp-ssse3.os)
+                0x0000000000000000                __GI___strcmp_ssse3
+                0x0000000000000000                __strcmp_ssse3
+ *fill*         0x0000000000001259        0x7 
+ .text.ssse3    0x0000000000001260     0x29c6 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcpy-ssse3.os)
+                0x0000000000001260                __memcpy_chk_ssse3
+                0x0000000000001270                __memcpy_ssse3
+ *fill*         0x0000000000003c26        0xa 
+ .text.ssse3    0x0000000000003c30     0x29c6 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mempcpy-ssse3.os)
+                0x0000000000003c30                __mempcpy_chk_ssse3
+                0x0000000000003c40                __mempcpy_ssse3
+ *fill*         0x00000000000065f6        0xa 
+ .text.ssse3    0x0000000000006600     0x2b77 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memmove-ssse3.os)
+                0x0000000000006600                __memmove_chk_ssse3
+                0x0000000000006610                __memmove_ssse3
+ *fill*         0x0000000000009177        0x9 
+ .text.ssse3    0x0000000000009180     0x2ac6 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mempcpy-ssse3-back.os)
+                0x0000000000009180                __mempcpy_chk_ssse3_back
+                0x0000000000009190                __mempcpy_ssse3_back
+ *fill*         0x000000000000bc46        0xa 
+ .text.ssse3    0x000000000000bc50     0x2b16 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memmove-ssse3-back.os)
+                0x000000000000bc50                __memmove_chk_ssse3_back
+                0x000000000000bc60                __memmove_ssse3_back
+ *fill*         0x000000000000e766        0xa 
+ .text.ssse3    0x000000000000e770     0x17a2 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcpy-ssse3.os)
+                0x000000000000e770                __strcpy_ssse3
+ *fill*         0x000000000000ff12        0xe 
+ .text.ssse3    0x000000000000ff20     0x1803 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(stpcpy-ssse3.os)
+                0x000000000000ff20                __stpcpy_ssse3
+
+.text.sse4.1    0x0000000000000000     0x163e
+ .text.sse4.1   0x0000000000000000     0x163e /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcmp-sse4.os)
+                0x0000000000000000                __memcmp_sse4_1
+
+.text.atom      0x0000000000000000     0x1a83
+ .text.atom     0x0000000000000000      0x315 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strchr-sse2-no-bsf.os)
+                0x0000000000000000                __strchr_sse2_no_bsf
+ *fill*         0x0000000000000315        0xb 
+ .text.atom     0x0000000000000320     0x1763 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcmp-ssse3.os)
+                0x0000000000000320                __memcmp_ssse3
+
+.text.startup   0x0000000000000000      0x251
+ .text.startup  0x0000000000000000      0x251 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cacheinfo.os)
+
+.text.compat    0x0000000000000000      0x15a
+ .text.compat   0x0000000000000000      0x15a /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(forward.os)
+                0x0000000000000000                pthread_cond_broadcast@GLIBC_2.2.5
+                0x0000000000000000                __pthread_cond_broadcast_2_0
+                0x0000000000000030                __pthread_cond_destroy_2_0
+                0x0000000000000030                pthread_cond_destroy@GLIBC_2.2.5
+                0x0000000000000060                __pthread_cond_init_2_0
+                0x0000000000000060                pthread_cond_init@GLIBC_2.2.5
+                0x0000000000000090                __pthread_cond_signal_2_0
+                0x0000000000000090                pthread_cond_signal@GLIBC_2.2.5
+                0x00000000000000c0                pthread_cond_wait@GLIBC_2.2.5
+                0x00000000000000c0                __pthread_cond_wait_2_0
+                0x00000000000000f0                pthread_cond_timedwait@GLIBC_2.2.5
+                0x00000000000000f0                __pthread_cond_timedwait_2_0
+                0x0000000000000120                __pthread_unwind
+
+.fini
+ *(SORT(.fini))
+
+.rodata         0x0000000000000000     0x1000
+ *(.rodata)
+ .rodata        0x0000000000000000      0xb50 /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os
+                0x0000000000000b40                __GI__itoa_lower_digits
+                0x0000000000000b40                _itoa_lower_digits
+ .rodata        0x0000000000000b50       0x40 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcmp.os)
+ .rodata        0x0000000000000b90       0x40 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(wordcopy.os)
+ .rodata        0x0000000000000bd0       0x40 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcmp-ssse3.os)
+ .rodata        0x0000000000000c10       0x80 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcpy-sse2-unaligned.os)
+ .rodata        0x0000000000000c90       0x80 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(stpcpy-sse2-unaligned.os)
+ *fill*         0x0000000000000d10       0x10 
+ .rodata        0x0000000000000d20      0x2e0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cacheinfo.os)
+
+.rodata.str1.1  0x0000000000000000      0xfa6
+ .rodata.str1.1
+                0x0000000000000000      0xf4a /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os
+ .rodata.str1.1
+                0x0000000000000f4a       0x14 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(check_fds.os)
+ .rodata.str1.1
+                0x0000000000000f5e       0x2a /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cacheinfo.os)
+ .rodata.str1.1
+                0x0000000000000f88       0x1e /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cxa_atexit.os)
+
+.rodata.str1.8  0x0000000000000000     0x2755
+ .rodata.str1.8
+                0x0000000000000000     0x26f4 /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os
+ *fill*         0x00000000000026f4        0x4 
+ .rodata.str1.8
+                0x00000000000026f8       0x4d /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cacheinfo.os)
+ *fill*         0x0000000000002745        0x3 
+ .rodata.str1.8
+                0x0000000000002748        0xd /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cxa_atexit.os)
+
+.rodata.str1.16
+                0x0000000000000000      0x391
+ .rodata.str1.16
+                0x0000000000000000      0x373 /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os
+ *fill*         0x0000000000000373        0xd 
+ .rodata.str1.16
+                0x0000000000000380       0x11 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cacheinfo.os)
+
+.rodata.cst16   0x0000000000000000       0x20
+ .rodata.cst16  0x0000000000000000       0x20 /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os
+
+.rodata.cst4    0x0000000000000000        0x4
+ .rodata.cst4   0x0000000000000000        0x4 /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os
+
+.rodata.str1.32
+                0x0000000000000000      0x161
+ .rodata.str1.32
+                0x0000000000000000      0x161 /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os
+
+.rodata.sse4.2  0x0000000000000000       0x40
+ .rodata.sse4.2
+                0x0000000000000000       0x40 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcmp.os)
+
+.rodata.sse4.1  0x0000000000000000      0x140
+ .rodata.sse4.1
+                0x0000000000000000      0x140 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcmp-sse4.os)
+
+.rodata.ssse3   0x0000000000000000      0xf40
+ .rodata.ssse3  0x0000000000000000      0x1c0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcpy-ssse3.os)
+ .rodata.ssse3  0x00000000000001c0      0x1c0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mempcpy-ssse3.os)
+ .rodata.ssse3  0x0000000000000380      0x1c0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memmove-ssse3.os)
+ .rodata.ssse3  0x0000000000000540      0x500 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mempcpy-ssse3-back.os)
+ .rodata.ssse3  0x0000000000000a40      0x500 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memmove-ssse3-back.os)
+
+.rodata1
+ *(.rodata1)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame       0x0000000000000000     0x3b80
+ *(.eh_frame)
+ .eh_frame      0x0000000000000000     0x2168 /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os
+ .eh_frame      0x0000000000002168       0x68 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(check_fds.os)
+ .eh_frame      0x00000000000021d0       0x30 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(setjmp.os)
+ .eh_frame      0x0000000000002200       0x48 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(__longjmp.os)
+ .eh_frame      0x0000000000002248       0x48 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strchr.os)
+                                         0x40 (size before relaxing)
+ .eh_frame      0x0000000000002290       0x60 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcmp.os)
+                                         0x58 (size before relaxing)
+ .eh_frame      0x00000000000022f0       0x48 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcpy.os)
+                                         0x40 (size before relaxing)
+ .eh_frame      0x0000000000002338       0x30 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strlen.os)
+ .eh_frame      0x0000000000002368       0x30 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strnlen.os)
+ .eh_frame      0x0000000000002398       0x30 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memchr.os)
+ .eh_frame      0x00000000000023c8       0x48 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcmp.os)
+                                         0x40 (size before relaxing)
+ .eh_frame      0x0000000000002410       0x88 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memmove.os)
+ .eh_frame      0x0000000000002498       0x78 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memset.os)
+                                         0x68 (size before relaxing)
+ .eh_frame      0x0000000000002510       0x88 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mempcpy.os)
+                                         0x80 (size before relaxing)
+ .eh_frame      0x0000000000002598       0x48 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(stpcpy.os)
+                                         0x40 (size before relaxing)
+ .eh_frame      0x00000000000025e0       0x88 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcpy.os)
+                                         0x80 (size before relaxing)
+ .eh_frame      0x0000000000002668       0x98 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(wordcopy.os)
+                                         0x90 (size before relaxing)
+ .eh_frame      0x0000000000002700       0x30 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(rawmemchr.os)
+ .eh_frame      0x0000000000002730       0x30 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcmp-ssse3.os)
+ .eh_frame      0x0000000000002760       0x30 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcmp-sse2-unaligned.os)
+ .eh_frame      0x0000000000002790       0x30 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcmp-sse4.os)
+ .eh_frame      0x00000000000027c0       0x48 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcpy-ssse3.os)
+                                         0x40 (size before relaxing)
+ .eh_frame      0x0000000000002808       0x30 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcpy-sse2-unaligned.os)
+ .eh_frame      0x0000000000002838       0x48 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mempcpy-ssse3.os)
+                                         0x40 (size before relaxing)
+ .eh_frame      0x0000000000002880       0x48 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memmove-ssse3.os)
+                                         0x40 (size before relaxing)
+ .eh_frame      0x00000000000028c8       0x48 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mempcpy-ssse3-back.os)
+                                         0x40 (size before relaxing)
+ .eh_frame      0x0000000000002910       0x48 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memmove-ssse3-back.os)
+                                         0x40 (size before relaxing)
+ .eh_frame      0x0000000000002958       0x30 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcpy-ssse3.os)
+ .eh_frame      0x0000000000002988       0x30 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(stpcpy-ssse3.os)
+ .eh_frame      0x00000000000029b8       0x30 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcpy-sse2-unaligned.os)
+ .eh_frame      0x00000000000029e8       0x30 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(stpcpy-sse2-unaligned.os)
+ .eh_frame      0x0000000000002a18       0x30 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strchr-sse2-no-bsf.os)
+ .eh_frame      0x0000000000002a48       0x30 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcmp-ssse3.os)
+ .eh_frame      0x0000000000002a78      0x1a8 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cacheinfo.os)
+                                        0x1a0 (size before relaxing)
+ .eh_frame      0x0000000000002c20       0x38 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(closedir.os)
+ .eh_frame      0x0000000000002c58      0x118 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(readdir.os)
+ .eh_frame      0x0000000000002d70       0xf8 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(rewinddir.os)
+ .eh_frame      0x0000000000002e68       0x68 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(getdents.os)
+ .eh_frame      0x0000000000002ed0       0x50 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(fdopendir.os)
+ .eh_frame      0x0000000000002f20       0x30 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(uname.os)
+ .eh_frame      0x0000000000002f50       0x30 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(_exit.os)
+ .eh_frame      0x0000000000002f80       0x38 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(getpid.os)
+ .eh_frame      0x0000000000002fb8       0x40 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(xstat.os)
+ .eh_frame      0x0000000000002ff8       0x40 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(fxstat.os)
+ .eh_frame      0x0000000000003038       0x40 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(lxstat.os)
+ .eh_frame      0x0000000000003078       0x30 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(open.os)
+ .eh_frame      0x00000000000030a8       0x30 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(read.os)
+ .eh_frame      0x00000000000030d8       0x30 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(write.os)
+ .eh_frame      0x0000000000003108       0x30 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(access.os)
+ .eh_frame      0x0000000000003138       0x90 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(fcntl.os)
+ .eh_frame      0x00000000000031c8       0x30 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(close.os)
+ .eh_frame      0x00000000000031f8       0x30 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mmap.os)
+ .eh_frame      0x0000000000003228       0x30 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(munmap.os)
+ .eh_frame      0x0000000000003258       0x30 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mprotect.os)
+ .eh_frame      0x0000000000003288       0x30 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(llseek.os)
+ .eh_frame      0x00000000000032b8       0x80 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(profil.os)
+ .eh_frame      0x0000000000003338       0x30 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(prof-freq.os)
+ .eh_frame      0x0000000000003368       0x68 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(libc-lowlevellock.os)
+                                         0x60 (size before relaxing)
+ .eh_frame      0x00000000000033d0       0x48 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(libc-cancellation.os)
+                                         0x40 (size before relaxing)
+ .eh_frame      0x0000000000003418       0x50 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(init-arch.os)
+ .eh_frame      0x0000000000003468       0xf8 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(sigaction.os)
+ .eh_frame      0x0000000000003560       0x30 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(setitimer.os)
+ .eh_frame      0x0000000000003590      0x3a8 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(forward.os)
+                                        0x318 (size before relaxing)
+ .eh_frame      0x0000000000003938       0x58 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(exit.os)
+ .eh_frame      0x0000000000003990      0x168 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cxa_atexit.os)
+                                        0x160 (size before relaxing)
+ .eh_frame      0x0000000000003af8       0x88 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cxa_thread_atexit_impl.os)
+                                         0x80 (size before relaxing)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.gnu_extab
+ *(.gnu_extab*)
+
+.exception_ranges
+ *(.exception_ranges .exception_ranges*)
+
+.eh_frame
+ *(.eh_frame)
+
+.gnu_extab
+ *(.gnu_extab)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.exception_ranges
+ *(.exception_ranges .exception_ranges*)
+
+.tdata
+ *(.tdata)
+
+.tbss           0x0000000000000000       0x18
+ *(.tbss)
+ .tbss          0x0000000000000000        0x4 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(errno.os)
+                0x0000000000000000                errno
+                0x0000000000000000                __libc_errno
+ *fill*         0x0000000000000004        0x4 
+ .tbss          0x0000000000000008       0x10 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cxa_thread_atexit_impl.os)
+
+.preinit_array
+ *(.preinit_array)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got)
+ *(.igot)
+
+.got.plt
+ *(.got.plt)
+ *(.igot.plt)
+
+.data           0x0000000000000000      0xfc8
+ *(.data)
+ .data          0x0000000000000000      0xf84 /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os
+                0x0000000000000000                _rtld_global
+                0x0000000000000000                _rtld_local
+ .data          0x0000000000000f84        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(check_fds.os)
+ .data          0x0000000000000f84        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(errno.os)
+ .data          0x0000000000000f84        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(setjmp.os)
+ .data          0x0000000000000f84        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(__longjmp.os)
+ .data          0x0000000000000f84        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strchr.os)
+ .data          0x0000000000000f84        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcmp.os)
+ .data          0x0000000000000f84        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcpy.os)
+ .data          0x0000000000000f84        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strlen.os)
+ .data          0x0000000000000f84        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strnlen.os)
+ .data          0x0000000000000f84        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memchr.os)
+ .data          0x0000000000000f84        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcmp.os)
+ .data          0x0000000000000f84        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memmove.os)
+ .data          0x0000000000000f84        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memset.os)
+ .data          0x0000000000000f84        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mempcpy.os)
+ .data          0x0000000000000f84        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(stpcpy.os)
+ .data          0x0000000000000f84        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcpy.os)
+ .data          0x0000000000000f84        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(wordcopy.os)
+ .data          0x0000000000000f84        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(rawmemchr.os)
+ .data          0x0000000000000f84        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcmp-ssse3.os)
+ .data          0x0000000000000f84        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcmp-sse2-unaligned.os)
+ .data          0x0000000000000f84        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcmp-sse4.os)
+ .data          0x0000000000000f84        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcpy-ssse3.os)
+ .data          0x0000000000000f84        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcpy-sse2-unaligned.os)
+ .data          0x0000000000000f84        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mempcpy-ssse3.os)
+ .data          0x0000000000000f84        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memmove-ssse3.os)
+ .data          0x0000000000000f84        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mempcpy-ssse3-back.os)
+ .data          0x0000000000000f84        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memmove-ssse3-back.os)
+ .data          0x0000000000000f84        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcpy-ssse3.os)
+ .data          0x0000000000000f84        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(stpcpy-ssse3.os)
+ .data          0x0000000000000f84        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcpy-sse2-unaligned.os)
+ .data          0x0000000000000f84        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(stpcpy-sse2-unaligned.os)
+ .data          0x0000000000000f84        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strchr-sse2-no-bsf.os)
+ .data          0x0000000000000f84        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcmp-ssse3.os)
+ *fill*         0x0000000000000f84        0x4 
+ .data          0x0000000000000f88       0x40 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cacheinfo.os)
+                0x0000000000000f88                __x86_raw_shared_cache_size
+                0x0000000000000f90                __x86_raw_shared_cache_size_half
+                0x0000000000000f98                __x86_shared_cache_size
+                0x0000000000000fa0                __x86_shared_cache_size_half
+                0x0000000000000fa8                __x86_raw_data_cache_size
+                0x0000000000000fb0                __x86_raw_data_cache_size_half
+                0x0000000000000fb8                __x86_data_cache_size
+                0x0000000000000fc0                __x86_data_cache_size_half
+ .data          0x0000000000000fc8        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(closedir.os)
+ .data          0x0000000000000fc8        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(readdir.os)
+ .data          0x0000000000000fc8        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(rewinddir.os)
+ .data          0x0000000000000fc8        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(getdents.os)
+ .data          0x0000000000000fc8        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(fdopendir.os)
+ .data          0x0000000000000fc8        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(uname.os)
+ .data          0x0000000000000fc8        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(_exit.os)
+ .data          0x0000000000000fc8        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(getpid.os)
+ .data          0x0000000000000fc8        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(environ.os)
+ .data          0x0000000000000fc8        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(xstat.os)
+ .data          0x0000000000000fc8        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(fxstat.os)
+ .data          0x0000000000000fc8        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(lxstat.os)
+ .data          0x0000000000000fc8        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(open.os)
+ .data          0x0000000000000fc8        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(read.os)
+ .data          0x0000000000000fc8        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(write.os)
+ .data          0x0000000000000fc8        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(access.os)
+ .data          0x0000000000000fc8        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(fcntl.os)
+ .data          0x0000000000000fc8        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(close.os)
+ .data          0x0000000000000fc8        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mmap.os)
+ .data          0x0000000000000fc8        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(munmap.os)
+ .data          0x0000000000000fc8        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mprotect.os)
+ .data          0x0000000000000fc8        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(llseek.os)
+ .data          0x0000000000000fc8        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(profil.os)
+ .data          0x0000000000000fc8        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(prof-freq.os)
+ .data          0x0000000000000fc8        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(libc-lowlevellock.os)
+ .data          0x0000000000000fc8        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(libc-cancellation.os)
+ .data          0x0000000000000fc8        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(libc_multiple_threads.os)
+ .data          0x0000000000000fc8        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(init-arch.os)
+ .data          0x0000000000000fc8        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(sigaction.os)
+ .data          0x0000000000000fc8        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(setitimer.os)
+ .data          0x0000000000000fc8        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(forward.os)
+ .data          0x0000000000000fc8        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(exit.os)
+ .data          0x0000000000000fc8        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cxa_atexit.os)
+ .data          0x0000000000000fc8        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cxa_thread_atexit_impl.os)
+
+.data.rel.ro    0x0000000000000000      0x26c
+ .data.rel.ro   0x0000000000000000      0x26c /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os
+                0x00000000000000b0                __pointer_chk_guard_local
+                0x00000000000000b8                _dl_skip_args
+                0x00000000000000c0                _dl_argv_internal
+                0x00000000000000c0                _dl_argv
+                0x00000000000000c8                _dl_argc
+                0x00000000000000e0                _rtld_global_ro
+                0x00000000000000e0                _rtld_local_ro
+                0x0000000000000250                __stack_prot
+                0x0000000000000258                _dl_random
+                0x0000000000000260                __libc_stack_end
+                0x0000000000000260                __GI___libc_stack_end
+                0x0000000000000268                __libc_enable_secure_internal
+                0x0000000000000268                __libc_enable_secure
+
+.init_array     0x0000000000000000        0x8
+ .init_array    0x0000000000000000        0x8 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cacheinfo.os)
+
+.data.rel.local
+                0x0000000000000000        0x8
+ .data.rel.local
+                0x0000000000000000        0x8 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cxa_atexit.os)
+                0x0000000000000000                __exit_funcs
+
+.data1
+ *(.data1)
+
+.bss            0x0000000000000000      0x634
+ *(.dynbss)
+ *(.bss)
+ .bss           0x0000000000000000      0x124 /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os
+                0x00000000000000f8                __libc_multiple_libcs
+                0x0000000000000118                __curbrk
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(check_fds.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(errno.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(setjmp.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(__longjmp.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strchr.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcmp.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcpy.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strlen.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strnlen.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memchr.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcmp.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memmove.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memset.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mempcpy.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(stpcpy.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcpy.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(wordcopy.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(rawmemchr.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcmp-ssse3.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcmp-sse2-unaligned.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcmp-sse4.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcpy-ssse3.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcpy-sse2-unaligned.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mempcpy-ssse3.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memmove-ssse3.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mempcpy-ssse3-back.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memmove-ssse3-back.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcpy-ssse3.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(stpcpy-ssse3.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcpy-sse2-unaligned.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(stpcpy-sse2-unaligned.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strchr-sse2-no-bsf.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcmp-ssse3.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cacheinfo.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(closedir.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(readdir.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(rewinddir.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(getdents.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(fdopendir.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(uname.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(_exit.os)
+ .bss           0x0000000000000124        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(getpid.os)
+ *fill*         0x0000000000000124        0x4 
+ .bss           0x0000000000000128        0x8 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(environ.os)
+                0x0000000000000128                _environ
+                0x0000000000000128                __environ
+                0x0000000000000128                environ
+ .bss           0x0000000000000130        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(xstat.os)
+ .bss           0x0000000000000130        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(fxstat.os)
+ .bss           0x0000000000000130        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(lxstat.os)
+ .bss           0x0000000000000130        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(open.os)
+ .bss           0x0000000000000130        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(read.os)
+ .bss           0x0000000000000130        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(write.os)
+ .bss           0x0000000000000130        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(access.os)
+ .bss           0x0000000000000130        0x4 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(fcntl.os)
+ .bss           0x0000000000000134        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(close.os)
+ .bss           0x0000000000000134        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mmap.os)
+ .bss           0x0000000000000134        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(munmap.os)
+ .bss           0x0000000000000134        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mprotect.os)
+ .bss           0x0000000000000134        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(llseek.os)
+ *fill*         0x0000000000000134        0xc 
+ .bss           0x0000000000000140       0xe0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(profil.os)
+ .bss           0x0000000000000220        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(prof-freq.os)
+ .bss           0x0000000000000220        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(libc-lowlevellock.os)
+ .bss           0x0000000000000220        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(libc-cancellation.os)
+ .bss           0x0000000000000220        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(libc_multiple_threads.os)
+ .bss           0x0000000000000220        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(init-arch.os)
+ .bss           0x0000000000000220        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(sigaction.os)
+ .bss           0x0000000000000220        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(setitimer.os)
+ .bss           0x0000000000000220        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(forward.os)
+ .bss           0x0000000000000220        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(exit.os)
+ .bss           0x0000000000000220      0x414 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cxa_atexit.os)
+ .bss           0x0000000000000634        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cxa_thread_atexit_impl.os)
+ *(COMMON)
+ COMMON         0x0000000000000634        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os
+ COMMON         0x0000000000000634        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cacheinfo.os)
+ COMMON         0x0000000000000634        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(libc_multiple_threads.os)
+ COMMON         0x0000000000000634        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(init-arch.os)
+ COMMON         0x0000000000000634        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(forward.os)
+ COMMON         0x0000000000000634        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cxa_atexit.os)
+
+.lbss
+ *(.dynlbss)
+ *(.lbss)
+ *(LARGE_COMMON)
+
+.lrodata
+ *(.lrodata)
+
+.ldata
+ *(.ldata)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000      0xc64
+ *(.comment)
+ .comment       0x0000000000000000      0x71c /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os
+ .comment       0x000000000000071c       0x34 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(check_fds.os)
+ .comment       0x0000000000000750       0x34 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(errno.os)
+ .comment       0x0000000000000784       0x34 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memmove.os)
+ .comment       0x00000000000007b8       0x34 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(wordcopy.os)
+ .comment       0x00000000000007ec       0x34 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cacheinfo.os)
+ .comment       0x0000000000000820       0x34 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(closedir.os)
+ .comment       0x0000000000000854       0x34 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(readdir.os)
+ .comment       0x0000000000000888       0x34 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(rewinddir.os)
+ .comment       0x00000000000008bc       0x34 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(getdents.os)
+ .comment       0x00000000000008f0       0x34 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(fdopendir.os)
+ .comment       0x0000000000000924       0x34 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(_exit.os)
+ .comment       0x0000000000000958       0x34 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(getpid.os)
+ .comment       0x000000000000098c       0x34 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(environ.os)
+ .comment       0x00000000000009c0       0x34 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(xstat.os)
+ .comment       0x00000000000009f4       0x34 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(fxstat.os)
+ .comment       0x0000000000000a28       0x34 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(lxstat.os)
+ .comment       0x0000000000000a5c       0x34 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(fcntl.os)
+ .comment       0x0000000000000a90       0x34 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(profil.os)
+ .comment       0x0000000000000ac4       0x34 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(prof-freq.os)
+ .comment       0x0000000000000af8       0x34 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(libc_multiple_threads.os)
+ .comment       0x0000000000000b2c       0x34 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(init-arch.os)
+ .comment       0x0000000000000b60       0x34 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(sigaction.os)
+ .comment       0x0000000000000b94       0x34 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(forward.os)
+ .comment       0x0000000000000bc8       0x34 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(exit.os)
+ .comment       0x0000000000000bfc       0x34 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cxa_atexit.os)
+ .comment       0x0000000000000c30       0x34 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cxa_thread_atexit_impl.os)
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/elf/dl-allobjs.os
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(check_fds.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(errno.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(setjmp.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(__longjmp.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strchr.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcmp.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcpy.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strlen.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strnlen.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memchr.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcmp.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memmove.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memset.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mempcpy.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(stpcpy.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcpy.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(wordcopy.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(rawmemchr.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcmp-ssse3.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcmp-sse2-unaligned.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcmp-sse4.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcpy-ssse3.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcpy-sse2-unaligned.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mempcpy-ssse3.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memmove-ssse3.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mempcpy-ssse3-back.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memmove-ssse3-back.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcpy-ssse3.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(stpcpy-ssse3.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strcpy-sse2-unaligned.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(stpcpy-sse2-unaligned.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(strchr-sse2-no-bsf.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(memcmp-ssse3.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cacheinfo.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(closedir.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(readdir.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(rewinddir.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(getdents.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(fdopendir.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(uname.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(_exit.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(getpid.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(environ.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(xstat.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(fxstat.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(lxstat.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(open.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(read.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(write.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(access.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(fcntl.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(close.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mmap.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(munmap.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(mprotect.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(llseek.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(profil.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(prof-freq.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(libc-lowlevellock.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(libc-cancellation.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(libc_multiple_threads.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(init-arch.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(sigaction.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(setitimer.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(forward.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(exit.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cxa_atexit.os)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/sekwon/strata_sekwon/shim/glibc-build-all/libc_pic.a(cxa_thread_atexit_impl.os)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line .debug_line.* .debug_line_end)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.debug_macro
+ *(.debug_macro)
+
+.gnu.attributes
+ *(.gnu.attributes)
+OUTPUT(/home/sekwon/strata_sekwon/shim/glibc-build-all/elf/librtld.map.o elf64-x86-64)

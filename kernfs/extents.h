@@ -397,6 +397,17 @@ extern pthread_mutex_t block_bitmap_mutex;
 
 int mlfs_mark_inode_dirty(struct inode *inode);
 
+mlfs_fsblk_t mlfs_new_data_blocks(handle_t *handle,
+		struct inode *inode, int goal, unsigned int flags,
+		mlfs_lblk_t *count, int *errp);
+
+mlfs_fsblk_t mlfs_new_meta_blocks(handle_t *handle,
+		struct inode *inode, mlfs_fsblk_t goal, unsigned int flags,
+		mlfs_lblk_t *count, int *errp);
+
+void mlfs_free_blocks(handle_t *handle, struct inode *inode,
+		void *fake, mlfs_fsblk_t block, int count, int flags);
+
 #ifdef __cplusplus
 }
 #endif
