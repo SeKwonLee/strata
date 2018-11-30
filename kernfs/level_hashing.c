@@ -565,7 +565,7 @@ extern level_hash *mlfs_level_init(uint64_t level_size,
 
     newblock = mlfs_new_data_blocks(handle, inode, goal, flags, &allocated, &err);
     level_hash *level = g_bdev[handle->dev]->map_base_addr + (newblock << g_block_size_shift);
-    inode->_dinode->root_blk = newblock;
+    inode->root_blk = newblock;
     if (!level)
     {
         printf("The level hash table initialization fails:1\n");
@@ -591,7 +591,7 @@ extern level_hash *mlfs_level_init(uint64_t level_size,
     newblock = mlfs_new_data_blocks(handle, inode, goal, flags, &allocated, &err);
     level->buckets[0] = g_bdev[handle->dev]->map_base_addr + (newblock << g_block_size_shift);
     memset(level->buckets[0], 0, sizeof(level_bucket) * pow(2, level_size));
-    inode->_dinode->bucket_blk0 = newblock;
+    inode->bucket_blk0 = newblock;
 
     bucket_size = sizeof(level_bucket) * pow(2, level_size - 1);
 	if (bucket_size < g_block_size_bytes)
@@ -605,7 +605,7 @@ extern level_hash *mlfs_level_init(uint64_t level_size,
     newblock = mlfs_new_data_blocks(handle, inode, goal, flags, &allocated, &err);
     level->buckets[1] = g_bdev[handle->dev]->map_base_addr + (newblock << g_block_size_shift);
     memset(level->buckets[1], 0, sizeof(level_bucket) * pow(2, level_size - 1));
-    inode->_dinode->bucket_blk1 = newblock;
+    inode->bucket_blk1 = newblock;
 
     level->level_item_num[0] = 0;
     level->level_item_num[1] = 0;
@@ -724,14 +724,14 @@ extern void mlfs_level_resize(level_hash *level, handle_t *handle,
 	}
 
     mlfs_free_blocks(handle, inode, NULL,
-        inode->_dinode->bucket_blk1, allocated, 0);
+        inode->bucket_blk1, allocated, 0);
 
     level->buckets[1] = level->buckets[0];
     level->buckets[0] = newBuckets;
     newBuckets = NULL;
 
-    inode->_dinode->bucket_blk1 = inode->_dinode->bucket_blk0;
-    inode->_dinode->bucket_blk0 = newblock;
+    inode->bucket_blk1 = inode->bucket_blk0;
+    inode->bucket_blk0 = newblock;
     
     level->level_item_num[1] = level->level_item_num[0];
     level->level_item_num[0] = new_level_item_num;

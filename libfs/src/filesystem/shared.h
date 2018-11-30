@@ -296,7 +296,12 @@ struct inode {
 	/* for testing */
 	struct db_handle *i_db; 
 	int (*i_writeback)(struct inode *inode);
-
+#ifdef MLFS_HASH
+    addr_t root_blk;
+    addr_t bucket_blk0;
+    addr_t bucket_blk1;
+    level_hash *level;
+#endif
 	///////////////////////////////////////////////////////////////////
 };
 

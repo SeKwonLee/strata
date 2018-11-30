@@ -551,6 +551,7 @@ int digest_file(uint8_t from_dev, uint8_t to_dev, uint32_t file_inum,
         ret = mlfs_write(bh_data);
         mlfs_assert(!ret);
 
+		clear_buffer_uptodate(bh_data);
         bh_release(bh_data);
 
         mlfs_debug("inum %d, offset %lu len %u (dev %d:%lu) -> (dev %d:%lu)\n", 
@@ -1579,7 +1580,7 @@ static int persist_dirty_objects_nvm(void)
 	struct rb_node *node;
 
 	// flush extent tree changes
-	sync_all_buffers(g_bdev[g_root_dev]);
+	//sync_all_buffers(g_bdev[g_root_dev]);
 
 	// save dirty inodes
 	for (node = rb_first(&sb[g_root_dev]->s_dirty_root); 

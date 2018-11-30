@@ -1,4 +1,4 @@
-cscope 15 $HOME/strata_sekwon/kernfs               0000895572
+cscope 15 $HOME/strata_sekwon/kernfs               0000895865
 	@balloc.c
 
 1 
@@ -9003,17 +9003,51 @@ eh_max
 öode
 , 0));
 
-393 
+394 i‡(
+öode
+->
+Àvñ
+ =
+NULL
+) {
+
+395 
+öode
+->
+Àvñ
+ = 
+	`mlfs_Àvñ_öô
+(16, 
+h™dÀ
+,
+
+396 
+öode
+, 
+MLFS_GET_BLOCKS_CREATE
+);
+
+397 
+	`as£π
+(
+öode
+->
+Àvñ
+ !
+NULL
+);
+
+399 
 	`mlfs_m¨k_öode_dúty
 (
 öode
 );
 
-395 
+401 
 	}
 }
 
-397 
+403 
 	$mlfs_ext_öô
 (
 su≥r_block
@@ -9021,11 +9055,11 @@ su≥r_block
 sb
 ) {
 
-401 
+407 
 	}
 }
 
-407 
+413 
 buf„r_hód
  *
 	$ªad_exã¡_åì_block
@@ -9035,7 +9069,7 @@ h™dÀ_t
 h™dÀ
 ,
 
-408 
+414 
 öode
  *öode, 
 mlfs_fsblk_t
@@ -9047,17 +9081,17 @@ dïth
 Êags
 )
 
-410 
+416 
 buf„r_hód
  *
 bh
 ;
 
-411 
+417 
 îr
 ;
 
-413 
+419 
 bh
  = 
 	`fs_bªad
@@ -9071,11 +9105,11 @@ pblk
 îr
 );
 
-414 i‡(!
+420 i‡(!
 bh
 )
 
-415  (
+421  (
 buf„r_hód
  *)
 	`ERR_PTR
@@ -9083,33 +9117,33 @@ buf„r_hód
 ENOMEM
 );
 
-417 i‡(!
+423 i‡(!
 	`buf„r_u±od©e
 (
 bh
 )) {
 
-418 
+424 
 îr
  = -
 EIO
 ;
 
-419 
+425 
 îrout
 ;
 
-422 i‡(
+428 i‡(
 	`buf„r_vîifõd
 (
 bh
 ))
 
-423  
+429  
 bh
 ;
 
-425 
+431 
 îr
  = 
 	`mlfs_ext_check
@@ -9125,35 +9159,35 @@ dïth
 pblk
 );
 
-426 i‡(
+432 i‡(
 îr
 )
 
-427 
+433 
 îrout
 ;
 
-429 
+435 
 	`£t_buf„r_vîifõd
 (
 bh
 );
 
-430  
+436  
 bh
 ;
 
-432 
+438 
 îrout
 :
 
-433 
+439 
 	`fs_bªl£
 (
 bh
 );
 
-434  (
+440  (
 buf„r_hód
  *)
 	`ERR_PTR
@@ -9161,11 +9195,11 @@ buf„r_hód
 îr
 );
 
-435 
+441 
 	}
 }
 
-437 
+443 
 	$mlfs_ext_check_öode
 (
 h™dÀ_t
@@ -9175,7 +9209,7 @@ h™dÀ
 öode
  *inode)
 
-439  
+445  
 	`mlfs_ext_check
 (
 öode
@@ -9185,7 +9219,7 @@ h™dÀ
 h™dÀ
 , inode),
 
-440 
+446 
 	`ext_dïth
 (
 h™dÀ
@@ -9193,11 +9227,11 @@ h™dÀ
 öode
 ), 0);
 
-441 
+447 
 	}
 }
 
-443 
+449 
 uöt32_t
  
 	$mlfs_ext_block_csum
@@ -9205,39 +9239,39 @@ uöt32_t
 öode
  *inode,
 
-444 
+450 
 mlfs_exã¡_hódî
  *
 eh
 )
 
-447  
+453  
 ET_CHECKSUM_MAGIC
 ;
 
-448 
+454 
 	}
 }
 
-450 
+456 
 	$mlfs_exã¡_block_csum_£t
 (
 öode
  *inode,
 
-451 
+457 
 mlfs_exã¡_hódî
  *
 eh
 )
 
-453 
+459 
 mlfs_exã¡_èû
  *
 èû
 ;
 
-455 
+461 
 èû
  = 
 	`föd_mlfs_exã¡_èû
@@ -9245,7 +9279,7 @@ mlfs_exã¡_èû
 eh
 );
 
-456 
+462 
 èû
 ->
 ë_checksum
@@ -9257,11 +9291,11 @@ eh
 eh
 );
 
-457 
+463 
 	}
 }
 
-459 
+465 
 mlfs_•lô_exã¡_©
 (
 h™dÀ_t
@@ -9269,11 +9303,11 @@ h™dÀ_t
 h™dÀ
 ,
 
-460 
+466 
 öode
  *inode,
 
-461 
+467 
 mlfs_ext_∑th
  **
 µ©h
@@ -9283,13 +9317,13 @@ mlfs_lblk_t
 •lô
 ,
 
-462 
+468 
 •lô_Êag
 , 
 Êags
 );
 
-464 
+470 
 ölöe
  
 	$mlfs_f‹˚_•lô_exã¡_©
@@ -9299,17 +9333,17 @@ h™dÀ_t
 h™dÀ
 ,
 
-465 
+471 
 öode
  *inode,
 
-466 
+472 
 mlfs_ext_∑th
  **
 µ©h
 ,
 
-467 
+473 
 mlfs_lblk_t
  
 lblk
@@ -9317,7 +9351,7 @@ lblk
 noÁû
 )
 
-469 
+475 
 mlfs_ext_∑th
  *
 ∑th
@@ -9325,7 +9359,7 @@ mlfs_ext_∑th
 µ©h
 ;
 
-470 
+476 
 unwrôãn
  = 
 	`mlfs_ext_is_unwrôãn
@@ -9337,7 +9371,7 @@ p_dïth
 p_ext
 );
 
-472  
+478  
 	`mlfs_•lô_exã¡_©
 (
 h™dÀ
@@ -9349,7 +9383,7 @@ h™dÀ
 lblk
 ,
 
-473 
+479 
 unwrôãn
  ? 
 MLFS_EXT_MARK_UNWRIT1
@@ -9357,23 +9391,23 @@ MLFS_EXT_MARK_UNWRIT1
 MLFS_EXT_MARK_UNWRIT2
  : 0,
 
-474 
+480 
 MLFS_EX_NOCACHE
  | 
 MLFS_GET_BLOCKS_PRE_IO
  |
 
-475 (
+481 (
 noÁû
  ? 
 MLFS_GET_BLOCKS_METADATA_NOFAIL
  : 0));
 
-476 
+482 
 	}
 }
 
-478 
+484 
 mlfs_fsblk_t
  
 	$mlfs_ext_föd_gﬂl
@@ -9381,7 +9415,7 @@ mlfs_fsblk_t
 öode
  *inode,
 
-479 
+485 
 mlfs_ext_∑th
  *
 ∑th
@@ -9391,11 +9425,11 @@ mlfs_lblk_t
 block
 )
 
-481 i‡(
+487 i‡(
 ∑th
 ) {
 
-482 
+488 
 dïth
  = 
 ∑th
@@ -9403,13 +9437,13 @@ dïth
 p_dïth
 ;
 
-483 
+489 
 mlfs_exã¡
  *
 ex
 ;
 
-502 
+508 
 ex
  = 
 ∑th
@@ -9419,11 +9453,11 @@ dïth
 p_ext
 ;
 
-503 i‡(
+509 i‡(
 ex
 ) {
 
-504 
+510 
 mlfs_fsblk_t
  
 ext_pblk
@@ -9433,7 +9467,7 @@ ext_pblk
 ex
 );
 
-505 
+511 
 mlfs_lblk_t
  
 ext_block
@@ -9445,13 +9479,13 @@ ex
 ì_block
 );
 
-507 i‡(
+513 i‡(
 block
  > 
 ext_block
 )
 
-508  
+514  
 ext_pblk
  + (
 block
@@ -9459,7 +9493,7 @@ block
 ext_block
 );
 
-510  
+516  
 ext_pblk
  - (
 ext_block
@@ -9467,7 +9501,7 @@ ext_block
 block
 );
 
-515 i‡(
+521 i‡(
 ∑th
 [
 dïth
@@ -9475,7 +9509,7 @@ dïth
 p_bh
 )
 
-516  
+522  
 ∑th
 [
 dïth
@@ -9485,17 +9519,17 @@ p_bh
 b_blockƒ
 ;
 
-520  
+526  
 	`mlfs_öode_to_gﬂl_block
 (
 öode
 );
 
-521 
+527 
 	}
 }
 
-526 
+532 
 mlfs_fsblk_t
  
 	$mlfs_ext_√w_mëa_block
@@ -9505,17 +9539,17 @@ h™dÀ_t
 h™dÀ
 ,
 
-527 
+533 
 öode
  *inode,
 
-528 
+534 
 mlfs_ext_∑th
  *
 ∑th
 ,
 
-529 
+535 
 mlfs_exã¡
  *
 ex
@@ -9523,11 +9557,11 @@ ex
 îr
 ,
 
-530 
+536 
 Êags
 )
 
-532 
+538 
 mlfs_fsblk_t
  
 gﬂl
@@ -9535,13 +9569,13 @@ gﬂl
 √wblock
 ;
 
-533 
+539 
 mlfs_lblk_t
  
 cou¡
  = 1;
 
-536 
+542 
 	`mlfs_debug
 ("mëa: sèπ off£à%lx,Üí %lu\n", 
 ex
@@ -9551,13 +9585,13 @@ ex
 ì_Àn
 );
 
-537 
+543 
 Êags
  |
 MLFS_GET_BLOCKS_CREATE_META
 ;
 
-538 
+544 
 √wblock
  = 
 	`mlfs_√w_mëa_blocks
@@ -9575,15 +9609,15 @@ cou¡
 îr
 );
 
-540  
+546  
 √wblock
 ;
 
-541 
+547 
 	}
 }
 
-543 
+549 
 	$__mlfs_ext_dúty
 (c⁄° *
 whîe
@@ -9591,7 +9625,7 @@ whîe
 löe
 ,
 
-544 
+550 
 h™dÀ_t
  *
 h™dÀ
@@ -9599,23 +9633,23 @@ h™dÀ
 öode
  *inode,
 
-545 
+551 
 mlfs_ext_∑th
  *
 ∑th
 )
 
-547 
+553 
 îr
  = 0;
 
-549 i‡(
+555 i‡(
 ∑th
 ->
 p_bh
 ) {
 
-551 
+557 
 	`mlfs_exã¡_block_csum_£t
 (
 öode
@@ -9627,7 +9661,7 @@ p_bh
 p_bh
 ));
 
-552 
+558 
 	`fs_m¨k_buf„r_dúty
 (
 ∑th
@@ -9635,7 +9669,7 @@ p_bh
 p_bh
 );
 
-555 
+561 
 îr
  = 
 	`mlfs_m¨k_öode_dúty
@@ -9643,25 +9677,25 @@ p_bh
 öode
 );
 
-558 #ifde‡
+564 #ifde‡
 REUSE_PREVIOUS_PATH
 
 
-559 
+565 
 öode
 ->
 övÆid©e_∑th
  = 1;
 
-561  
+567  
 îr
 ;
 
-562 
+568 
 	}
 }
 
-564 
+570 
 	$mlfs_ext_dr›_ªfs
 (
 mlfs_ext_∑th
@@ -9669,17 +9703,17 @@ mlfs_ext_∑th
 ∑th
 )
 
-566 
+572 
 dïth
 , 
 i
 ;
 
-568 i‡(!
+574 i‡(!
 ∑th
 )
 
-571 
+577 
 dïth
  = 
 ∑th
@@ -9687,7 +9721,7 @@ dïth
 p_dïth
 ;
 
-572 
+578 
 i
  = 0; i <
 dïth
@@ -9695,13 +9729,13 @@ dïth
 ∑th
 ++)
 
-573 i‡(
+579 i‡(
 ∑th
 ->
 p_bh
 ) {
 
-574 
+580 
 	`fs_bªl£
 (
 ∑th
@@ -9709,7 +9743,7 @@ p_bh
 p_bh
 );
 
-575 
+581 
 ∑th
 ->
 p_bh
@@ -9717,11 +9751,11 @@ p_bh
 NULL
 ;
 
-577 
+583 
 	}
 }
 
-583 
+589 
 	$mlfs_ext_check
 (
 öode
@@ -9731,7 +9765,7 @@ mlfs_exã¡_hódî
 eh
 ,
 
-584 
+590 
 dïth
 , 
 mlfs_fsblk_t
@@ -9739,21 +9773,21 @@ mlfs_fsblk_t
 pblk
 )
 
-586 
+592 
 mlfs_exã¡_èû
  *
 èû
 ;
 
-587 c⁄° *
+593 c⁄° *
 îr‹_msg
 ;
 
-588 
+594 
 max
  = 0;
 
-590 i‡(
+596 i‡(
 eh
 ->
 eh_magic
@@ -9761,15 +9795,15 @@ eh_magic
 MLFS_EXT_MAGIC
 ) {
 
-591 
+597 
 îr‹_msg
  = "invalid magic";
 
-592 
+598 
 c‹ru±ed
 ;
 
-594 i‡(
+600 i‡(
 	`À16_to_˝u
 (
 eh
@@ -9779,29 +9813,29 @@ eh_dïth
 dïth
 ) {
 
-595 
+601 
 îr‹_msg
  = "unexpectedÉh_depth";
 
-596 
+602 
 c‹ru±ed
 ;
 
-598 i‡(
+604 i‡(
 eh
 ->
 eh_max
  == 0) {
 
-599 
+605 
 îr‹_msg
  = "invalidÉh_max";
 
-600 
+606 
 c‹ru±ed
 ;
 
-602 i‡(
+608 i‡(
 eh
 ->
 eh_íåõs
@@ -9809,15 +9843,15 @@ eh_íåõs
 eh_max
 ) {
 
-603 
+609 
 îr‹_msg
  = "invalidÉh_entries";
 
-604 
+610 
 c‹ru±ed
 ;
 
-607 
+613 
 èû
  = 
 	`föd_mlfs_exã¡_èû
@@ -9825,7 +9859,7 @@ c‹ru±ed
 eh
 );
 
-608 i‡(
+614 i‡(
 èû
 ->
 ë_checksum
@@ -9837,11 +9871,11 @@ eh
 eh
 )) {
 
-609 
+615 
 	`mlfs_lsm_debug
 (
 
-612 
+618 
 èû
 ->
 ë_checksum
@@ -9853,37 +9887,37 @@ eh
 eh
 ));
 
-617 
+623 
 c‹ru±ed
 :
 
-618 
+624 
 	`mlfs_öfo
 ("c‹ru±ed block %lu\n", 
 pblk
 );
 
-619 
+625 
 	`∑nic
 (
 îr‹_msg
 );
 
-620  -
+626  -
 EIO
 ;
 
-621 
+627 
 	}
 }
 
-628 
+634 
 	$mlfs_ext_bö£¨ch_idx
 (
 öode
  *inode,
 
-629 
+635 
 mlfs_ext_∑th
  *
 ∑th
@@ -9893,7 +9927,7 @@ mlfs_lblk_t
 block
 )
 
-631 
+637 
 mlfs_exã¡_hódî
  *
 eh
@@ -9903,7 +9937,7 @@ eh
 p_hdr
 ;
 
-632 
+638 
 mlfs_exã¡_idx
  *
 r
@@ -9913,7 +9947,7 @@ l
 m
 ;
 
-636 
+642 
 l
  = 
 	`EXT_FIRST_INDEX
@@ -9921,7 +9955,7 @@ l
 eh
 ) + 1;
 
-637 
+643 
 r
  = 
 	`EXT_LAST_INDEX
@@ -9929,13 +9963,13 @@ r
 eh
 );
 
-639 
+645 
 l
  <
 r
 ) {
 
-640 
+646 
 m
  = 
 l
@@ -9943,7 +9977,7 @@ l
 r
  -Ü) / 2;
 
-641 i‡(
+647 i‡(
 block
  < 
 	`mlfs_idx_lblock
@@ -9951,19 +9985,19 @@ block
 m
 ))
 
-642 
+648 
 r
  = 
 m
  - 1;
 
-644 
+650 
 l
  = 
 m
  + 1;
 
-651 
+657 
 ∑th
 ->
 p_idx
@@ -9971,11 +10005,11 @@ p_idx
 l
  - 1;
 
-658 #ifde‡
+664 #ifde‡
 CHECK_BINSEARCH
 
 
-660 
+666 
 mlfs_exã¡_idx
  *
 chix
@@ -9983,11 +10017,11 @@ chix
 ix
 ;
 
-661 
+667 
 k
 ;
 
-663 
+669 
 chix
  = 
 ix
@@ -9997,7 +10031,7 @@ ix
 eh
 );
 
-664 
+670 
 k
  = 0; k < (
 eh
@@ -10007,7 +10041,7 @@ eh_íåõs
 ix
 ++) {
 
-665 i‡(
+671 i‡(
 k
  !0 && (
 ix
@@ -10015,13 +10049,13 @@ ix
 ei_block
 ) <= (ix[-1].ei_block)) {
 
-666 
+672 
 	`¥ötk
 (
 KERN_DEBUG
 
 
-669 
+675 
 k
 , 
 ix
@@ -10031,7 +10065,7 @@ ix
 eh
 ));
 
-670 
+676 
 	`¥ötk
 (
 KERN_DEBUG
@@ -10041,13 +10075,13 @@ ix
 ei_block
 ),
 
-671 (
+677 (
 ix
 [-1].
 ei_block
 ));
 
-673 
+679 
 	`BUG_ON
 (
 k
@@ -10057,7 +10091,7 @@ ix
 ei_block
 ) <= (ix[-1].ei_block));
 
-674 i‡(
+680 i‡(
 block
  < (
 ix
@@ -10065,13 +10099,13 @@ ix
 ei_block
 ))
 
-676 
+682 
 chix
  = 
 ix
 ;
 
-678 
+684 
 	`BUG_ON
 (
 chix
@@ -10081,11 +10115,11 @@ chix
 p_idx
 );
 
-681 
+687 
 	}
 }
 
-689 
+695 
 	$mlfs_ext_bö£¨ch
 (
 öode
@@ -10095,13 +10129,13 @@ mlfs_ext_∑th
 ∑th
 ,
 
-690 
+696 
 mlfs_lblk_t
  
 block
 )
 
-692 
+698 
 mlfs_exã¡_hódî
  *
 eh
@@ -10111,7 +10145,7 @@ eh
 p_hdr
 ;
 
-693 
+699 
 mlfs_exã¡
  *
 r
@@ -10121,13 +10155,13 @@ l
 m
 ;
 
-695 i‡(
+701 i‡(
 eh
 ->
 eh_íåõs
  == 0) {
 
-703 
+709 
 l
  = 
 	`EXT_FIRST_EXTENT
@@ -10135,7 +10169,7 @@ l
 eh
 ) + 1;
 
-704 
+710 
 r
  = 
 	`EXT_LAST_EXTENT
@@ -10143,13 +10177,13 @@ r
 eh
 );
 
-706 
+712 
 l
  <
 r
 ) {
 
-707 
+713 
 m
  = 
 l
@@ -10157,7 +10191,7 @@ l
 r
  -Ü) / 2;
 
-708 i‡(
+714 i‡(
 block
  < 
 	`mlfs_ext_lblock
@@ -10165,19 +10199,19 @@ block
 m
 ))
 
-709 
+715 
 r
  = 
 m
  - 1;
 
-711 
+717 
 l
  = 
 m
  + 1;
 
-713 
+719 
 	`mlfs_lsm_debug
 ("%p(%u): %p(%u): %p(%uË", 
 l
@@ -10187,7 +10221,7 @@ l
 m
 ,
 
-714 (
+720 (
 m
 ->
 ì_block
@@ -10195,7 +10229,7 @@ m
 r
 , (r->ee_block));
 
-717 
+723 
 ∑th
 ->
 p_ext
@@ -10203,7 +10237,7 @@ p_ext
 l
  - 1;
 
-718 
+724 
 	`mlfs_lsm_debug
 (" -> %d:%lx:[%d]%d\n", (
 ∑th
@@ -10213,7 +10247,7 @@ p_ext
 ì_block
 ),
 
-719 
+725 
 	`mlfs_ext_pblock
 (
 ∑th
@@ -10221,7 +10255,7 @@ p_ext
 p_ext
 ),
 
-720 
+726 
 	`mlfs_ext_is_unwrôãn
 (
 ∑th
@@ -10229,7 +10263,7 @@ p_ext
 p_ext
 ),
 
-721 
+727 
 	`mlfs_ext_gë_a˘uÆ_Àn
 (
 ∑th
@@ -10237,11 +10271,11 @@ p_ext
 p_ext
 ));
 
-723 #ifde‡
+729 #ifde‡
 CHECK_BINSEARCH
 
 
-725 
+731 
 mlfs_exã¡
  *
 chex
@@ -10249,11 +10283,11 @@ chex
 ex
 ;
 
-726 
+732 
 k
 ;
 
-728 
+734 
 chex
  = 
 ex
@@ -10263,7 +10297,7 @@ ex
 eh
 );
 
-729 
+735 
 k
  = 0; k < 
 	`À16_to_˝u
@@ -10275,7 +10309,7 @@ eh_íåõs
 ex
 ++) {
 
-730 
+736 
 	`BUG_ON
 (
 k
@@ -10285,7 +10319,7 @@ ex
 ì_block
 ) <= (ex[-1].ee_block));
 
-731 i‡(
+737 i‡(
 block
  < (
 ex
@@ -10293,13 +10327,13 @@ ex
 ì_block
 )) ;
 
-732 
+738 
 chex
  = 
 ex
 ;
 
-734 
+740 
 	`BUG_ON
 (
 chex
@@ -10309,11 +10343,11 @@ chex
 p_ext
 );
 
-737 
+743 
 	}
 }
 
-739 
+745 
 	$mlfs_ext_show_∑th
 (
 öode
@@ -10323,7 +10357,7 @@ mlfs_ext_∑th
 ∑th
 )
 
-741 
+747 
 k
 , 
 l
@@ -10333,7 +10367,7 @@ l
 p_dïth
 ;
 
-743 
+749 
 	`mlfs_öfo
 ("---------Ö©h dum∞öum = %u\n", 
 öode
@@ -10341,7 +10375,7 @@ p_dïth
 öum
 );
 
-744 
+750 
 k
  = 0; k <
 l
@@ -10349,13 +10383,13 @@ l
 ∑th
 ++) {
 
-745 i‡(
+751 i‡(
 ∑th
 ->
 p_idx
 ) {
 
-746 
+752 
 	`mlfs_öfo
 ("idx :Üb %d @ %lu\n", 
 	`À32_to_˝u
@@ -10367,7 +10401,7 @@ p_idx
 ei_block
 ),
 
-747 
+753 
 	`mlfs_idx_pblock
 (
 ∑th
@@ -10375,17 +10409,17 @@ ei_block
 p_idx
 ));
 
-748 } i‡(
+754 } i‡(
 ∑th
 ->
 p_ext
 ) {
 
-749 
+755 
 	`mlfs_öfo
 ("leaf:Üb %u:[%d] ~ %u @ %lu\n",
 
-750 
+756 
 	`À32_to_˝u
 (
 ∑th
@@ -10395,7 +10429,7 @@ p_ext
 ì_block
 ),
 
-751 
+757 
 	`mlfs_ext_is_unwrôãn
 (
 ∑th
@@ -10403,7 +10437,7 @@ p_ext
 p_ext
 ),
 
-752 
+758 
 	`mlfs_ext_gë_a˘uÆ_Àn
 (
 ∑th
@@ -10411,7 +10445,7 @@ p_ext
 p_ext
 ) - 1,
 
-753 
+759 
 	`mlfs_ext_pblock
 (
 ∑th
@@ -10419,15 +10453,15 @@ p_ext
 p_ext
 ));
 
-755 
+761 
 	`mlfs_öfo
 ("%s\n", " []");
 
-757 
+763 
 	}
 }
 
-761 
+767 
 	$mlfs_ext_show_Àaf
 (
 h™dÀ_t
@@ -10437,13 +10471,13 @@ h™dÀ
 öode
  *inode,
 
-762 
+768 
 mlfs_ext_∑th
  *
 ∑th
 )
 
-764 
+770 
 dïth
  = 
 	`ext_dïth
@@ -10453,27 +10487,27 @@ h™dÀ
 öode
 );
 
-765 
+771 
 mlfs_exã¡_hódî
  *
 eh
 ;
 
-766 
+772 
 mlfs_exã¡
  *
 ex
 ;
 
-767 
+773 
 i
 ;
 
-769 i‡(!
+775 i‡(!
 ∑th
 )
 
-772 
+778 
 eh
  = 
 ∑th
@@ -10483,7 +10517,7 @@ dïth
 p_hdr
 ;
 
-773 
+779 
 ex
  = 
 	`EXT_FIRST_EXTENT
@@ -10491,7 +10525,7 @@ ex
 eh
 );
 
-775 
+781 
 	`mlfs_lsm_debug
 ("---------Üó‡(öum %u)\n", 
 öode
@@ -10499,7 +10533,7 @@ eh
 öum
 );
 
-777 
+783 
 i
  = 0; i < 
 	`À16_to_˝u
@@ -10511,11 +10545,11 @@ eh_íåõs
 ex
 ++) {
 
-778 
+784 
 	`mlfs_lsm_debug
 ("lb %u:[%d] ~ %u @ %lx\n",
 
-779 
+785 
 	`À32_to_˝u
 (
 ex
@@ -10523,29 +10557,29 @@ ex
 ì_block
 ),
 
-780 
+786 
 	`mlfs_ext_is_unwrôãn
 (
 ex
 ),
 
-781 
+787 
 	`mlfs_ext_gë_a˘uÆ_Àn
 (
 ex
 ) - 1,
 
-782 
+788 
 	`mlfs_ext_pblock
 (
 ex
 ));
 
-784 
+790 
 	}
 }
 
-786 
+792 
 	$mlfs_ext_show_move
 (
 h™dÀ_t
@@ -10555,7 +10589,7 @@ h™dÀ
 öode
  *inode,
 
-787 
+793 
 mlfs_ext_∑th
  *
 ∑th
@@ -10567,7 +10601,7 @@ mlfs_fsblk_t
 Àvñ
 )
 
-789 
+795 
 dïth
  = 
 	`ext_dïth
@@ -10577,25 +10611,25 @@ h™dÀ
 öode
 );
 
-790 
+796 
 mlfs_exã¡
  *
 ex
 ;
 
-792 i‡(
+798 i‡(
 dïth
  !
 Àvñ
 ) {
 
-793 
+799 
 mlfs_exã¡_idx
  *
 idx
 ;
 
-794 
+800 
 idx
  = 
 ∑th
@@ -10605,7 +10639,7 @@ idx
 p_idx
 ;
 
-795 
+801 
 idx
  <
 	`EXT_MAX_INDEX
@@ -10617,13 +10651,13 @@ idx
 p_hdr
 )) {
 
-796 
+802 
 	`mlfs_lsm_debug
 ("%d: movê%d:%lx i¿√w index %lx\n", 
 Àvñ
 ,
 
-797 
+803 
 	`À32_to_˝u
 (
 idx
@@ -10633,15 +10667,15 @@ ei_block
 	`mlfs_idx_pblock
 (idx),
 
-798 
+804 
 √wblock
 );
 
-799 
+805 
 idx
 ++;
 
-805 
+811 
 ex
  = 
 ∑th
@@ -10651,7 +10685,7 @@ dïth
 p_ext
 ;
 
-806 
+812 
 ex
  <
 	`EXT_MAX_EXTENT
@@ -10663,11 +10697,11 @@ dïth
 p_hdr
 )) {
 
-807 
+813 
 	`mlfs_lsm_debug
 ("move %d:%lx:[%d]%d inÇewÜeaf %lx\n",
 
-808 
+814 
 	`À32_to_˝u
 (
 ex
@@ -10677,7 +10711,7 @@ ex
 	`mlfs_ext_pblock
 (ex),
 
-809 
+815 
 	`mlfs_ext_is_unwrôãn
 (
 ex
@@ -10685,19 +10719,19 @@ ex
 	`mlfs_ext_gë_a˘uÆ_Àn
 (ex),
 
-810 
+816 
 √wblock
 );
 
-811 
+817 
 ex
 ++;
 
-813 
+819 
 	}
 }
 
-816 
+822 
 	#mlfs_ext_show_Àaf
 (
 öode
@@ -10707,7 +10741,7 @@ ex
 
 	)
 
-817 
+823 
 	#mlfs_ext_show_move
 (
 öode
@@ -10721,7 +10755,7 @@ ex
 
 	)
 
-823 
+829 
 mlfs_ext_∑th
  *
 	$mlfs_föd_exã¡
@@ -10731,7 +10765,7 @@ h™dÀ_t
 h™dÀ
 ,
 
-824 
+830 
 öode
  *öode, 
 mlfs_lblk_t
@@ -10739,7 +10773,7 @@ mlfs_lblk_t
 block
 ,
 
-825 
+831 
 mlfs_ext_∑th
  **
 ‹ig_∑th
@@ -10747,19 +10781,19 @@ mlfs_ext_∑th
 Êags
 )
 
-827 
+833 
 mlfs_exã¡_hódî
  *
 eh
 ;
 
-828 
+834 
 buf„r_hód
  *
 bh
 ;
 
-829 
+835 
 mlfs_ext_∑th
  *
 ∑th
@@ -10769,7 +10803,7 @@ mlfs_ext_∑th
 NULL
 ;
 
-830 
+836 
 dïth
 , 
 i
@@ -10777,11 +10811,11 @@ i
 µos
  = 0;
 
-831 
+837 
 ªt
 ;
 
-833 
+839 
 eh
  = 
 	`ext_öode_hdr
@@ -10791,7 +10825,7 @@ h™dÀ
 öode
 );
 
-834 
+840 
 dïth
  = 
 	`ext_dïth
@@ -10801,17 +10835,17 @@ h™dÀ
 öode
 );
 
-836 i‡(
+842 i‡(
 ∑th
 ) {
 
-837 
+843 
 	`mlfs_ext_dr›_ªfs
 (
 ∑th
 );
 
-838 i‡(
+844 i‡(
 dïth
  > 
 ∑th
@@ -10819,13 +10853,13 @@ dïth
 p_maxdïth
 ) {
 
-839 
+845 
 	`mlfs_‰ì
 (
 ∑th
 );
 
-840 *
+846 *
 ‹ig_∑th
  = 
 ∑th
@@ -10833,11 +10867,11 @@ p_maxdïth
 NULL
 ;
 
-844 i‡(!
+850 i‡(!
 ∑th
 ) {
 
-846 
+852 
 ∑th
  = (
 mlfs_ext_∑th
@@ -10845,19 +10879,19 @@ mlfs_ext_∑th
 	`mlfs_zÆloc
 (
 
-847 (
+853 (
 mlfs_ext_∑th
 Ë* (
 dïth
  + 2));
 
-848 i‡(
+854 i‡(
 	`u∆ikñy
 (!
 ∑th
 ))
 
-849  (
+855  (
 mlfs_ext_∑th
  *)
 	`ERR_PTR
@@ -10865,7 +10899,7 @@ mlfs_ext_∑th
 ENOMEM
 );
 
-850 
+856 
 ∑th
 [0].
 p_maxdïth
@@ -10873,7 +10907,7 @@ p_maxdïth
 dïth
  + 1;
 
-853 
+859 
 ∑th
 [0].
 p_hdr
@@ -10881,7 +10915,7 @@ p_hdr
 eh
 ;
 
-855 
+861 
 ∑th
 [0].
 p_bh
@@ -10889,23 +10923,23 @@ p_bh
 NULL
 ;
 
-857 
+863 
 i
  = 
 dïth
 ;
 
-859 
+865 
 i
 ) {
 
-860 
+866 
 	`mlfs_lsm_debug
 ("dïth %d:Çum %d, max %d\n", 
 µos
 ,
 
-861 
+867 
 	`À16_to_˝u
 (
 eh
@@ -10915,7 +10949,7 @@ eh_íåõs
 eh_max
 ));
 
-864 
+870 
 	`mlfs_ext_bö£¨ch_idx
 (
 öode
@@ -10927,7 +10961,7 @@ eh_max
 block
 );
 
-866 
+872 
 ∑th
 [
 µos
@@ -10939,7 +10973,7 @@ p_block
 p_idx
 );
 
-867 
+873 
 ∑th
 [
 µos
@@ -10949,7 +10983,7 @@ p_dïth
 i
 ;
 
-868 
+874 
 ∑th
 [
 µos
@@ -10959,11 +10993,11 @@ p_ext
 NULL
 ;
 
-870 
+876 
 i
 --;
 
-872 
+878 
 bh
  = 
 	`ªad_exã¡_åì_block
@@ -10983,7 +11017,7 @@ i
 Êags
 );
 
-873 i‡(
+879 i‡(
 	`u∆ikñy
 (
 	`IS_ERR
@@ -10991,7 +11025,7 @@ i
 bh
 ))) {
 
-874 
+880 
 ªt
  = 
 	`PTR_ERR
@@ -10999,11 +11033,11 @@ bh
 bh
 );
 
-875 
+881 
 îr
 ;
 
-878 
+884 
 eh
  = 
 	`ext_block_hdr
@@ -11011,11 +11045,11 @@ eh
 bh
 );
 
-880 
+886 
 µos
 ++;
 
-881 i‡(
+887 i‡(
 	`u∆ikñy
 (
 µos
@@ -11023,13 +11057,13 @@ bh
 dïth
 )) {
 
-882 
+888 
 	`fs_bªl£
 (
 bh
 );
 
-883 
+889 
 	`MLFS_ERROR_INODE
 (
 öode
@@ -11039,17 +11073,17 @@ bh
 dïth
 );
 
-884 
+890 
 ªt
  = -
 EIO
 ;
 
-885 
+891 
 îr
 ;
 
-888 
+894 
 ∑th
 [
 µos
@@ -11059,7 +11093,7 @@ p_bh
 bh
 ;
 
-889 
+895 
 ∑th
 [
 µos
@@ -11069,7 +11103,7 @@ p_hdr
 eh
 ;
 
-892 
+898 
 ∑th
 [
 µos
@@ -11079,7 +11113,7 @@ p_dïth
 i
 ;
 
-893 
+899 
 ∑th
 [
 µos
@@ -11089,7 +11123,7 @@ p_ext
 NULL
 ;
 
-894 
+900 
 ∑th
 [
 µos
@@ -11099,7 +11133,7 @@ p_idx
 NULL
 ;
 
-897 
+903 
 	`mlfs_ext_bö£¨ch
 (
 öode
@@ -11111,7 +11145,7 @@ NULL
 block
 );
 
-900 i‡(
+906 i‡(
 ∑th
 [
 µos
@@ -11119,7 +11153,7 @@ block
 p_ext
 )
 
-901 
+907 
 ∑th
 [
 µos
@@ -11131,41 +11165,41 @@ p_block
 p_ext
 );
 
-903  
+909  
 ∑th
 ;
 
-905 
+911 
 îr
 :
 
-906 
+912 
 	`mlfs_ext_dr›_ªfs
 (
 ∑th
 );
 
-907 i‡(
+913 i‡(
 ∑th
 ) {
 
-908 
+914 
 	`mlfs_‰ì
 (
 ∑th
 );
 
-909 i‡(
+915 i‡(
 ‹ig_∑th
 )
 
-910 *
+916 *
 ‹ig_∑th
  = 
 NULL
 ;
 
-912  (
+918  (
 mlfs_ext_∑th
  *)
 	`ERR_PTR
@@ -11173,11 +11207,11 @@ mlfs_ext_∑th
 ªt
 );
 
-913 
+919 
 	}
 }
 
-920 
+926 
 	$mlfs_ext_ö£π_ödex
 (
 h™dÀ_t
@@ -11187,7 +11221,7 @@ h™dÀ
 öode
  *inode,
 
-921 
+927 
 mlfs_ext_∑th
  *
 cuΩ
@@ -11199,19 +11233,19 @@ mlfs_fsblk_t
 ±r
 )
 
-923 
+929 
 mlfs_exã¡_idx
  *
 ix
 ;
 
-924 
+930 
 Àn
 , 
 îr
 ;
 
-926 i‡(
+932 i‡(
 	`u∆ikñy
 (
 logiˇl
@@ -11225,7 +11259,7 @@ p_idx
 ei_block
 ))) {
 
-927 
+933 
 	`MLFS_ERROR_INODE
 (
 öode
@@ -11233,7 +11267,7 @@ ei_block
 logiˇl
 ,
 
-928 
+934 
 	`À32_to_˝u
 (
 cuΩ
@@ -11243,11 +11277,11 @@ p_idx
 ei_block
 ));
 
-929  -
+935  -
 EIO
 ;
 
-932 i‡(
+938 i‡(
 	`u∆ikñy
 (
 	`À16_to_˝u
@@ -11259,7 +11293,7 @@ p_hdr
 eh_íåõs
 ) >=
 
-933 
+939 
 	`À16_to_˝u
 (
 cuΩ
@@ -11269,13 +11303,13 @@ p_hdr
 eh_max
 ))) {
 
-934 
+940 
 	`MLFS_ERROR_INODE
 (
 öode
 , "eh_entries %d >=Éh_max %d!",
 
-935 
+941 
 	`À16_to_˝u
 (
 cuΩ
@@ -11285,7 +11319,7 @@ p_hdr
 eh_íåõs
 ),
 
-936 
+942 
 	`À16_to_˝u
 (
 cuΩ
@@ -11295,11 +11329,11 @@ p_hdr
 eh_max
 ));
 
-937  -
+943  -
 EIO
 ;
 
-940 i‡(
+946 i‡(
 logiˇl
  > 
 	`À32_to_˝u
@@ -11311,7 +11345,7 @@ p_idx
 ei_block
 )) {
 
-942 
+948 
 	`mlfs_lsm_debug
 ("ö£πÇew index %dá·î: %lx\n", 
 logiˇl
@@ -11319,7 +11353,7 @@ logiˇl
 ±r
 );
 
-943 
+949 
 ix
  = 
 cuΩ
@@ -11327,7 +11361,7 @@ cuΩ
 p_idx
  + 1;
 
-946 
+952 
 	`mlfs_lsm_debug
 ("ö£πÇew index %d bef‹e: %lx\n", 
 logiˇl
@@ -11335,7 +11369,7 @@ logiˇl
 ±r
 );
 
-947 
+953 
 ix
  = 
 cuΩ
@@ -11343,7 +11377,7 @@ cuΩ
 p_idx
 ;
 
-950 
+956 
 Àn
  = 
 	`EXT_LAST_INDEX
@@ -11355,21 +11389,21 @@ p_hdr
 ix
  + 1;
 
-951 
+957 
 	`BUG_ON
 (
 Àn
  < 0);
 
-952 i‡(
+958 i‡(
 Àn
  > 0) {
 
-953 
+959 
 	`mlfs_lsm_debug
 (
 
-956 
+962 
 logiˇl
 , 
 Àn
@@ -11377,7 +11411,7 @@ logiˇl
 ix
 , ix + 1);
 
-957 
+963 
 	`memmove
 (
 ix
@@ -11387,7 +11421,7 @@ ix
 mlfs_exã¡_idx
 ));
 
-960 i‡(
+966 i‡(
 	`u∆ikñy
 (
 ix
@@ -11399,17 +11433,17 @@ cuΩ
 p_hdr
 ))) {
 
-961 
+967 
 	`MLFS_ERROR_INODE
 (
 öode
 , "%s\n", "ix > EXT_MAX_INDEX!");
 
-962  -
+968  -
 EIO
 ;
 
-965 
+971 
 ix
 ->
 ei_block
@@ -11419,7 +11453,7 @@ ei_block
 logiˇl
 );
 
-966 
+972 
 	`mlfs_idx_°‹e_pblock
 (
 ix
@@ -11427,7 +11461,7 @@ ix
 ±r
 );
 
-967 
+973 
 	`À16_add_˝u
 (&
 cuΩ
@@ -11437,7 +11471,7 @@ p_hdr
 eh_íåõs
 , 1);
 
-969 i‡(
+975 i‡(
 	`u∆ikñy
 (
 ix
@@ -11449,17 +11483,17 @@ cuΩ
 p_hdr
 ))) {
 
-970 
+976 
 	`MLFS_ERROR_INODE
 (
 öode
 , "%s\n", "ix > EXT_LAST_INDEX!");
 
-971  -
+977  -
 EIO
 ;
 
-974 
+980 
 îr
  = 
 	`mlfs_ext_dúty
@@ -11471,15 +11505,15 @@ h™dÀ
 cuΩ
 );
 
-977  
+983  
 îr
 ;
 
-978 
+984 
 	}
 }
 
-990 
+996 
 	$mlfs_ext_•lô
 (
 h™dÀ_t
@@ -11489,7 +11523,7 @@ h™dÀ
 öode
  *inode,
 
-991 
+997 
 Êags
 , 
 mlfs_ext_∑th
@@ -11497,7 +11531,7 @@ mlfs_ext_∑th
 ∑th
 ,
 
-992 
+998 
 mlfs_exã¡
  *
 √wext
@@ -11505,7 +11539,7 @@ mlfs_exã¡
 ©
 )
 
-994 
+1000 
 buf„r_hód
  *
 bh
@@ -11513,7 +11547,7 @@ bh
 NULL
 ;
 
-995 
+1001 
 dïth
  = 
 	`ext_dïth
@@ -11523,19 +11557,19 @@ h™dÀ
 öode
 );
 
-996 
+1002 
 mlfs_exã¡_hódî
  *
 √h
 ;
 
-997 
+1003 
 mlfs_exã¡_idx
  *
 fidx
 ;
 
-998 
+1004 
 i
  = 
 ©
@@ -11549,7 +11583,7 @@ a
 ªt
 ;
 
-999 
+1005 
 mlfs_fsblk_t
  
 √wblock
@@ -11557,13 +11591,13 @@ mlfs_fsblk_t
 ﬁdblock
 ;
 
-1000 
+1006 
 __À32
  
 b‹dî
 ;
 
-1001 
+1007 
 mlfs_fsblk_t
  *
 ablocks
@@ -11571,11 +11605,11 @@ ablocks
 NULL
 ;
 
-1002 
+1008 
 îr
  = 0;
 
-1009 i‡(
+1015 i‡(
 	`u∆ikñy
 (
 ∑th
@@ -11589,17 +11623,17 @@ p_ext
 p_hdr
 ))) {
 
-1010 
+1016 
 	`MLFS_ERROR_INODE
 (
 öode
 , "%s\n", "p_ext > EXT_MAX_EXTENT!");
 
-1011  -
+1017  -
 EIO
 ;
 
-1013 i‡(
+1019 i‡(
 ∑th
 [
 dïth
@@ -11611,7 +11645,7 @@ p_ext
 p_hdr
 )) {
 
-1014 
+1020 
 b‹dî
  = 
 ∑th
@@ -11620,24 +11654,6 @@ dïth
 ].
 p_ext
 [1].
-ì_block
-;
-
-1015 
-	`mlfs_lsm_debug
-(
-
-1018 
-	`À32_to_˝u
-(
-b‹dî
-));
-
-1020 
-b‹dî
- = 
-√wext
-->
 ì_block
 ;
 
@@ -11651,7 +11667,25 @@ b‹dî
 b‹dî
 ));
 
-1039 
+1026 
+b‹dî
+ = 
+√wext
+->
+ì_block
+;
+
+1027 
+	`mlfs_lsm_debug
+(
+
+1030 
+	`À32_to_˝u
+(
+b‹dî
+));
+
+1045 
 ablocks
  = (
 mlfs_fsblk_t
@@ -11661,15 +11695,15 @@ mlfs_fsblk_t
 dïth
 );
 
-1040 i‡(!
+1046 i‡(!
 ablocks
 )
 
-1041  -
+1047  -
 ENOMEM
 ;
 
-1044 
+1050 
 	`mlfs_lsm_debug
 ("Æloˇã %d block†f‹ indexes/Àaf\n", 
 dïth
@@ -11677,7 +11711,7 @@ dïth
 ©
 );
 
-1045 
+1051 
 a
  = 0;á < 
 dïth
@@ -11685,7 +11719,7 @@ dïth
 ©
 ;á++) {
 
-1046 
+1052 
 √wblock
  = 
 	`mlfs_ext_√w_mëa_block
@@ -11699,21 +11733,21 @@ h™dÀ
 √wext
 ,
 
-1047 &
+1053 &
 îr
 , 
 Êags
 );
 
-1048 i‡(
+1054 i‡(
 √wblock
  == 0)
 
-1049 
+1055 
 ˛ónup
 ;
 
-1050 
+1056 
 ablocks
 [
 a
@@ -11721,7 +11755,7 @@ a
 √wblock
 ;
 
-1054 
+1060 
 √wblock
  = 
 ablocks
@@ -11729,29 +11763,29 @@ ablocks
 a
 ];
 
-1055 i‡(
+1061 i‡(
 	`u∆ikñy
 (
 √wblock
  == 0)) {
 
-1056 
+1062 
 	`MLFS_ERROR_INODE
 (
 öode
 , "%s\n", "newblock == 0!");
 
-1057 
+1063 
 îr
  = -
 EIO
 ;
 
-1058 
+1064 
 ˛ónup
 ;
 
-1061 
+1067 
 bh
  = 
 	`fs_gë_bh
@@ -11765,23 +11799,23 @@ dev
 ªt
 );
 
-1063 i‡(
+1069 i‡(
 	`u∆ikñy
 (!
 bh
 )) {
 
-1064 
+1070 
 îr
  = -
 ENOMEM
 ;
 
-1065 
+1071 
 ˛ónup
 ;
 
-1077 
+1083 
 √h
  = 
 	`ext_block_hdr
@@ -11789,13 +11823,13 @@ ENOMEM
 bh
 );
 
-1078 
+1084 
 √h
 ->
 eh_íåõs
  = 0;
 
-1079 
+1085 
 √h
 ->
 eh_max
@@ -11807,7 +11841,7 @@ eh_max
 öode
 , 0));
 
-1080 
+1086 
 √h
 ->
 eh_magic
@@ -11817,13 +11851,13 @@ eh_magic
 MLFS_EXT_MAGIC
 );
 
-1081 
+1087 
 √h
 ->
 eh_dïth
  = 0;
 
-1084 i‡(
+1090 i‡(
 	`u∆ikñy
 (
 ∑th
@@ -11837,13 +11871,13 @@ eh_íåõs
 eh_max
 )) {
 
-1085 
+1091 
 	`MLFS_ERROR_INODE
 (
 öode
 , "eh_entries %d !=Éh_max %d!",
 
-1086 
+1092 
 ∑th
 [
 dïth
@@ -11853,7 +11887,7 @@ p_hdr
 eh_íåõs
 ,
 
-1087 
+1093 
 ∑th
 [
 dïth
@@ -11863,17 +11897,17 @@ p_hdr
 eh_max
 );
 
-1088 
+1094 
 îr
  = -
 EIO
 ;
 
-1089 
+1095 
 ˛ónup
 ;
 
-1093 
+1099 
 m
  = 
 	`EXT_MAX_EXTENT
@@ -11887,7 +11921,7 @@ p_hdr
 p_ext
 ++;
 
-1094 
+1100 
 	`mlfs_ext_show_move
 (
 h™dÀ
@@ -11901,17 +11935,17 @@ h™dÀ
 dïth
 );
 
-1095 i‡(
+1101 i‡(
 m
 ) {
 
-1096 
+1102 
 mlfs_exã¡
  *
 ex
 ;
 
-1097 
+1103 
 ex
  = 
 	`EXT_FIRST_EXTENT
@@ -11919,7 +11953,7 @@ ex
 √h
 );
 
-1098 
+1104 
 	`memmove
 (
 ex
@@ -11935,7 +11969,7 @@ mlfs_exã¡
 m
 );
 
-1099 
+1105 
 	`À16_add_˝u
 (&
 √h
@@ -11945,7 +11979,7 @@ eh_íåõs
 m
 );
 
-1102 
+1108 
 	`mlfs_exã¡_block_csum_£t
 (
 öode
@@ -11953,13 +11987,13 @@ m
 √h
 );
 
-1103 
+1109 
 	`£t_buf„r_u±od©e
 (
 bh
 );
 
-1105 
+1111 
 îr
  = 
 	`mlfs_h™dÀ_dúty_mëad©a
@@ -11971,31 +12005,31 @@ h™dÀ
 bh
 );
 
-1106 i‡(
+1112 i‡(
 îr
 )
 
-1107 
+1113 
 ˛ónup
 ;
 
-1109 
+1115 
 	`fs_bªl£
 (
 bh
 );
 
-1110 
+1116 
 bh
  = 
 NULL
 ;
 
-1113 i‡(
+1119 i‡(
 m
 ) {
 
-1114 
+1120 
 	`À16_add_˝u
 (&
 ∑th
@@ -12009,7 +12043,7 @@ eh_íåõs
 m
 );
 
-1115 
+1121 
 îr
  = 
 	`mlfs_ext_dúty
@@ -12023,15 +12057,15 @@ h™dÀ
 dïth
 );
 
-1116 i‡(
+1122 i‡(
 îr
 )
 
-1117 
+1123 
 ˛ónup
 ;
 
-1121 
+1127 
 k
  = 
 dïth
@@ -12039,13 +12073,13 @@ dïth
 ©
  - 1;
 
-1122 i‡(
+1128 i‡(
 	`u∆ikñy
 (
 k
  < 0)) {
 
-1123 
+1129 
 	`MLFS_ERROR_INODE
 (
 öode
@@ -12053,43 +12087,43 @@ k
 k
 );
 
-1124 
+1130 
 îr
  = -
 EIO
 ;
 
-1125 
+1131 
 ˛ónup
 ;
 
-1128 i‡(
+1134 i‡(
 k
 )
 
-1129 
+1135 
 	`mlfs_lsm_debug
 ("¸óã %d i¡îmedüã indi˚s\n", 
 k
 );
 
-1133 
+1139 
 i
  = 
 dïth
  - 1;
 
-1135 
+1141 
 k
 --) {
 
-1136 
+1142 
 ﬁdblock
  = 
 √wblock
 ;
 
-1137 
+1143 
 √wblock
  = 
 ablocks
@@ -12097,7 +12131,7 @@ ablocks
 a
 ];
 
-1140 
+1146 
 bh
  = 
 	`fs_gë_bh
@@ -12111,23 +12145,23 @@ dev
 ªt
 );
 
-1142 i‡(
+1148 i‡(
 	`u∆ikñy
 (!
 bh
 )) {
 
-1143 
+1149 
 îr
  = -
 ENOMEM
 ;
 
-1144 
+1150 
 ˛ónup
 ;
 
-1147 
+1153 
 √h
  = 
 	`ext_block_hdr
@@ -12135,7 +12169,7 @@ ENOMEM
 bh
 );
 
-1148 
+1154 
 √h
 ->
 eh_íåõs
@@ -12143,7 +12177,7 @@ eh_íåõs
 	`˝u_to_À16
 (1);
 
-1149 
+1155 
 √h
 ->
 eh_magic
@@ -12153,7 +12187,7 @@ eh_magic
 MLFS_EXT_MAGIC
 );
 
-1150 
+1156 
 √h
 ->
 eh_max
@@ -12165,7 +12199,7 @@ eh_max
 öode
 , 0));
 
-1151 
+1157 
 √h
 ->
 eh_dïth
@@ -12177,7 +12211,7 @@ dïth
 i
 );
 
-1152 
+1158 
 fidx
  = 
 	`EXT_FIRST_INDEX
@@ -12185,7 +12219,7 @@ fidx
 √h
 );
 
-1153 
+1159 
 fidx
 ->
 ei_block
@@ -12193,7 +12227,7 @@ ei_block
 b‹dî
 ;
 
-1154 
+1160 
 	`mlfs_idx_°‹e_pblock
 (
 fidx
@@ -12201,13 +12235,13 @@ fidx
 ﬁdblock
 );
 
-1156 
+1162 
 	`mlfs_lsm_debug
 ("öt.ödexáà%d (block %lx): %u -> %lx\n", 
 i
 ,
 
-1157 
+1163 
 √wblock
 , 
 	`À32_to_˝u
@@ -12217,7 +12251,7 @@ b‹dî
 ﬁdblock
 );
 
-1160 i‡(
+1166 i‡(
 	`u∆ikñy
 (
 	`EXT_MAX_INDEX
@@ -12229,7 +12263,7 @@ i
 p_hdr
 ) !=
 
-1161 
+1167 
 	`EXT_LAST_INDEX
 (
 ∑th
@@ -12239,13 +12273,13 @@ i
 p_hdr
 ))) {
 
-1162 
+1168 
 	`MLFS_ERROR_INODE
 (
 öode
 ,
 
-1164 
+1170 
 	`À32_to_˝u
 (
 ∑th
@@ -12257,17 +12291,17 @@ p_ext
 ì_block
 ));
 
-1165 
+1171 
 îr
  = -
 EIO
 ;
 
-1166 
+1172 
 ˛ónup
 ;
 
-1169 
+1175 
 m
  = 
 	`EXT_MAX_INDEX
@@ -12281,7 +12315,7 @@ p_hdr
 p_idx
 ++;
 
-1170 
+1176 
 	`mlfs_lsm_debug
 ("cu∏0x%p,Üa° 0x%p\n", 
 ∑th
@@ -12291,7 +12325,7 @@ i
 p_idx
 ,
 
-1171 
+1177 
 	`EXT_MAX_INDEX
 (
 ∑th
@@ -12301,7 +12335,7 @@ i
 p_hdr
 ));
 
-1173 
+1179 
 	`mlfs_ext_show_move
 (
 h™dÀ
@@ -12315,11 +12349,11 @@ h™dÀ
 i
 );
 
-1174 i‡(
+1180 i‡(
 m
 ) {
 
-1175 
+1181 
 	`memmove
 (++
 fidx
@@ -12335,7 +12369,7 @@ mlfs_exã¡_idx
 m
 );
 
-1176 
+1182 
 	`À16_add_˝u
 (&
 √h
@@ -12345,7 +12379,7 @@ eh_íåõs
 m
 );
 
-1179 
+1185 
 	`mlfs_exã¡_block_csum_£t
 (
 öode
@@ -12353,13 +12387,13 @@ m
 √h
 );
 
-1180 
+1186 
 	`£t_buf„r_u±od©e
 (
 bh
 );
 
-1182 
+1188 
 îr
  = 
 	`mlfs_h™dÀ_dúty_mëad©a
@@ -12371,31 +12405,31 @@ h™dÀ
 bh
 );
 
-1183 i‡(
+1189 i‡(
 îr
 )
 
-1184 
+1190 
 ˛ónup
 ;
 
-1185 
+1191 
 	`fs_bªl£
 (
 bh
 );
 
-1186 
+1192 
 bh
  = 
 NULL
 ;
 
-1189 i‡(
+1195 i‡(
 m
 ) {
 
-1190 
+1196 
 	`À16_add_˝u
 (&
 ∑th
@@ -12409,7 +12443,7 @@ eh_íåõs
 m
 );
 
-1191 
+1197 
 îr
  = 
 	`mlfs_ext_dúty
@@ -12423,19 +12457,19 @@ h™dÀ
 i
 );
 
-1192 i‡(
+1198 i‡(
 îr
 )
 
-1193 
+1199 
 ˛ónup
 ;
 
-1196 
+1202 
 i
 --;
 
-1200 
+1206 
 îr
  = 
 	`mlfs_ext_ö£π_ödex
@@ -12449,7 +12483,7 @@ h™dÀ
 ©
 ,
 
-1201 
+1207 
 	`À32_to_˝u
 (
 b‹dî
@@ -12457,37 +12491,37 @@ b‹dî
 √wblock
 );
 
-1203 
+1209 
 ˛ónup
 :
 
-1204 i‡(
+1210 i‡(
 bh
 )
 
-1205 
+1211 
 	`fs_bªl£
 (
 bh
 );
 
-1207 i‡(
+1213 i‡(
 îr
 ) {
 
-1209 
+1215 
 i
  = 0; i < 
 dïth
 ; i++) {
 
-1210 i‡(!
+1216 i‡(!
 ablocks
 [
 i
 ]) ;
 
-1211 
+1217 
 	`mlfs_‰ì_blocks
 (
 h™dÀ
@@ -12501,25 +12535,25 @@ ablocks
 i
 ], 1,
 
-1212 
+1218 
 MLFS_FREE_BLOCKS_METADATA
 );
 
-1216 
+1222 
 	`mlfs_‰ì
 (
 ablocks
 );
 
-1218  
+1224  
 îr
 ;
 
-1219 
+1225 
 	}
 }
 
-1229 
+1235 
 	$mlfs_ext_grow_ödïth
 (
 h™dÀ_t
@@ -12527,25 +12561,25 @@ h™dÀ_t
 h™dÀ
 ,
 
-1230 
+1236 
 öode
  *öode, 
 Êags
 )
 
-1232 
+1238 
 mlfs_exã¡_hódî
  *
 √h
 ;
 
-1233 
+1239 
 buf„r_hód
  *
 bh
 ;
 
-1234 
+1240 
 mlfs_fsblk_t
  
 √wblock
@@ -12553,19 +12587,19 @@ mlfs_fsblk_t
 gﬂl
  = 0;
 
-1235 
+1241 
 îr
  = 0, 
 ªt
 ;
 
-1236 
+1242 
 mlfs_lblk_t
  
 cou¡
  = 1;
 
-1239 i‡(
+1245 i‡(
 	`ext_dïth
 (
 h™dÀ
@@ -12573,7 +12607,7 @@ h™dÀ
 öode
 ))
 
-1240 
+1246 
 gﬂl
  = 
 	`mlfs_idx_pblock
@@ -12587,7 +12621,7 @@ h™dÀ
 öode
 )));
 
-1241 
+1247 
 gﬂl
  = 
 	`mlfs_öode_to_gﬂl_block
@@ -12595,7 +12629,7 @@ gﬂl
 öode
 );
 
-1243 
+1249 
 √wblock
  = 
 	`mlfs_√w_mëa_blocks
@@ -12613,15 +12647,15 @@ cou¡
 îr
 );
 
-1244 i‡(
+1250 i‡(
 √wblock
  == 0)
 
-1245  
+1251  
 îr
 ;
 
-1247 
+1253 
 bh
  = 
 	`fs_gë_bh
@@ -12635,21 +12669,21 @@ dev
 ªt
 );
 
-1249 i‡(!
+1255 i‡(!
 bh
 )
 
-1250  -
+1256  -
 ENOMEM
 ;
 
-1251 
+1257 
 	`lock_buf„r
 (
 bh
 );
 
-1261 
+1267 
 	`memmove
 (
 bh
@@ -12667,7 +12701,7 @@ l1
 i_d©a
 ));
 
-1264 
+1270 
 √h
  = 
 	`ext_block_hdr
@@ -12675,7 +12709,7 @@ i_d©a
 bh
 );
 
-1267 i‡(
+1273 i‡(
 	`ext_dïth
 (
 h™dÀ
@@ -12683,7 +12717,7 @@ h™dÀ
 öode
 ))
 
-1268 
+1274 
 √h
 ->
 eh_max
@@ -12695,7 +12729,7 @@ eh_max
 öode
 , 0));
 
-1270 
+1276 
 √h
 ->
 eh_max
@@ -12707,7 +12741,7 @@ eh_max
 öode
 , 0));
 
-1271 
+1277 
 √h
 ->
 eh_magic
@@ -12717,7 +12751,7 @@ eh_magic
 MLFS_EXT_MAGIC
 );
 
-1272 
+1278 
 	`mlfs_exã¡_block_csum_£t
 (
 öode
@@ -12725,19 +12759,19 @@ MLFS_EXT_MAGIC
 √h
 );
 
-1273 
+1279 
 	`£t_buf„r_u±od©e
 (
 bh
 );
 
-1274 
+1280 
 	`u∆ock_buf„r
 (
 bh
 );
 
-1276 
+1282 
 îr
  = 
 	`mlfs_h™dÀ_dúty_mëad©a
@@ -12749,15 +12783,15 @@ h™dÀ
 bh
 );
 
-1277 i‡(
+1283 i‡(
 îr
 )
 
-1278 
+1284 
 out
 ;
 
-1281 
+1287 
 √h
  = 
 	`ext_öode_hdr
@@ -12767,7 +12801,7 @@ h™dÀ
 öode
 );
 
-1282 
+1288 
 √h
 ->
 eh_íåõs
@@ -12775,7 +12809,7 @@ eh_íåõs
 	`˝u_to_À16
 (1);
 
-1283 
+1289 
 	`mlfs_idx_°‹e_pblock
 (
 	`EXT_FIRST_INDEX
@@ -12785,13 +12819,13 @@ eh_íåõs
 √wblock
 );
 
-1284 i‡(
+1290 i‡(
 √h
 ->
 eh_dïth
  == 0) {
 
-1286 
+1292 
 √h
 ->
 eh_max
@@ -12803,7 +12837,7 @@ eh_max
 öode
 , 0));
 
-1287 
+1293 
 	`EXT_FIRST_INDEX
 (
 √h
@@ -12811,7 +12845,7 @@ eh_max
 ei_block
  =
 
-1288 
+1294 
 	`EXT_FIRST_EXTENT
 (
 √h
@@ -12819,11 +12853,11 @@ ei_block
 ì_block
 ;
 
-1290 
+1296 
 	`mlfs_lsm_debug
 ("newÑoot:Çum %d(%d),Üblock %d,Ötr %lx\n",
 
-1291 (
+1297 (
 √h
 ->
 eh_íåõs
@@ -12831,7 +12865,7 @@ eh_íåõs
 eh_max
 ),
 
-1292 (
+1298 (
 	`EXT_FIRST_INDEX
 (
 √h
@@ -12839,7 +12873,7 @@ eh_max
 ei_block
 ),
 
-1293 
+1299 
 	`mlfs_idx_pblock
 (
 	`EXT_FIRST_INDEX
@@ -12847,7 +12881,7 @@ ei_block
 √h
 )));
 
-1295 
+1301 
 	`À16_add_˝u
 (&
 √h
@@ -12855,31 +12889,31 @@ ei_block
 eh_dïth
 , 1);
 
-1296 
+1302 
 	`mlfs_m¨k_öode_dúty
 (
 öode
 );
 
-1297 
+1303 
 out
 :
 
-1298 
+1304 
 	`fs_bªl£
 (
 bh
 );
 
-1300  
+1306  
 îr
 ;
 
-1301 
+1307 
 	}
 }
 
-1308 
+1314 
 	$mlfs_ext_¸óã_√w_Àaf
 (
 h™dÀ_t
@@ -12887,7 +12921,7 @@ h™dÀ_t
 h™dÀ
 ,
 
-1309 
+1315 
 öode
  *öode, 
 mb_Êags
@@ -12895,7 +12929,7 @@ mb_Êags
 gb_Êags
 ,
 
-1310 
+1316 
 mlfs_ext_∑th
  **
 µ©h
@@ -12905,7 +12939,7 @@ mlfs_exã¡
 √wext
 )
 
-1312 
+1318 
 mlfs_ext_∑th
  *
 ∑th
@@ -12913,13 +12947,13 @@ mlfs_ext_∑th
 µ©h
 ;
 
-1313 
+1319 
 mlfs_ext_∑th
  *
 cuΩ
 ;
 
-1314 
+1320 
 dïth
 , 
 i
@@ -12927,11 +12961,11 @@ i
 îr
  = 0;
 
-1316 
+1322 
 ª≥©
 :
 
-1317 
+1323 
 i
  = 
 dïth
@@ -12943,7 +12977,7 @@ h™dÀ
 öode
 );
 
-1320 
+1326 
 cuΩ
  = 
 ∑th
@@ -12951,7 +12985,7 @@ cuΩ
 dïth
 ;
 
-1321 
+1327 
 i
  > 0 && !
 	`EXT_HAS_FREE_INDEX
@@ -12959,21 +12993,21 @@ i
 cuΩ
 )) {
 
-1322 
+1328 
 i
 --;
 
-1323 
+1329 
 cuΩ
 --;
 
-1328 i‡(
+1334 i‡(
 	`EXT_HAS_FREE_INDEX
 (
 cuΩ
 )) {
 
-1331 
+1337 
 îr
  = 
 	`mlfs_ext_•lô
@@ -12991,15 +13025,15 @@ mb_Êags
 i
 );
 
-1332 i‡(
+1338 i‡(
 îr
 )
 
-1333 
+1339 
 out
 ;
 
-1336 
+1342 
 ∑th
  = 
 	`mlfs_föd_exã¡
@@ -13013,19 +13047,19 @@ h™dÀ
 √wext
 ),
 
-1337 
+1343 
 µ©h
 , 
 gb_Êags
 );
 
-1339 i‡(
+1345 i‡(
 	`IS_ERR
 (
 ∑th
 ))
 
-1340 
+1346 
 îr
  = 
 	`PTR_ERR
@@ -13033,7 +13067,7 @@ gb_Êags
 ∑th
 );
 
-1343 
+1349 
 îr
  = 
 	`mlfs_ext_grow_ödïth
@@ -13045,15 +13079,15 @@ h™dÀ
 mb_Êags
 );
 
-1344 i‡(
+1350 i‡(
 îr
 )
 
-1345 
+1351 
 out
 ;
 
-1348 
+1354 
 ∑th
  = 
 	`mlfs_föd_exã¡
@@ -13067,19 +13101,19 @@ h™dÀ
 √wext
 ),
 
-1349 
+1355 
 µ©h
 , 
 gb_Êags
 );
 
-1350 i‡(
+1356 i‡(
 	`IS_ERR
 (
 ∑th
 )) {
 
-1351 
+1357 
 îr
  = 
 	`PTR_ERR
@@ -13087,11 +13121,11 @@ gb_Êags
 ∑th
 );
 
-1352 
+1358 
 out
 ;
 
-1359 
+1365 
 dïth
  = 
 	`ext_dïth
@@ -13101,7 +13135,7 @@ h™dÀ
 öode
 );
 
-1360 i‡(
+1366 i‡(
 ∑th
 [
 dïth
@@ -13113,23 +13147,23 @@ eh_íåõs
 eh_max
 ) {
 
-1362 
+1368 
 ª≥©
 ;
 
-1366 
+1372 
 out
 :
 
-1367  
+1373  
 îr
 ;
 
-1368 
+1374 
 	}
 }
 
-1377 
+1383 
 	$mlfs_ext_£¨ch_À·
 (
 öode
@@ -13139,7 +13173,7 @@ mlfs_ext_∑th
 ∑th
 ,
 
-1378 
+1384 
 mlfs_lblk_t
  *
 logiˇl
@@ -13149,25 +13183,25 @@ mlfs_fsblk_t
 phys
 )
 
-1380 
+1386 
 mlfs_exã¡_idx
  *
 ix
 ;
 
-1381 
+1387 
 mlfs_exã¡
  *
 ex
 ;
 
-1382 
+1388 
 dïth
 , 
 ì_Àn
 ;
 
-1384 i‡(
+1390 i‡(
 	`u∆ikñy
 (
 ∑th
@@ -13175,7 +13209,7 @@ dïth
 NULL
 )) {
 
-1385 
+1391 
 	`MLFS_ERROR_INODE
 (
 öode
@@ -13183,11 +13217,11 @@ NULL
 logiˇl
 );
 
-1386  -
+1392  -
 EIO
 ;
 
-1388 
+1394 
 dïth
  = 
 ∑th
@@ -13195,11 +13229,11 @@ dïth
 p_dïth
 ;
 
-1389 *
+1395 *
 phys
  = 0;
 
-1391 i‡(
+1397 i‡(
 dïth
  =0 && 
 ∑th
@@ -13209,7 +13243,7 @@ p_ext
 NULL
 )
 
-1398 
+1404 
 ex
  = 
 ∑th
@@ -13219,7 +13253,7 @@ dïth
 p_ext
 ;
 
-1399 
+1405 
 ì_Àn
  = 
 	`mlfs_ext_gë_a˘uÆ_Àn
@@ -13227,7 +13261,7 @@ p_ext
 ex
 );
 
-1400 i‡(*
+1406 i‡(*
 logiˇl
  < 
 	`À32_to_˝u
@@ -13237,7 +13271,7 @@ ex
 ì_block
 )) {
 
-1401 i‡(
+1407 i‡(
 	`u∆ikñy
 (
 	`EXT_FIRST_EXTENT
@@ -13251,13 +13285,13 @@ p_hdr
 ex
 )) {
 
-1402 
+1408 
 	`MLFS_ERROR_INODE
 (
 öode
 ,
 
-1404 *
+1410 *
 logiˇl
 , 
 	`À32_to_˝u
@@ -13267,15 +13301,15 @@ ex
 ì_block
 ));
 
-1405  -
+1411  -
 EIO
 ;
 
-1407 --
+1413 --
 dïth
  >= 0) {
 
-1408 
+1414 
 ix
  = 
 ∑th
@@ -13285,7 +13319,7 @@ dïth
 p_idx
 ;
 
-1409 i‡(
+1415 i‡(
 	`u∆ikñy
 (
 ix
@@ -13299,15 +13333,15 @@ dïth
 p_hdr
 ))) {
 
-1410 
+1416 
 	`MLFS_ERROR_INODE
 (
 
-1411 
+1417 
 öode
 , "ix (%d) != EXT_FIRST_INDEX (%d) (depth %d)!",
 
-1412 
+1418 
 ix
  !
 NULL
@@ -13317,7 +13351,7 @@ NULL
 ei_block
 ) : 0,
 
-1413 
+1419 
 	`EXT_FIRST_INDEX
 (
 ∑th
@@ -13329,11 +13363,11 @@ p_hdr
 NULL
 
 
-1414 ? 
+1420 ? 
 	`À32_to_˝u
 (
 
-1415 
+1421 
 	`EXT_FIRST_INDEX
 (
 ∑th
@@ -13345,15 +13379,15 @@ p_hdr
 ei_block
 )
 
-1417 
+1423 
 dïth
 );
 
-1418  -
+1424  -
 EIO
 ;
 
-1424 i‡(
+1430 i‡(
 	`u∆ikñy
 (*
 logiˇl
@@ -13367,13 +13401,13 @@ ex
 ì_Àn
 ))) {
 
-1425 
+1431 
 	`MLFS_ERROR_INODE
 (
 öode
 , "logical %d <Ée_block %d +Ée_len %d!",
 
-1426 *
+1432 *
 logiˇl
 , 
 	`À32_to_˝u
@@ -13385,11 +13419,11 @@ ex
 ì_Àn
 );
 
-1427  -
+1433  -
 EIO
 ;
 
-1430 *
+1436 *
 logiˇl
  = 
 	`À32_to_˝u
@@ -13401,7 +13435,7 @@ ex
 ì_Àn
  - 1;
 
-1431 *
+1437 *
 phys
  = 
 	`mlfs_ext_pblock
@@ -13411,11 +13445,11 @@ ex
 ì_Àn
  - 1;
 
-1433 
+1439 
 	}
 }
 
-1442 
+1448 
 	$mlfs_ext_£¨ch_right
 (
 h™dÀ_t
@@ -13425,7 +13459,7 @@ h™dÀ
 öode
  *inode,
 
-1443 
+1449 
 mlfs_ext_∑th
  *
 ∑th
@@ -13439,13 +13473,13 @@ mlfs_fsblk_t
 phys
 ,
 
-1444 
+1450 
 mlfs_exã¡
  **
 ªt_ex
 )
 
-1446 
+1452 
 buf„r_hód
  *
 bh
@@ -13453,45 +13487,45 @@ bh
 NULL
 ;
 
-1447 
+1453 
 mlfs_exã¡_hódî
  *
 eh
 ;
 
-1448 
+1454 
 mlfs_exã¡_idx
  *
 ix
 ;
 
-1449 
+1455 
 mlfs_exã¡
  *
 ex
 ;
 
-1450 
+1456 
 mlfs_fsblk_t
  
 block
 ;
 
-1451 
+1457 
 dïth
 ;
 
-1452 
+1458 
 ì_Àn
 ;
 
-1454 i‡(
+1460 i‡(
 ∑th
  =
 NULL
 ) {
 
-1455 
+1461 
 	`MLFS_ERROR_INODE
 (
 öode
@@ -13499,11 +13533,11 @@ NULL
 logiˇl
 );
 
-1456  -
+1462  -
 EIO
 ;
 
-1458 
+1464 
 dïth
  = 
 ∑th
@@ -13511,11 +13545,11 @@ dïth
 p_dïth
 ;
 
-1459 *
+1465 *
 phys
  = 0;
 
-1461 i‡(
+1467 i‡(
 dïth
  =0 && 
 ∑th
@@ -13525,7 +13559,7 @@ p_ext
 NULL
 )
 
-1468 
+1474 
 ex
  = 
 ∑th
@@ -13535,7 +13569,7 @@ dïth
 p_ext
 ;
 
-1469 
+1475 
 ì_Àn
  = 
 	`mlfs_ext_gë_a˘uÆ_Àn
@@ -13543,7 +13577,7 @@ p_ext
 ex
 );
 
-1471 i‡(*
+1477 i‡(*
 logiˇl
  < (
 ex
@@ -13551,7 +13585,7 @@ ex
 ì_block
 )) {
 
-1472 i‡(
+1478 i‡(
 	`u∆ikñy
 (
 	`EXT_FIRST_EXTENT
@@ -13565,25 +13599,25 @@ p_hdr
 ex
 )) {
 
-1473 
+1479 
 	`MLFS_ERROR_INODE
 (
 öode
 , "first_extent(path[%d].p_hdr) !=Éx",
 
-1474 
+1480 
 dïth
 );
 
-1475  -
+1481  -
 EIO
 ;
 
-1477 --
+1483 --
 dïth
  >= 0) {
 
-1478 
+1484 
 ix
  = 
 ∑th
@@ -13593,7 +13627,7 @@ dïth
 p_idx
 ;
 
-1479 i‡(
+1485 i‡(
 	`u∆ikñy
 (
 ix
@@ -13607,25 +13641,25 @@ dïth
 p_hdr
 ))) {
 
-1480 
+1486 
 	`MLFS_ERROR_INODE
 (
 öode
 , "ix != EXT_FIRST_INDEX *logical %d!",
 
-1481 *
+1487 *
 logiˇl
 );
 
-1482  -
+1488  -
 EIO
 ;
 
-1485 
+1491 
 found_exã¡
 ;
 
-1489 i‡(
+1495 i‡(
 	`u∆ikñy
 (*
 logiˇl
@@ -13637,13 +13671,13 @@ ex
 ì_Àn
 ))) {
 
-1490 
+1496 
 	`MLFS_ERROR_INODE
 (
 öode
 , "logical %d <Ée_block %d +Ée_len %d!",
 
-1492 *
+1498 *
 logiˇl
 , (
 ex
@@ -13653,11 +13687,11 @@ ex
 ì_Àn
 );
 
-1493  -
+1499  -
 EIO
 ;
 
-1496 i‡(
+1502 i‡(
 ex
  !
 	`EXT_LAST_EXTENT
@@ -13669,19 +13703,19 @@ dïth
 p_hdr
 )) {
 
-1498 
+1504 
 ex
 ++;
 
-1499 
+1505 
 found_exã¡
 ;
 
-1503 --
+1509 --
 dïth
  >= 0) {
 
-1504 
+1510 
 ix
  = 
 ∑th
@@ -13691,7 +13725,7 @@ dïth
 p_idx
 ;
 
-1505 i‡(
+1511 i‡(
 ix
  !
 	`EXT_LAST_INDEX
@@ -13703,19 +13737,19 @@ dïth
 p_hdr
 ))
 
-1506 
+1512 
 gŸ_ödex
 ;
 
-1512 
+1518 
 gŸ_ödex
 :
 
-1516 
+1522 
 ix
 ++;
 
-1517 
+1523 
 block
  = 
 	`mlfs_idx_pblock
@@ -13723,7 +13757,7 @@ block
 ix
 );
 
-1518 ++
+1524 ++
 dïth
  < 
 ∑th
@@ -13731,7 +13765,7 @@ dïth
 p_dïth
 ) {
 
-1520 
+1526 
 bh
  = 
 	`ªad_exã¡_åì_block
@@ -13749,19 +13783,19 @@ p_dïth
 dïth
 , 0);
 
-1521 i‡(
+1527 i‡(
 	`IS_ERR
 (
 bh
 ))
 
-1522  
+1528  
 	`PTR_ERR
 (
 bh
 );
 
-1524 
+1530 
 eh
  = 
 	`ext_block_hdr
@@ -13769,7 +13803,7 @@ eh
 bh
 );
 
-1525 
+1531 
 ix
  = 
 	`EXT_FIRST_INDEX
@@ -13777,7 +13811,7 @@ ix
 eh
 );
 
-1526 
+1532 
 block
  = 
 	`mlfs_idx_pblock
@@ -13785,13 +13819,13 @@ block
 ix
 );
 
-1527 
+1533 
 	`fs_bªl£
 (
 bh
 );
 
-1530 
+1536 
 bh
  = 
 	`ªad_exã¡_åì_block
@@ -13809,19 +13843,19 @@ p_dïth
 dïth
 , 0);
 
-1531 i‡(
+1537 i‡(
 	`IS_ERR
 (
 bh
 ))
 
-1532  
+1538  
 	`PTR_ERR
 (
 bh
 );
 
-1534 
+1540 
 eh
  = 
 	`ext_block_hdr
@@ -13829,7 +13863,7 @@ eh
 bh
 );
 
-1535 
+1541 
 ex
  = 
 	`EXT_FIRST_EXTENT
@@ -13837,11 +13871,11 @@ ex
 eh
 );
 
-1536 
+1542 
 found_exã¡
 :
 
-1538 *
+1544 *
 logiˇl
  = (
 ex
@@ -13849,7 +13883,7 @@ ex
 ì_block
 );
 
-1539 *
+1545 *
 phys
  = 
 	`mlfs_ext_pblock
@@ -13857,27 +13891,27 @@ phys
 ex
 );
 
-1540 *
+1546 *
 ªt_ex
  = 
 ex
 ;
 
-1542 i‡(
+1548 i‡(
 bh
 )
 
-1543 
+1549 
 	`fs_bªl£
 (
 bh
 );
 
-1546 
+1552 
 	}
 }
 
-1555 
+1561 
 mlfs_lblk_t
  
 	$mlfs_ext_√xt_Æloˇãd_block
@@ -13887,11 +13921,11 @@ mlfs_ext_∑th
 ∑th
 )
 
-1557 
+1563 
 dïth
 ;
 
-1559 
+1565 
 dïth
  = 
 ∑th
@@ -13899,7 +13933,7 @@ dïth
 p_dïth
 ;
 
-1561 i‡(
+1567 i‡(
 dïth
  =0 && 
 ∑th
@@ -13909,15 +13943,15 @@ p_ext
 NULL
 )
 
-1562  
+1568  
 EXT_MAX_BLOCKS
 ;
 
-1564 
+1570 
 dïth
  >= 0) {
 
-1565 i‡(
+1571 i‡(
 dïth
  =
 ∑th
@@ -13925,7 +13959,7 @@ dïth
 p_dïth
 ) {
 
-1567 i‡(
+1573 i‡(
 ∑th
 [
 dïth
@@ -13933,7 +13967,7 @@ dïth
 p_ext
  &&
 
-1568 
+1574 
 ∑th
 [
 dïth
@@ -13945,7 +13979,7 @@ p_ext
 p_hdr
 ))
 
-1570  
+1576  
 	`mlfs_ext_lblock
 (&
 ∑th
@@ -13955,7 +13989,7 @@ dïth
 p_ext
 [1]);
 
-1573 i‡(
+1579 i‡(
 ∑th
 [
 dïth
@@ -13967,7 +14001,7 @@ p_idx
 p_hdr
 ))
 
-1575  
+1581  
 	`mlfs_idx_lblock
 (&
 ∑th
@@ -13977,19 +14011,19 @@ dïth
 p_idx
 [1]);
 
-1577 
+1583 
 dïth
 --;
 
-1580  
+1586  
 EXT_MAX_BLOCKS
 ;
 
-1581 
+1587 
 	}
 }
 
-1587 
+1593 
 mlfs_lblk_t
  
 	$mlfs_ext_√xt_Àaf_block
@@ -13999,11 +14033,11 @@ mlfs_ext_∑th
 ∑th
 )
 
-1589 
+1595 
 dïth
 ;
 
-1591 
+1597 
 	`BUG_ON
 (
 ∑th
@@ -14011,7 +14045,7 @@ dïth
 NULL
 );
 
-1592 
+1598 
 dïth
  = 
 ∑th
@@ -14019,23 +14053,23 @@ dïth
 p_dïth
 ;
 
-1595 i‡(
+1601 i‡(
 dïth
  == 0)
 
-1596  
+1602  
 EXT_MAX_BLOCKS
 ;
 
-1599 
+1605 
 dïth
 --;
 
-1601 
+1607 
 dïth
  >= 0) {
 
-1602 i‡(
+1608 i‡(
 ∑th
 [
 dïth
@@ -14047,7 +14081,7 @@ p_idx
 p_hdr
 ))
 
-1604  
+1610  
 	`mlfs_idx_lblock
 (&
 ∑th
@@ -14057,19 +14091,19 @@ dïth
 p_idx
 [1]);
 
-1606 
+1612 
 dïth
 --;
 
-1609  
+1615  
 EXT_MAX_BLOCKS
 ;
 
-1610 
+1616 
 	}
 }
 
-1618 
+1624 
 	$mlfs_ext_c‹ª˘_ödexes
 (
 h™dÀ_t
@@ -14077,7 +14111,7 @@ h™dÀ_t
 h™dÀ
 ,
 
-1619 
+1625 
 öode
  *öode, 
 mlfs_ext_∑th
@@ -14085,13 +14119,13 @@ mlfs_ext_∑th
 ∑th
 )
 
-1621 
+1627 
 mlfs_exã¡_hódî
  *
 eh
 ;
 
-1622 
+1628 
 dïth
  = 
 	`ext_dïth
@@ -14101,25 +14135,25 @@ h™dÀ
 öode
 );
 
-1623 
+1629 
 mlfs_exã¡
  *
 ex
 ;
 
-1624 
+1630 
 __À32
  
 b‹dî
 ;
 
-1625 
+1631 
 k
 , 
 îr
  = 0;
 
-1627 
+1633 
 eh
  = 
 ∑th
@@ -14129,7 +14163,7 @@ dïth
 p_hdr
 ;
 
-1628 
+1634 
 ex
  = 
 ∑th
@@ -14139,7 +14173,7 @@ dïth
 p_ext
 ;
 
-1630 i‡(
+1636 i‡(
 	`u∆ikñy
 (
 ex
@@ -14149,7 +14183,7 @@ NULL
 eh
  == NULL)) {
 
-1631 
+1637 
 	`MLFS_ERROR_INODE
 (
 öode
@@ -14159,15 +14193,15 @@ ex
 eh
 );
 
-1632  -
+1638  -
 EIO
 ;
 
-1635 i‡(
+1641 i‡(
 dïth
  == 0) {
 
-1640 i‡(
+1646 i‡(
 ex
  !
 	`EXT_FIRST_EXTENT
@@ -14175,13 +14209,13 @@ ex
 eh
 )) {
 
-1648 
+1654 
 k
  = 
 dïth
  - 1;
 
-1649 
+1655 
 b‹dî
  = 
 ∑th
@@ -14193,7 +14227,7 @@ p_ext
 ì_block
 ;
 
-1651 
+1657 
 ∑th
 [
 k
@@ -14205,7 +14239,7 @@ ei_block
 b‹dî
 ;
 
-1652 
+1658 
 îr
  = 
 	`mlfs_ext_dúty
@@ -14219,19 +14253,19 @@ h™dÀ
 k
 );
 
-1654 i‡(
+1660 i‡(
 îr
 )
 
-1655  
+1661  
 îr
 ;
 
-1657 
+1663 
 k
 --) {
 
-1659 i‡(
+1665 i‡(
 ∑th
 [
 k
@@ -14243,7 +14277,7 @@ p_idx
 p_hdr
 ))
 
-1662 
+1668 
 ∑th
 [
 k
@@ -14255,7 +14289,7 @@ ei_block
 b‹dî
 ;
 
-1663 
+1669 
 îr
  = 
 	`mlfs_ext_dúty
@@ -14269,19 +14303,19 @@ h™dÀ
 k
 );
 
-1664 i‡(
+1670 i‡(
 îr
 ) ;
 
-1667  
+1673  
 îr
 ;
 
-1668 
+1674 
 	}
 }
 
-1670 
+1676 
 	$mlfs_ˇn_exã¡s_be_mîged
 (
 öode
@@ -14291,19 +14325,19 @@ mlfs_exã¡
 ex1
 ,
 
-1671 
+1677 
 mlfs_exã¡
  *
 ex2
 )
 
-1673 
+1679 
 ext1_ì_Àn
 , 
 ext2_ì_Àn
 ;
 
-1681 i‡(
+1687 i‡(
 	`mlfs_ext_is_unwrôãn
 (
 ex1
@@ -14311,7 +14345,7 @@ ex1
 ex2
 ))
 
-1684 
+1690 
 ext1_ì_Àn
  = 
 	`mlfs_ext_gë_a˘uÆ_Àn
@@ -14319,7 +14353,7 @@ ext1_ì_Àn
 ex1
 );
 
-1685 
+1691 
 ext2_ì_Àn
  = 
 	`mlfs_ext_gë_a˘uÆ_Àn
@@ -14327,7 +14361,7 @@ ext2_ì_Àn
 ex2
 );
 
-1688 i‡(
+1694 i‡(
 	`mlfs_ext_lblock
 (
 ex1
@@ -14337,7 +14371,7 @@ ext1_ì_Àn
 ex2
 ))
 
-1696 i‡(
+1702 i‡(
 ext1_ì_Àn
  + 
 ext2_ì_Àn
@@ -14345,13 +14379,13 @@ ext2_ì_Àn
 EXT_INIT_MAX_LEN
 )
 
-1699 i‡(
+1705 i‡(
 	`mlfs_ext_is_unwrôãn
 (
 ex1
 ) &&
 
-1700 (
+1706 (
 ext1_ì_Àn
  + 
 ext2_ì_Àn
@@ -14359,15 +14393,15 @@ ext2_ì_Àn
 EXT_UNWRITTEN_MAX_LEN
 ))
 
-1703 #ifde‡
+1709 #ifde‡
 AGGRESSIVE_TEST
 
 
-1704 i‡(
+1710 i‡(
 ext1_ì_Àn
  >= 4)  0;
 
-1708 i‡(
+1714 i‡(
 	`mlfs_ext_pblock
 (
 ex1
@@ -14377,11 +14411,11 @@ ext1_ì_Àn
 ex2
 ))
 
-1712 
+1718 
 	}
 }
 
-1721 
+1727 
 	$mlfs_ext_åy_to_mîge_right
 (
 h™dÀ_t
@@ -14391,7 +14425,7 @@ h™dÀ
 öode
  *inode,
 
-1722 
+1728 
 mlfs_ext_∑th
  *
 ∑th
@@ -14401,25 +14435,25 @@ mlfs_exã¡
 ex
 )
 
-1724 
+1730 
 mlfs_exã¡_hódî
  *
 eh
 ;
 
-1725 
+1731 
 dïth
 , 
 Àn
 ;
 
-1726 
+1732 
 mîge_d⁄e
  = 0, 
 unwrôãn
 ;
 
-1728 
+1734 
 dïth
  = 
 	`ext_dïth
@@ -14429,7 +14463,7 @@ h™dÀ
 öode
 );
 
-1729 
+1735 
 	`as£π
 (
 ∑th
@@ -14441,7 +14475,7 @@ p_hdr
 NULL
 );
 
-1730 
+1736 
 eh
  = 
 ∑th
@@ -14451,7 +14485,7 @@ dïth
 p_hdr
 ;
 
-1732 
+1738 
 ex
  < 
 	`EXT_LAST_EXTENT
@@ -14459,7 +14493,7 @@ ex
 eh
 )) {
 
-1733 i‡(!
+1739 i‡(!
 	`mlfs_ˇn_exã¡s_be_mîged
 (
 öode
@@ -14467,7 +14501,7 @@ eh
 ex
 ,Éx + 1))
 
-1737 
+1743 
 unwrôãn
  = 
 	`mlfs_ext_is_unwrôãn
@@ -14475,7 +14509,7 @@ unwrôãn
 ex
 );
 
-1738 
+1744 
 ex
 ->
 ì_Àn
@@ -14485,23 +14519,23 @@ ex
 	`mlfs_ext_gë_a˘uÆ_Àn
 (ex) +
 
-1739 
+1745 
 	`mlfs_ext_gë_a˘uÆ_Àn
 (
 ex
  + 1));
 
-1741 i‡(
+1747 i‡(
 unwrôãn
 )
 
-1742 
+1748 
 	`mlfs_ext_m¨k_unwrôãn
 (
 ex
 );
 
-1744 i‡(
+1750 i‡(
 ex
  + 1 < 
 	`EXT_LAST_EXTENT
@@ -14509,7 +14543,7 @@ ex
 eh
 )) {
 
-1745 
+1751 
 Àn
  = (
 	`EXT_LAST_EXTENT
@@ -14521,7 +14555,7 @@ ex
 mlfs_exã¡
 );
 
-1746 
+1752 
 	`memmove
 (
 ex
@@ -14529,7 +14563,7 @@ ex
 Àn
 );
 
-1749 
+1755 
 	`À16_add_˝u
 (&
 eh
@@ -14537,31 +14571,31 @@ eh
 eh_íåõs
 , -1);
 
-1750 
+1756 
 mîge_d⁄e
  = 1;
 
-1752 i‡(!
+1758 i‡(!
 eh
 ->
 eh_íåõs
 )
 
-1753 
+1759 
 	`MLFS_ERROR_INODE
 (
 öode
 , "%s\n", "eh->eh_entries = 0!");
 
-1756  
+1762  
 mîge_d⁄e
 ;
 
-1757 
+1763 
 	}
 }
 
-1763 
+1769 
 	$mlfs_ext_åy_to_mîge_up
 (
 h™dÀ_t
@@ -14569,7 +14603,7 @@ h™dÀ_t
 h™dÀ
 ,
 
-1764 
+1770 
 öode
  *öode, 
 mlfs_ext_∑th
@@ -14577,13 +14611,13 @@ mlfs_ext_∑th
 ∑th
 )
 
-1766 
+1772 
 size_t
  
 s
 ;
 
-1767 
+1773 
 max_roŸ
  = 
 	`mlfs_ext_•a˚_roŸ
@@ -14591,19 +14625,19 @@ max_roŸ
 öode
 , 0);
 
-1768 
+1774 
 mlfs_fsblk_t
  
 blk
 ;
 
-1770 i‡((
+1776 i‡((
 ∑th
 [0].
 p_dïth
  != 1) ||
 
-1771 (
+1777 (
 	`À16_to_˝u
 (
 ∑th
@@ -14613,7 +14647,7 @@ p_hdr
 eh_íåõs
 ) != 1) ||
 
-1772 (
+1778 (
 	`À16_to_˝u
 (
 ∑th
@@ -14625,7 +14659,7 @@ eh_íåõs
 max_roŸ
 ))
 
-1787 
+1793 
 blk
  = 
 	`mlfs_idx_pblock
@@ -14635,7 +14669,7 @@ blk
 p_idx
 );
 
-1788 
+1794 
 s
  = 
 	`À16_to_˝u
@@ -14649,19 +14683,19 @@ eh_íåõs
 mlfs_exã¡_idx
 );
 
-1789 
+1795 
 s
  +(
 mlfs_exã¡_hódî
 );
 
-1791 
+1797 
 ∑th
 [1].
 p_maxdïth
  =Öath[0].p_maxdepth;
 
-1792 
+1798 
 	`mem˝y
 (
 ∑th
@@ -14671,13 +14705,13 @@ p_hdr
 s
 );
 
-1793 
+1799 
 ∑th
 [0].
 p_dïth
  = 0;
 
-1794 
+1800 
 ∑th
 [0].
 p_ext
@@ -14687,7 +14721,7 @@ p_ext
 p_hdr
 ) +
 
-1795 (
+1801 (
 ∑th
 [1].
 p_ext
@@ -14697,7 +14731,7 @@ p_ext
 p_hdr
 ));
 
-1796 
+1802 
 ∑th
 [0].
 p_hdr
@@ -14709,7 +14743,7 @@ eh_max
 max_roŸ
 );
 
-1798 
+1804 
 	`fs_bªl£
 (
 ∑th
@@ -14717,7 +14751,7 @@ max_roŸ
 p_bh
 );
 
-1799 
+1805 
 	`mlfs_‰ì_blocks
 (
 h™dÀ
@@ -14729,17 +14763,17 @@ NULL
 blk
 , 1,
 
-1800 
+1806 
 MLFS_FREE_BLOCKS_METADATA
  | 
 MLFS_FREE_BLOCKS_FORGET
 );
 
-1801 
+1807 
 	}
 }
 
-1807 
+1813 
 	$mlfs_ext_åy_to_mîge
 (
 h™dÀ_t
@@ -14747,7 +14781,7 @@ h™dÀ_t
 h™dÀ
 ,
 
-1808 
+1814 
 öode
  *öode, 
 mlfs_ext_∑th
@@ -14759,21 +14793,21 @@ mlfs_exã¡
 ex
 )
 
-1810 
+1816 
 mlfs_exã¡_hódî
  *
 eh
 ;
 
-1811 
+1817 
 dïth
 ;
 
-1812 
+1818 
 mîge_d⁄e
  = 0;
 
-1814 
+1820 
 dïth
  = 
 	`ext_dïth
@@ -14783,7 +14817,7 @@ h™dÀ
 öode
 );
 
-1815 
+1821 
 	`BUG_ON
 (
 ∑th
@@ -14795,7 +14829,7 @@ p_hdr
 NULL
 );
 
-1816 
+1822 
 eh
  = 
 ∑th
@@ -14805,7 +14839,7 @@ dïth
 p_hdr
 ;
 
-1818 i‡(
+1824 i‡(
 ex
  > 
 	`EXT_FIRST_EXTENT
@@ -14813,7 +14847,7 @@ ex
 eh
 ))
 
-1819 
+1825 
 mîge_d⁄e
  = 
 	`mlfs_ext_åy_to_mîge_right
@@ -14827,11 +14861,11 @@ h™dÀ
 ex
  - 1);
 
-1821 i‡(!
+1827 i‡(!
 mîge_d⁄e
 )
 
-1822 ()
+1828 ()
 	`mlfs_ext_åy_to_mîge_right
 (
 h™dÀ
@@ -14843,7 +14877,7 @@ h™dÀ
 ex
 );
 
-1824 
+1830 
 	`mlfs_ext_åy_to_mîge_up
 (
 h™dÀ
@@ -14853,11 +14887,11 @@ h™dÀ
 ∑th
 );
 
-1825 
+1831 
 	}
 }
 
-1833 
+1839 
 	$mlfs_ext_ö£π_exã¡
 (
 h™dÀ_t
@@ -14867,7 +14901,7 @@ h™dÀ
 öode
  *inode,
 
-1834 
+1840 
 mlfs_ext_∑th
  **
 µ©h
@@ -14879,7 +14913,7 @@ mlfs_exã¡
 gb_Êags
 )
 
-1836 
+1842 
 mlfs_ext_∑th
  *
 ∑th
@@ -14887,13 +14921,13 @@ mlfs_ext_∑th
 µ©h
 ;
 
-1837 
+1843 
 mlfs_exã¡_hódî
  *
 eh
 ;
 
-1838 
+1844 
 mlfs_exã¡
  *
 ex
@@ -14901,13 +14935,13 @@ ex
 œ°_ex
 ;
 
-1839 
+1845 
 mlfs_exã¡
  *
 √¨ex
 ;
 
-1840 
+1846 
 mlfs_ext_∑th
  *
 ≈©h
@@ -14915,7 +14949,7 @@ mlfs_ext_∑th
 NULL
 ;
 
-1841 
+1847 
 dïth
 , 
 Àn
@@ -14923,19 +14957,19 @@ dïth
 îr
 ;
 
-1842 
+1848 
 mlfs_lblk_t
  
 √xt_lb
 ;
 
-1843 
+1849 
 mb_Êags
  = 0, 
 unwrôãn
 ;
 
-1845 i‡(
+1851 i‡(
 	`u∆ikñy
 (
 	`mlfs_ext_gë_a˘uÆ_Àn
@@ -14943,17 +14977,17 @@ unwrôãn
 √wext
 ) == 0)) {
 
-1846 
+1852 
 	`MLFS_ERROR_INODE
 (
 öode
 , "%s\n",
 
-1848  -
+1854  -
 EIO
 ;
 
-1851 
+1857 
 dïth
  = 
 	`ext_dïth
@@ -14963,7 +14997,7 @@ h™dÀ
 öode
 );
 
-1852 
+1858 
 ex
  = 
 ∑th
@@ -14973,7 +15007,7 @@ dïth
 p_ext
 ;
 
-1853 
+1859 
 eh
  = 
 ∑th
@@ -14983,7 +15017,7 @@ dïth
 p_hdr
 ;
 
-1855 i‡(
+1861 i‡(
 	`u∆ikñy
 (
 ∑th
@@ -14995,7 +15029,7 @@ p_hdr
 NULL
 )) {
 
-1856 
+1862 
 	`MLFS_ERROR_INODE
 (
 öode
@@ -15003,11 +15037,11 @@ NULL
 dïth
 );
 
-1857  -
+1863  -
 EIO
 ;
 
-1861 i‡(
+1867 i‡(
 ex
  && !(
 gb_Êags
@@ -15015,7 +15049,7 @@ gb_Êags
 MLFS_GET_BLOCKS_PRE_IO
 )) {
 
-1869 i‡(
+1875 i‡(
 ex
  < 
 	`EXT_LAST_EXTENT
@@ -15023,7 +15057,7 @@ ex
 eh
 ) &&
 
-1870 (
+1876 (
 	`mlfs_ext_lblock
 (
 ex
@@ -15031,21 +15065,21 @@ ex
 	`mlfs_ext_gë_a˘uÆ_Àn
 (ex) <
 
-1871 
+1877 
 	`mlfs_ext_lblock
 (
 √wext
 ))) {
 
-1872 
+1878 
 ex
  += 1;
 
-1873 
+1879 
 ¥ïíd
 ;
 
-1874 } i‡((
+1880 } i‡((
 ex
  > 
 	`EXT_FIRST_EXTENT
@@ -15053,7 +15087,7 @@ ex
 eh
 )) &&
 
-1875 (
+1881 (
 	`mlfs_ext_lblock
 (
 √wext
@@ -15061,17 +15095,17 @@ eh
 	`mlfs_ext_gë_a˘uÆ_Àn
 (newext) <
 
-1876 
+1882 
 	`mlfs_ext_lblock
 (
 ex
 )))
 
-1877 
+1883 
 ex
  -= 1;
 
-1880 i‡(
+1886 i‡(
 	`mlfs_ˇn_exã¡s_be_mîged
 (
 öode
@@ -15081,23 +15115,23 @@ ex
 √wext
 )) {
 
-1881 
+1887 
 	`mlfs_lsm_debug
 (
 
-1883 
+1889 
 	`mlfs_ext_is_unwrôãn
 (
 √wext
 ),
 
-1884 
+1890 
 	`mlfs_ext_gë_a˘uÆ_Àn
 (
 √wext
 ),
 
-1885 
+1891 
 	`À32_to_˝u
 (
 ex
@@ -15105,25 +15139,25 @@ ex
 ì_block
 ),
 
-1886 
+1892 
 	`mlfs_ext_is_unwrôãn
 (
 ex
 ),
 
-1887 
+1893 
 	`mlfs_ext_gë_a˘uÆ_Àn
 (
 ex
 ),
 
-1888 
+1894 
 	`mlfs_ext_pblock
 (
 ex
 ));
 
-1890 
+1896 
 unwrôãn
  = 
 	`mlfs_ext_is_unwrôãn
@@ -15131,7 +15165,7 @@ unwrôãn
 ex
 );
 
-1891 
+1897 
 ex
 ->
 ì_Àn
@@ -15141,23 +15175,23 @@ ex
 	`mlfs_ext_gë_a˘uÆ_Àn
 (ex) +
 
-1892 
+1898 
 	`mlfs_ext_gë_a˘uÆ_Àn
 (
 √wext
 ));
 
-1894 i‡(
+1900 i‡(
 unwrôãn
 )
 
-1895 
+1901 
 	`mlfs_ext_m¨k_unwrôãn
 (
 ex
 );
 
-1897 
+1903 
 eh
  = 
 ∑th
@@ -15167,21 +15201,21 @@ dïth
 p_hdr
 ;
 
-1898 
+1904 
 √¨ex
  = 
 ex
 ;
 
-1900 
+1906 
 mîge
 ;
 
-1903 
+1909 
 ¥ïíd
 :
 
-1905 i‡(
+1911 i‡(
 	`mlfs_ˇn_exã¡s_be_mîged
 (
 öode
@@ -15191,57 +15225,57 @@ mîge
 ex
 )) {
 
-1906 
+1912 
 	`mlfs_lsm_debug
 (
 
-1908 
-	`À32_to_˝u
-(
-√wext
-->
-ì_block
-),
-
-1909 
-	`mlfs_ext_is_unwrôãn
-(
-√wext
-),
-
-1910 
-	`mlfs_ext_gë_a˘uÆ_Àn
-(
-√wext
-),
-
-1911 
-	`À32_to_˝u
-(
-ex
-->
-ì_block
-),
-
-1912 
-	`mlfs_ext_is_unwrôãn
-(
-ex
-),
-
-1913 
-	`mlfs_ext_gë_a˘uÆ_Àn
-(
-ex
-),
-
 1914 
+	`À32_to_˝u
+(
+√wext
+->
+ì_block
+),
+
+1915 
+	`mlfs_ext_is_unwrôãn
+(
+√wext
+),
+
+1916 
+	`mlfs_ext_gë_a˘uÆ_Àn
+(
+√wext
+),
+
+1917 
+	`À32_to_˝u
+(
+ex
+->
+ì_block
+),
+
+1918 
+	`mlfs_ext_is_unwrôãn
+(
+ex
+),
+
+1919 
+	`mlfs_ext_gë_a˘uÆ_Àn
+(
+ex
+),
+
+1920 
 	`mlfs_ext_pblock
 (
 ex
 ));
 
-1916 
+1922 
 unwrôãn
  = 
 	`mlfs_ext_is_unwrôãn
@@ -15249,7 +15283,7 @@ unwrôãn
 ex
 );
 
-1917 
+1923 
 ex
 ->
 ì_block
@@ -15257,7 +15291,7 @@ ex
 √wext
 ->ee_block;
 
-1919 
+1925 
 	`mlfs_ext_°‹e_pblock
 (
 ex
@@ -15267,7 +15301,7 @@ ex
 √wext
 ));
 
-1920 
+1926 
 ex
 ->
 ì_Àn
@@ -15277,23 +15311,23 @@ ex
 	`mlfs_ext_gë_a˘uÆ_Àn
 (ex) +
 
-1921 
+1927 
 	`mlfs_ext_gë_a˘uÆ_Àn
 (
 √wext
 ));
 
-1923 i‡(
+1929 i‡(
 unwrôãn
 )
 
-1924 
+1930 
 	`mlfs_ext_m¨k_unwrôãn
 (
 ex
 );
 
-1926 
+1932 
 eh
  = 
 ∑th
@@ -15303,17 +15337,17 @@ dïth
 p_hdr
 ;
 
-1927 
+1933 
 √¨ex
  = 
 ex
 ;
 
-1929 
+1935 
 mîge
 ;
 
-1933 
+1939 
 dïth
  = 
 	`ext_dïth
@@ -15323,7 +15357,7 @@ h™dÀ
 öode
 );
 
-1934 
+1940 
 eh
  = 
 ∑th
@@ -15333,7 +15367,7 @@ dïth
 p_hdr
 ;
 
-1936 i‡(
+1942 i‡(
 	`À16_to_˝u
 (
 eh
@@ -15343,11 +15377,11 @@ eh_íåõs
 eh_max
 ))
 
-1937 
+1943 
 has_•a˚
 ;
 
-1940 
+1946 
 œ°_ex
  = 
 	`EXT_LAST_EXTENT
@@ -15355,13 +15389,13 @@ has_•a˚
 eh
 );
 
-1941 
+1947 
 √xt_lb
  = 
 EXT_MAX_BLOCKS
 ;
 
-1943 i‡(
+1949 i‡(
 	`mlfs_ext_lblock
 (
 √wext
@@ -15369,7 +15403,7 @@ EXT_MAX_BLOCKS
 œ°_ex
 ))
 
-1944 
+1950 
 √xt_lb
  = 
 	`mlfs_ext_√xt_Àaf_block
@@ -15377,19 +15411,19 @@ EXT_MAX_BLOCKS
 ∑th
 );
 
-1948 i‡(
+1954 i‡(
 √xt_lb
  !
 EXT_MAX_BLOCKS
 ) {
 
-1949 
+1955 
 	`mlfs_lsm_debug
 ("√xàÀa‡block - %u\n", 
 √xt_lb
 );
 
-1950 
+1956 
 	`BUG_ON
 (
 ≈©h
@@ -15397,7 +15431,7 @@ EXT_MAX_BLOCKS
 NULL
 );
 
-1952 
+1958 
 ≈©h
  = 
 	`mlfs_föd_exã¡
@@ -15411,19 +15445,19 @@ h™dÀ
 NULL
 , 0);
 
-1953 i‡(
+1959 i‡(
 	`IS_ERR
 (
 ≈©h
 ))
 
-1954  
+1960  
 	`PTR_ERR
 (
 ≈©h
 );
 
-1956 
+1962 
 	`BUG_ON
 (
 ≈©h
@@ -15433,7 +15467,7 @@ p_dïth
 ∑th
 ->p_depth);
 
-1958 
+1964 
 eh
  = 
 ≈©h
@@ -15443,7 +15477,7 @@ dïth
 p_hdr
 ;
 
-1961 i‡(
+1967 i‡(
 	`À16_to_˝u
 (
 eh
@@ -15453,11 +15487,11 @@ eh_íåõs
 eh_max
 )) {
 
-1962 
+1968 
 	`mlfs_lsm_debug
 ("nextÜeaf isn't full(%d)\n",
 
-1963 
+1969 
 	`À16_to_˝u
 (
 eh
@@ -15465,21 +15499,21 @@ eh
 eh_íåõs
 ));
 
-1967 
+1973 
 ∑th
  = 
 ≈©h
 ;
 
-1968 
+1974 
 has_•a˚
 ;
 
-1971 
+1977 
 	`mlfs_lsm_debug
 ("nextÜeaf hasÇo free space(%d,%d)\n",
 
-1972 
+1978 
 	`À16_to_˝u
 (
 eh
@@ -15489,19 +15523,19 @@ eh_íåõs
 eh_max
 ));
 
-1979 i‡(
+1985 i‡(
 gb_Êags
  & 
 MLFS_GET_BLOCKS_METADATA_NOFAIL
 )
 
-1980 
+1986 
 mb_Êags
  |
 MLFS_MB_USE_RESERVED
 ;
 
-1983 
+1989 
 îr
  = 
 	`mlfs_ext_¸óã_√w_Àaf
@@ -15515,21 +15549,21 @@ mb_Êags
 gb_Êags
 ,
 
-1984 
+1990 
 µ©h
 , 
 √wext
 );
 
-1986 i‡(
+1992 i‡(
 îr
 )
 
-1987 
+1993 
 ˛ónup
 ;
 
-1989 
+1995 
 dïth
  = 
 	`ext_dïth
@@ -15539,7 +15573,7 @@ h™dÀ
 öode
 );
 
-1990 
+1996 
 eh
  = 
 ∑th
@@ -15549,11 +15583,11 @@ dïth
 p_hdr
 ;
 
-1992 
+1998 
 has_•a˚
 :
 
-1998 
+2004 
 √¨ex
  = 
 ∑th
@@ -15563,15 +15597,15 @@ dïth
 p_ext
 ;
 
-2000 i‡(!
+2006 i‡(!
 √¨ex
 ) {
 
-2003 
+2009 
 	`mlfs_lsm_debug
 ("firstÉxtent inÅheÜeaf: %u:%lx:[%d]%d\n",
 
-2004 
+2010 
 	`À32_to_˝u
 (
 √wext
@@ -15581,19 +15615,19 @@ p_ext
 	`mlfs_ext_pblock
 (newext),
 
-2005 
+2011 
 	`mlfs_ext_is_unwrôãn
 (
 √wext
 ),
 
-2006 
+2012 
 	`mlfs_ext_gë_a˘uÆ_Àn
 (
 √wext
 ));
 
-2007 
+2013 
 √¨ex
  = 
 	`EXT_FIRST_EXTENT
@@ -15601,7 +15635,7 @@ p_ext
 eh
 );
 
-2009 i‡(
+2015 i‡(
 	`mlfs_ext_lblock
 (
 √wext
@@ -15609,11 +15643,11 @@ eh
 √¨ex
 )) {
 
-2010 
+2016 
 	`mlfs_lsm_debug
 (
 
-2013 
+2019 
 	`mlfs_ext_lblock
 (
 √wext
@@ -15621,7 +15655,7 @@ eh
 	`mlfs_ext_pblock
 (newext),
 
-2014 
+2020 
 	`mlfs_ext_is_unwrôãn
 (
 √wext
@@ -15629,15 +15663,15 @@ eh
 	`mlfs_ext_gë_a˘uÆ_Àn
 (newext),
 
-2015 
+2021 
 √¨ex
 );
 
-2016 
+2022 
 √¨ex
 ++;
 
-2018 
+2024 
 	`BUG_ON
 (
 	`mlfs_ext_lblock
@@ -15647,11 +15681,11 @@ eh
 √¨ex
 ));
 
-2019 
+2025 
 	`mlfs_lsm_debug
 (
 
-2022 
+2028 
 	`mlfs_ext_lblock
 (
 √wext
@@ -15659,7 +15693,7 @@ eh
 	`mlfs_ext_pblock
 (newext),
 
-2023 
+2029 
 	`mlfs_ext_is_unwrôãn
 (
 √wext
@@ -15667,11 +15701,11 @@ eh
 	`mlfs_ext_gë_a˘uÆ_Àn
 (newext),
 
-2024 
+2030 
 √¨ex
 );
 
-2026 
+2032 
 Àn
  = 
 	`EXT_LAST_EXTENT
@@ -15681,15 +15715,15 @@ eh
 √¨ex
  + 1;
 
-2028 i‡(
+2034 i‡(
 Àn
  > 0) {
 
-2029 
+2035 
 	`mlfs_lsm_debug
 (
 
-2032 
+2038 
 	`mlfs_ext_lblock
 (
 √wext
@@ -15697,7 +15731,7 @@ eh
 	`mlfs_ext_pblock
 (newext),
 
-2033 
+2039 
 	`mlfs_ext_is_unwrôãn
 (
 √wext
@@ -15705,13 +15739,13 @@ eh
 	`mlfs_ext_gë_a˘uÆ_Àn
 (newext),
 
-2034 
+2040 
 Àn
 , 
 √¨ex
 ,Çearex + 1);
 
-2035 
+2041 
 	`memmove
 (
 √¨ex
@@ -15721,7 +15755,7 @@ eh
 mlfs_exã¡
 ));
 
-2039 
+2045 
 	`À16_add_˝u
 (&
 eh
@@ -15729,7 +15763,7 @@ eh
 eh_íåõs
 , 1);
 
-2040 
+2046 
 ∑th
 [
 dïth
@@ -15739,7 +15773,7 @@ p_ext
 √¨ex
 ;
 
-2045 
+2051 
 	`mlfs_ext_£t_lblock
 (
 √¨ex
@@ -15749,7 +15783,7 @@ p_ext
 √wext
 ));
 
-2046 
+2052 
 	`mlfs_ext_°‹e_pblock
 (
 √¨ex
@@ -15759,7 +15793,7 @@ p_ext
 √wext
 ));
 
-2047 
+2053 
 √¨ex
 ->
 ì_Àn
@@ -15767,17 +15801,17 @@ p_ext
 √wext
 ->ee_len;
 
-2049 
+2055 
 mîge
 :
 
-2051 i‡(!(
+2057 i‡(!(
 gb_Êags
  & 
 MLFS_GET_BLOCKS_PRE_IO
 ))
 
-2052 
+2058 
 	`mlfs_ext_åy_to_mîge
 (
 h™dÀ
@@ -15789,7 +15823,7 @@ h™dÀ
 √¨ex
 );
 
-2055 
+2061 
 îr
  = 
 	`mlfs_ext_c‹ª˘_ödexes
@@ -15801,15 +15835,15 @@ h™dÀ
 ∑th
 );
 
-2056 i‡(
+2062 i‡(
 îr
 )
 
-2057 
+2063 
 ˛ónup
 ;
 
-2059 
+2065 
 îr
  = 
 	`mlfs_ext_dúty
@@ -15823,35 +15857,35 @@ h™dÀ
 p_dïth
 );
 
-2061 
+2067 
 ˛ónup
 :
 
-2062 i‡(
+2068 i‡(
 ≈©h
 ) {
 
-2063 
+2069 
 	`mlfs_ext_dr›_ªfs
 (
 ≈©h
 );
 
-2064 
+2070 
 	`mlfs_‰ì
 (
 ≈©h
 );
 
-2067  
+2073  
 îr
 ;
 
-2068 
+2074 
 	}
 }
 
-2070 
+2076 
 ölöe
  
 	$gë_deÁu…_‰ì_blocks_Êags
@@ -15859,11 +15893,11 @@ p_dïth
 öode
  *inode)
 
-2073 
+2079 
 	}
 }
 
-2076 
+2082 
 	$mlfs_ext_zîoout
 (
 öode
@@ -15873,21 +15907,21 @@ mlfs_exã¡
 ex
 )
 
-2078 
+2084 
 mlfs_fsblk_t
  
 ì_pblock
 ;
 
-2079 
+2085 
 ì_Àn
 ;
 
-2080 
+2086 
 ªt
 ;
 
-2082 
+2088 
 ì_Àn
  = 
 	`mlfs_ext_gë_a˘uÆ_Àn
@@ -15895,7 +15929,7 @@ mlfs_fsblk_t
 ex
 );
 
-2083 
+2089 
 ì_pblock
  = 
 	`mlfs_ext_pblock
@@ -15903,19 +15937,19 @@ ex
 ex
 );
 
-2085 
+2091 
 ªt
  = 0;
 
-2087  
+2093  
 ªt
 ;
 
-2088 
+2094 
 	}
 }
 
-2090 
+2096 
 	$mlfs_ªmove_blocks
 (
 h™dÀ_t
@@ -15925,7 +15959,7 @@ h™dÀ
 öode
  *inode,
 
-2091 
+2097 
 mlfs_exã¡
  *
 ex
@@ -15935,17 +15969,17 @@ ex
 to
 )
 
-2093 
+2099 
 buf„r_hód
  *
 bh
 ;
 
-2094 
+2100 
 i
 ;
 
-2096 i‡(
+2102 i‡(
 ‰om
  >
 	`À32_to_˝u
@@ -15955,7 +15989,7 @@ ex
 ì_block
 ) &&
 
-2097 
+2103 
 to
  =
 	`À32_to_˝u
@@ -15967,13 +16001,13 @@ ex
 	`mlfs_ext_gë_a˘uÆ_Àn
 (ex) - 1) {
 
-2099 
+2105 
 num
 , 
 °¨t
 ;
 
-2100 
+2106 
 num
  = 
 	`À32_to_˝u
@@ -15987,7 +16021,7 @@ ex
 ‰om
 ;
 
-2101 
+2107 
 °¨t
  = 
 	`mlfs_ext_pblock
@@ -15999,7 +16033,7 @@ ex
 num
 ;
 
-2102 
+2108 
 	`mlfs_‰ì_blocks
 (
 h™dÀ
@@ -16013,7 +16047,7 @@ NULL
 num
 , 0);
 
-2103 } i‡(
+2109 } i‡(
 ‰om
  =
 	`À32_to_˝u
@@ -16023,7 +16057,7 @@ ex
 ì_block
 ) &&
 
-2104 
+2110 
 to
  <
 	`À32_to_˝u
@@ -16035,11 +16069,11 @@ ex
 	`mlfs_ext_gë_a˘uÆ_Àn
 (ex) - 1) {
 
-2108 
+2114 
 	}
 }
 
-2115 
+2121 
 	$mlfs_ext_rm_idx
 (
 h™dÀ_t
@@ -16049,7 +16083,7 @@ h™dÀ
 öode
  *inode,
 
-2116 
+2122 
 mlfs_ext_∑th
  *
 ∑th
@@ -16057,27 +16091,27 @@ mlfs_ext_∑th
 dïth
 )
 
-2118 
+2124 
 îr
 ;
 
-2119 
+2125 
 mlfs_fsblk_t
  
 Àaf
 ;
 
-2121 
+2127 
 ∑th
 --;
 
-2122 
+2128 
 ∑th
  =Ö©h + 
 dïth
 ;
 
-2123 
+2129 
 Àaf
  = 
 	`mlfs_idx_pblock
@@ -16087,7 +16121,7 @@ dïth
 p_idx
 );
 
-2126 
+2132 
 	`BUG_ON
 (
 ∑th
@@ -16097,7 +16131,7 @@ p_hdr
 eh_íåõs
  == 0);
 
-2128 i‡(
+2134 i‡(
 ∑th
 ->
 p_idx
@@ -16107,7 +16141,7 @@ p_idx
 p_hdr
 )) {
 
-2129 
+2135 
 Àn
  = 
 	`EXT_LAST_INDEX
@@ -16119,13 +16153,13 @@ p_hdr
 p_idx
 ;
 
-2130 
+2136 
 Àn
  *(
 mlfs_exã¡_idx
 );
 
-2131 
+2137 
 	`memmove
 (
 ∑th
@@ -16135,7 +16169,7 @@ p_idx
 Àn
 );
 
-2134 
+2140 
 	`À16_add_˝u
 (&
 ∑th
@@ -16145,7 +16179,7 @@ p_hdr
 eh_íåõs
 , -1);
 
-2136 i‡((
+2142 i‡((
 îr
  = 
 	`mlfs_ext_dúty
@@ -16157,11 +16191,11 @@ h™dÀ
 ∑th
 )))
 
-2137  
+2143  
 îr
 ;
 
-2139 
+2145 
 	`mlfs_‰ì_blocks
 (
 h™dÀ
@@ -16173,11 +16207,11 @@ NULL
 Àaf
 , 1, 0);
 
-2141 --
+2147 --
 dïth
  >= 0) {
 
-2142 i‡(
+2148 i‡(
 ∑th
 ->
 p_idx
@@ -16187,7 +16221,7 @@ p_idx
 p_hdr
 ))
 
-2146 i‡(
+2152 i‡(
 ∑th
 ->
 p_hdr
@@ -16199,11 +16233,11 @@ h™dÀ
 öode
 ))
 
-2149 
+2155 
 ∑th
 --;
 
-2151 
+2157 
 	`mlfs_as£π
 (
 ∑th
@@ -16211,7 +16245,7 @@ h™dÀ
 p_idx
 );
 
-2152 
+2158 
 	`mlfs_as£π
 ((
 ∑th
@@ -16219,7 +16253,7 @@ p_idx
 p_idx
 );
 
-2154 
+2160 
 ∑th
 ->
 p_idx
@@ -16227,7 +16261,7 @@ p_idx
 ei_block
  = (path+1)->p_idx->ei_block;
 
-2155 
+2161 
 îr
  = 
 	`mlfs_ext_dúty
@@ -16239,19 +16273,19 @@ h™dÀ
 ∑th
 );
 
-2156 i‡(
+2162 i‡(
 îr
 )
 
-2160  
+2166  
 îr
 ;
 
-2161 
+2167 
 	}
 }
 
-2163 
+2169 
 	$mlfs_ext_rm_Àaf
 (
 h™dÀ_t
@@ -16261,7 +16295,7 @@ h™dÀ
 öode
  *inode,
 
-2164 
+2170 
 mlfs_ext_∑th
  *
 ∑th
@@ -16273,13 +16307,13 @@ mlfs_lblk_t
 íd
 )
 
-2166 
+2172 
 îr
  = 0, 
 c‹ª˘_ödex
  = 0;
 
-2167 
+2173 
 dïth
  = 
 	`ext_dïth
@@ -16289,13 +16323,13 @@ h™dÀ
 öode
 );
 
-2168 
+2174 
 mlfs_exã¡_hódî
  *
 eh
 ;
 
-2169 
+2175 
 mlfs_lblk_t
  
 a
@@ -16305,57 +16339,57 @@ b
 block
 ;
 
-2170 
+2176 
 num
 , 
 unwrôãn
  = 0;
 
-2171 
+2177 
 mlfs_lblk_t
  
 ex_ì_block
 ;
 
-2172 
+2178 
 ex_ì_Àn
 ;
 
-2173 
+2179 
 mlfs_exã¡
  *
 ex
 ;
 
-2175 
+2181 
 	`mlfs_lsm_debug
 ("truncate from %u(0x%x)Åo %u(0x%x)\n",
 
-2176 
+2182 
 °¨t
  << 
 g_block_size_shi·
 ,
 
-2177 
+2183 
 °¨t
  << 
 g_block_size_shi·
 ,
 
-2178 
+2184 
 íd
  << 
 g_block_size_shi·
 ,
 
-2179 
+2185 
 íd
  << 
 g_block_size_shi·
 );
 
-2182 i‡(!
+2188 i‡(!
 ∑th
 [
 dïth
@@ -16363,7 +16397,7 @@ dïth
 p_hdr
 )
 
-2183 
+2189 
 ∑th
 [
 dïth
@@ -16375,7 +16409,7 @@ p_hdr
 p_bh
 );
 
-2185 
+2191 
 eh
  = 
 ∑th
@@ -16385,7 +16419,7 @@ dïth
 p_hdr
 ;
 
-2186 
+2192 
 	`BUG_ON
 (
 eh
@@ -16393,7 +16427,7 @@ eh
 NULL
 );
 
-2190 
+2196 
 ex
  = 
 	`EXT_LAST_EXTENT
@@ -16401,7 +16435,7 @@ ex
 eh
 );
 
-2192 
+2198 
 ex_ì_block
  = 
 	`À32_to_˝u
@@ -16411,7 +16445,7 @@ ex
 ì_block
 );
 
-2193 
+2199 
 ex_ì_Àn
  = 
 	`mlfs_ext_gë_a˘uÆ_Àn
@@ -16419,7 +16453,7 @@ ex_ì_Àn
 ex
 );
 
-2195 
+2201 
 ex
  >
 	`EXT_FIRST_EXTENT
@@ -16427,7 +16461,7 @@ ex
 eh
 ) &&
 
-2196 
+2202 
 ex_ì_block
  + 
 ex_ì_Àn
@@ -16435,21 +16469,21 @@ ex_ì_Àn
 °¨t
 ) {
 
-2198 i‡(
+2204 i‡(
 	`mlfs_ext_is_unwrôãn
 (
 ex
 ))
 
-2199 
+2205 
 unwrôãn
  = 1;
 
-2201 
+2207 
 unwrôãn
  = 0;
 
-2203 
+2209 
 ∑th
 [
 dïth
@@ -16459,7 +16493,7 @@ p_ext
 ex
 ;
 
-2207 
+2213 
 a
  = 
 ex_ì_block
@@ -16467,7 +16501,7 @@ ex_ì_block
 °¨t
  ?Éx_ee_block : start;
 
-2208 
+2214 
 b
  = 
 ex_ì_block
@@ -16477,7 +16511,7 @@ ex_ì_Àn
 íd
  ?
 
-2209 
+2215 
 ex_ì_block
 +
 ex_ì_Àn
@@ -16485,11 +16519,11 @@ ex_ì_Àn
 íd
 ;
 
-2211 
+2217 
 	`mlfs_lsm_debug
 ("removeÉxt %u:[%d]%d - border %u:%u\n",
 
-2212 
+2218 
 ex_ì_block
 , 
 unwrôãn
@@ -16501,17 +16535,17 @@ a
 b
 );
 
-2215 i‡(
+2221 i‡(
 íd
  < 
 ex_ì_block
 ) {
 
-2216 
+2222 
 ex
 --;
 
-2217 
+2223 
 ex_ì_block
  = 
 	`À32_to_˝u
@@ -16521,7 +16555,7 @@ ex
 ì_block
 );
 
-2218 
+2224 
 ex_ì_Àn
  = 
 	`mlfs_ext_gë_a˘uÆ_Àn
@@ -16529,7 +16563,7 @@ ex_ì_Àn
 ex
 );
 
-2220 } i‡(
+2226 } i‡(
 b
  !
 ex_ì_block
@@ -16537,13 +16571,13 @@ ex_ì_block
 ex_ì_Àn
  - 1) {
 
-2221 
+2227 
 	`MLFS_ERROR_INODE
 (
 öode
 ,
 
-2224 
+2230 
 °¨t
 , 
 íd
@@ -16551,29 +16585,29 @@ ex_ì_Àn
 ex_ì_block
 ,
 
-2225 
+2231 
 ex_ì_block
  + 
 ex_ì_Àn
  - 1);
 
-2226 
+2232 
 îr
  = -
 EFSCORRUPTED
 ;
 
-2227 
+2233 
 out
 ;
 
-2228 } i‡(
+2234 } i‡(
 a
  !
 ex_ì_block
 ) {
 
-2230 
+2236 
 num
  = 
 a
@@ -16581,11 +16615,11 @@ a
 ex_ì_block
 ;
 
-2233 
+2239 
 num
  = 0;
 
-2236 i‡(
+2242 i‡(
 ex
  =
 	`EXT_FIRST_EXTENT
@@ -16593,11 +16627,11 @@ ex
 eh
 ))
 
-2237 
+2243 
 c‹ª˘_ödex
  = 1;
 
-2239 
+2245 
 îr
  = 
 	`mlfs_ªmove_blocks
@@ -16613,25 +16647,25 @@ a
 b
 );
 
-2240 i‡(
+2246 i‡(
 îr
 )
 
-2241 
+2247 
 out
 ;
 
-2244 i‡(
+2250 i‡(
 num
  == 0)
 
-2245 
+2251 
 	`mlfs_ext_°‹e_pblock
 (
 ex
 , 0);
 
-2247 
+2253 
 ex
 ->
 ì_Àn
@@ -16641,29 +16675,29 @@ ex
 num
 );
 
-2253 i‡(
+2259 i‡(
 unwrôãn
  && 
 num
 )
 
-2254 
+2260 
 	`mlfs_ext_m¨k_unwrôãn
 (
 ex
 );
 
-2259 i‡(
+2265 i‡(
 num
  == 0) {
 
-2260 i‡(
+2266 i‡(
 íd
  !
 EXT_MAX_BLOCKS
  - 1) {
 
-2266 
+2272 
 	`memmove
 (
 ex
@@ -16673,11 +16707,11 @@ ex
 eh
 ) -Éx) *
 
-2267 (
+2273 (
 mlfs_exã¡
 ));
 
-2270 
+2276 
 	`mem£t
 (
 	`EXT_LAST_EXTENT
@@ -16685,11 +16719,11 @@ mlfs_exã¡
 eh
 ), 0,
 
-2271 (
+2277 (
 mlfs_exã¡
 ));
 
-2273 
+2279 
 	`À16_add_˝u
 (&
 eh
@@ -16697,7 +16731,7 @@ eh
 eh_íåõs
 , -1);
 
-2276 
+2282 
 îr
  = 
 	`mlfs_ext_dúty
@@ -16711,15 +16745,15 @@ h™dÀ
 dïth
 );
 
-2277 i‡(
+2283 i‡(
 îr
 )
 
-2278 
+2284 
 out
 ;
 
-2280 
+2286 
 	`mlfs_lsm_debug
 ("√wÉxã¡: %u:%u @ %lu\n", 
 ex_ì_block
@@ -16727,17 +16761,17 @@ ex_ì_block
 num
 ,
 
-2281 
+2287 
 	`mlfs_ext_pblock
 (
 ex
 ));
 
-2283 
+2289 
 ex
 --;
 
-2284 
+2290 
 ex_ì_block
  = 
 	`À32_to_˝u
@@ -16747,7 +16781,7 @@ ex
 ì_block
 );
 
-2285 
+2291 
 ex_ì_Àn
  = 
 	`mlfs_ext_gë_a˘uÆ_Àn
@@ -16755,7 +16789,7 @@ ex_ì_Àn
 ex
 );
 
-2288 i‡(
+2294 i‡(
 c‹ª˘_ödex
  && 
 eh
@@ -16763,7 +16797,7 @@ eh
 eh_íåõs
 )
 
-2289 
+2295 
 îr
  = 
 	`mlfs_ext_c‹ª˘_ödexes
@@ -16775,7 +16809,7 @@ h™dÀ
 ∑th
 );
 
-2293 i‡(
+2299 i‡(
 îr
  =0 && 
 eh
@@ -16791,7 +16825,7 @@ p_bh
 NULL
 )
 
-2294 
+2300 
 îr
  = 
 	`mlfs_ext_rm_idx
@@ -16805,19 +16839,19 @@ h™dÀ
 dïth
 );
 
-2296 
+2302 
 out
 :
 
-2297  
+2303  
 îr
 ;
 
-2298 
+2304 
 	}
 }
 
-2321 
+2327 
 	$mlfs_•lô_exã¡_©
 (
 h™dÀ_t
@@ -16825,7 +16859,7 @@ h™dÀ_t
 h™dÀ
 ,
 
-2322 
+2328 
 öode
  *öode, 
 mlfs_ext_∑th
@@ -16837,13 +16871,13 @@ mlfs_lblk_t
 •lô
 ,
 
-2323 
+2329 
 •lô_Êag
 , 
 Êags
 )
 
-2325 
+2331 
 mlfs_ext_∑th
  *
 ∑th
@@ -16851,19 +16885,19 @@ mlfs_ext_∑th
 µ©h
 ;
 
-2326 
+2332 
 mlfs_fsblk_t
  
 √wblock
 ;
 
-2327 
+2333 
 mlfs_lblk_t
  
 ì_block
 ;
 
-2328 
+2334 
 mlfs_exã¡
  *
 ex
@@ -16875,7 +16909,7 @@ ex
 zîo_ex
 ;
 
-2329 
+2335 
 mlfs_exã¡
  *
 ex2
@@ -16883,23 +16917,23 @@ ex2
 NULL
 ;
 
-2330 
+2336 
 ì_Àn
 , 
 dïth
 ;
 
-2331 
+2337 
 îr
  = 0;
 
-2335 
+2341 
 	`mlfs_lsm_debug
 ("•lôáàlogiˇ»block %Œu\n", ()
 •lô
 );
 
-2337 
+2343 
 dïth
  = 
 	`ext_dïth
@@ -16909,7 +16943,7 @@ h™dÀ
 öode
 );
 
-2338 
+2344 
 ex
  = 
 ∑th
@@ -16919,7 +16953,7 @@ dïth
 p_ext
 ;
 
-2339 
+2345 
 ì_block
  = 
 	`À32_to_˝u
@@ -16927,7 +16961,7 @@ p_ext
 ex
 ->ee_block);
 
-2340 
+2346 
 ì_Àn
  = 
 	`mlfs_ext_gë_a˘uÆ_Àn
@@ -16935,7 +16969,7 @@ ex
 ex
 );
 
-2341 
+2347 
 √wblock
  = 
 •lô
@@ -16947,7 +16981,7 @@ ex
 ex
 );
 
-2343 
+2349 
 	`BUG_ON
 (
 •lô
@@ -16957,37 +16991,37 @@ ex
 ì_Àn
 ));
 
-2345 i‡(
+2351 i‡(
 •lô
  =
 ì_block
 ) {
 
-2351 i‡(
+2357 i‡(
 •lô_Êag
  & 
 MLFS_EXT_MARK_UNWRIT2
 )
 
-2352 
+2358 
 	`mlfs_ext_m¨k_unwrôãn
 (
 ex
 );
 
-2354 
+2360 
 	`mlfs_ext_m¨k_öôülized
 (
 ex
 );
 
-2356 i‡(!(
+2362 i‡(!(
 Êags
  & 
 MLFS_GET_BLOCKS_PRE_IO
 ))
 
-2357 
+2363 
 	`mlfs_ext_åy_to_mîge
 (
 h™dÀ
@@ -16999,7 +17033,7 @@ h™dÀ
 ex
 );
 
-2359 
+2365 
 îr
  = 
 	`mlfs_ext_dúty
@@ -17013,11 +17047,11 @@ h™dÀ
 p_dïth
 );
 
-2360 
+2366 
 out
 ;
 
-2364 
+2370 
 	`mem˝y
 (&
 ‹ig_ex
@@ -17025,7 +17059,7 @@ out
 ex
 , (orig_ex));
 
-2365 
+2371 
 ex
 ->
 ì_Àn
@@ -17037,19 +17071,19 @@ ex
 ì_block
 );
 
-2367 i‡(
+2373 i‡(
 •lô_Êag
  & 
 MLFS_EXT_MARK_UNWRIT1
 )
 
-2368 
+2374 
 	`mlfs_ext_m¨k_unwrôãn
 (
 ex
 );
 
-2374 
+2380 
 îr
  = 
 	`mlfs_ext_dúty
@@ -17063,21 +17097,21 @@ h™dÀ
 dïth
 );
 
-2375 i‡(
+2381 i‡(
 îr
 )
 
-2376 
+2382 
 fix_exã¡_Àn
 ;
 
-2378 
+2384 
 ex2
  = &
 √wex
 ;
 
-2379 
+2385 
 ex2
 ->
 ì_block
@@ -17087,7 +17121,7 @@ ex2
 •lô
 );
 
-2380 
+2386 
 ex2
 ->
 ì_Àn
@@ -17099,7 +17133,7 @@ ex2
 ì_block
 ));
 
-2381 
+2387 
 	`mlfs_ext_°‹e_pblock
 (
 ex2
@@ -17107,19 +17141,19 @@ ex2
 √wblock
 );
 
-2382 i‡(
+2388 i‡(
 •lô_Êag
  & 
 MLFS_EXT_MARK_UNWRIT2
 )
 
-2383 
+2389 
 	`mlfs_ext_m¨k_unwrôãn
 (
 ex2
 );
 
-2385 
+2391 
 îr
  = 
 	`mlfs_ext_ö£π_exã¡
@@ -17135,7 +17169,7 @@ h™dÀ
 Êags
 );
 
-2387 i‡(
+2393 i‡(
 îr
  =-
 ENOSPC
@@ -17145,7 +17179,7 @@ MLFS_EXT_MAY_ZEROOUT
 •lô_Êag
 )) {
 
-2388 i‡(
+2394 i‡(
 •lô_Êag
  & (
 MLFS_EXT_DATA_VALID1
@@ -17153,90 +17187,50 @@ MLFS_EXT_DATA_VALID1
 MLFS_EXT_DATA_VALID2
 )) {
 
-2389 i‡(
+2395 i‡(
 •lô_Êag
  & 
 MLFS_EXT_DATA_VALID1
 ) {
 
-2390 
-îr
- = 
-	`mlfs_ext_zîoout
-(
-öode
-, 
-ex2
-);
-
-2391 
-zîo_ex
-.
-ì_block
- = 
-ex2
-->ee_block;
-
-2392 
-zîo_ex
-.
-ì_Àn
- = 
-	`˝u_to_À16
-(
-	`mlfs_ext_gë_a˘uÆ_Àn
-(
-ex2
-));
-
-2393 
-	`mlfs_ext_°‹e_pblock
-(&
-zîo_ex
-, 
-	`mlfs_ext_pblock
-(
-ex2
-));
-
-2395 
-îr
- = 
-	`mlfs_ext_zîoout
-(
-öode
-, 
-ex
-);
-
 2396 
-zîo_ex
-.
-ì_block
+îr
  = 
-ex
-->ee_block;
+	`mlfs_ext_zîoout
+(
+öode
+, 
+ex2
+);
 
 2397 
 zîo_ex
 .
+ì_block
+ = 
+ex2
+->ee_block;
+
+2398 
+zîo_ex
+.
 ì_Àn
  = 
 	`˝u_to_À16
 (
 	`mlfs_ext_gë_a˘uÆ_Àn
 (
-ex
+ex2
 ));
 
-2398 
+2399 
 	`mlfs_ext_°‹e_pblock
 (&
 zîo_ex
 , 
 	`mlfs_ext_pblock
 (
-ex
+ex2
 ));
 
 2401 
@@ -17245,8 +17239,8 @@ ex
 	`mlfs_ext_zîoout
 (
 öode
-, &
-‹ig_ex
+, 
+ex
 );
 
 2402 
@@ -17254,8 +17248,8 @@ zîo_ex
 .
 ì_block
  = 
-‹ig_ex
-.ee_block;
+ex
+->ee_block;
 
 2403 
 zîo_ex
@@ -17265,11 +17259,51 @@ zîo_ex
 	`˝u_to_À16
 (
 	`mlfs_ext_gë_a˘uÆ_Àn
+(
+ex
+));
+
+2404 
+	`mlfs_ext_°‹e_pblock
+(&
+zîo_ex
+, 
+	`mlfs_ext_pblock
+(
+ex
+));
+
+2407 
+îr
+ = 
+	`mlfs_ext_zîoout
+(
+öode
+, &
+‹ig_ex
+);
+
+2408 
+zîo_ex
+.
+ì_block
+ = 
+‹ig_ex
+.ee_block;
+
+2409 
+zîo_ex
+.
+ì_Àn
+ = 
+	`˝u_to_À16
+(
+	`mlfs_ext_gë_a˘uÆ_Àn
 (&
 ‹ig_ex
 ));
 
-2404 
+2410 
 	`mlfs_ext_°‹e_pblock
 (&
 zîo_ex
@@ -17279,15 +17313,15 @@ zîo_ex
 ‹ig_ex
 ));
 
-2407 i‡(
+2413 i‡(
 îr
 )
 
-2408 
+2414 
 fix_exã¡_Àn
 ;
 
-2410 
+2416 
 ex
 ->
 ì_Àn
@@ -17295,7 +17329,7 @@ ex
 	`˝u_to_À16
 (ee_len);
 
-2411 
+2417 
 	`mlfs_ext_åy_to_mîge
 (
 h™dÀ
@@ -17307,7 +17341,7 @@ h™dÀ
 ex
 );
 
-2412 
+2418 
 îr
  = 
 	`mlfs_ext_dúty
@@ -17321,39 +17355,39 @@ h™dÀ
 p_dïth
 );
 
-2413 i‡(
+2419 i‡(
 îr
 )
 
-2414 
+2420 
 fix_exã¡_Àn
 ;
 
-2416 
+2422 
 out
 ;
 
-2417 } i‡(
+2423 } i‡(
 îr
 )
 
-2418 
+2424 
 fix_exã¡_Àn
 ;
 
-2420 
+2426 
 out
 :
 
-2422  
+2428  
 îr
 ;
 
-2424 
+2430 
 fix_exã¡_Àn
 :
 
-2425 
+2431 
 ex
 ->
 ì_Àn
@@ -17361,7 +17395,7 @@ ex
 ‹ig_ex
 .ee_len;
 
-2426 
+2432 
 	`mlfs_ext_dúty
 (
 h™dÀ
@@ -17373,15 +17407,15 @@ h™dÀ
 p_dïth
 );
 
-2427  
+2433  
 îr
 ;
 
-2428 
+2434 
 	}
 }
 
-2433 
+2439 
 ölöe
  
 	$mlfs_ext_m‹e_to_rm
@@ -17391,7 +17425,7 @@ mlfs_ext_∑th
 ∑th
 )
 
-2435 
+2441 
 	`BUG_ON
 (
 ∑th
@@ -17401,7 +17435,7 @@ p_idx
 NULL
 );
 
-2437 i‡(
+2443 i‡(
 ∑th
 ->
 p_idx
@@ -17411,7 +17445,7 @@ p_idx
 p_hdr
 ))
 
-2444 i‡(
+2450 i‡(
 	`À16_to_˝u
 (
 ∑th
@@ -17423,11 +17457,11 @@ eh_íåõs
 p_block
 )
 
-2448 
+2454 
 	}
 }
 
-2450 
+2456 
 	$mlfs_ext_ªmove_•a˚
 (
 h™dÀ_t
@@ -17437,7 +17471,7 @@ h™dÀ
 öode
  *inode,
 
-2451 
+2457 
 mlfs_lblk_t
  
 °¨t
@@ -17445,7 +17479,7 @@ mlfs_lblk_t
 íd
 )
 
-2453 
+2459 
 su≥r_block
  *
 sb
@@ -17459,7 +17493,7 @@ dev
 öode
 );
 
-2454 
+2460 
 dïth
  = 
 	`ext_dïth
@@ -17469,59 +17503,59 @@ h™dÀ
 öode
 );
 
-2455 
+2461 
 mlfs_ext_∑th
  *
 ∑th
 ;
 
-2456 
+2462 
 i
  = 0, 
 îr
  = 0;
 
-2458 
+2464 
 	`mlfs_lsm_debug
 ("truncate from %u(0x%x)Åo %u(0x%x)\n",
 
-2459 
+2465 
 °¨t
  << 
 g_block_size_shi·
 ,
 
-2460 
+2466 
 °¨t
  << 
 g_block_size_shi·
 ,
 
-2461 
+2467 
 íd
  << 
 g_block_size_shi·
 ,
 
-2462 
+2468 
 íd
  << 
 g_block_size_shi·
 );
 
-2471 i‡(
+2477 i‡(
 íd
  < 
 EXT_MAX_BLOCKS
  - 1) {
 
-2472 
+2478 
 mlfs_exã¡
  *
 ex
 ;
 
-2473 
+2479 
 mlfs_lblk_t
  
 ì_block
@@ -17531,13 +17565,13 @@ ex_íd
 lblk
 ;
 
-2474 
+2480 
 mlfs_fsblk_t
  
 pblk
 ;
 
-2477 
+2483 
 ∑th
  = 
 	`mlfs_föd_exã¡
@@ -17553,19 +17587,19 @@ NULL
 MLFS_EX_NOCACHE
 );
 
-2478 i‡(
+2484 i‡(
 	`IS_ERR
 (
 ∑th
 ))
 
-2479  
+2485  
 	`PTR_ERR
 (
 ∑th
 );
 
-2483 
+2489 
 dïth
  = 
 	`ext_dïth
@@ -17575,7 +17609,7 @@ h™dÀ
 öode
 );
 
-2485 
+2491 
 ex
  = 
 ∑th
@@ -17585,15 +17619,15 @@ dïth
 p_ext
 ;
 
-2486 i‡(!
+2492 i‡(!
 ex
 ) {
 
-2487 i‡(
+2493 i‡(
 dïth
 ) {
 
-2488 
+2494 
 	`MLFS_ERROR_INODE
 (
 öode
@@ -17601,17 +17635,17 @@ dïth
 dïth
 );
 
-2489 
+2495 
 îr
  = -
 EFSCORRUPTED
 ;
 
-2491 
+2497 
 out
 ;
 
-2494 
+2500 
 ì_block
  = 
 	`À32_to_˝u
@@ -17619,7 +17653,7 @@ out
 ex
 ->ee_block);
 
-2497 i‡(
+2503 i‡(
 ì_block
  + 
 	`mlfs_ext_gë_a˘uÆ_Àn
@@ -17627,11 +17661,11 @@ ex
 ex
 ) == 0) {
 
-2498 
+2504 
 out
 ;
 
-2501 
+2507 
 ex_íd
  = 
 ì_block
@@ -17641,7 +17675,7 @@ ex_íd
 ex
 ) - 1;
 
-2509 i‡(
+2515 i‡(
 íd
  >
 ì_block
@@ -17649,7 +17683,7 @@ ex
 ex_íd
 ) {
 
-2516 
+2522 
 îr
  = 
 	`mlfs_f‹˚_•lô_exã¡_©
@@ -17661,31 +17695,31 @@ h™dÀ
 ∑th
 ,
 
-2517 
+2523 
 íd
  + 1, 1);
 
-2518 i‡(
+2524 i‡(
 îr
  < 0)
 
-2519 
+2525 
 out
 ;
 
-2521 } i‡(
+2527 } i‡(
 íd
  >
 ex_íd
 ) {
 
-2528 
+2534 
 lblk
  = 
 ex_íd
  + 1;
 
-2529 
+2535 
 îr
  = 
 	`mlfs_ext_£¨ch_right
@@ -17703,15 +17737,15 @@ pblk
 ex
 );
 
-2530 i‡(
+2536 i‡(
 îr
 )
 
-2531 
+2537 
 out
 ;
 
-2539 
+2545 
 dïth
  = 
 	`ext_dïth
@@ -17721,11 +17755,11 @@ h™dÀ
 öode
 );
 
-2540 i‡(
+2546 i‡(
 ∑th
 ) {
 
-2541 
+2547 
 k
  = 
 i
@@ -17733,11 +17767,11 @@ i
 dïth
 ;
 
-2543 --
+2549 --
 k
  > 0)
 
-2544 
+2550 
 ∑th
 [
 k
@@ -17745,7 +17779,7 @@ k
 p_block
  =
 
-2545 
+2551 
 	`À16_to_˝u
 (
 ∑th
@@ -17757,7 +17791,7 @@ p_hdr
 eh_íåõs
 )+1;
 
-2547 
+2553 
 ∑th
  = (
 mlfs_ext_∑th
@@ -17765,23 +17799,23 @@ mlfs_ext_∑th
 	`mlfs_zÆloc
 (
 
-2548 (
+2554 (
 mlfs_ext_∑th
 Ë* (
 dïth
  + 1));
 
-2550 i‡(
+2556 i‡(
 ∑th
  =
 NULL
 )
 
-2551  -
+2557  -
 ENOMEM
 ;
 
-2553 
+2559 
 ∑th
 [0].
 p_maxdïth
@@ -17791,7 +17825,7 @@ p_dïth
 dïth
 ;
 
-2554 
+2560 
 ∑th
 [0].
 p_hdr
@@ -17803,11 +17837,11 @@ h™dÀ
 öode
 );
 
-2555 
+2561 
 i
  = 0;
 
-2557 i‡(
+2563 i‡(
 	`mlfs_ext_check_öode
 (
 h™dÀ
@@ -17815,33 +17849,33 @@ h™dÀ
 öode
 )) {
 
-2558 
+2564 
 îr
  = -
 EFSCORRUPTED
 ;
 
-2559 
+2565 
 out
 ;
 
-2563 
+2569 
 îr
  = 0;
 
-2565 
+2571 
 i
  >0 && 
 îr
  == 0) {
 
-2566 i‡(
+2572 i‡(
 i
  =
 dïth
 ) {
 
-2568 
+2574 
 îr
  = 
 	`mlfs_ext_rm_Àaf
@@ -17857,7 +17891,7 @@ h™dÀ
 íd
 );
 
-2570 
+2576 
 	`fs_bªl£
 (
 ∑th
@@ -17867,7 +17901,7 @@ i
 p_bh
 );
 
-2571 
+2577 
 ∑th
 [
 i
@@ -17877,11 +17911,11 @@ p_bh
 NULL
 ;
 
-2572 
+2578 
 i
 --;
 
-2577 i‡(!
+2583 i‡(!
 ∑th
 [
 i
@@ -17889,7 +17923,7 @@ i
 p_hdr
 ) {
 
-2578 
+2584 
 ∑th
 [
 i
@@ -17901,7 +17935,7 @@ p_hdr
 p_bh
 );
 
-2581 i‡(!
+2587 i‡(!
 ∑th
 [
 i
@@ -17909,7 +17943,7 @@ i
 p_idx
 ) {
 
-2583 
+2589 
 ∑th
 [
 i
@@ -17921,7 +17955,7 @@ p_idx
 p_hdr
 );
 
-2584 
+2590 
 ∑th
 [
 i
@@ -17935,11 +17969,11 @@ p_hdr
 eh_íåõs
 ) + 1;
 
-2585 
+2591 
 	`mlfs_lsm_debug
 ("init indexÖtr: hdr 0x%p,Çum %d\n",
 
-2586 
+2592 
 ∑th
 [
 i
@@ -17951,7 +17985,7 @@ p_hdr
 eh_íåõs
 ));
 
-2589 
+2595 
 ∑th
 [
 i
@@ -17959,11 +17993,11 @@ i
 p_idx
 --;
 
-2592 
+2598 
 	`mlfs_lsm_debug
 ("level %d - index, first 0x%p, cur 0x%p\n",
 
-2593 
+2599 
 i
 , 
 	`EXT_FIRST_INDEX
@@ -17973,7 +18007,7 @@ i
 p_hdr
 ),
 
-2594 
+2600 
 ∑th
 [
 i
@@ -17981,7 +18015,7 @@ i
 p_idx
 );
 
-2596 i‡(
+2602 i‡(
 	`mlfs_ext_m‹e_to_rm
 (
 ∑th
@@ -17989,17 +18023,17 @@ p_idx
 i
 )) {
 
-2597 
+2603 
 buf„r_hód
  *
 bh
 ;
 
-2599 
+2605 
 	`mlfs_lsm_debug
 ("moveÅoÜevel %d (block %lx)\n",
 
-2600 
+2606 
 i
  + 1, 
 	`mlfs_idx_pblock
@@ -18009,7 +18043,7 @@ i
 p_idx
 ));
 
-2601 
+2607 
 	`mem£t
 (
 ∑th
@@ -18017,7 +18051,7 @@ p_idx
 i
  + 1, 0, (*path));
 
-2603 
+2609 
 bh
  = 
 	`ªad_exã¡_åì_block
@@ -18027,7 +18061,7 @@ h™dÀ
 öode
 ,
 
-2604 
+2610 
 	`mlfs_idx_pblock
 (
 ∑th
@@ -18037,7 +18071,7 @@ i
 p_idx
 ),
 
-2605 
+2611 
 ∑th
 [0].
 p_dïth
@@ -18045,19 +18079,19 @@ p_dïth
 i
  + 1), 0);
 
-2606 i‡(
+2612 i‡(
 	`IS_ERR
 (
 bh
 )) {
 
-2608 
+2614 
 îr
  = -
 EIO
 ;
 
-2611 
+2617 
 ∑th
 [
 i
@@ -18067,7 +18101,7 @@ p_bh
 bh
 ;
 
-2615 
+2621 
 ∑th
 [
 i
@@ -18081,11 +18115,11 @@ p_hdr
 eh_íåõs
 );
 
-2616 
+2622 
 i
 ++;
 
-2619 i‡(
+2625 i‡(
 ∑th
 [
 i
@@ -18095,7 +18129,7 @@ p_hdr
 eh_íåõs
  == 0 && i > 0) {
 
-2623 
+2629 
 îr
  = 
 	`mlfs_ext_rm_idx
@@ -18109,7 +18143,7 @@ h™dÀ
 i
 );
 
-2626 
+2632 
 	`fs_bªl£
 (
 ∑th
@@ -18119,7 +18153,7 @@ i
 p_bh
 );
 
-2627 
+2633 
 ∑th
 [
 i
@@ -18129,17 +18163,17 @@ p_bh
 NULL
 ;
 
-2628 
+2634 
 i
 --;
 
-2629 
+2635 
 	`mlfs_lsm_debug
 ("ªtu∫ÅÿÀvñ %d\n", 
 i
 );
 
-2634 i‡(
+2640 i‡(
 ∑th
 ->
 p_hdr
@@ -18147,7 +18181,7 @@ p_hdr
 eh_íåõs
  == 0) {
 
-2639 
+2645 
 	`ext_öode_hdr
 (
 h™dÀ
@@ -18157,7 +18191,7 @@ h™dÀ
 eh_dïth
  = 0;
 
-2640 
+2646 
 	`ext_öode_hdr
 (
 h™dÀ
@@ -18167,7 +18201,7 @@ h™dÀ
 eh_max
  =
 
-2641 
+2647 
 	`˝u_to_À16
 (
 	`mlfs_ext_•a˚_roŸ
@@ -18175,7 +18209,7 @@ eh_max
 öode
 , 0));
 
-2642 
+2648 
 îr
  = 
 	`mlfs_ext_dúty
@@ -18187,35 +18221,35 @@ h™dÀ
 ∑th
 );
 
-2644 
+2650 
 out
 :
 
-2645 i‡(
+2651 i‡(
 ∑th
 ) {
 
-2646 
+2652 
 	`mlfs_ext_dr›_ªfs
 (
 ∑th
 );
 
-2647 
+2653 
 	`mlfs_‰ì
 (
 ∑th
 );
 
-2650  
+2656  
 îr
 ;
 
-2651 
+2657 
 	}
 }
 
-2653 
+2659 
 	$mlfs_ext_c⁄vît_to_öôülized
 (
 h™dÀ_t
@@ -18223,29 +18257,29 @@ h™dÀ_t
 h™dÀ
 ,
 
-2654 
+2660 
 öode
  *inode,
 
-2655 
+2661 
 mlfs_ext_∑th
  **
 µ©h
 ,
 
-2656 
+2662 
 mlfs_lblk_t
  
 •lô
 ,
 
-2657 
+2663 
 blocks
 , 
 Êags
 )
 
-2659 
+2665 
 dïth
  = 
 	`ext_dïth
@@ -18257,7 +18291,7 @@ h™dÀ
 îr
 ;
 
-2660 
+2666 
 mlfs_exã¡
  *
 ex
@@ -18269,7 +18303,7 @@ dïth
 p_ext
 ;
 
-2662 
+2668 
 	`as£π
 (
 	`À32_to_˝u
@@ -18281,13 +18315,13 @@ ex
 •lô
 );
 
-2664 i‡(
+2670 i‡(
 •lô
  + 
 blocks
  ==
 
-2665 
+2671 
 	`À32_to_˝u
 (
 ex
@@ -18297,7 +18331,7 @@ ex
 	`mlfs_ext_gë_a˘uÆ_Àn
 (ex)) {
 
-2667 
+2673 
 îr
  = 
 	`mlfs_•lô_exã¡_©
@@ -18311,13 +18345,13 @@ h™dÀ
 •lô
 ,
 
-2668 
+2674 
 MLFS_EXT_MARK_UNWRIT1
 , 
 Êags
 );
 
-2670 } i‡(
+2676 } i‡(
 	`À32_to_˝u
 (
 ex
@@ -18327,7 +18361,7 @@ ex
 •lô
 ) {
 
-2672 
+2678 
 îr
  = 
 	`mlfs_•lô_exã¡_©
@@ -18343,13 +18377,13 @@ h™dÀ
 blocks
 ,
 
-2673 
+2679 
 MLFS_EXT_MARK_UNWRIT2
 , 
 Êags
 );
 
-2677 
+2683 
 îr
  = 
 	`mlfs_•lô_exã¡_©
@@ -18365,7 +18399,7 @@ h™dÀ
 blocks
 ,
 
-2678 
+2684 
 MLFS_EXT_MARK_UNWRIT1
  | 
 MLFS_EXT_MARK_UNWRIT2
@@ -18373,11 +18407,11 @@ MLFS_EXT_MARK_UNWRIT2
 Êags
 );
 
-2679 i‡(0 =
+2685 i‡(0 =
 îr
 ) {
 
-2680 
+2686 
 îr
  = 
 	`mlfs_•lô_exã¡_©
@@ -18391,21 +18425,21 @@ h™dÀ
 •lô
 ,
 
-2681 
+2687 
 MLFS_EXT_MARK_UNWRIT1
 , 
 Êags
 );
 
-2685  
+2691  
 îr
 ;
 
-2686 
+2692 
 	}
 }
 
-2701 
+2707 
 mlfs_lblk_t
  
 	$mlfs_ext_dëîmöe_hﬁe
@@ -18417,7 +18451,7 @@ h™dÀ
 öode
  *inode,
 
-2702 
+2708 
 mlfs_ext_∑th
  *
 ∑th
@@ -18427,7 +18461,7 @@ mlfs_lblk_t
 lblk
 )
 
-2704 
+2710 
 dïth
  = 
 	`ext_dïth
@@ -18437,19 +18471,19 @@ h™dÀ
 öode
 );
 
-2705 
+2711 
 mlfs_exã¡
  *
 ex
 ;
 
-2706 
+2712 
 mlfs_lblk_t
  
 Àn
 ;
 
-2708 
+2714 
 ex
  = 
 ∑th
@@ -18459,23 +18493,23 @@ dïth
 p_ext
 ;
 
-2709 i‡(
+2715 i‡(
 ex
  =
 NULL
 ) {
 
-2711 *
+2717 *
 lblk
  = 0;
 
-2712 
+2718 
 Àn
  = 
 EXT_MAX_BLOCKS
 ;
 
-2713 } i‡(*
+2719 } i‡(*
 lblk
  < 
 	`À32_to_˝u
@@ -18485,7 +18519,7 @@ ex
 ì_block
 )) {
 
-2714 
+2720 
 Àn
  = 
 	`À32_to_˝u
@@ -18497,7 +18531,7 @@ ex
 lblk
 ;
 
-2715 } i‡(*
+2721 } i‡(*
 lblk
  >
 	`À32_to_˝u
@@ -18507,19 +18541,19 @@ ex
 ì_block
 )
 
-2716 + 
+2722 + 
 	`mlfs_ext_gë_a˘uÆ_Àn
 (
 ex
 )) {
 
-2717 
+2723 
 mlfs_lblk_t
  
 √xt
 ;
 
-2719 *
+2725 *
 lblk
  = 
 	`À32_to_˝u
@@ -18531,7 +18565,7 @@ ex
 	`mlfs_ext_gë_a˘uÆ_Àn
 (ex);
 
-2720 
+2726 
 √xt
  = 
 	`mlfs_ext_√xt_Æloˇãd_block
@@ -18539,7 +18573,7 @@ ex
 ∑th
 );
 
-2721 
+2727 
 	`BUG_ON
 (
 √xt
@@ -18547,7 +18581,7 @@ ex
 lblk
 );
 
-2722 
+2728 
 Àn
  = 
 √xt
@@ -18555,19 +18589,19 @@ lblk
 lblk
 ;
 
-2724 
+2730 
 	`BUG_ON
 (1);
 
-2726  
+2732  
 Àn
 ;
 
-2727 
+2733 
 	}
 }
 
-2742 
+2748 
 	$mlfs_ext_gë_blocks
 (
 h™dÀ_t
@@ -18577,7 +18611,7 @@ h™dÀ
 öode
  *inode,
 
-2743 
+2749 
 mlfs_m≠_blocks
  *
 m≠
@@ -18585,7 +18619,7 @@ m≠
 Êags
 )
 
-2745 
+2751 
 mlfs_ext_∑th
  *
 ∑th
@@ -18593,7 +18627,7 @@ mlfs_ext_∑th
 NULL
 ;
 
-2746 
+2752 
 mlfs_ext_∑th
  *
 _∑th
@@ -18601,7 +18635,7 @@ _∑th
 NULL
 ;
 
-2747 
+2753 
 mlfs_exã¡
  
 √wex
@@ -18609,7 +18643,7 @@ mlfs_exã¡
 ex
 ;
 
-2748 
+2754 
 gﬂl
 , 
 îr
@@ -18617,13 +18651,13 @@ gﬂl
 dïth
 ;
 
-2749 
+2755 
 mlfs_lblk_t
  
 Æloˇãd
  = 0;
 
-2750 
+2756 
 mlfs_fsblk_t
  
 √xt
@@ -18631,17 +18665,17 @@ mlfs_fsblk_t
 √wblock
 ;
 
-2751 
+2757 
 ¸óã
 ;
 
-2752 
+2758 
 uöt64_t
  
 tsc_°¨t
  = 0;
 
-2754 
+2760 
 	`mlfs_as£π
 (
 h™dÀ
@@ -18649,11 +18683,23 @@ h™dÀ
 NULL
 );
 
-2757 #ifde‡
+2761 i‡(
+Êags
+ !0 && fœg†!
+MLFS_GET_BLOCKS_CREATE
+)
+
+2762 
+	`¥ötf
+("Êag†%d\n", 
+Êags
+);
+
+2765 #ifde‡
 MLFS_HASH
 
 
-2758 i‡(
+2766 i‡(
 h™dÀ
 ->
 dev
@@ -18661,24 +18707,30 @@ dev
 g_roŸ_dev
 ) {
 
-2759 #ifde‡
+2767 #ifde‡
 KERNFS
 
 
-2760 i‡(
+2768 i‡(
 öode
-->
-_döode
 ->
 Àvñ
  =
 NULL
 ) {
 
-2761 
+2769 
+	`as£π
+(
 öode
 ->
-_döode
+Àvñ
+ !
+NULL
+);
+
+2770 
+öode
 ->
 Àvñ
  = 
@@ -18687,47 +18739,47 @@ _döode
 h™dÀ
 ,
 
-2762 
+2771 
 öode
 , 
 Êags
 );
 
-2763 
+2772 
 	`as£π
 (
 öode
-->
-_döode
 ->
 Àvñ
  !
 NULL
 );
 
-2764 
-	`mlfs_m¨k_öode_dúty
-(
+2775 i‡(
 öode
-);
-
-2767 i‡(
-öode
-->
-_döode
 ->
 Àvñ
  =
 NULL
 ) {
 
-2768 
+2776 
+	`as£π
+(
+öode
+->
+Àvñ
+ !
+NULL
+);
+
+2777 
 döode
  
 dù
 ;
 
-2769 
+2778 
 	`ªad_⁄disk_öode
 (
 g_roŸ_dev
@@ -18739,7 +18791,7 @@ g_roŸ_dev
 dù
 );
 
-2770 
+2779 
 	`mlfs_as£π
 (
 dù
@@ -18747,7 +18799,7 @@ dù
 ôy≥
  != 0);
 
-2771 
+2780 
 	`sync_öode_‰om_döode
 (
 öode
@@ -18755,7 +18807,7 @@ dù
 dù
 );
 
-2772 
+2781 
 	`mlfs_as£π
 (
 dù
@@ -18763,19 +18815,13 @@ dù
 dev
  != 0);
 
-2773 
-	`mlfs_m¨k_öode_dúty
-(
-öode
-);
-
-2776 
+2784 
 uöt8_t
  
 key
 [16];
 
-2777 
+2785 
 	`¢¥ötf
 (
 key
@@ -18785,10 +18831,8 @@ m≠
 m_lblk
 );
 
-2778 
+2786 
 öode
-->
-_döode
 ->
 Àvñ
  = 
@@ -18799,16 +18843,14 @@ h™dÀ
 dev
 ]->
 m≠_ba£_addr
- + (öode->_döode->
+ + (öode->
 roŸ_blk
  << 
 g_block_size_shi·
 );
 
-2779 
+2787 
 öode
-->
-_döode
 ->
 Àvñ
 ->
@@ -18821,16 +18863,14 @@ h™dÀ
 dev
 ]->
 m≠_ba£_addr
- + (öode->_döode->
+ + (öode->
 buckë_blk0
  << 
 g_block_size_shi·
 );
 
-2780 
+2788 
 öode
-->
-_döode
 ->
 Àvñ
 ->
@@ -18843,27 +18883,25 @@ h™dÀ
 dev
 ]->
 m≠_ba£_addr
- + (öode->_döode->
+ + (öode->
 buckë_blk1
  << 
 g_block_size_shi·
 );
 
-2781 
+2789 
 √wblock
  = 
 	`Àvñ_dy«mic_quîy
 (
 öode
 ->
-_döode
-->
 Àvñ
 , 
 key
 );
 
-2783 i‡(
+2791 i‡(
 Êags
  =
 MLFS_GET_BLOCKS_CREATE
@@ -18871,15 +18909,15 @@ MLFS_GET_BLOCKS_CREATE
 √wblock
  == 0) {
 
-2784 
+2792 
 √wblock
  = 0;
 
-2785 
+2793 
 Æloˇãd
  = 1;
 
-2786 
+2794 
 √wblock
  = 
 	`mlfs_√w_d©a_blocks
@@ -18889,7 +18927,7 @@ h™dÀ
 öode
 ,
 
-2787 
+2795 
 gﬂl
 , 
 Êags
@@ -18899,21 +18937,25 @@ gﬂl
 îr
 );
 
-2789 i‡(!
+2797 i‡(!
 √wblock
-)
+) {
 
-2790 
+2798 
+Æloˇãd
+ = 0;
+
+2799 
 hash_out
 ;
 
-2792 
+2802 
 uöt8_t
  
 vÆue
 [15];
 
-2793 
+2803 
 	`¢¥ötf
 (
 key
@@ -18923,7 +18965,7 @@ m≠
 m_lblk
 );
 
-2794 
+2804 
 	`¢¥ötf
 (
 vÆue
@@ -18931,12 +18973,10 @@ vÆue
 √wblock
 );
 
-2796 i‡(
+2806 i‡(
 	`Àvñ_ö£π
 (
 öode
-->
-_döode
 ->
 Àvñ
 , 
@@ -18945,16 +18985,14 @@ key
 vÆue
 )) {
 
-2797 
+2807 
 	`¥ötf
 ("Rehashing\n");
 
-2798 
+2808 
 	`mlfs_Àvñ_ªsize
 (
 öode
-->
-_döode
 ->
 Àvñ
 , 
@@ -18963,12 +19001,10 @@ h™dÀ
 Êags
 );
 
-2799 
+2809 
 	`Àvñ_ö£π
 (
 öode
-->
-_döode
 ->
 Àvñ
 , 
@@ -18977,11 +19013,17 @@ key
 vÆue
 );
 
-2802 
+2812 
+	`mlfs_m¨k_öode_dúty
+(
+öode
+);
+
+2814 
 Æloˇãd
  = 1;
 
-2805 i‡(
+2817 i‡(
 Æloˇãd
  > 
 m≠
@@ -18989,7 +19031,7 @@ m≠
 m_Àn
 )
 
-2806 
+2818 
 Æloˇãd
  = 
 m≠
@@ -18997,7 +19039,17 @@ m≠
 m_Àn
 ;
 
-2808 
+2820 
+hash_out
+:
+
+2821 
+	`as£π
+(
+√wblock
+!=0);
+
+2822 
 m≠
 ->
 m_pblk
@@ -19005,7 +19057,7 @@ m_pblk
 √wblock
 ;
 
-2809 
+2823 
 m≠
 ->
 m_Àn
@@ -19013,15 +19065,11 @@ m_Àn
 Æloˇãd
 ;
 
-2810 
-hash_out
-:
-
-2811  
+2824  
 Æloˇãd
 ;
 
-2815 
+2828 
 ¸óã
  = 
 Êags
@@ -19029,11 +19077,11 @@ hash_out
 MLFS_GET_BLOCKS_CREATE_DATA
 ;
 
-2819 i‡(
+2832 i‡(
 ¸óã
 ) {
 
-2820 
+2833 
 öode
 ->
 ¥evious_∑th
@@ -19041,15 +19089,15 @@ MLFS_GET_BLOCKS_CREATE_DATA
 NULL
 ;
 
-2821 
+2834 
 föd_ext_∑th
 ;
 
-2824 #ifde‡
+2837 #ifde‡
 REUSE_PREVIOUS_PATH
 
 
-2825 i‡(!
+2838 i‡(!
 öode
 ->
 ¥evious_∑th
@@ -19061,11 +19109,11 @@ m_Êags
 MLFS_MAP_LOG_ALLOC
 ))
 
-2826 
+2839 
 föd_ext_∑th
 ;
 
-2828 
+2841 
 _∑th
  = 
 öode
@@ -19073,7 +19121,7 @@ _∑th
 ¥evious_∑th
 ;
 
-2829 
+2842 
 dïth
  = 
 	`ext_dïth
@@ -19083,7 +19131,7 @@ h™dÀ
 öode
 );
 
-2830 
+2843 
 ex
  = 
 _∑th
@@ -19093,11 +19141,11 @@ dïth
 p_ext
 ;
 
-2831 i‡(
+2844 i‡(
 ex
 ) {
 
-2832 
+2845 
 mlfs_lblk_t
  
 ì_block
@@ -19107,7 +19155,7 @@ mlfs_lblk_t
 ex
 ->ee_block);
 
-2833 
+2846 
 mlfs_fsblk_t
  
 ì_°¨t
@@ -19117,11 +19165,11 @@ mlfs_fsblk_t
 ex
 );
 
-2834 
+2847 
 ì_Àn
 ;
 
-2840 
+2853 
 ì_Àn
  = 
 	`mlfs_ext_gë_a˘uÆ_Àn
@@ -19129,7 +19177,7 @@ ex
 ex
 );
 
-2843 i‡(
+2856 i‡(
 	`ö_ønge
 (
 m≠
@@ -19141,7 +19189,7 @@ m_lblk
 ì_Àn
 )) {
 
-2844 
+2857 
 Æloˇãd
  = 
 ì_Àn
@@ -19153,13 +19201,13 @@ m≠
 m_lblk
 ;
 
-2846 i‡(!
+2859 i‡(!
 	`mlfs_ext_is_unwrôãn
 (
 ex
 )) {
 
-2847 
+2860 
 √wblock
  = 
 m≠
@@ -19171,29 +19219,29 @@ m_lblk
 ì_°¨t
 ;
 
-2848 
+2861 
 öode
 ->
 övÆid©e_∑th
  = 0;
 
-2849 
+2862 
 out
 ;
 
-2854 
+2867 
 	`mlfs_ext_dr›_ªfs
 (
 _∑th
 );
 
-2855 
+2868 
 	`mlfs_‰ì
 (
 _∑th
 );
 
-2856 
+2869 
 öode
 ->
 ¥evious_∑th
@@ -19201,25 +19249,25 @@ _∑th
 NULL
 ;
 
-2859 
+2872 
 föd_ext_∑th
 :
 
-2861 #ifde‡
+2874 #ifde‡
 KERNFS
 
 
-2862 i‡(
+2875 i‡(
 íabÀ_≥rf_°©s
 )
 
-2863 
+2876 
 tsc_°¨t
  = 
 	`asm_rdts˝
 ();
 
-2867 
+2880 
 ∑th
  = 
 	`mlfs_föd_exã¡
@@ -19235,13 +19283,13 @@ m_lblk
 NULL
 , 0);
 
-2868 i‡(
+2881 i‡(
 	`IS_ERR
 (
 ∑th
 )) {
 
-2869 
+2882 
 îr
  = 
 	`PTR_ERR
@@ -19249,25 +19297,25 @@ NULL
 ∑th
 );
 
-2870 
+2883 
 ∑th
  = 
 NULL
 ;
 
-2871 
+2884 
 out2
 ;
 
-2874 #ifde‡
+2887 #ifde‡
 KERNFS
 
 
-2875 i‡(
+2888 i‡(
 íabÀ_≥rf_°©s
 )
 
-2876 
+2889 
 g_≥rf_°©s
 .
 ∑th_£¨ch_tsc
@@ -19277,7 +19325,7 @@ g_≥rf_°©s
 tsc_°¨t
 );
 
-2879 
+2892 
 dïth
  = 
 	`ext_dïth
@@ -19287,7 +19335,7 @@ h™dÀ
 öode
 );
 
-2886 
+2899 
 	`BUG_ON
 (
 ∑th
@@ -19299,7 +19347,7 @@ p_ext
 NULL
  && depth != 0);
 
-2888 
+2901 
 ex
  = 
 ∑th
@@ -19309,11 +19357,11 @@ dïth
 p_ext
 ;
 
-2889 i‡(
+2902 i‡(
 ex
 ) {
 
-2890 
+2903 
 mlfs_lblk_t
  
 ì_block
@@ -19323,7 +19371,7 @@ mlfs_lblk_t
 ex
 ->ee_block);
 
-2891 
+2904 
 mlfs_fsblk_t
  
 ì_°¨t
@@ -19333,11 +19381,11 @@ mlfs_fsblk_t
 ex
 );
 
-2892 
+2905 
 ì_Àn
 ;
 
-2898 
+2911 
 ì_Àn
  = 
 	`mlfs_ext_gë_a˘uÆ_Àn
@@ -19345,7 +19393,7 @@ ex
 ex
 );
 
-2901 i‡(
+2914 i‡(
 	`ö_ønge
 (
 m≠
@@ -19357,7 +19405,7 @@ m_lblk
 ì_Àn
 )) {
 
-2903 
+2916 
 Æloˇãd
  = 
 ì_Àn
@@ -19369,7 +19417,7 @@ m≠
 m_lblk
 ;
 
-2910 i‡(
+2923 i‡(
 m≠
 ->
 m_Êags
@@ -19377,11 +19425,11 @@ m_Êags
 MLFS_MAP_LOG_ALLOC
 ) {
 
-2911 
+2924 
 ªt
 ;
 
-2912 
+2925 
 ªt
  = 
 	`mlfs_ext_åunˇã
@@ -19395,7 +19443,7 @@ m≠
 m_lblk
 ,
 
-2913 
+2926 
 m≠
 ->
 m_lblk
@@ -19403,25 +19451,25 @@ m_lblk
 m_Àn
  - 1);
 
-2917 
+2930 
 	`mlfs_as£π
 (
 ªt
  == 0);
 
-2920 
+2933 
 	`mlfs_ext_dr›_ªfs
 (
 ∑th
 );
 
-2921 
+2934 
 	`mlfs_‰ì
 (
 ∑th
 );
 
-2922 
+2935 
 ∑th
  = 
 	`mlfs_föd_exã¡
@@ -19437,7 +19485,7 @@ m_lblk
 NULL
 , 0);
 
-2923 
+2936 
 	`mlfs_as£π
 (!
 	`IS_ERR
@@ -19445,17 +19493,17 @@ NULL
 ∑th
 ));
 
-2924 } i‡(
+2937 } i‡(
 	`mlfs_ext_is_unwrôãn
 (
 ex
 )) {
 
-2925 i‡(
+2938 i‡(
 ¸óã
 ) {
 
-2926 
+2939 
 √wblock
  = 
 m≠
@@ -19467,7 +19515,7 @@ m_lblk
 ì_°¨t
 ;
 
-2927 
+2940 
 îr
  = 
 	`mlfs_ext_c⁄vît_to_öôülized
@@ -19477,7 +19525,7 @@ h™dÀ
 öode
 ,
 
-2928 &
+2941 &
 ∑th
 , 
 m≠
@@ -19489,23 +19537,23 @@ m_lblk
 Êags
 );
 
-2929 i‡(
+2942 i‡(
 îr
 ) {
 
-2930 
+2943 
 out2
 ;
 
-2933 
+2946 
 √wblock
  = 0;
 
-2935 
+2948 
 out
 ;
 
-2937 
+2950 
 √wblock
  = 
 m≠
@@ -19517,15 +19565,15 @@ m_lblk
 ì_°¨t
 ;
 
-2938 
+2951 
 out
 ;
 
-2947 i‡(!
+2960 i‡(!
 ¸óã
 ) {
 
-2948 
+2961 
 mlfs_lblk_t
  
 hﬁe_°¨t
@@ -19533,7 +19581,7 @@ hﬁe_°¨t
 hﬁe_Àn
 ;
 
-2950 
+2963 
 hﬁe_°¨t
  = 
 m≠
@@ -19541,7 +19589,7 @@ m≠
 m_lblk
 ;
 
-2951 
+2964 
 hﬁe_Àn
  = 
 	`mlfs_ext_dëîmöe_hﬁe
@@ -19555,7 +19603,7 @@ h™dÀ
 hﬁe_°¨t
 );
 
-2954 i‡(
+2967 i‡(
 hﬁe_°¨t
  !
 m≠
@@ -19563,7 +19611,7 @@ m≠
 m_lblk
 )
 
-2955 
+2968 
 hﬁe_Àn
  -
 m≠
@@ -19573,13 +19621,13 @@ m_lblk
 hﬁe_°¨t
 ;
 
-2957 
+2970 
 m≠
 ->
 m_pblk
  = 0;
 
-2958 
+2971 
 m≠
 ->
 m_Àn
@@ -19589,15 +19637,15 @@ m_Àn
 hﬁe_Àn
 );
 
-2959 
+2972 
 îr
  = 0;
 
-2960 
+2973 
 out2
 ;
 
-2965 
+2978 
 √xt
  = 
 	`mlfs_ext_√xt_Æloˇãd_block
@@ -19605,7 +19653,7 @@ out2
 ∑th
 );
 
-2966 
+2979 
 	`BUG_ON
 (
 √xt
@@ -19615,7 +19663,7 @@ m≠
 m_lblk
 );
 
-2968 
+2981 
 Æloˇãd
  = 
 √xt
@@ -19625,13 +19673,13 @@ m≠
 m_lblk
 ;
 
-2970 i‡((
+2983 i‡((
 Êags
  & 
 MLFS_GET_BLOCKS_PRE_IO
 ) &&
 
-2971 
+2984 
 m≠
 ->
 m_Àn
@@ -19639,7 +19687,7 @@ m_Àn
 EXT_UNWRITTEN_MAX_LEN
 )
 
-2972 
+2985 
 m≠
 ->
 m_Àn
@@ -19647,7 +19695,7 @@ m_Àn
 EXT_UNWRITTEN_MAX_LEN
 ;
 
-2974 i‡(
+2987 i‡(
 Æloˇãd
  > 
 m≠
@@ -19655,7 +19703,7 @@ m≠
 m_Àn
 )
 
-2975 
+2988 
 Æloˇãd
  = 
 m≠
@@ -19663,7 +19711,7 @@ m≠
 m_Àn
 ;
 
-2977 
+2990 
 √wblock
  = 
 	`mlfs_√w_d©a_blocks
@@ -19673,7 +19721,7 @@ h™dÀ
 öode
 ,
 
-2978 
+2991 
 gﬂl
 , 
 Êags
@@ -19683,15 +19731,15 @@ gﬂl
 îr
 );
 
-2980 i‡(!
+2993 i‡(!
 √wblock
 )
 
-2981 
+2994 
 out2
 ;
 
-2984 
+2997 
 √wex
 .
 ì_block
@@ -19703,7 +19751,7 @@ m≠
 m_lblk
 );
 
-2985 
+2998 
 	`mlfs_ext_°‹e_pblock
 (&
 √wex
@@ -19711,7 +19759,7 @@ m_lblk
 √wblock
 );
 
-2986 
+2999 
 √wex
 .
 ì_Àn
@@ -19721,19 +19769,19 @@ m_lblk
 Æloˇãd
 );
 
-2989 i‡(
+3002 i‡(
 Êags
  & 
 MLFS_GET_BLOCKS_PRE_IO
 ) {
 
-2990 
+3003 
 	`mlfs_ext_m¨k_unwrôãn
 (&
 √wex
 );
 
-2993 
+3006 
 îr
  = 
 	`mlfs_ext_ö£π_exã¡
@@ -19747,17 +19795,17 @@ h™dÀ
 √wex
 ,
 
-2994 
+3007 
 Êags
  & 
 MLFS_GET_BLOCKS_PRE_IO
 );
 
-2996 i‡(
+3009 i‡(
 îr
 ) {
 
-2998 
+3011 
 	`mlfs_‰ì_blocks
 (
 h™dÀ
@@ -19771,7 +19819,7 @@ NULL
 √wex
 ),
 
-2999 
+3012 
 	`À16_to_˝u
 (
 √wex
@@ -19779,33 +19827,33 @@ NULL
 ì_Àn
 ),
 
-3000 
+3013 
 	`gë_deÁu…_‰ì_blocks_Êags
 (
 öode
 ));
 
-3001 
+3014 
 out2
 ;
 
-3004 
+3017 
 	`mlfs_m¨k_öode_dúty
 (
 öode
 );
 
-3007 i‡(
+3020 i‡(
 	`mlfs_ext_is_unwrôãn
 (&
 √wex
 ))
 
-3008 
+3021 
 √wblock
  = 0;
 
-3010 
+3023 
 √wblock
  = 
 	`mlfs_ext_pblock
@@ -19813,11 +19861,11 @@ out2
 √wex
 );
 
-3012 
+3025 
 out
 :
 
-3013 i‡(
+3026 i‡(
 Æloˇãd
  > 
 m≠
@@ -19825,7 +19873,7 @@ m≠
 m_Àn
 )
 
-3014 
+3027 
 Æloˇãd
  = 
 m≠
@@ -19833,7 +19881,7 @@ m≠
 m_Àn
 ;
 
-3018 
+3031 
 m≠
 ->
 m_pblk
@@ -19841,7 +19889,7 @@ m_pblk
 √wblock
 ;
 
-3019 
+3032 
 m≠
 ->
 m_Àn
@@ -19849,27 +19897,27 @@ m_Àn
 Æloˇãd
 ;
 
-3020 
+3033 
 out2
 :
 
-3021 #ifde‡
+3034 #ifde‡
 REUSE_PREVIOUS_PATH
 
 
-3022 i‡(
+3035 i‡(
 öode
 ->
 övÆid©e_∑th
 ) {
 
-3023 
+3036 
 öode
 ->
 övÆid©e_∑th
  = 0;
 
-3024 
+3037 
 öode
 ->
 ¥evious_∑th
@@ -19877,7 +19925,7 @@ REUSE_PREVIOUS_PATH
 NULL
 ;
 
-3027 
+3040 
 öode
 ->
 ¥evious_∑th
@@ -19885,43 +19933,43 @@ NULL
 ∑th
 ;
 
-3028 
+3041 
 ∑th
  = 
 NULL
 ;
 
-3032 i‡(
+3045 i‡(
 ∑th
 ) {
 
-3034 
+3047 
 	`mlfs_ext_dr›_ªfs
 (
 ∑th
 );
 
-3035 
+3048 
 	`mlfs_‰ì
 (
 ∑th
 );
 
-3039  
+3052  
 îr
  ?Éº : 
 Æloˇãd
 ;
 
-3040 #ifde‡
+3053 #ifde‡
 MLFS_HASH
 
 
-3043 
+3056 
 	}
 }
 
-3045 
+3058 
 	$mlfs_ext_åunˇã
 (
 h™dÀ_t
@@ -19931,7 +19979,7 @@ h™dÀ
 öode
  *inode,
 
-3046 
+3059 
 mlfs_lblk_t
  
 °¨t
@@ -19939,11 +19987,11 @@ mlfs_lblk_t
 íd
 )
 
-3048 
+3061 
 ªt
 ;
 
-3050 
+3063 
 	`mlfs_as£π
 (
 h™dÀ
@@ -19951,7 +19999,7 @@ h™dÀ
 NULL
 );
 
-3052 
+3065 
 ªt
  = 
 	`mlfs_ext_ªmove_•a˚
@@ -19965,11 +20013,11 @@ h™dÀ
 íd
 );
 
-3055 i‡(!
+3068 i‡(!
 ªt
 )
 
-3056 
+3069 
 ªt
  = 
 	`mlfs_m¨k_öode_dúty
@@ -19977,11 +20025,11 @@ h™dÀ
 öode
 );
 
-3058  
+3071  
 ªt
 ;
 
-3059 
+3072 
 	}
 }
 
@@ -23175,7 +23223,7 @@ dev
 to_dev
 };
 
-309 
+307 
 ihdr
  = 
 	`ext_öode_hdr
@@ -23185,7 +23233,7 @@ h™dÀ
 öode
 );
 
-312 i‡(
+310 i‡(
 ihdr
 ->
 eh_magic
@@ -23193,7 +23241,7 @@ eh_magic
 MLFS_EXT_MAGIC
 ) {
 
-313 
+311 
 	`mlfs_ext_åì_öô
 (&
 h™dÀ
@@ -23201,7 +23249,7 @@ h™dÀ
 öode
 );
 
-316 
+314 
 öode
 ->
 i_wrôeback
@@ -23209,7 +23257,7 @@ i_wrôeback
 NULL
 ;
 
-317 
+315 
 	`mem£t
 (
 öode
@@ -23217,7 +23265,7 @@ NULL
 i_uuid
 , 0xCC, (inode->i_uuid));
 
-318 
+316 
 öode
 ->
 i_csum
@@ -23227,13 +23275,13 @@ i_csum
 i_uuid
 , (inode->i_uuid));
 
-319 
+317 
 öode
 ->
 i_csum
  =
 
-320 
+318 
 	`mlfs_¸c32c
 (
 öode
@@ -23243,7 +23291,7 @@ i_csum
 öum
 , (inode->inum));
 
-321 
+319 
 öode
 ->
 i_csum
@@ -23253,13 +23301,13 @@ i_csum
 i_gíî©i⁄
 ,
 
-322 (
+320 (
 öode
 ->
 i_gíî©i⁄
 ));
 
-326 i‡(
+324 i‡(
 §c_döode
 ->
 size
@@ -23267,13 +23315,13 @@ size
 öode
 ->size) {
 
-327 
+325 
 h™dÀ_t
  
 h™dÀ
 ;
 
-328 
+326 
 h™dÀ
 .
 dev
@@ -23281,7 +23329,7 @@ dev
 §c_döode
 ->dev;
 
-330 
+328 
 ªt
  = 
 	`mlfs_ext_åunˇã
@@ -23291,7 +23339,7 @@ h™dÀ
 öode
 ,
 
-331 (
+329 (
 §c_döode
 ->
 size
@@ -23299,7 +23347,7 @@ size
 g_block_size_shi·
 ,
 
-332 ((
+330 ((
 öode
 ->
 size
@@ -23307,13 +23355,13 @@ size
 g_block_size_shi·
 ) - 1);
 
-334 
+332 
 	`mlfs_as£π
 (!
 ªt
 );
 
-338 
+336 
 öode
 ->
 size
@@ -23321,11 +23369,11 @@ size
 §c_döode
 ->size;
 
-340 
+338 
 	`mlfs_debug
 ("[INODE] (%d->%d) inode inum %uÅype %d, size %lu\n",
 
-341 
+339 
 ‰om_dev
 , 
 to_dev
@@ -23339,19 +23387,19 @@ to_dev
 size
 );
 
-343 
+341 
 	`mlfs_m¨k_öode_dúty
 (
 öode
 );
 
-345 
+343 
 	`˛ór_buf„r_u±od©e
 (
 bh
 );
 
-347 
+345 
 	`mlfs_‰ì
 (
 bh
@@ -23359,17 +23407,17 @@ bh
 b_d©a
 );
 
-348 
+346 
 	`bh_ªÀa£
 (
 bh
 );
 
-351 
+349 
 	}
 }
 
-359 
+357 
 	$dige°_dúe˘‹y
 (
 uöt8_t
@@ -23383,7 +23431,7 @@ n
 ty≥
 ,
 
-360 
+358 
 uöt32_t
  
 dú_öum
@@ -23399,35 +23447,35 @@ addr_t
 blkƒ
 )
 
-362 
+360 
 öode
  *
 dú_öode
 ;
 
-363 
+361 
 döode
  *dinode;
 
-364 
+362 
 dúít
  *
 de
 ;
 
-365 
+363 
 loghdr_ext
 [2048], *
 «me
 ;
 
-366 
+364 
 uöt32_t
  
 dúít_öum
 ;
 
-367 
+365 
 buf„r_hód
  *
 bh_dú
@@ -23435,29 +23483,29 @@ bh_dú
 bh
 ;
 
-368 
+366 
 uöt8_t
  *
 dúít_¨øy
 ;
 
-369 
+367 
 uöt8_t
  
 found
  = 0;
 
-370 
+368 
 ªt
 ;
 
-372 
+370 
 to_dev
  = 
 g_roŸ_dev
 ;
 
-374 
+372 
 bh
  = 
 	`bh_gë_sync_IO
@@ -23469,7 +23517,7 @@ blkƒ
 BH_NO_DATA_ALLOC
 );
 
-375 
+373 
 bh
 ->
 b_size
@@ -23477,7 +23525,7 @@ b_size
 g_block_size_byãs
 ;
 
-376 
+374 
 bh
 ->
 b_d©a
@@ -23487,19 +23535,19 @@ b_d©a
 b_size
 );
 
-378 
+376 
 	`bh_submô_ªad_sync_IO
 (
 bh
 );
 
-379 
+377 
 	`mlfs_io_waô
 (
 ‰om_dev
 , 1);
 
-381 
+379 
 «me
  = (*)
 bh
@@ -23509,7 +23557,7 @@ b_d©a
 loghódî
 );
 
-382 
+380 
 	`memmove
 (
 loghdr_ext
@@ -23521,7 +23569,7 @@ loghdr_ext
 	`°æí
 (name), 2048));
 
-386 
+384 
 «me
  = 
 	`°πok
@@ -23529,27 +23577,27 @@ loghdr_ext
 loghdr_ext
 , "|");
 
-387 
+385 
 «me
  !
 NULL
 ) {
 
-388 i‡(
+386 i‡(
 «me
 [0] ='0' + 
 n
 ) {
 
-389 
+387 
 «me
 ++;
 
-390 
+388 
 found
  = 1;
 
-393 
+391 
 «me
  = 
 	`°πok
@@ -23557,21 +23605,21 @@ found
 NULL
 , "|");
 
-396 i‡(
+394 i‡(
 found
  == 0)
 
-397  -
+395  -
 EEXIST
 ;
 
-399 
+397 
 «me
  = 
 	`°πok
 (name, "@");
 
-400 
+398 
 dúít_öum
  = 
 	`°πoul
@@ -23581,7 +23629,7 @@ dúít_öum
 NULL
 , "@"), NULL, 10);
 
-401 
+399 
 	`mlfs_as£π
 (
 dúít_öum
@@ -23591,23 +23639,23 @@ uöt32_t
 _dúít_öum
 );
 
-403 
+401 
 	`mlfs_debug
 ("[DIR] %s,Çame %s (parent inum %d) inum %d\n",
 
-404 
+402 
 ty≥
  =
 L_TYPE_DIR_ADD
  ? "ADD" :
 
-405 
+403 
 ty≥
  =
 L_TYPE_DIR_DEL
  ? "DEL" : "RENAME",
 
-406 
+404 
 «me
 , 
 dú_öum
@@ -23615,7 +23663,7 @@ dú_öum
 dúít_öum
 );
 
-408 
+406 
 dú_öode
  = 
 	`iˇche_föd
@@ -23625,11 +23673,11 @@ to_dev
 dú_öum
 );
 
-409 i‡(!
+407 i‡(!
 dú_öode
 )
 
-410 
+408 
 dú_öode
  = 
 	`üŒoc
@@ -23641,13 +23689,13 @@ T_DIR
 dú_öum
 );
 
-414 i‡(
+412 i‡(
 ty≥
  =
 L_TYPE_DIR_ADD
 )
 
-415 
+413 
 	`dú_add_íåy
 (
 dú_öode
@@ -23657,19 +23705,19 @@ dú_öode
 dúít_öum
 );
 
-416 i‡(
+414 i‡(
 ty≥
  =
 L_TYPE_DIR_RENAME
 ) {
 
-417 
+415 
 öode
  *
 ﬁd_öode
 ;
 
-419 
+417 
 ﬁd_öode
  = 
 	`dú_lookup
@@ -23681,11 +23729,11 @@ dú_öode
 NULL
 );
 
-422 i‡(
+420 i‡(
 ﬁd_öode
 ) {
 
-423 
+421 
 	`dú_ªmove_íåy
 (
 dú_öode
@@ -23697,7 +23745,7 @@ dú_öode
 öum
 );
 
-424 
+422 
 	`dige°_u∆ök
 (
 ‰om_dev
@@ -23709,7 +23757,7 @@ to_dev
 öum
 );
 
-427 
+425 
 	`dú_add_íåy
 (
 dú_öode
@@ -23719,13 +23767,13 @@ dú_öode
 dúít_öum
 );
 
-428 } i‡(
+426 } i‡(
 ty≥
  =
 L_TYPE_DIR_DEL
 )
 
-429 
+427 
 	`dú_ªmove_íåy
 (
 dú_öode
@@ -23735,11 +23783,11 @@ dú_öode
 dúít_öum
 );
 
-431 
+429 
 	`∑nic
 ("unsupportedÅype\n");
 
-433 
+431 
 	`mlfs_debug
 ("dú_öodêsizê%lu\n", 
 dú_öode
@@ -23747,11 +23795,11 @@ dú_öode
 size
 );
 
-435 
+433 
 	`mlfs_debug
 ("[DIR] (%d->%d) inode inum %u size %lu\n",
 
-436 
+434 
 ‰om_dev
 , 
 dú_öode
@@ -23759,7 +23807,7 @@ dú_öode
 dev
 ,
 
-437 
+435 
 dú_öode
 ->
 öum
@@ -23767,19 +23815,19 @@ dú_öode
 size
 );
 
-439 
+437 
 	`mlfs_m¨k_öode_dúty
 (
 dú_öode
 );
 
-441 
+439 
 	`˛ór_buf„r_u±od©e
 (
 bh
 );
 
-443 
+441 
 	`mlfs_‰ì
 (
 bh
@@ -23787,17 +23835,17 @@ bh
 b_d©a
 );
 
-444 
+442 
 	`bh_ªÀa£
 (
 bh
 );
 
-447 
+445 
 	}
 }
 
-449 
+447 
 	$dige°_fûe
 (
 uöt8_t
@@ -23811,7 +23859,7 @@ uöt32_t
 fûe_öum
 ,
 
-450 
+448 
 off£t_t
  
 off£t
@@ -23825,23 +23873,23 @@ addr_t
 blkƒ
 )
 
-452 
+450 
 ªt
 ;
 
-453 
+451 
 uöt32_t
  
 off£t_ö_block
  = 0;
 
-454 
+452 
 öode
  *
 fûe_öode
 ;
 
-455 
+453 
 buf„r_hód
  *
 bh_d©a
@@ -23849,13 +23897,13 @@ bh_d©a
 bh
 ;
 
-456 
+454 
 uöt8_t
  *
 d©a
 ;
 
-457 
+455 
 mlfs_ext_∑th
  *
 ∑th
@@ -23863,13 +23911,13 @@ mlfs_ext_∑th
 NULL
 ;
 
-458 
+456 
 mlfs_m≠_blocks
  
 m≠
 ;
 
-459 
+457 
 uöt32_t
  
 ƒ_blocks
@@ -23877,13 +23925,13 @@ uöt32_t
 ƒ_dige°ed_blocks
  = 0;
 
-460 
+458 
 off£t_t
  
 cur_off£t
 ;
 
-461 
+459 
 h™dÀ_t
  
 h™dÀ
@@ -23893,11 +23941,11 @@ dev
 to_dev
 };
 
-463 
+461 
 	`mlfs_debug
 ("[FILE] (%d->%d) inum %d offset %lu(0x%lx)Üength %u\n",
 
-464 
+462 
 ‰om_dev
 , 
 to_dev
@@ -23909,17 +23957,17 @@ off£t
 Àngth
 );
 
-466 i‡(
+464 i‡(
 Àngth
  < 
 g_block_size_byãs
 )
 
-467 
+465 
 ƒ_blocks
  = 1;
 
-469 
+467 
 ƒ_blocks
  = (
 Àngth
@@ -23927,23 +23975,23 @@ g_block_size_byãs
 g_block_size_shi·
 );
 
-471 i‡(
+469 i‡(
 Àngth
  % 
 g_block_size_byãs
  != 0)
 
-472 
+470 
 ƒ_blocks
 ++;
 
-475 
+473 
 	`mlfs_as£π
 (
 ƒ_blocks
  > 0);
 
-477 i‡((
+475 i‡((
 ‰om_dev
  =
 g_ssd_dev
@@ -23951,11 +23999,11 @@ g_ssd_dev
 g_hdd_dev
 ))
 
-478 
+476 
 	`∑nic
 ("doesÇot supportÅhis case yet\n");
 
-482 
+480 
 d©a
  = 
 g_bdev
@@ -23969,7 +24017,7 @@ blkƒ
 g_block_size_shi·
 );
 
-484 
+482 
 fûe_öode
  = 
 	`iˇche_föd
@@ -23979,17 +24027,17 @@ g_roŸ_dev
 fûe_öum
 );
 
-485 i‡(!
+483 i‡(!
 fûe_öode
 ) {
 
-486 
+484 
 döode
  
 dù
 ;
 
-487 
+485 
 fûe_öode
  = 
 	`iˇche_Æloc_add
@@ -23999,7 +24047,7 @@ g_roŸ_dev
 fûe_öum
 );
 
-489 
+487 
 	`ªad_⁄disk_öode
 (
 g_roŸ_dev
@@ -24009,7 +24057,7 @@ fûe_öum
 dù
 );
 
-490 
+488 
 	`mlfs_as£π
 (
 dù
@@ -24017,7 +24065,7 @@ dù
 ôy≥
  != 0);
 
-492 
+490 
 	`sync_öode_‰om_döode
 (
 fûe_öode
@@ -24025,7 +24073,7 @@ fûe_öode
 dù
 );
 
-494 
+492 
 fûe_öode
 ->
 i_sb
@@ -24033,7 +24081,7 @@ i_sb
 sb
 ;
 
-496 
+494 
 	`mlfs_as£π
 (
 dù
@@ -24041,7 +24089,7 @@ dù
 dev
  != 0);
 
-499 
+497 
 	`mlfs_as£π
 (
 fûe_öode
@@ -24049,7 +24097,7 @@ fûe_öode
 dev
  != 0);
 
-502 i‡(
+500 i‡(
 fûe_öode
 ->
 size
@@ -24059,7 +24107,7 @@ off£t
 Àngth
 ) {
 
-505 
+503 
 fûe_öode
 ->
 size
@@ -24069,23 +24117,23 @@ off£t
 Àngth
 ;
 
-507 
+505 
 	`mlfs_m¨k_öode_dúty
 (
 fûe_öode
 );
 
-510 
+508 
 ƒ_dige°ed_blocks
  = 0;
 
-511 
+509 
 cur_off£t
  = 
 off£t
 ;
 
-512 
+510 
 off£t_ö_block
  = 
 off£t
@@ -24093,7 +24141,7 @@ off£t
 g_block_size_byãs
 ;
 
-514 
+512 
 uöt32_t
  
 Àngth_
@@ -24101,13 +24149,13 @@ uöt32_t
 Àngth
 ;
 
-518 
+516 
 ƒ_dige°ed_blocks
  < 
 ƒ_blocks
 ) {
 
-520 
+518 
 _Àn
  = 
 	`_mö
@@ -24121,7 +24169,7 @@ g_block_size_byãs
 off£t_ö_block
 );
 
-522 
+520 
 m≠
 .
 m_lblk
@@ -24131,25 +24179,25 @@ cur_off£t
 g_block_size_shi·
 );
 
-523 
+521 
 m≠
 .
 m_pblk
  = 0;
 
-524 
+522 
 m≠
 .
 m_Àn
  = 1;
 
-525 
+523 
 m≠
 .
 m_Êags
  = 0;
 
-527 
+525 
 ªt
  = 
 	`mlfs_ext_gë_blocks
@@ -24161,17 +24209,17 @@ fûe_öode
 m≠
 ,
 
-528 
+526 
 MLFS_GET_BLOCKS_CREATE
 );
 
-530 
+528 
 	`mlfs_as£π
 (
 ªt
  == 1);
 
-532 
+530 
 bh_d©a
  = 
 	`bh_gë_sync_IO
@@ -24185,13 +24233,13 @@ m_pblk
 BH_NO_DATA_ALLOC
 );
 
-534 
+532 
 	`mlfs_as£π
 (
 bh_d©a
 );
 
-536 
+534 
 bh_d©a
 ->
 b_d©a
@@ -24201,7 +24249,7 @@ d©a
 off£t_ö_block
 ;
 
-537 
+535 
 bh_d©a
 ->
 b_size
@@ -24209,7 +24257,7 @@ b_size
 _Àn
 ;
 
-538 
+536 
 bh_d©a
 ->
 b_off£t
@@ -24217,23 +24265,23 @@ b_off£t
 off£t_ö_block
 ;
 
-540 #ifde‡
+538 #ifde‡
 MIGRATION
 
 
-541 
+539 
 Ãu_key_t
  
 k
  = {
 
-542 .
+540 .
 dev
  = 
 to_dev
 ,
 
-543 .
+541 .
 block
  = 
 m≠
@@ -24241,19 +24289,19 @@ m≠
 m_pblk
 ,
 
-545 
+543 
 Ãu_vÆ_t
  
 v
  = {
 
-546 .
+544 .
 öum
  = 
 fûe_öum
 ,
 
-547 .
+545 .
 lblock
  = 
 m≠
@@ -24261,7 +24309,7 @@ m≠
 m_lblk
 ,
 
-549 
+547 
 	`upd©e_¶ru_li°_‰om_dige°
 (
 to_dev
@@ -24271,7 +24319,7 @@ k
 v
 );
 
-553 
+551 
 ªt
  = 
 	`mlfs_wrôe
@@ -24279,23 +24327,29 @@ v
 bh_d©a
 );
 
-554 
+552 
 	`mlfs_as£π
 (!
 ªt
 );
 
-556 
+554 
+	`˛ór_buf„r_u±od©e
+(
+bh_d©a
+);
+
+555 
 	`bh_ªÀa£
 (
 bh_d©a
 );
 
-558 
+557 
 	`mlfs_debug
 ("inum %d, offset %luÜen %u (dev %d:%lu) -> (dev %d:%lu)\n",
 
-559 
+558 
 fûe_öode
 ->
 öum
@@ -24305,7 +24359,7 @@ cur_off£t
 _Àn
 ,
 
-560 
+559 
 ‰om_dev
 , 
 blkƒ
@@ -24317,23 +24371,23 @@ m≠
 m_pblk
 );
 
-562 
+561 
 ƒ_dige°ed_blocks
 ++;
 
-563 
+562 
 cur_off£t
  +
 _Àn
 ;
 
-564 
+563 
 d©a
  +
 _Àn
 ;
 
-565 
+564 
 off£t_ö_block
  = 
 cur_off£t
@@ -24341,31 +24395,31 @@ cur_off£t
 g_block_size_byãs
 ;
 
-566 
+565 
 Àngth_
  -
 _Àn
 ;
 
-570 
+569 
 	`as£π
 (
 Àngth_
  == 0);
 
-577 
+576 
 ƒ_dige°ed_blocks
  < 
 ƒ_blocks
 ) {
 
-578 
+577 
 ƒ_block_gë
  = 0, 
 i
 ;
 
-580 
+579 
 	`mlfs_as£π
 ((
 cur_off£t
@@ -24373,7 +24427,7 @@ cur_off£t
 g_block_size_byãs
 ) == 0);
 
-582 
+581 
 m≠
 .
 m_lblk
@@ -24383,13 +24437,13 @@ cur_off£t
 g_block_size_shi·
 );
 
-583 
+582 
 m≠
 .
 m_pblk
  = 0;
 
-584 
+583 
 m≠
 .
 m_Àn
@@ -24399,13 +24453,13 @@ m_Àn
 ƒ_dige°ed_blocks
 ;
 
-585 
+584 
 m≠
 .
 m_Êags
  = 0;
 
-588 i‡(
+587 i‡(
 to_dev
  =
 g_ssd_dev
@@ -24413,7 +24467,7 @@ g_ssd_dev
 g_hdd_dev
 ) {
 
-591 
+590 
 ƒ_block_gë
  = 
 	`mlfs_ext_gë_blocks
@@ -24425,27 +24479,27 @@ fûe_öode
 m≠
 ,
 
-592 
+591 
 MLFS_GET_BLOCKS_CREATE_DATA
 );
+
+593 
+ƒ_block_gë
+ = 
+	`mlfs_ext_gë_blocks
+(&
+h™dÀ
+, 
+fûe_öode
+, &
+m≠
+,
 
 594 
-ƒ_block_gë
- = 
-	`mlfs_ext_gë_blocks
-(&
-h™dÀ
-, 
-fûe_öode
-, &
-m≠
-,
-
-595 
 MLFS_GET_BLOCKS_CREATE_DATA
 );
 
-598 
+597 
 	`mlfs_as£π
 (
 m≠
@@ -24453,7 +24507,7 @@ m≠
 m_pblk
  != 0);
 
-600 
+599 
 	`mlfs_as£π
 (
 ƒ_block_gë
@@ -24463,19 +24517,19 @@ m_pblk
 ƒ_dige°ed_blocks
 ));
 
-601 
+600 
 	`mlfs_as£π
 (
 ƒ_block_gë
  > 0);
 
-603 
+602 
 ƒ_dige°ed_blocks
  +
 ƒ_block_gë
 ;
 
-606 
+605 
 bh_d©a
  = 
 	`bh_gë_sync_IO
@@ -24489,7 +24543,7 @@ m_pblk
 BH_NO_DATA_ALLOC
 );
 
-608 
+607 
 bh_d©a
 ->
 b_d©a
@@ -24497,7 +24551,7 @@ b_d©a
 d©a
 ;
 
-609 
+608 
 bh_d©a
 ->
 b_size
@@ -24507,35 +24561,35 @@ b_size
 g_block_size_byãs
 ;
 
-610 
+609 
 bh_d©a
 ->
 b_off£t
  = 0;
 
-612 #ifde‡
+611 #ifde‡
 MIGRATION
 
 
-613 
+612 
 i
  = 0; i < 
 ƒ_block_gë
 ; i++) {
 
-614 
+613 
 Ãu_key_t
  
 k
  = {
 
-615 .
+614 .
 dev
  = 
 to_dev
 ,
 
-616 .
+615 .
 block
  = 
 m≠
@@ -24545,19 +24599,19 @@ m_pblk
 i
 ,
 
-618 
+617 
 Ãu_vÆ_t
  
 v
  = {
 
-619 .
+618 .
 öum
  = 
 fûe_öum
 ,
 
-620 .
+619 .
 lblock
  = 
 m≠
@@ -24567,7 +24621,7 @@ m_lblk
 i
 ,
 
-622 
+621 
 	`upd©e_¶ru_li°_‰om_dige°
 (
 to_dev
@@ -24577,7 +24631,7 @@ k
 v
 );
 
-628 
+627 
 ªt
  = 
 	`mlfs_wrôe
@@ -24585,37 +24639,37 @@ v
 bh_d©a
 );
 
-629 
+628 
 	`mlfs_as£π
 (!
 ªt
 );
 
-630 
+629 
 	`˛ór_buf„r_u±od©e
 (
 bh_d©a
 );
 
-631 
+630 
 	`bh_ªÀa£
 (
 bh_d©a
 );
 
-634 
+633 
 buf„r_hód
  *
 bh
 ;
 
-635 
+634 
 uöt8_t
  
 tmp_buf
 [4096];
 
-636 
+635 
 bh
  = 
 	`bh_gë_sync_IO
@@ -24629,7 +24683,7 @@ m_pblk
 BH_NO_DATA_ALLOC
 );
 
-638 
+637 
 bh
 ->
 b_d©a
@@ -24637,7 +24691,7 @@ b_d©a
 tmp_buf
 ;
 
-639 
+638 
 bh
 ->
 b_size
@@ -24645,13 +24699,13 @@ b_size
 g_block_size_byãs
 ;
 
-640 
+639 
 	`bh_submô_ªad_sync_IO
 (
 bh
 );
 
-641 
+640 
 	`mlfs_io_waô
 (
 bh
@@ -24659,21 +24713,21 @@ bh
 b_dev
 , 1);
 
-643 
+642 
 GDB_TRAP
 ;
 
-645 
+644 
 	`bh_ªÀa£
 (
 bh
 );
 
-648 
+647 
 	`mlfs_debug
 ("inum %d, offset %luÜen %u (dev %d:%lu) -> (dev %d:%lu)\n",
 
-649 
+648 
 fûe_öode
 ->
 öum
@@ -24685,7 +24739,7 @@ bh_d©a
 b_size
 ,
 
-650 
+649 
 ‰om_dev
 , 
 blkƒ
@@ -24697,7 +24751,7 @@ m≠
 m_pblk
 );
 
-652 
+651 
 cur_off£t
  +
 ƒ_block_gë
@@ -24705,7 +24759,7 @@ cur_off£t
 g_block_size_byãs
 ;
 
-653 
+652 
 d©a
  +
 ƒ_block_gë
@@ -24713,7 +24767,7 @@ d©a
 g_block_size_byãs
 ;
 
-656 
+655 
 	`mlfs_as£π
 (
 ƒ_blocks
@@ -24721,7 +24775,7 @@ g_block_size_byãs
 ƒ_dige°ed_blocks
 );
 
-658 i‡(
+657 i‡(
 fûe_öode
 ->
 size
@@ -24731,7 +24785,7 @@ off£t
 Àngth
 )
 
-659 
+658 
 fûe_öode
 ->
 size
@@ -24741,11 +24795,11 @@ off£t
 Àngth
 ;
 
-662 
+661 
 	}
 }
 
-666 
+665 
 	$dige°_fûe_iovec
 (
 uöt8_t
@@ -24755,7 +24809,7 @@ uöt8_t
 to_dev
 ,
 
-667 
+666 
 uöt32_t
  
 fûe_öum
@@ -24765,23 +24819,23 @@ f_iovec_t
 iovec
 )
 
-669 
+668 
 ªt
 ;
 
-670 
+669 
 uöt32_t
  
 off£t_ö_block
  = 0;
 
-671 
+670 
 öode
  *
 fûe_öode
 ;
 
-672 
+671 
 buf„r_hód
  *
 bh_d©a
@@ -24789,13 +24843,13 @@ bh_d©a
 bh
 ;
 
-673 
+672 
 uöt8_t
  *
 d©a
 ;
 
-674 
+673 
 mlfs_ext_∑th
  *
 ∑th
@@ -24803,13 +24857,13 @@ mlfs_ext_∑th
 NULL
 ;
 
-675 
+674 
 mlfs_m≠_blocks
  
 m≠
 ;
 
-676 
+675 
 uöt32_t
  
 ƒ_blocks
@@ -24817,13 +24871,13 @@ uöt32_t
 ƒ_dige°ed_blocks
  = 0;
 
-677 
+676 
 off£t_t
  
 cur_off£t
 ;
 
-678 
+677 
 uöt32_t
  
 Àngth
@@ -24831,7 +24885,7 @@ uöt32_t
 iovec
 ->length;
 
-679 
+678 
 off£t_t
  
 off£t
@@ -24839,13 +24893,13 @@ off£t
 iovec
 ->offset;
 
-680 
+679 
 f_blkli°_t
  *
 _blk_li°
 ;
 
-681 
+680 
 h™dÀ_t
  
 h™dÀ
@@ -24855,17 +24909,17 @@ dev
 to_dev
 };
 
-683 
+682 
 	`¥ötf
 ("%s\n", 
 __func__
 );
 
-685 
+684 
 	`mlfs_debug
 ("[FILE] (%d->%d) inum %d offset %lu(0x%lx)Üength %u\n",
 
-686 
+685 
 ‰om_dev
 , 
 to_dev
@@ -24877,17 +24931,17 @@ off£t
 Àngth
 );
 
-688 i‡(
+687 i‡(
 Àngth
  < 
 g_block_size_byãs
 )
 
-689 
+688 
 ƒ_blocks
  = 1;
 
-691 
+690 
 ƒ_blocks
  = (
 Àngth
@@ -24895,33 +24949,33 @@ g_block_size_byãs
 g_block_size_shi·
 );
 
-693 i‡(
+692 i‡(
 Àngth
  % 
 g_block_size_byãs
  != 0)
 
-694 
+693 
 ƒ_blocks
 ++;
 
-697 
+696 
 	`mlfs_as£π
 (
 ƒ_blocks
  > 0);
 
-699 i‡(
+698 i‡(
 ‰om_dev
  =
 g_ssd_dev
 )
 
-700 
+699 
 	`∑nic
 ("doesÇot supportÅhis case\n");
 
-702 
+701 
 fûe_öode
  = 
 	`iˇche_föd
@@ -24931,17 +24985,17 @@ to_dev
 fûe_öum
 );
 
-703 i‡(!
+702 i‡(!
 fûe_öode
 ) {
 
-704 
+703 
 döode
  
 dù
 ;
 
-705 
+704 
 fûe_öode
  = 
 	`iˇche_Æloc_add
@@ -24951,7 +25005,7 @@ to_dev
 fûe_öum
 );
 
-707 
+706 
 	`ªad_⁄disk_öode
 (
 to_dev
@@ -24961,7 +25015,7 @@ fûe_öum
 dù
 );
 
-708 
+707 
 	`mlfs_as£π
 (
 dù
@@ -24969,7 +25023,7 @@ dù
 ôy≥
  != 0);
 
-709 
+708 
 	`mlfs_as£π
 (
 dù
@@ -24977,7 +25031,7 @@ dù
 dev
  != 0);
 
-711 
+710 
 	`sync_öode_‰om_döode
 (
 fûe_öode
@@ -24985,7 +25039,7 @@ fûe_öode
 dù
 );
 
-713 
+712 
 fûe_öode
 ->
 i_sb
@@ -24993,7 +25047,7 @@ i_sb
 sb
 ;
 
-717 
+716 
 	`mlfs_as£π
 (
 fûe_öode
@@ -25001,11 +25055,11 @@ fûe_öode
 dev
  != 0);
 
-719 #ifde‡
+718 #ifde‡
 USE_SSD
 
 
-721 i‡(
+720 i‡(
 fûe_öode
 ->
 size
@@ -25015,7 +25069,7 @@ off£t
 Àngth
 ) {
 
-724 
+723 
 uöt8_t
  
 sync_dev
@@ -25023,13 +25077,13 @@ sync_dev
 to_dev
 ;
 
-725 
+724 
 h™dÀ_t
  
 h™dÀ
 ;
 
-726 
+725 
 öode
  *
 sync_fûe_öode
@@ -25041,17 +25095,17 @@ sync_dev
 fûe_öum
 );
 
-727 i‡(!
+726 i‡(!
 sync_fûe_öode
 ) {
 
-728 
+727 
 döode
  
 dù
 ;
 
-729 
+728 
 sync_fûe_öode
  = 
 	`iˇche_Æloc_add
@@ -25061,7 +25115,7 @@ sync_dev
 fûe_öum
 );
 
-731 
+730 
 	`ªad_⁄disk_öode
 (
 sync_dev
@@ -25071,7 +25125,7 @@ fûe_öum
 dù
 );
 
-733 
+732 
 	`mlfs_as£π
 (
 dù
@@ -25079,7 +25133,7 @@ dù
 ôy≥
  != 0);
 
-734 
+733 
 	`sync_öode_‰om_döode
 (
 sync_fûe_öode
@@ -25087,7 +25141,7 @@ sync_fûe_öode
 dù
 );
 
-736 
+735 
 fûe_öode
 ->
 i_sb
@@ -25095,7 +25149,7 @@ i_sb
 sb
 ;
 
-739 
+738 
 fûe_öode
 ->
 size
@@ -25105,7 +25159,7 @@ off£t
 Àngth
 ;
 
-740 
+739 
 sync_fûe_öode
 ->
 size
@@ -25113,7 +25167,7 @@ size
 fûe_öode
 ->size;
 
-742 
+741 
 h™dÀ
 .
 dev
@@ -25121,13 +25175,13 @@ dev
 to_dev
 ;
 
-743 
+742 
 	`mlfs_m¨k_öode_dúty
 (
 fûe_öode
 );
 
-745 
+744 
 h™dÀ
 .
 dev
@@ -25135,23 +25189,23 @@ dev
 sync_dev
 ;
 
-746 
+745 
 	`mlfs_m¨k_öode_dúty
 (
 sync_fûe_öode
 );
 
-750 
+749 
 ƒ_dige°ed_blocks
  = 0;
 
-751 
+750 
 cur_off£t
  = 
 off£t
 ;
 
-752 
+751 
 off£t_ö_block
  = 
 off£t
@@ -25159,7 +25213,7 @@ off£t
 g_block_size_byãs
 ;
 
-754 
+753 
 _blk_li°
  = 
 	`li°_fú°_íåy
@@ -25173,7 +25227,7 @@ f_blkli°_t
 li°
 );
 
-758 i‡((
+757 i‡((
 Àngth
  < 
 g_block_size_byãs
@@ -25181,7 +25235,7 @@ g_block_size_byãs
 off£t_ö_block
  != 0) {
 
-759 
+758 
 _Àn
  = 
 	`_mö
@@ -25195,7 +25249,7 @@ g_block_size_byãs
 off£t_ö_block
 );
 
-762 
+761 
 d©a
  = 
 g_bdev
@@ -25211,7 +25265,7 @@ blkƒ
 g_block_size_shi·
 );
 
-764 
+763 
 m≠
 .
 m_lblk
@@ -25221,19 +25275,19 @@ cur_off£t
 g_block_size_shi·
 );
 
-765 
+764 
 m≠
 .
 m_pblk
  = 0;
 
-766 
+765 
 m≠
 .
 m_Àn
  = 1;
 
-768 
+767 
 ªt
  = 
 	`mlfs_ext_gë_blocks
@@ -25245,17 +25299,17 @@ fûe_öode
 m≠
 ,
 
-769 
+768 
 MLFS_GET_BLOCKS_CREATE
 );
 
-771 
+770 
 	`mlfs_as£π
 (
 ªt
  == 1);
 
-773 
+772 
 bh_d©a
  = 
 	`bh_gë_sync_IO
@@ -25269,7 +25323,7 @@ m_pblk
 BH_NO_DATA_ALLOC
 );
 
-775 
+774 
 bh_d©a
 ->
 b_d©a
@@ -25279,7 +25333,7 @@ d©a
 off£t_ö_block
 ;
 
-776 
+775 
 bh_d©a
 ->
 b_size
@@ -25287,7 +25341,7 @@ b_size
 _Àn
 ;
 
-777 
+776 
 bh_d©a
 ->
 b_off£t
@@ -25295,7 +25349,7 @@ b_off£t
 off£t_ö_block
 ;
 
-781 
+780 
 ªt
  = 
 	`mlfs_wrôe
@@ -25303,29 +25357,29 @@ off£t_ö_block
 bh_d©a
 );
 
-782 
+781 
 	`mlfs_as£π
 (!
 ªt
 );
 
-783 
+782 
 	`˛ór_buf„r_u±od©e
 (
 bh_d©a
 );
 
-784 
+783 
 	`bh_ªÀa£
 (
 bh_d©a
 );
 
-786 
+785 
 	`mlfs_debug
 ("inum %d, offset %lu (dev %d:%lx) -> (dev %d:%lx)\n",
 
-787 
+786 
 fûe_öode
 ->
 öum
@@ -25335,7 +25389,7 @@ cur_off£t
 ‰om_dev
 ,
 
-788 
+787 
 blkƒ
 , 
 to_dev
@@ -25345,29 +25399,29 @@ m≠
 m_pblk
 );
 
-790 
+789 
 ƒ_dige°ed_blocks
 ++;
 
-791 
+790 
 cur_off£t
  +
 _Àn
 ;
 
-792 
+791 
 d©a
  +
 _Àn
 ;
 
-799 
+798 
 ƒ_dige°ed_blocks
  < 
 ƒ_blocks
 ) {
 
-800 
+799 
 ƒ_block_gë
  = 0, 
 i
@@ -25375,11 +25429,11 @@ i
 j
 ;
 
-801 
+800 
 ønd_vÆ
 ;
 
-803 
+802 
 	`mlfs_as£π
 ((
 cur_off£t
@@ -25387,7 +25441,7 @@ cur_off£t
 g_block_size_byãs
 ) == 0);
 
-805 
+804 
 m≠
 .
 m_lblk
@@ -25397,13 +25451,13 @@ cur_off£t
 g_block_size_shi·
 );
 
-806 
+805 
 m≠
 .
 m_pblk
  = 0;
 
-807 
+806 
 m≠
 .
 m_Àn
@@ -25415,7 +25469,7 @@ m_Àn
 ƒ_dige°ed_blocks
 , (1 << 15));
 
-810 
+809 
 ƒ_block_gë
  = 
 	`mlfs_ext_gë_blocks
@@ -25427,11 +25481,11 @@ fûe_öode
 m≠
 ,
 
-811 
+810 
 MLFS_GET_BLOCKS_CREATE
 );
 
-813 
+812 
 	`mlfs_as£π
 (
 m≠
@@ -25439,19 +25493,19 @@ m≠
 m_pblk
  != 0);
 
-815 
+814 
 	`mlfs_as£π
 (
 ƒ_block_gë
  > 0);
 
-817 
+816 
 ƒ_dige°ed_blocks
  +
 ƒ_block_gë
 ;
 
-819 i‡(
+818 i‡(
 _blk_li°
 ->
 n
@@ -25459,7 +25513,7 @@ n
 ƒ_block_gë
 ) {
 
-820 
+819 
 d©a
  = 
 g_bdev
@@ -25469,7 +25523,7 @@ g_bdev
 m≠_ba£_addr
  +
 
-821 (
+820 (
 _blk_li°
 ->
 blkƒ
@@ -25477,11 +25531,11 @@ blkƒ
 g_block_size_shi·
 );
 
-823 
+822 
 	`mlfs_debug
 ("inum %d, offset %luÜen %u (dev %d:%lu) -> (dev %d:%lu)\n",
 
-824 
+823 
 fûe_öode
 ->
 öum
@@ -25495,7 +25549,7 @@ n
 g_block_size_shi·
 ,
 
-825 
+824 
 ‰om_dev
 , 
 _blk_li°
@@ -25509,7 +25563,7 @@ m≠
 m_pblk
 );
 
-827 
+826 
 bh_d©a
  = 
 	`bh_gë_sync_IO
@@ -25523,7 +25577,7 @@ m_pblk
 BH_NO_DATA_ALLOC
 );
 
-829 
+828 
 bh_d©a
 ->
 b_d©a
@@ -25531,7 +25585,7 @@ b_d©a
 d©a
 ;
 
-830 
+829 
 bh_d©a
 ->
 b_size
@@ -25543,13 +25597,13 @@ n
 g_block_size_shi·
 );
 
-831 
+830 
 bh_d©a
 ->
 b_off£t
  = 0;
 
-835 
+834 
 ªt
  = 
 	`mlfs_wrôe
@@ -25557,25 +25611,25 @@ b_off£t
 bh_d©a
 );
 
-836 
+835 
 	`mlfs_as£π
 (!
 ªt
 );
 
-837 
+836 
 	`˛ór_buf„r_u±od©e
 (
 bh_d©a
 );
 
-838 
+837 
 	`bh_ªÀa£
 (
 bh_d©a
 );
 
-840 
+839 
 cur_off£t
  +(
 ƒ_block_gë
@@ -25583,7 +25637,7 @@ cur_off£t
 g_block_size_shi·
 );
 
-842 
+841 
 _blk_li°
 ->
 n
@@ -25591,7 +25645,7 @@ n
 ƒ_block_gë
 ;
 
-843 
+842 
 _blk_li°
 ->
 blkƒ
@@ -25599,7 +25653,7 @@ blkƒ
 ƒ_block_gë
 ;
 
-848 
+847 
 i
  = 0, 
 j
@@ -25611,7 +25665,7 @@ n
 ƒ_block_gë
 ;
 
-849 
+848 
 i
  +
 _blk_li°
@@ -25621,7 +25675,7 @@ n
 j
  += _blk_list->n) {
 
-850 
+849 
 d©a
  = 
 g_bdev
@@ -25631,7 +25685,7 @@ g_bdev
 m≠_ba£_addr
  +
 
-851 (
+850 (
 _blk_li°
 ->
 blkƒ
@@ -25639,11 +25693,11 @@ blkƒ
 g_block_size_shi·
 );
 
-853 
+852 
 	`mlfs_debug
 ("inum %d, offset %luÜen %u (dev %d:%lu) -> (dev %d:%lu)\n",
 
-854 
+853 
 fûe_öode
 ->
 öum
@@ -25657,7 +25711,7 @@ n
 g_block_size_shi·
 ,
 
-855 
+854 
 ‰om_dev
 , 
 _blk_li°
@@ -25673,7 +25727,7 @@ m_pblk
 i
 );
 
-858 
+857 
 bh_d©a
  = 
 	`bh_gë_sync_IO
@@ -25689,7 +25743,7 @@ i
 BH_NO_DATA_ALLOC
 );
 
-860 
+859 
 bh_d©a
 ->
 b_d©a
@@ -25697,7 +25751,7 @@ b_d©a
 d©a
 ;
 
-861 
+860 
 bh_d©a
 ->
 b_blockƒ
@@ -25709,7 +25763,7 @@ m_pblk
 i
 ;
 
-862 
+861 
 bh_d©a
 ->
 b_size
@@ -25721,13 +25775,13 @@ n
 g_block_size_shi·
 );
 
-863 
+862 
 bh_d©a
 ->
 b_off£t
  = 0;
 
-867 
+866 
 ªt
  = 
 	`mlfs_wrôe
@@ -25735,25 +25789,25 @@ b_off£t
 bh_d©a
 );
 
-868 
+867 
 	`mlfs_as£π
 (!
 ªt
 );
 
-869 
+868 
 	`˛ór_buf„r_u±od©e
 (
 bh_d©a
 );
 
-870 
+869 
 	`bh_ªÀa£
 (
 bh_d©a
 );
 
-872 
+871 
 cur_off£t
  +(
 _blk_li°
@@ -25763,7 +25817,7 @@ n
 g_block_size_shi·
 );
 
-874 
+873 
 _blk_li°
  = 
 	`li°_√xt_íåy
@@ -25771,7 +25825,7 @@ _blk_li°
 li°
 );
 
-876 i‡(&
+875 i‡(&
 _blk_li°
 ->
 li°
@@ -25781,7 +25835,7 @@ iovec
 iov_blk_li°
 )
 
-881 
+880 
 	`mlfs_as£π
 (
 ƒ_blocks
@@ -25789,7 +25843,7 @@ iov_blk_li°
 ƒ_dige°ed_blocks
 );
 
-883 i‡(
+882 i‡(
 fûe_öode
 ->
 size
@@ -25799,7 +25853,7 @@ off£t
 Àngth
 )
 
-884 
+883 
 fûe_öode
 ->
 size
@@ -25809,11 +25863,11 @@ off£t
 Àngth
 ;
 
-887 
+886 
 	}
 }
 
-889 
+888 
 	$dige°_u∆ök
 (
 uöt8_t
@@ -25827,25 +25881,25 @@ uöt32_t
 öum
 )
 
-891 
+890 
 buf„r_hód
  *
 bh
 ;
 
-892 
+891 
 öode
  *inode;
 
-893 
+892 
 döode
  dinode;
 
-894 
+893 
 ªt
  = 0;
 
-896 
+895 
 	`mlfs_as£π
 (
 to_dev
@@ -25853,7 +25907,7 @@ to_dev
 g_roŸ_dev
 );
 
-898 
+897 
 	`mlfs_debug
 ("[UNLINK] (%d->%dËöum %d\n", 
 ‰om_dev
@@ -25863,7 +25917,7 @@ to_dev
 öum
 );
 
-900 
+899 
 öode
  = 
 	`iˇche_föd
@@ -25873,13 +25927,13 @@ to_dev
 öum
 );
 
-901 
+900 
 	`mlfs_as£π
 (
 öode
 );
 
-903 
+902 
 	`mlfs_as£π
 (!(
 öode
@@ -25889,7 +25943,7 @@ to_dev
 I_DELETING
 ));
 
-905 i‡(
+904 i‡(
 öode
 ->
 ôy≥
@@ -25897,13 +25951,13 @@ I_DELETING
 T_FILE
 ) {
 
-906 i‡(
+905 i‡(
 öode
 ->
 size
  > 0) {
 
-907 
+906 
 h™dÀ_t
  
 h™dÀ
@@ -25913,7 +25967,7 @@ dev
 to_dev
 };
 
-908 
+907 
 mlfs_lblk_t
  
 íd
@@ -25925,7 +25979,7 @@ size
 g_block_size_shi·
 ;
 
-910 
+909 
 ªt
  = 
 	`mlfs_ext_åunˇã
@@ -25937,13 +25991,13 @@ h™dÀ
 íd
  == 0 ?Énd :Énd - 1);
 
-911 
+910 
 	`mlfs_as£π
 (!
 ªt
 );
 
-913 } i‡(
+912 } i‡(
 öode
 ->
 ôy≥
@@ -25951,11 +26005,11 @@ h™dÀ
 T_DIR
 ) {
 
-916 
+915 
 	`∑nic
 ("unsupported inodeÅype\n");
 
-919 
+918 
 	`mem£t
 (
 öode
@@ -25965,7 +26019,7 @@ _döode
 döode
 ));
 
-921 
+920 
 öode
 ->
 dev
@@ -25973,13 +26027,13 @@ dev
 to_dev
 ;
 
-922 
+921 
 öode
 ->
 Êags
  = 0;
 
-923 
+922 
 öode
 ->
 Êags
@@ -25987,29 +26041,29 @@ to_dev
 I_DELETING
 ;
 
-924 
+923 
 öode
 ->
 size
  = 0;
 
-925 
+924 
 öode
 ->
 ôy≥
  = 0;
 
-927 
+926 
 	`mlfs_m¨k_öode_dúty
 (
 öode
 );
 
-930 
+929 
 	}
 }
 
-932 
+931 
 	$dige°_óch_log_íåõs
 (
 uöt8_t
@@ -26021,31 +26075,31 @@ loghdr_mëa_t
 loghdr_mëa
 )
 
-934 
+933 
 i
 , 
 ªt
 ;
 
-935 
+934 
 loghdr_t
  *
 loghdr
 ;
 
-936 
+935 
 uöt16_t
  
 ƒ_íåõs
 ;
 
-937 
+936 
 uöt64_t
  
 tsc_begö
 ;
 
-939 
+938 
 ƒ_íåõs
  = 
 loghdr_mëa
@@ -26055,29 +26109,29 @@ loghdr
 n
 ;
 
-940 
+939 
 loghdr
  = 
 loghdr_mëa
 ->loghdr;
 
-942 
+941 
 i
  = 0; i < 
 ƒ_íåõs
 ; i++) {
 
-943 i‡(
+942 i‡(
 íabÀ_≥rf_°©s
 )
 
-944 
+943 
 g_≥rf_°©s
 .
 n_dige°
 ++;
 
-947 
+946 
 loghdr
 ->
 ty≥
@@ -26085,25 +26139,25 @@ ty≥
 i
 ]) {
 
-948 
+947 
 L_TYPE_INODE_CREATE
 :
 
-950 
+949 
 L_TYPE_INODE_UPDATE
 : {
 
-951 i‡(
+950 i‡(
 íabÀ_≥rf_°©s
 )
 
-952 
+951 
 tsc_begö
  = 
 	`asm_rdts˝
 ();
 
-954 
+953 
 ªt
  = 
 	`dige°_öode
@@ -26111,11 +26165,11 @@ tsc_begö
 ‰om_dev
 ,
 
-955 
+954 
 g_roŸ_dev
 ,
 
-956 
+955 
 loghdr
 ->
 öode_no
@@ -26123,7 +26177,7 @@ loghdr
 i
 ],
 
-957 
+956 
 loghdr
 ->
 blocks
@@ -26131,51 +26185,51 @@ blocks
 i
 ]);
 
-958 
+957 
 	`mlfs_as£π
 (!
 ªt
 );
 
-960 i‡(
+959 i‡(
 íabÀ_≥rf_°©s
 )
 
-961 
+960 
 g_≥rf_°©s
 .
 dige°_öode_tsc
  +=
 
-962 
+961 
 	`asm_rdts˝
 (Ë- 
 tsc_begö
 ;
 
-965 
+964 
 L_TYPE_DIR_ADD
 :
 
-966 
+965 
 L_TYPE_DIR_RENAME
 :
 
-967 
+966 
 L_TYPE_DIR_DEL
 : {
 
-968 i‡(
+967 i‡(
 íabÀ_≥rf_°©s
 )
 
-969 
+968 
 tsc_begö
  = 
 	`asm_rdts˝
 ();
 
-971 
+970 
 ªt
  = 
 	`dige°_dúe˘‹y
@@ -26183,15 +26237,15 @@ tsc_begö
 ‰om_dev
 ,
 
-972 
+971 
 g_roŸ_dev
 ,
 
-973 
+972 
 i
 ,
 
-974 
+973 
 loghdr
 ->
 ty≥
@@ -26199,10 +26253,18 @@ ty≥
 i
 ],
 
-975 
+974 
 loghdr
 ->
 öode_no
+[
+i
+],
+
+975 
+loghdr
+->
+Àngth
 [
 i
 ],
@@ -26210,52 +26272,44 @@ i
 976 
 loghdr
 ->
-Àngth
-[
-i
-],
-
-977 
-loghdr
-->
 d©a
 [
 i
 ],
 
-978 
+977 
 loghdr_mëa
 ->
 hdr_blkno
 );
 
-979 
+978 
 	`mlfs_as£π
 (!
 ªt
 );
 
-981 i‡(
+980 i‡(
 íabÀ_≥rf_°©s
 )
 
-982 
+981 
 g_≥rf_°©s
 .
 dige°_dú_tsc
  +=
 
-983 
+982 
 	`asm_rdts˝
 (Ë- 
 tsc_begö
 ;
 
-986 
+985 
 L_TYPE_FILE
 : {
 
-987 
+986 
 uöt8_t
  
 de°_dev
@@ -26263,31 +26317,31 @@ de°_dev
 g_roŸ_dev
 ;
 
-988 
+987 
 ønd_vÆ
 ;
 
-989 
+988 
 Ãu_key_t
  
 k
 ;
 
-991 i‡(
+990 i‡(
 íabÀ_≥rf_°©s
 )
 
-992 
+991 
 tsc_begö
  = 
 	`asm_rdts˝
 ();
 
-993 #ifde‡
+992 #ifde‡
 USE_SSD
 
 
-997 
+996 
 ªt
  = 
 	`dige°_fûe
@@ -26295,11 +26349,11 @@ USE_SSD
 ‰om_dev
 ,
 
-998 
+997 
 de°_dev
 ,
 
-999 
+998 
 loghdr
 ->
 öode_no
@@ -26307,7 +26361,7 @@ loghdr
 i
 ],
 
-1000 
+999 
 loghdr
 ->
 d©a
@@ -26315,7 +26369,7 @@ d©a
 i
 ],
 
-1001 
+1000 
 loghdr
 ->
 Àngth
@@ -26323,7 +26377,7 @@ loghdr
 i
 ],
 
-1002 
+1001 
 loghdr
 ->
 blocks
@@ -26331,43 +26385,43 @@ blocks
 i
 ]);
 
-1003 
+1002 
 	`mlfs_as£π
 (!
 ªt
 );
 
-1005 i‡(
+1004 i‡(
 íabÀ_≥rf_°©s
 )
 
-1006 
+1005 
 g_≥rf_°©s
 .
 dige°_fûe_tsc
  +=
 
-1007 
+1006 
 	`asm_rdts˝
 (Ë- 
 tsc_begö
 ;
 
-1010 
+1009 
 L_TYPE_UNLINK
 : {
 
-1011 i‡(
+1010 i‡(
 íabÀ_≥rf_°©s
 )
 
-1012 
+1011 
 tsc_begö
  = 
 	`asm_rdts˝
 ();
 
-1014 
+1013 
 ªt
  = 
 	`dige°_u∆ök
@@ -26375,11 +26429,11 @@ tsc_begö
 ‰om_dev
 ,
 
-1015 
+1014 
 g_roŸ_dev
 ,
 
-1016 
+1015 
 loghdr
 ->
 öode_no
@@ -26387,29 +26441,29 @@ loghdr
 i
 ]);
 
-1017 
+1016 
 	`mlfs_as£π
 (!
 ªt
 );
 
-1019 i‡(
+1018 i‡(
 íabÀ_≥rf_°©s
 )
 
-1020 
+1019 
 g_≥rf_°©s
 .
 dige°_öode_tsc
  +=
 
-1021 
+1020 
 	`asm_rdts˝
 (Ë- 
 tsc_begö
 ;
 
-1025 
+1024 
 	`¥ötf
 ("%s: dige°Åy≥ %d\n", 
 __func__
@@ -26421,15 +26475,15 @@ ty≥
 i
 ]);
 
-1026 
+1025 
 	`∑nic
 ("unsupportedÅype of operation\n");
 
-1031 
+1030 
 	}
 }
 
-1033 
+1032 
 	$dige°_ª∂ay_™d_›timize
 (
 uöt8_t
@@ -26437,7 +26491,7 @@ uöt8_t
 ‰om_dev
 ,
 
-1034 
+1033 
 loghdr_mëa_t
  *
 loghdr_mëa
@@ -26445,25 +26499,25 @@ loghdr_mëa
 ª∂ay_li°
  *replay_list)
 
-1036 
+1035 
 i
 , 
 ªt
 ;
 
-1037 
+1036 
 loghdr_t
  *
 loghdr
 ;
 
-1038 
+1037 
 uöt16_t
  
 ƒ_íåõs
 ;
 
-1040 
+1039 
 ƒ_íåõs
  = 
 loghdr_mëa
@@ -26473,19 +26527,19 @@ loghdr
 n
 ;
 
-1041 
+1040 
 loghdr
  = 
 loghdr_mëa
 ->loghdr;
 
-1043 
+1042 
 i
  = 0; i < 
 ƒ_íåõs
 ; i++) {
 
-1044 
+1043 
 loghdr
 ->
 ty≥
@@ -26493,15 +26547,15 @@ ty≥
 i
 ]) {
 
-1045 
+1044 
 L_TYPE_INODE_CREATE
 :
 
-1046 
+1045 
 L_TYPE_INODE_UPDATE
 : {
 
-1047 
+1046 
 i_ª∂ay_t
  
 £¨ch
@@ -26509,7 +26563,7 @@ i_ª∂ay_t
 ôem
 ;
 
-1048 
+1047 
 	`mem£t
 (&
 £¨ch
@@ -26517,7 +26571,7 @@ i_ª∂ay_t
 i_ª∂ay_t
 ));
 
-1050 
+1049 
 £¨ch
 .
 key
@@ -26531,7 +26585,7 @@ loghdr
 i
 ];
 
-1052 i‡(
+1051 i‡(
 loghdr
 ->
 ty≥
@@ -26541,7 +26595,7 @@ i
 L_TYPE_INODE_CREATE
 )
 
-1053 
+1052 
 öode_vîsi⁄_èbÀ
 [
 £¨ch
@@ -26551,7 +26605,7 @@ key
 öum
 ]++;
 
-1054 
+1053 
 £¨ch
 .
 key
@@ -26563,7 +26617,7 @@ vî
 öum
 ];
 
-1056 
+1055 
 	`HASH_FIND
 (
 hh
@@ -26577,17 +26631,17 @@ i_dige°_hash
 key
 ,
 
-1057 (
+1056 (
 ª∂ay_key_t
 ), 
 ôem
 );
 
-1058 i‡(!
+1057 i‡(!
 ôem
 ) {
 
-1059 
+1058 
 ôem
  = (
 i_ª∂ay_t
@@ -26595,7 +26649,7 @@ i_ª∂ay_t
 	`mlfs_zÆloc
 ((i_replay_t));
 
-1060 
+1059 
 ôem
 ->
 key
@@ -26603,7 +26657,7 @@ key
 £¨ch
 .key;
 
-1061 
+1060 
 ôem
 ->
 node_ty≥
@@ -26611,7 +26665,7 @@ node_ty≥
 NTYPE_I
 ;
 
-1062 
+1061 
 	`li°_add_èû
 (&
 ôem
@@ -26623,7 +26677,7 @@ li°
 hód
 );
 
-1067 i‡(
+1066 i‡(
 loghdr
 ->
 ty≥
@@ -26633,19 +26687,19 @@ i
 L_TYPE_INODE_CREATE
 )
 
-1068 
+1067 
 ôem
 ->
 ¸óã
  = 1;
 
-1070 
+1069 
 ôem
 ->
 ¸óã
  = 0;
 
-1072 
+1071 
 	`HASH_ADD
 (
 hh
@@ -26657,17 +26711,17 @@ i_dige°_hash
 key
 ,
 
-1073 (
+1072 (
 ª∂ay_key_t
 ), 
 ôem
 );
 
-1074 
+1073 
 	`mlfs_debug
 ("[INODE] inum %u (ver %u) - create %d\n",
 
-1075 
+1074 
 ôem
 ->
 key
@@ -26679,7 +26733,7 @@ vî
 ¸óã
 );
 
-1078 
+1077 
 ôem
 ->
 blkƒ
@@ -26691,29 +26745,29 @@ blocks
 i
 ];
 
-1079 i‡(
+1078 i‡(
 íabÀ_≥rf_°©s
 )
 
-1080 
+1079 
 g_≥rf_°©s
 .
 n_dige°
 ++;
 
-1083 
+1082 
 L_TYPE_DIR_DEL
 :
 
-1084 
+1083 
 L_TYPE_DIR_RENAME
 :
 
-1085 
+1084 
 L_TYPE_DIR_ADD
 : {
 
-1086 
+1085 
 d_ª∂ay_t
  
 £¨ch
@@ -26721,7 +26775,7 @@ d_ª∂ay_t
 ôem
 ;
 
-1088 
+1087 
 	`mem£t
 (&
 £¨ch
@@ -26729,7 +26783,7 @@ d_ª∂ay_t
 d_ª∂ay_t
 ));
 
-1089 
+1088 
 £¨ch
 .
 key
@@ -26743,7 +26797,7 @@ d©a
 i
 ];
 
-1090 
+1089 
 £¨ch
 .
 key
@@ -26755,7 +26809,7 @@ loghdr
 i
 ];
 
-1091 
+1090 
 £¨ch
 .
 key
@@ -26771,7 +26825,7 @@ d©a
 i
 ]];
 
-1093 
+1092 
 	`HASH_FIND
 (
 hh
@@ -26785,17 +26839,17 @@ d_dige°_hash
 key
 ,
 
-1094 (
+1093 (
 d_ª∂ay_key_t
 ), 
 ôem
 );
 
-1095 i‡(!
+1094 i‡(!
 ôem
 ) {
 
-1096 
+1095 
 ôem
  = (
 d_ª∂ay_t
@@ -26803,7 +26857,7 @@ d_ª∂ay_t
 	`mlfs_zÆloc
 ((d_replay_t));
 
-1097 
+1096 
 ôem
 ->
 key
@@ -26811,7 +26865,7 @@ key
 £¨ch
 .key;
 
-1098 
+1097 
 	`HASH_ADD
 (
 hh
@@ -26823,13 +26877,13 @@ d_dige°_hash
 key
 ,
 
-1099 (
+1098 (
 d_ª∂ay_key_t
 ), 
 ôem
 );
 
-1100 
+1099 
 ôem
 ->
 node_ty≥
@@ -26837,7 +26891,7 @@ node_ty≥
 NTYPE_D
 ;
 
-1101 
+1100 
 	`li°_add_èû
 (&
 ôem
@@ -26849,11 +26903,11 @@ li°
 hód
 );
 
-1102 
+1101 
 	`mlfs_debug
 ("[ DIR ] inum %u (ver %u) - %s\n",
 
-1103 
+1102 
 ôem
 ->
 key
@@ -26861,7 +26915,7 @@ key
 öum
 ,
 
-1104 
+1103 
 ôem
 ->
 key
@@ -26869,7 +26923,7 @@ key
 vî
 ,
 
-1105 
+1104 
 loghdr
 ->
 ty≥
@@ -26879,7 +26933,7 @@ i
 L_TYPE_DIR_ADD
  ? "ADD" :
 
-1106 
+1105 
 loghdr
 ->
 ty≥
@@ -26889,7 +26943,7 @@ i
 L_TYPE_DIR_DEL
  ? "DEL" :
 
-1109 
+1108 
 ôem
 ->
 n
@@ -26897,7 +26951,7 @@ n
 i
 ;
 
-1110 
+1109 
 ôem
 ->
 dú_öum
@@ -26909,7 +26963,7 @@ loghdr
 i
 ];
 
-1111 
+1110 
 ôem
 ->
 dú_size
@@ -26921,7 +26975,7 @@ loghdr
 i
 ];
 
-1112 
+1111 
 ôem
 ->
 blkƒ
@@ -26931,21 +26985,21 @@ loghdr_mëa
 hdr_blkno
 ;
 
-1113 i‡(
+1112 i‡(
 íabÀ_≥rf_°©s
 )
 
-1114 
+1113 
 g_≥rf_°©s
 .
 n_dige°
 ++;
 
-1117 
+1116 
 L_TYPE_FILE
 : {
 
-1118 
+1117 
 f_ª∂ay_t
  
 £¨ch
@@ -26953,35 +27007,35 @@ f_ª∂ay_t
 ôem
 ;
 
-1119 
+1118 
 f_iovec_t
  *
 f_iovec
 ;
 
-1120 
+1119 
 f_blkli°_t
  *
 _blk_li°
 ;
 
-1121 
+1120 
 Ãu_key_t
  
 k
 ;
 
-1122 
+1121 
 off£t_t
  
 iovec_key
 ;
 
-1123 
+1122 
 found
  = 0;
 
-1125 
+1124 
 	`mem£t
 (&
 £¨ch
@@ -26989,7 +27043,7 @@ found
 f_ª∂ay_t
 ));
 
-1126 
+1125 
 £¨ch
 .
 key
@@ -27003,7 +27057,7 @@ loghdr
 i
 ];
 
-1127 
+1126 
 £¨ch
 .
 key
@@ -27019,7 +27073,7 @@ loghdr
 i
 ]];
 
-1129 
+1128 
 	`HASH_FIND
 (
 hh
@@ -27033,17 +27087,17 @@ f_dige°_hash
 key
 ,
 
-1130 (
+1129 (
 ª∂ay_key_t
 ), 
 ôem
 );
 
-1131 i‡(!
+1130 i‡(!
 ôem
 ) {
 
-1132 
+1131 
 ôem
  = (
 f_ª∂ay_t
@@ -27051,7 +27105,7 @@ f_ª∂ay_t
 	`mlfs_zÆloc
 ((f_replay_t));
 
-1133 
+1132 
 ôem
 ->
 key
@@ -27059,7 +27113,7 @@ key
 £¨ch
 .key;
 
-1135 
+1134 
 	`HASH_ADD
 (
 hh
@@ -27071,13 +27125,13 @@ f_dige°_hash
 key
 ,
 
-1136 (
+1135 (
 ª∂ay_key_t
 ), 
 ôem
 );
 
-1138 
+1137 
 	`INIT_LIST_HEAD
 (&
 ôem
@@ -27085,7 +27139,7 @@ key
 iovec_li°
 );
 
-1139 
+1138 
 ôem
 ->
 node_ty≥
@@ -27093,7 +27147,7 @@ node_ty≥
 NTYPE_F
 ;
 
-1140 
+1139 
 ôem
 ->
 iovec_hash
@@ -27101,7 +27155,7 @@ iovec_hash
 NULL
 ;
 
-1141 
+1140 
 	`li°_add_èû
 (&
 ôem
@@ -27113,15 +27167,15 @@ li°
 hód
 );
 
-1144 #i‚de‡
+1143 #i‚de‡
 EXPERIMENTAL
 
 
-1145 #ifde‡
+1144 #ifde‡
 IOMERGE
 
 
-1150 
+1149 
 iovec_key
  = 
 	`ALIGN_FLOOR
@@ -27135,7 +27189,7 @@ i
 g_block_size_byãs
 );
 
-1152 i‡(
+1151 i‡(
 loghdr
 ->
 d©a
@@ -27145,7 +27199,7 @@ i
 g_block_size_byãs
  !=0 ||
 
-1153 
+1152 
 loghdr
 ->
 Àngth
@@ -27155,11 +27209,11 @@ i
 g_block_size_byãs
 )
 
-1154 
+1153 
 	`∑nic
 ("IO merge isÇot support current IOÖattern\n");
 
-1156 
+1155 
 	`HASH_FIND
 (
 hh
@@ -27169,7 +27223,7 @@ hh
 iovec_hash
 ,
 
-1157 &
+1156 &
 iovec_key
 , (
 off£t_t
@@ -27177,11 +27231,11 @@ off£t_t
 f_iovec
 );
 
-1159 i‡(
+1158 i‡(
 f_iovec
  &&
 
-1160 (
+1159 (
 f_iovec
 ->
 Àngth
@@ -27191,7 +27245,7 @@ loghdr
 i
 ])) {
 
-1161 
+1160 
 f_iovec
 ->
 off£t
@@ -27199,7 +27253,7 @@ off£t
 iovec_key
 ;
 
-1162 
+1161 
 f_iovec
 ->
 blkƒ
@@ -27211,15 +27265,15 @@ blocks
 i
 ];
 
-1164 
+1163 
 found
  = 1;
 
-1167 i‡(!
+1166 i‡(!
 found
 ) {
 
-1168 
+1167 
 f_iovec
  = (
 f_iovec_t
@@ -27227,7 +27281,7 @@ f_iovec_t
 	`mlfs_zÆloc
 ((f_iovec_t));
 
-1169 
+1168 
 f_iovec
 ->
 Àngth
@@ -27237,7 +27291,7 @@ loghdr
 i
 ];
 
-1170 
+1169 
 f_iovec
 ->
 off£t
@@ -27249,7 +27303,7 @@ d©a
 i
 ];
 
-1171 
+1170 
 f_iovec
 ->
 blkƒ
@@ -27261,7 +27315,7 @@ blocks
 i
 ];
 
-1172 
+1171 
 	`INIT_LIST_HEAD
 (&
 f_iovec
@@ -27269,7 +27323,7 @@ f_iovec
 li°
 );
 
-1173 
+1172 
 	`li°_add_èû
 (&
 f_iovec
@@ -27281,7 +27335,7 @@ li°
 iovec_li°
 );
 
-1175 
+1174 
 f_iovec
 ->
 hash_key
@@ -27289,7 +27343,7 @@ hash_key
 iovec_key
 ;
 
-1176 
+1175 
 	`HASH_ADD
 (
 hh
@@ -27301,13 +27355,13 @@ iovec_hash
 hash_key
 ,
 
-1177 (
+1176 (
 off£t_t
 ), 
 f_iovec
 );
 
-1180 
+1179 
 f_iovec
  = (
 f_iovec_t
@@ -27315,7 +27369,7 @@ f_iovec_t
 	`mlfs_zÆloc
 ((f_iovec_t));
 
-1181 
+1180 
 f_iovec
 ->
 Àngth
@@ -27325,7 +27379,7 @@ loghdr
 i
 ];
 
-1182 
+1181 
 f_iovec
 ->
 off£t
@@ -27337,7 +27391,7 @@ d©a
 i
 ];
 
-1183 
+1182 
 f_iovec
 ->
 blkƒ
@@ -27349,7 +27403,7 @@ blocks
 i
 ];
 
-1184 
+1183 
 	`INIT_LIST_HEAD
 (&
 f_iovec
@@ -27357,7 +27411,7 @@ f_iovec
 li°
 );
 
-1185 
+1184 
 	`li°_add_èû
 (&
 f_iovec
@@ -27369,7 +27423,7 @@ li°
 iovec_li°
 );
 
-1191 
+1190 
 	`mlfs_debug
 ("√wÜog block %lu\n", 
 loghdr
@@ -27379,7 +27433,7 @@ blocks
 i
 ]);
 
-1192 
+1191 
 _blk_li°
  = (
 f_blkli°_t
@@ -27387,7 +27441,7 @@ f_blkli°_t
 	`mlfs_zÆloc
 ((f_blklist_t));
 
-1193 
+1192 
 	`INIT_LIST_HEAD
 (&
 _blk_li°
@@ -27395,7 +27449,7 @@ _blk_li°
 li°
 );
 
-1196 
+1195 
 _blk_li°
 ->
 n
@@ -27409,7 +27463,7 @@ i
 g_block_size_shi·
 );
 
-1197 
+1196 
 _blk_li°
 ->
 blkƒ
@@ -27421,7 +27475,7 @@ blocks
 i
 ];
 
-1199 i‡(!
+1198 i‡(!
 	`li°_em±y
 (&
 ôem
@@ -27429,7 +27483,7 @@ i
 iovec_li°
 )) {
 
-1200 
+1199 
 f_iovec
  = 
 	`li°_œ°_íåy
@@ -27443,7 +27497,7 @@ f_iovec_t
 li°
 );
 
-1203 i‡(
+1202 i‡(
 f_iovec
 ->
 off£t
@@ -27457,7 +27511,7 @@ d©a
 i
 ]) {
 
-1204 
+1203 
 f_iovec
 ->
 Àngth
@@ -27467,13 +27521,13 @@ loghdr
 i
 ];
 
-1205 
+1204 
 f_iovec
 ->
 n_li°
 ++;
 
-1207 
+1206 
 	`mlfs_debug
 ("block i†mîged %u\n", 
 _blk_li°
@@ -27481,7 +27535,7 @@ _blk_li°
 blkƒ
 );
 
-1208 
+1207 
 	`li°_add_èû
 (&
 _blk_li°
@@ -27493,7 +27547,7 @@ f_iovec
 iov_blk_li°
 );
 
-1210 
+1209 
 	`mlfs_debug
 ("√w f_iove¯%lu\n", 
 loghdr
@@ -27503,7 +27557,7 @@ d©a
 i
 ]);
 
-1212 
+1211 
 f_iovec
  = (
 f_iovec_t
@@ -27511,7 +27565,7 @@ f_iovec_t
 	`mlfs_zÆloc
 ((f_iovec_t));
 
-1213 
+1212 
 f_iovec
 ->
 Àngth
@@ -27521,7 +27575,7 @@ loghdr
 i
 ];
 
-1214 
+1213 
 f_iovec
 ->
 off£t
@@ -27533,7 +27587,7 @@ d©a
 i
 ];
 
-1215 
+1214 
 f_iovec
 ->
 blkƒ
@@ -27545,7 +27599,7 @@ blocks
 i
 ];
 
-1216 
+1215 
 	`INIT_LIST_HEAD
 (&
 f_iovec
@@ -27553,9 +27607,21 @@ f_iovec
 li°
 );
 
-1217 
+1216 
 	`INIT_LIST_HEAD
 (&
+f_iovec
+->
+iov_blk_li°
+);
+
+1218 
+	`li°_add_èû
+(&
+_blk_li°
+->
+li°
+, &
 f_iovec
 ->
 iov_blk_li°
@@ -27564,18 +27630,6 @@ iov_blk_li°
 1219 
 	`li°_add_èû
 (&
-_blk_li°
-->
-li°
-, &
-f_iovec
-->
-iov_blk_li°
-);
-
-1220 
-	`li°_add_èû
-(&
 f_iovec
 ->
 li°
@@ -27585,7 +27639,7 @@ li°
 iovec_li°
 );
 
-1223 
+1222 
 f_iovec
  = (
 f_iovec_t
@@ -27593,7 +27647,7 @@ f_iovec_t
 	`mlfs_zÆloc
 ((f_iovec_t));
 
-1224 
+1223 
 f_iovec
 ->
 Àngth
@@ -27603,7 +27657,7 @@ loghdr
 i
 ];
 
-1225 
+1224 
 f_iovec
 ->
 off£t
@@ -27615,7 +27669,7 @@ d©a
 i
 ];
 
-1226 
+1225 
 f_iovec
 ->
 blkƒ
@@ -27627,7 +27681,7 @@ blocks
 i
 ];
 
-1227 
+1226 
 	`INIT_LIST_HEAD
 (&
 f_iovec
@@ -27635,7 +27689,7 @@ f_iovec
 li°
 );
 
-1228 
+1227 
 	`INIT_LIST_HEAD
 (&
 f_iovec
@@ -27643,7 +27697,7 @@ f_iovec
 iov_blk_li°
 );
 
-1230 
+1229 
 	`li°_add_èû
 (&
 _blk_li°
@@ -27655,7 +27709,7 @@ f_iovec
 iov_blk_li°
 );
 
-1231 
+1230 
 	`li°_add_èû
 (&
 f_iovec
@@ -27667,21 +27721,21 @@ li°
 iovec_li°
 );
 
-1235 i‡(
+1234 i‡(
 íabÀ_≥rf_°©s
 )
 
-1236 
+1235 
 g_≥rf_°©s
 .
 n_dige°
 ++;
 
-1239 
+1238 
 L_TYPE_UNLINK
 : {
 
-1242 
+1241 
 uöt32_t
  
 öum
@@ -27693,7 +27747,7 @@ loghdr
 i
 ];
 
-1243 
+1242 
 i_ª∂ay_t
  
 i_£¨ch
@@ -27701,7 +27755,7 @@ i_£¨ch
 i_ôem
 ;
 
-1244 
+1243 
 d_ª∂ay_t
  
 d_£¨ch
@@ -27709,7 +27763,7 @@ d_£¨ch
 d_ôem
 ;
 
-1245 
+1244 
 f_ª∂ay_t
  
 f_£¨ch
@@ -27717,7 +27771,7 @@ f_£¨ch
 f_ôem
 ;
 
-1246 
+1245 
 u_ª∂ay_t
  
 u_£¨ch
@@ -27725,7 +27779,7 @@ u_£¨ch
 u_ôem
 ;
 
-1248 
+1247 
 f_iovec_t
  *
 f_iovec
@@ -27733,13 +27787,13 @@ f_iovec
 tmp
 ;
 
-1250 
+1249 
 ª∂ay_key_t
  
 key
  = {
 
-1251 .
+1250 .
 öum
  = 
 loghdr
@@ -27749,7 +27803,7 @@ loghdr
 i
 ],
 
-1252 .
+1251 .
 vî
  = 
 öode_vîsi⁄_èbÀ
@@ -27761,7 +27815,7 @@ loghdr
 i
 ]],
 
-1256 
+1255 
 	`mem£t
 (&
 i_£¨ch
@@ -27769,7 +27823,7 @@ i_£¨ch
 i_ª∂ay_t
 ));
 
-1257 
+1256 
 	`mem£t
 (&
 d_£¨ch
@@ -27777,7 +27831,7 @@ d_£¨ch
 d_ª∂ay_t
 ));
 
-1258 
+1257 
 	`mem£t
 (&
 f_£¨ch
@@ -27785,7 +27839,7 @@ f_£¨ch
 f_ª∂ay_t
 ));
 
-1259 
+1258 
 	`mem£t
 (&
 u_£¨ch
@@ -27793,11 +27847,11 @@ u_£¨ch
 u_ª∂ay_t
 ));
 
-1261 
+1260 
 	`mlfs_debug
 ("%s\n", "-------------------------------");
 
-1264 
+1263 
 i_£¨ch
 .
 key
@@ -27805,7 +27859,7 @@ key
 öum
  = key.inum;
 
-1265 
+1264 
 i_£¨ch
 .
 key
@@ -27813,7 +27867,7 @@ key
 vî
  = key.ver;
 
-1266 
+1265 
 	`HASH_FIND
 (
 hh
@@ -27827,23 +27881,23 @@ i_£¨ch
 key
 ,
 
-1267 (
+1266 (
 ª∂ay_key_t
 ), 
 i_ôem
 );
 
-1269 i‡(
+1268 i‡(
 i_ôem
  && i_ôem->
 ¸óã
 ) {
 
-1270 
+1269 
 	`mlfs_debug
 ("[INODE] inum %u (ver %u) --> SKIP\n",
 
-1271 
+1270 
 i_ôem
 ->
 key
@@ -27853,7 +27907,7 @@ key
 vî
 );
 
-1273 
+1272 
 	`HASH_DEL
 (
 ª∂ay_li°
@@ -27863,7 +27917,7 @@ i_dige°_hash
 i_ôem
 );
 
-1274 
+1273 
 	`li°_dñ
 (&
 i_ôem
@@ -27871,23 +27925,23 @@ i_ôem
 li°
 );
 
-1275 
+1274 
 	`mlfs_‰ì
 (
 i_ôem
 );
 
-1276 i‡(
+1275 i‡(
 íabÀ_≥rf_°©s
 )
 
-1277 
+1276 
 g_≥rf_°©s
 .
 n_dige°_skù≥d
 ++;
 
-1280 
+1279 
 u_ôem
  = (
 u_ª∂ay_t
@@ -27895,13 +27949,13 @@ u_ª∂ay_t
 	`mlfs_zÆloc
 ((u_replay_t));
 
-1281 
+1280 
 u_ôem
 ->
 key
  = key;
 
-1282 
+1281 
 u_ôem
 ->
 node_ty≥
@@ -27909,7 +27963,7 @@ node_ty≥
 NTYPE_U
 ;
 
-1283 
+1282 
 	`HASH_ADD
 (
 hh
@@ -27921,13 +27975,13 @@ u_dige°_hash
 key
 ,
 
-1284 (
+1283 (
 ª∂ay_key_t
 ), 
 u_ôem
 );
 
-1285 
+1284 
 	`li°_add_èû
 (&
 u_ôem
@@ -27939,11 +27993,11 @@ li°
 hód
 );
 
-1286 
+1285 
 	`mlfs_debug
 ("[ULINK] inum %u (ver %u)\n",
 
-1287 
+1286 
 u_ôem
 ->
 key
@@ -27953,17 +28007,17 @@ key
 vî
 );
 
-1288 i‡(
+1287 i‡(
 íabÀ_≥rf_°©s
 )
 
-1289 
+1288 
 g_≥rf_°©s
 .
 n_dige°
 ++;
 
-1293 
+1292 
 	`HASH_FIND
 (
 hh
@@ -27975,21 +28029,21 @@ u_dige°_hash
 key
 ,
 
-1294 (
+1293 (
 ª∂ay_key_t
 ), 
 u_ôem
 );
 
-1295 i‡(
+1294 i‡(
 u_ôem
 ) {
 
-1297 
+1296 
 	`mlfs_debug
 ("[ULINK] inum %u (ver %u) --> SKIP\n",
 
-1298 
+1297 
 u_ôem
 ->
 key
@@ -27999,7 +28053,7 @@ key
 vî
 );
 
-1299 
+1298 
 	`HASH_DEL
 (
 ª∂ay_li°
@@ -28009,7 +28063,7 @@ u_dige°_hash
 u_ôem
 );
 
-1300 
+1299 
 	`li°_dñ
 (&
 u_ôem
@@ -28017,13 +28071,13 @@ u_ôem
 li°
 );
 
-1301 
+1300 
 	`mlfs_‰ì
 (
 u_ôem
 );
 
-1306 
+1305 
 d_£¨ch
 .
 key
@@ -28031,7 +28085,7 @@ key
 öum
  = inum;
 
-1307 
+1306 
 d_£¨ch
 .
 key
@@ -28039,7 +28093,7 @@ key
 vî
  = key.ver;
 
-1308 
+1307 
 d_£¨ch
 .
 key
@@ -28049,7 +28103,7 @@ ty≥
 L_TYPE_DIR_ADD
 ;
 
-1310 
+1309 
 	`HASH_FIND
 (
 hh
@@ -28063,21 +28117,21 @@ d_£¨ch
 key
 ,
 
-1311 (
+1310 (
 d_ª∂ay_key_t
 ), 
 d_ôem
 );
 
-1313 i‡(
+1312 i‡(
 d_ôem
 ) {
 
-1314 
+1313 
 	`mlfs_debug
 ("[ DIR ] inum %u (ver %u) - ADD --> SKIP\n",
 
-1315 
+1314 
 d_ôem
 ->
 key
@@ -28087,7 +28141,7 @@ key
 vî
 );
 
-1316 
+1315 
 	`HASH_DEL
 (
 ª∂ay_li°
@@ -28097,7 +28151,7 @@ d_dige°_hash
 d_ôem
 );
 
-1317 
+1316 
 	`li°_dñ
 (&
 d_ôem
@@ -28105,23 +28159,23 @@ d_ôem
 li°
 );
 
-1318 
+1317 
 	`mlfs_‰ì
 (
 d_ôem
 );
 
-1319 i‡(
+1318 i‡(
 íabÀ_≥rf_°©s
 )
 
-1320 
+1319 
 g_≥rf_°©s
 .
 n_dige°_skù≥d
 ++;
 
-1323 
+1322 
 d_£¨ch
 .
 key
@@ -28129,7 +28183,7 @@ key
 öum
  = inum;
 
-1324 
+1323 
 d_£¨ch
 .
 key
@@ -28137,7 +28191,7 @@ key
 vî
  = key.ver;
 
-1325 
+1324 
 d_£¨ch
 .
 key
@@ -28147,7 +28201,7 @@ ty≥
 L_TYPE_DIR_RENAME
 ;
 
-1327 
+1326 
 	`HASH_FIND
 (
 hh
@@ -28161,21 +28215,21 @@ d_£¨ch
 key
 ,
 
-1328 (
+1327 (
 d_ª∂ay_key_t
 ), 
 d_ôem
 );
 
-1330 i‡(
+1329 i‡(
 d_ôem
 ) {
 
-1331 
+1330 
 	`mlfs_debug
 ("[ DIR ] inum %u (ver %u) - RENAME --> SKIP\n",
 
-1332 
+1331 
 d_ôem
 ->
 key
@@ -28185,7 +28239,7 @@ key
 vî
 );
 
-1333 
+1332 
 	`HASH_DEL
 (
 ª∂ay_li°
@@ -28195,7 +28249,7 @@ d_dige°_hash
 d_ôem
 );
 
-1334 
+1333 
 	`li°_dñ
 (&
 d_ôem
@@ -28203,23 +28257,23 @@ d_ôem
 li°
 );
 
-1335 
+1334 
 	`mlfs_‰ì
 (
 d_ôem
 );
 
-1336 i‡(
+1335 i‡(
 íabÀ_≥rf_°©s
 )
 
-1337 
+1336 
 g_≥rf_°©s
 .
 n_dige°_skù≥d
 ++;
 
-1341 
+1340 
 	`mem£t
 (&
 d_£¨ch
@@ -28227,7 +28281,7 @@ d_£¨ch
 d_ª∂ay_t
 ));
 
-1342 
+1341 
 d_£¨ch
 .
 key
@@ -28235,7 +28289,7 @@ key
 öum
  = inum;
 
-1343 
+1342 
 d_£¨ch
 .
 key
@@ -28243,7 +28297,7 @@ key
 vî
  = key.ver;
 
-1344 
+1343 
 d_£¨ch
 .
 key
@@ -28253,7 +28307,7 @@ ty≥
 L_TYPE_DIR_DEL
 ;
 
-1346 
+1345 
 	`HASH_FIND
 (
 hh
@@ -28267,13 +28321,13 @@ d_£¨ch
 key
 ,
 
-1347 (
+1346 (
 d_ª∂ay_key_t
 ), 
 d_ôem
 );
 
-1349 i‡(
+1348 i‡(
 d_ôem
  && d_ôem->
 key
@@ -28281,11 +28335,11 @@ key
 vî
  != 0 ) {
 
-1350 
+1349 
 	`mlfs_debug
 ("[ DIR ] inum %u (ver %u) - DEL --> SKIP\n",
 
-1351 
+1350 
 d_ôem
 ->
 key
@@ -28295,7 +28349,7 @@ key
 vî
 );
 
-1352 
+1351 
 	`HASH_DEL
 (
 ª∂ay_li°
@@ -28305,7 +28359,7 @@ d_dige°_hash
 d_ôem
 );
 
-1353 
+1352 
 	`li°_dñ
 (&
 d_ôem
@@ -28313,23 +28367,23 @@ d_ôem
 li°
 );
 
-1354 
+1353 
 	`mlfs_‰ì
 (
 d_ôem
 );
 
-1356 i‡(
+1355 i‡(
 íabÀ_≥rf_°©s
 )
 
-1357 
+1356 
 g_≥rf_°©s
 .
 n_dige°_skù≥d
 ++;
 
-1361 
+1360 
 f_£¨ch
 .
 key
@@ -28337,7 +28391,7 @@ key
 öum
  = key.inum;
 
-1362 
+1361 
 f_£¨ch
 .
 key
@@ -28345,7 +28399,7 @@ key
 vî
  = key.ver;
 
-1364 
+1363 
 	`HASH_FIND
 (
 hh
@@ -28359,17 +28413,17 @@ f_£¨ch
 key
 ,
 
-1365 (
+1364 (
 ª∂ay_key_t
 ), 
 f_ôem
 );
 
-1367 i‡(
+1366 i‡(
 f_ôem
 ) {
 
-1368 
+1367 
 	`li°_f‹_óch_íåy_ß„
 (
 f_iovec
@@ -28377,7 +28431,7 @@ f_iovec
 tmp
 ,
 
-1369 &
+1368 &
 f_ôem
 ->
 iovec_li°
@@ -28385,7 +28439,7 @@ iovec_li°
 li°
 ) {
 
-1370 
+1369 
 	`li°_dñ
 (&
 f_iovec
@@ -28393,23 +28447,23 @@ f_iovec
 li°
 );
 
-1371 
+1370 
 	`mlfs_‰ì
 (
 f_iovec
 );
 
-1373 i‡(
+1372 i‡(
 íabÀ_≥rf_°©s
 )
 
-1374 
+1373 
 g_≥rf_°©s
 .
 n_dige°_skù≥d
 ++;
 
-1377 
+1376 
 	`HASH_DEL
 (
 ª∂ay_li°
@@ -28419,7 +28473,7 @@ f_dige°_hash
 f_ôem
 );
 
-1378 
+1377 
 	`li°_dñ
 (&
 f_ôem
@@ -28427,17 +28481,17 @@ f_ôem
 li°
 );
 
-1379 
+1378 
 	`mlfs_‰ì
 (
 f_ôem
 );
 
-1382 
+1381 
 	`mlfs_debug
 ("%s\n", "-------------------------------");
 
-1386 
+1385 
 	`¥ötf
 ("%s: dige°Åy≥ %d\n", 
 __func__
@@ -28449,25 +28503,25 @@ ty≥
 i
 ]);
 
-1387 
+1386 
 	`∑nic
 ("unsupportedÅype of operation\n");
 
-1392 
+1391 
 	}
 }
 
-1394 #ifde‡
+1393 #ifde‡
 FCONCURRENT
 
 
-1395 
+1394 
 	$fûe_dige°_w‹kî
 (*
 ¨g
 )
 
-1397 
+1396 
 f_dige°_w‹kî_¨g
  *
 _¨g
@@ -28475,7 +28529,7 @@ _¨g
 ¨g
 ;
 
-1398 
+1397 
 f_iovec_t
  *
 f_iovec
@@ -28483,25 +28537,25 @@ f_iovec
 iovec_tmp
 ;
 
-1399 
+1398 
 f_ª∂ay_t
  *
 f_ôem
 ;
 
-1400 
+1399 
 Ãu_key_t
  
 k
 ;
 
-1402 
+1401 
 f_ôem
  = 
 _¨g
 ->f_item;
 
-1404 
+1403 
 	`li°_f‹_óch_íåy_ß„
 (
 f_iovec
@@ -28509,7 +28563,7 @@ f_iovec
 iovec_tmp
 ,
 
-1405 &
+1404 &
 f_ôem
 ->
 iovec_li°
@@ -28517,7 +28571,7 @@ iovec_li°
 li°
 ) {
 
-1406 
+1405 
 	`dige°_fûe
 (
 _¨g
@@ -28527,7 +28581,7 @@ _¨g
 to_dev
 ,
 
-1407 
+1406 
 f_ôem
 ->
 key
@@ -28539,7 +28593,7 @@ f_iovec
 off£t
 ,
 
-1408 
+1407 
 f_iovec
 ->
 Àngth
@@ -28547,23 +28601,23 @@ f_iovec
 blkƒ
 );
 
-1409 
+1408 
 	`mlfs_‰ì
 (
 f_iovec
 );
 
-1412 
+1411 
 	`mlfs_‰ì
 (
 _¨g
 );
 
-1413 
+1412 
 	}
 }
 
-1417 
+1416 
 	$dige°_log_‰om_ª∂ay_li°
 (
 uöt8_t
@@ -28573,7 +28627,7 @@ uöt8_t
 ª∂ay_li°
  *replay_list)
 
-1419 
+1418 
 li°_hód
  *
 l
@@ -28581,13 +28635,13 @@ l
 tmp
 ;
 
-1420 
+1419 
 uöt8_t
  *
 node_ty≥
 ;
 
-1421 
+1420 
 f_iovec_t
  *
 f_iovec
@@ -28595,13 +28649,13 @@ f_iovec
 iovec_tmp
 ;
 
-1422 
+1421 
 uöt64_t
  
 tsc_begö
 ;
 
-1424 
+1423 
 	`li°_f‹_óch_ß„
 (
 l
@@ -28613,7 +28667,7 @@ tmp
 hód
 ) {
 
-1425 
+1424 
 node_ty≥
  = (
 uöt8_t
@@ -28623,27 +28677,27 @@ l
 li°_hód
 );
 
-1426 
+1425 
 	`mlfs_as£π
 (*
 node_ty≥
  < 5);
 
-1428 *
+1427 *
 node_ty≥
 ) {
 
-1429 
+1428 
 NTYPE_I
 : {
 
-1430 
+1429 
 i_ª∂ay_t
  *
 i_ôem
 ;
 
-1431 
+1430 
 i_ôem
  = (
 i_ª∂ay_t
@@ -28655,17 +28709,17 @@ l
 li°
 );
 
-1433 i‡(
+1432 i‡(
 íabÀ_≥rf_°©s
 )
 
-1434 
+1433 
 tsc_begö
  = 
 	`asm_rdts˝
 ();
 
-1436 
+1435 
 	`dige°_öode
 (
 ‰om_dev
@@ -28681,7 +28735,7 @@ key
 blkƒ
 );
 
-1438 
+1437 
 	`HASH_DEL
 (
 ª∂ay_li°
@@ -28691,23 +28745,23 @@ i_dige°_hash
 i_ôem
 );
 
-1439 
+1438 
 	`li°_dñ
 (
 l
 );
 
-1440 
+1439 
 	`mlfs_‰ì
 (
 i_ôem
 );
 
-1442 i‡(
+1441 i‡(
 íabÀ_≥rf_°©s
 )
 
-1443 
+1442 
 g_≥rf_°©s
 .
 dige°_öode_tsc
@@ -28717,17 +28771,17 @@ dige°_öode_tsc
 tsc_begö
 ;
 
-1446 
+1445 
 NTYPE_D
 : {
 
-1447 
+1446 
 d_ª∂ay_t
  *
 d_ôem
 ;
 
-1448 
+1447 
 d_ôem
  = (
 d_ª∂ay_t
@@ -28739,17 +28793,17 @@ l
 li°
 );
 
-1450 i‡(
+1449 i‡(
 íabÀ_≥rf_°©s
 )
 
-1451 
+1450 
 tsc_begö
  = 
 	`asm_rdts˝
 ();
 
-1453 
+1452 
 	`dige°_dúe˘‹y
 (
 ‰om_dev
@@ -28761,7 +28815,7 @@ d_ôem
 n
 ,
 
-1454 
+1453 
 d_ôem
 ->
 key
@@ -28773,7 +28827,7 @@ dú_öum
 dú_size
 ,
 
-1455 
+1454 
 d_ôem
 ->
 key
@@ -28783,7 +28837,7 @@ key
 blkƒ
 );
 
-1457 
+1456 
 	`HASH_DEL
 (
 ª∂ay_li°
@@ -28793,23 +28847,23 @@ d_dige°_hash
 d_ôem
 );
 
-1458 
+1457 
 	`li°_dñ
 (
 l
 );
 
-1459 
+1458 
 	`mlfs_‰ì
 (
 d_ôem
 );
 
-1461 i‡(
+1460 i‡(
 íabÀ_≥rf_°©s
 )
 
-1462 
+1461 
 g_≥rf_°©s
 .
 dige°_dú_tsc
@@ -28819,11 +28873,11 @@ dige°_dú_tsc
 tsc_begö
 ;
 
-1465 
+1464 
 NTYPE_F
 : {
 
-1466 
+1465 
 uöt8_t
  
 de°_dev
@@ -28831,7 +28885,7 @@ de°_dev
 g_roŸ_dev
 ;
 
-1467 
+1466 
 f_ª∂ay_t
  *
 f_ôem
@@ -28839,7 +28893,7 @@ f_ôem
 t
 ;
 
-1468 
+1467 
 f_ôem
  = (
 f_ª∂ay_t
@@ -28851,27 +28905,27 @@ l
 li°
 );
 
-1469 
+1468 
 Ãu_key_t
  
 k
 ;
 
-1471 i‡(
+1470 i‡(
 íabÀ_≥rf_°©s
 )
 
-1472 
+1471 
 tsc_begö
  = 
 	`asm_rdts˝
 ();
 
-1474 #ifde‡
+1473 #ifde‡
 FCONCURRENT
 
 
-1475 
+1474 
 	`HASH_ITER
 (
 hh
@@ -28885,13 +28939,13 @@ f_ôem
 t
 ) {
 
-1476 
+1475 
 f_dige°_w‹kî_¨g
  *
 ¨g
 ;
 
-1479 
+1478 
 ¨g
  = (
 f_dige°_w‹kî_¨g
@@ -28899,17 +28953,17 @@ f_dige°_w‹kî_¨g
 	`mlfs_Æloc
 (
 
-1480 (
+1479 (
 f_dige°_w‹kî_¨g
 ));
 
-1482 
+1481 
 ¨g
 ->
 ‰om_dev
  = from_dev;
 
-1483 
+1482 
 ¨g
 ->
 to_dev
@@ -28917,31 +28971,31 @@ to_dev
 g_roŸ_dev
 ;
 
-1484 
+1483 
 ¨g
 ->
 f_ôem
  = f_item;
 
-1486 
+1485 
 	`thpoﬁ_add_w‹k
 (
 fûe_dige°_thªad_poﬁ
 ,
 
-1487 
+1486 
 fûe_dige°_w‹kî
 , (*)
 ¨g
 );
 
-1491 
+1490 
 	`thpoﬁ_waô
 (
 fûe_dige°_thªad_poﬁ
 );
 
-1493 
+1492 
 	`HASH_ITER
 (
 hh
@@ -28955,7 +29009,7 @@ f_ôem
 t
 ) {
 
-1494 
+1493 
 	`HASH_DEL
 (
 ª∂ay_li°
@@ -28965,13 +29019,13 @@ f_dige°_hash
 f_ôem
 );
 
-1495 
+1494 
 	`mlfs_‰ì
 (
 f_ôem
 );
 
-1498 
+1497 
 	`li°_f‹_óch_íåy_ß„
 (
 f_iovec
@@ -28979,7 +29033,7 @@ f_iovec
 iovec_tmp
 ,
 
-1499 &
+1498 &
 f_ôem
 ->
 iovec_li°
@@ -28987,11 +29041,11 @@ iovec_li°
 li°
 ) {
 
-1501 #i‚de‡
+1500 #i‚de‡
 EXPERIMENTAL
 
 
-1502 
+1501 
 	`dige°_fûe
 (
 ‰om_dev
@@ -28999,7 +29053,7 @@ EXPERIMENTAL
 de°_dev
 ,
 
-1503 
+1502 
 f_ôem
 ->
 key
@@ -29011,7 +29065,7 @@ f_iovec
 off£t
 ,
 
-1504 
+1503 
 f_iovec
 ->
 Àngth
@@ -29019,13 +29073,13 @@ f_iovec
 blkƒ
 );
 
-1505 
+1504 
 	`mlfs_‰ì
 (
 f_iovec
 );
 
-1507 
+1506 
 	`dige°_fûe_iovec
 (
 ‰om_dev
@@ -29033,7 +29087,7 @@ f_iovec
 de°_dev
 ,
 
-1508 
+1507 
 f_ôem
 ->
 key
@@ -29043,19 +29097,19 @@ key
 f_iovec
 );
 
-1510 i‡(
+1509 i‡(
 de°_dev
  =
 g_ssd_dev
 )
 
-1511 
+1510 
 	`mlfs_io_waô
 (
 g_ssd_dev
 , 0);
 
-1514 
+1513 
 	`HASH_DEL
 (
 ª∂ay_li°
@@ -29065,23 +29119,23 @@ f_dige°_hash
 f_ôem
 );
 
-1515 
+1514 
 	`mlfs_‰ì
 (
 f_ôem
 );
 
-1518 
+1517 
 	`li°_dñ
 (
 l
 );
 
-1520 i‡(
+1519 i‡(
 íabÀ_≥rf_°©s
 )
 
-1521 
+1520 
 g_≥rf_°©s
 .
 dige°_fûe_tsc
@@ -29091,17 +29145,17 @@ dige°_fûe_tsc
 tsc_begö
 ;
 
-1524 
+1523 
 NTYPE_U
 : {
 
-1525 
+1524 
 u_ª∂ay_t
  *
 u_ôem
 ;
 
-1526 
+1525 
 u_ôem
  = (
 u_ª∂ay_t
@@ -29113,17 +29167,17 @@ l
 li°
 );
 
-1528 i‡(
+1527 i‡(
 íabÀ_≥rf_°©s
 )
 
-1529 
+1528 
 tsc_begö
  = 
 	`asm_rdts˝
 ();
 
-1531 
+1530 
 	`dige°_u∆ök
 (
 ‰om_dev
@@ -29137,7 +29191,7 @@ key
 öum
 );
 
-1533 
+1532 
 	`HASH_DEL
 (
 ª∂ay_li°
@@ -29147,23 +29201,23 @@ u_dige°_hash
 u_ôem
 );
 
-1534 
+1533 
 	`li°_dñ
 (
 l
 );
 
-1535 
+1534 
 	`mlfs_‰ì
 (
 u_ôem
 );
 
-1537 i‡(
+1536 i‡(
 íabÀ_≥rf_°©s
 )
 
-1538 
+1537 
 g_≥rf_°©s
 .
 dige°_öode_tsc
@@ -29173,11 +29227,11 @@ dige°_öode_tsc
 tsc_begö
 ;
 
-1542 
+1541 
 	`∑nic
 ("unsupportedÇodeÅype!\n");
 
-1546 
+1545 
 	`HASH_CLEAR
 (
 hh
@@ -29187,7 +29241,7 @@ hh
 i_dige°_hash
 );
 
-1547 
+1546 
 	`HASH_CLEAR
 (
 hh
@@ -29197,7 +29251,7 @@ hh
 d_dige°_hash
 );
 
-1548 
+1547 
 	`HASH_CLEAR
 (
 hh
@@ -29207,7 +29261,7 @@ hh
 f_dige°_hash
 );
 
-1549 
+1548 
 	`HASH_CLEAR
 (
 hh
@@ -29217,7 +29271,7 @@ hh
 u_dige°_hash
 );
 
-1552 
+1551 
 i_ª∂ay_t
  *
 i_ôem
@@ -29225,7 +29279,7 @@ i_ôem
 i_tmp
 ;
 
-1553 
+1552 
 d_ª∂ay_t
  *
 d_ôem
@@ -29233,7 +29287,7 @@ d_ôem
 d_tmp
 ;
 
-1554 
+1553 
 f_ª∂ay_t
  *
 f_ôem
@@ -29241,7 +29295,7 @@ f_ôem
 f_tmp
 ;
 
-1555 
+1554 
 f_iovec_t
  *
 f_iovec
@@ -29249,7 +29303,7 @@ f_iovec
 iovec_tmp
 ;
 
-1557 
+1556 
 	`HASH_ITER
 (
 hh
@@ -29263,7 +29317,7 @@ i_ôem
 i_tmp
 ) {
 
-1558 
+1557 
 	`dige°_öode
 (
 ‰om_dev
@@ -29277,13 +29331,13 @@ i_ôem
 blkƒ
 );
 
-1559 
+1558 
 	`mlfs_‰ì
 (
 i_ôem
 );
 
-1562 
+1561 
 	`HASH_ITER
 (
 hh
@@ -29297,7 +29351,7 @@ d_ôem
 d_tmp
 ) {
 
-1563 
+1562 
 	`dige°_dúe˘‹y
 (
 ‰om_dev
@@ -29313,7 +29367,7 @@ key
 ty≥
 ,
 
-1564 
+1563 
 d_ôem
 ->
 dú_öum
@@ -29327,13 +29381,13 @@ key
 blkƒ
 );
 
-1565 
+1564 
 	`mlfs_‰ì
 (
 d_ôem
 );
 
-1568 
+1567 
 	`HASH_ITER
 (
 hh
@@ -29347,7 +29401,7 @@ f_ôem
 f_tmp
 ) {
 
-1569 
+1568 
 	`li°_f‹_óch_íåy_ß„
 (
 f_iovec
@@ -29361,7 +29415,7 @@ iovec_li°
 li°
 ) {
 
-1570 
+1569 
 	`dige°_fûe
 (
 ‰om_dev
@@ -29377,7 +29431,7 @@ f_iovec
 off£t
 ,
 
-1571 
+1570 
 f_iovec
 ->
 Àngth
@@ -29385,41 +29439,33 @@ f_iovec
 blkƒ
 );
 
-1572 
+1571 
 	`mlfs_‰ì
 (
 f_iovec
 );
 
-1574 
+1573 
 	`mlfs_‰ì
 (
 f_ôem
 );
 
-1577 
+1576 
 	}
 }
 
-1579 
+1578 
 	$≥rsi°_dúty_obje˘s_nvm
 ()
 
-1581 
+1580 
 rb_node
  *
 node
 ;
 
-1584 
-	`sync_Æl_buf„rs
-(
-g_bdev
-[
-g_roŸ_dev
-]);
-
-1587 
+1586 
 node
  = 
 	`rb_fú°
@@ -29431,13 +29477,13 @@ g_roŸ_dev
 s_dúty_roŸ
 );
 
-1588 
+1587 
 node
 ;Çodê
 	`rb_√xt
 (node)) {
 
-1589 
+1588 
 öode
  *
 ù
@@ -29449,11 +29495,11 @@ node
 i_rb_node
 );
 
-1590 
+1589 
 	`mlfs_debug
 ("[dev %d] write dirty inode %d size %lu\n",
 
-1591 
+1590 
 ù
 ->
 dev
@@ -29463,7 +29509,7 @@ dev
 size
 );
 
-1592 
+1591 
 	`rb_îa£
 (&
 ù
@@ -29477,7 +29523,7 @@ g_roŸ_dev
 s_dúty_roŸ
 );
 
-1593 
+1592 
 	`wrôe_⁄disk_öode
 (
 g_roŸ_dev
@@ -29485,7 +29531,7 @@ g_roŸ_dev
 ù
 );
 
-1595 i‡(
+1594 i‡(
 ù
 ->
 ôy≥
@@ -29493,13 +29539,13 @@ g_roŸ_dev
 T_DIR
 )
 
-1596 
+1595 
 	`≥rsi°_dúty_dúít_block
 (
 ù
 );
 
-1600 
+1599 
 	`°‹e_Æl_bôm≠
 (
 g_roŸ_dev
@@ -29509,21 +29555,21 @@ sb
 s_blk_bôm≠
 );
 
-1603 
+1602 
 	}
 }
 
-1605 
+1604 
 	$≥rsi°_dúty_obje˘s_ssd
 ()
 
-1607 
+1606 
 rb_node
  *
 node
 ;
 
-1609 
+1608 
 	`sync_Æl_buf„rs
 (
 g_bdev
@@ -29531,7 +29577,7 @@ g_bdev
 g_ssd_dev
 ]);
 
-1611 
+1610 
 	`°‹e_Æl_bôm≠
 (
 g_ssd_dev
@@ -29541,21 +29587,21 @@ sb
 s_blk_bôm≠
 );
 
-1614 
+1613 
 	}
 }
 
-1616 
+1615 
 	$≥rsi°_dúty_obje˘s_hdd
 ()
 
-1618 
+1617 
 rb_node
  *
 node
 ;
 
-1620 
+1619 
 	`sync_Æl_buf„rs
 (
 g_bdev
@@ -29563,7 +29609,7 @@ g_bdev
 g_hdd_dev
 ]);
 
-1622 
+1621 
 	`°‹e_Æl_bôm≠
 (
 g_hdd_dev
@@ -29573,11 +29619,11 @@ sb
 s_blk_bôm≠
 );
 
-1625 
+1624 
 	}
 }
 
-1627 
+1626 
 	$dige°_logs
 (
 uöt8_t
@@ -29587,7 +29633,7 @@ uöt8_t
 n_hdrs
 ,
 
-1628 
+1627 
 addr_t
  *
 loghdr_to_dige°
@@ -29595,59 +29641,59 @@ loghdr_to_dige°
 rŸ©ed
 )
 
-1630 
+1629 
 loghdr_mëa_t
  *
 loghdr_mëa
 ;
 
-1631 
+1630 
 i
 , 
 n_dige°
 ;
 
-1632 
+1631 
 uöt64_t
  
 tsc_begö
 ;
 
-1633 
+1632 
 addr_t
  
 ¥evious_loghdr_blk
 ;
 
-1634 
+1633 
 ª∂ay_li°
 Ñeplay_list = {
 
-1635 .
+1634 .
 i_dige°_hash
  = 
 NULL
 ,
 
-1636 .
+1635 .
 d_dige°_hash
  = 
 NULL
 ,
 
-1637 .
+1636 .
 f_dige°_hash
  = 
 NULL
 ,
 
-1638 .
+1637 .
 u_dige°_hash
  = 
 NULL
 ,
 
-1641 
+1640 
 	`INIT_LIST_HEAD
 (&
 ª∂ay_li°
@@ -29655,7 +29701,7 @@ NULL
 hód
 );
 
-1643 
+1642 
 	`mem£t
 (
 öode_vîsi⁄_èbÀ
@@ -29665,13 +29711,13 @@ uöt16_t
 NINODES
 );
 
-1646 
+1645 
 i
  = 0 ; i < 
 n_hdrs
 ; i++) {
 
-1647 
+1646 
 loghdr_mëa
  = 
 	`ªad_log_hódî
@@ -29681,7 +29727,7 @@ loghdr_mëa
 loghdr_to_dige°
 );
 
-1649 i‡(
+1648 i‡(
 loghdr_mëa
 ->
 loghdr
@@ -29691,7 +29737,7 @@ loghdr
 LH_COMMIT_MAGIC
 ) {
 
-1650 
+1649 
 	`mlfs_as£π
 (
 loghdr_mëa
@@ -29701,27 +29747,27 @@ loghdr
 öu£
  == 0);
 
-1651 
+1650 
 	`mlfs_‰ì
 (
 loghdr_mëa
 );
 
-1655 #ifde‡
+1654 #ifde‡
 DIGEST_OPT
 
 
-1656 i‡(
+1655 i‡(
 íabÀ_≥rf_°©s
 )
 
-1657 
+1656 
 tsc_begö
  = 
 	`asm_rdts˝
 ();
 
-1658 
+1657 
 	`dige°_ª∂ay_™d_›timize
 (
 ‰om_dev
@@ -29731,11 +29777,11 @@ loghdr_mëa
 ª∂ay_li°
 );
 
-1659 i‡(
+1658 i‡(
 íabÀ_≥rf_°©s
 )
 
-1660 
+1659 
 g_≥rf_°©s
 .
 ª∂ay_time_tsc
@@ -29745,7 +29791,7 @@ g_≥rf_°©s
 tsc_begö
 ;
 
-1662 
+1661 
 	`dige°_óch_log_íåõs
 (
 ‰om_dev
@@ -29753,7 +29799,7 @@ tsc_begö
 loghdr_mëa
 );
 
-1668 i‡(*
+1667 i‡(*
 loghdr_to_dige°
  > 
 loghdr_mëa
@@ -29763,11 +29809,11 @@ loghdr
 √xt_loghdr_blkno
 ) {
 
-1669 
+1668 
 	`mlfs_debug
 ("loghdr_to_digest %lu,Çext header %lu\n",
 
-1670 *
+1669 *
 loghdr_to_dige°
 , 
 loghdr_mëa
@@ -29777,11 +29823,11 @@ loghdr
 √xt_loghdr_blkno
 );
 
-1671 *
+1670 *
 rŸ©ed
  = 1;
 
-1674 *
+1673 *
 loghdr_to_dige°
  = 
 loghdr_mëa
@@ -29791,7 +29837,7 @@ loghdr
 √xt_loghdr_blkno
 ;
 
-1676 
+1675 
 ¥evious_loghdr_blk
  = 
 loghdr_mëa
@@ -29799,27 +29845,27 @@ loghdr_mëa
 hdr_blkno
 ;
 
-1678 
+1677 
 	`mlfs_‰ì
 (
 loghdr_mëa
 );
 
-1681 #ifde‡
+1680 #ifde‡
 DIGEST_OPT
 
 
-1682 i‡(
+1681 i‡(
 íabÀ_≥rf_°©s
 )
 
-1683 
+1682 
 tsc_begö
  = 
 	`asm_rdts˝
 ();
 
-1684 
+1683 
 	`dige°_log_‰om_ª∂ay_li°
 (
 ‰om_dev
@@ -29827,11 +29873,11 @@ tsc_begö
 ª∂ay_li°
 );
 
-1685 i‡(
+1684 i‡(
 íabÀ_≥rf_°©s
 )
 
-1686 
+1685 
 g_≥rf_°©s
 .
 ≠∂y_time_tsc
@@ -29841,19 +29887,19 @@ g_≥rf_°©s
 tsc_begö
 ;
 
-1689 
+1688 
 n_dige°
  = 
 i
 ;
 
-1692 
+1691 
 ncx_¶ab_°©_t
  
 ¶ab_°©
 ;
 
-1693 
+1692 
 	`ncx_¶ab_°©
 (
 mlfs_¶ab_poﬁ
@@ -29861,35 +29907,35 @@ mlfs_¶ab_poﬁ
 ¶ab_°©
 );
 
-1696  
+1695  
 n_dige°
 ;
 
-1697 
+1696 
 	}
 }
 
-1699 
+1698 
 	$h™dÀ_dige°_ªque°
 (*
 ¨g
 )
 
-1701 
+1700 
 uöt32_t
  
 dev_id
 ;
 
-1702 
+1701 
 sock_fd
 ;
 
-1703 
+1702 
 dige°_¨g
  *digest_arg;
 
-1704 *
+1703 *
 buf
 , 
 ª•⁄£
@@ -29897,19 +29943,19 @@ buf
 MAX_SOCK_BUF
 ];
 
-1705 
+1704 
 cmd_hódî
 [12];
 
-1706 
+1705 
 rŸ©ed
  = 0;
 
-1707 
+1706 
 Ãu_upd©ed
  = 0;
 
-1708 
+1707 
 addr_t
  
 dige°_blkno
@@ -29917,37 +29963,37 @@ dige°_blkno
 íd_blkno
 ;
 
-1709 
+1708 
 uöt32_t
  
 dige°_cou¡
 ;
 
-1710 
+1709 
 addr_t
  
 √xt_hdr_of_dige°ed_hdr
 ;
 
-1712 
+1711 
 	`mem£t
 (
 cmd_hódî
 , 0, 12);
 
-1714 
+1713 
 dige°_¨g
  = (dige°_¨g *)
 ¨g
 ;
 
-1716 
+1715 
 sock_fd
  = 
 dige°_¨g
 ->sock_fd;
 
-1717 
+1716 
 buf
  = 
 dige°_¨g
@@ -29955,13 +30001,13 @@ dige°_¨g
 msg
 ;
 
-1720 
+1719 
 	`ssˇnf
 (
 buf
 , "|%s |%d|%u|%lu|%lu|",
 
-1721 
+1720 
 cmd_hódî
 , &
 dev_id
@@ -29973,23 +30019,23 @@ dige°_blkno
 íd_blkno
 );
 
-1723 
+1722 
 	`mlfs_debug
 ("%s\n", 
 cmd_hódî
 );
 
-1724 i‡(
+1723 i‡(
 	`°rcmp
 (
 cmd_hódî
 , "digest") == 0) {
 
-1725 
+1724 
 	`mlfs_debug
 ("digest command: dev_id %u, digest_blkno %lx, digest_count %u\n",
 
-1726 
+1725 
 dev_id
 , 
 dige°_blkno
@@ -29997,11 +30043,11 @@ dige°_blkno
 dige°_cou¡
 );
 
-1728 i‡(
+1727 i‡(
 íabÀ_≥rf_°©s
 ) {
 
-1729 
+1728 
 g_≥rf_°©s
 .
 dige°_time_tsc
@@ -30009,55 +30055,55 @@ dige°_time_tsc
 	`asm_rdts˝
 ();
 
-1730 
+1729 
 g_≥rf_°©s
 .
 ∑th_£¨ch_tsc
  = 0;
 
-1731 
+1730 
 g_≥rf_°©s
 .
 ª∂ay_time_tsc
  = 0;
 
-1732 
+1731 
 g_≥rf_°©s
 .
 ≠∂y_time_tsc
 = 0;
 
-1733 
+1732 
 g_≥rf_°©s
 .
 dige°_dú_tsc
  = 0;
 
-1734 
+1733 
 g_≥rf_°©s
 .
 dige°_fûe_tsc
  = 0;
 
-1735 
+1734 
 g_≥rf_°©s
 .
 dige°_öode_tsc
  = 0;
 
-1736 
+1735 
 g_≥rf_°©s
 .
 n_dige°_skù≥d
  = 0;
 
-1737 
+1736 
 g_≥rf_°©s
 .
 n_dige°
  = 0;
 
-1740 
+1739 
 dige°_cou¡
  = 
 	`dige°_logs
@@ -30069,17 +30115,17 @@ dige°_blkno
 rŸ©ed
 );
 
-1742 i‡(
+1741 i‡(
 íabÀ_≥rf_°©s
 )
 
-1743 
+1742 
 g_≥rf_°©s
 .
 dige°_time_tsc
  =
 
-1744 (
+1743 (
 	`asm_rdts˝
 (Ë- 
 g_≥rf_°©s
@@ -30087,11 +30133,11 @@ g_≥rf_°©s
 dige°_time_tsc
 );
 
-1746 
+1745 
 	`mlfs_debug
 ("-- Total used block %d\n",
 
-1747 
+1746 
 	`bôm≠_weight
 ((
 uöt64_t
@@ -30105,7 +30151,7 @@ s_blk_bôm≠
 bôm≠
 ,
 
-1748 
+1747 
 sb
 [
 g_roŸ_dev
@@ -30115,7 +30161,7 @@ g_roŸ_dev
 nd©ablocks
 ));
 
-1750 
+1749 
 	`mem£t
 (
 ª•⁄£
@@ -30123,13 +30169,13 @@ nd©ablocks
 MAX_SOCK_BUF
 );
 
-1751 
+1750 
 	`•rötf
 (
 ª•⁄£
 , "|ACK |%d|%lu|%d|%d|",
 
-1752 
+1751 
 dige°_cou¡
 , 
 dige°_blkno
@@ -30139,33 +30185,33 @@ rŸ©ed
 Ãu_upd©ed
 );
 
-1753 
+1752 
 	`mlfs_öfo
 ("Wrôê%†tÿlibfs\n", 
 ª•⁄£
 );
 
-1755 
+1754 
 	`≥rsi°_dúty_obje˘s_nvm
 ();
 
-1756 #ifde‡
+1755 #ifde‡
 USE_SSD
 
 
-1757 
+1756 
 	`≥rsi°_dúty_obje˘s_ssd
 ();
 
-1759 #ifde‡
+1758 #ifde‡
 USE_HDD
 
 
-1760 
+1759 
 	`≥rsi°_dúty_obje˘s_hdd
 ();
 
-1763 
+1762 
 	`£ndto
 (
 sock_fd
@@ -30175,7 +30221,7 @@ sock_fd
 MAX_SOCK_BUF
 , 0,
 
-1764 (
+1763 (
 sockaddr
  *)&
 dige°_¨g
@@ -30185,31 +30231,31 @@ dige°_¨g
 sockaddr_un
 ));
 
-1766 
+1765 
 	`show_°‹age_°©s
 ();
 
-1768 i‡(
+1767 i‡(
 íabÀ_≥rf_°©s
 )
 
-1769 
+1768 
 	`show_kînfs_°©s
 ();
 
-1771 } i‡(
+1770 } i‡(
 	`°rcmp
 (
 cmd_hódî
 , "lru") == 0) {
 
-1774 
+1773 
 Ãu_node_t
  *
 l
 ;
 
-1775 
+1774 
 	`li°_f‹_óch_íåy
 (
 l
@@ -30221,11 +30267,11 @@ g_log_dev
 li°
 )
 
-1776 
+1775 
 	`mlfs_öfo
 ("%u - %lu\n",
 
-1777 
+1776 
 l
 ->
 vÆ
@@ -30235,31 +30281,31 @@ vÆ
 lblock
 );
 
-1780 
+1779 
 	`∑nic
 ("invalid command\n");
 
-1783 
+1782 
 	`mlfs_‰ì
 (
 ¨g
 );
 
-1784 
+1783 
 	}
 }
 
-1786 
+1785 
 	#MAX_EVENTS
  4
 
 	)
 
-1787 
+1786 
 	$waô_f‹_evít
 ()
 
-1789 
+1788 
 sock_fd
 , 
 ïfd
@@ -30271,29 +30317,29 @@ n
 ªt
 ;
 
-1790 
+1789 
 sockaddr_un
  
 addr
 ;
 
-1791 
+1790 
 ïﬁl_evít
  
 ïev
  = {0};
 
-1792 
+1791 
 ïﬁl_evít
  *
 evíts
 ;
 
-1793 
+1792 
 i
 ;
 
-1795 i‡((
+1794 i‡((
 sock_fd
  = 
 	`sockë
@@ -30303,17 +30349,17 @@ AF_UNIX
 SOCK_DGRAM
 , 0)) < 0)
 
-1796 
+1795 
 	`∑nic
  ("socketÉrror");
 
-1798 
+1797 
 	`mem£t
 (&
 addr
 , 0, (addr));
 
-1800 
+1799 
 addr
 .
 sun_Ámûy
@@ -30321,7 +30367,7 @@ sun_Ámûy
 AF_UNIX
 ;
 
-1801 
+1800 
 	`°∫˝y
 (
 addr
@@ -30331,13 +30377,13 @@ sun_∑th
 SRV_SOCK_PATH
 , (addr.sun_path));
 
-1803 
+1802 
 	`u∆ök
 (
 SRV_SOCK_PATH
 );
 
-1805 i‡(
+1804 i‡(
 	`böd
 (
 sock_fd
@@ -30347,11 +30393,11 @@ sockaddr
 addr
 , (addr)) < 0)
 
-1806 
+1805 
 	`∑nic
 ("bindÉrror");
 
-1809 
+1808 
 Êags
  = 
 	`f˙é
@@ -30361,13 +30407,13 @@ sock_fd
 F_GETFL
 , 0);
 
-1810 
+1809 
 Êags
  |
 O_NONBLOCK
 ;
 
-1811 
+1810 
 ªt
  = 
 	`f˙é
@@ -30379,21 +30425,21 @@ F_SETFL
 Êags
 );
 
-1812 i‡(
+1811 i‡(
 ªt
  < 0)
 
-1813 
+1812 
 	`∑nic
 ("failÅo setÇon-blocking mode\n");
 
-1815 
+1814 
 ïfd
  = 
 	`ïﬁl_¸óã
 (1);
 
-1816 
+1815 
 ïev
 .
 d©a
@@ -30403,7 +30449,7 @@ fd
 sock_fd
 ;
 
-1817 
+1816 
 ïev
 .
 evíts
@@ -30417,7 +30463,7 @@ EPOLLHUP
 EPOLLET
 ;
 
-1818 
+1817 
 ªt
  = 
 	`ïﬁl_˘l
@@ -30431,15 +30477,15 @@ sock_fd
 ïev
 );
 
-1819 i‡(
+1818 i‡(
 ªt
  < 0)
 
-1820 
+1819 
 	`∑nic
 ("failÅo connectÉpoll fd\n");
 
-1822 
+1821 
 evíts
  = 
 	`mlfs_zÆloc
@@ -30449,7 +30495,7 @@ evíts
 MAX_EVENTS
 );
 
-1825 
+1824 
 n
  = 
 	`ïﬁl_waô
@@ -30461,7 +30507,7 @@ evíts
 MAX_EVENTS
 , -1);
 
-1827 i‡(
+1826 i‡(
 n
  < 0 && 
 î∫o
@@ -30469,17 +30515,17 @@ n
 EINTR
 )
 
-1828 
+1827 
 	`∑nic
 ("epoll hasÉrror\n");
 
-1830 
+1829 
 i
  = 0; i < 
 n
 ; i++) {
 
-1841 i‡((
+1840 i‡((
 evíts
 [
 i
@@ -30487,7 +30533,7 @@ i
 EPOLLIN
 ) &&
 
-1842 
+1841 
 evíts
 [
 i
@@ -30499,33 +30545,33 @@ fd
 sock_fd
 ) {
 
-1843 
+1842 
 ªt
 ;
 
-1844 
+1843 
 buf
 [
 MAX_SOCK_BUF
 ];
 
-1845 
+1844 
 cmd_hódî
 [12];
 
-1846 
+1845 
 uöt32_t
  
 dev_id
 ;
 
-1847 
+1846 
 uöt32_t
  
 dige°_cou¡
 ;
 
-1848 
+1847 
 addr_t
  
 dige°_blkno
@@ -30533,13 +30579,13 @@ dige°_blkno
 íd_blkno
 ;
 
-1849 
+1848 
 sockaddr_un
  
 ˛i_addr
 ;
 
-1850 
+1849 
 sockÀn_t
  
 Àn
@@ -30547,11 +30593,11 @@ sockÀn_t
 sockaddr_un
 );
 
-1851 
+1850 
 dige°_¨g
  *digest_arg;
 
-1853 
+1852 
 ªt
  = 
 	`ªcv‰om
@@ -30563,7 +30609,7 @@ buf
 MAX_SOCK_BUF
 , 0,
 
-1854 (
+1853 (
 sockaddr
  *)&
 ˛i_addr
@@ -30571,29 +30617,29 @@ sockaddr
 Àn
 );
 
-1857 i‡(
+1856 i‡(
 ªt
  == 0)
 
-1860 
+1859 
 	`mlfs_öfo
 ("GET: %s\n", 
 buf
 );
 
-1862 
+1861 
 	`mem£t
 (
 cmd_hódî
 , 0, 12);
 
-1863 
+1862 
 	`ssˇnf
 (
 buf
 , "|%s |%d|%u|%lu|%lu|",
 
-1864 
+1863 
 cmd_hódî
 , &
 dev_id
@@ -30605,25 +30651,25 @@ dige°_blkno
 íd_blkno
 );
 
-1866 
+1865 
 dige°_¨g
  = (dige°_¨g *)
 	`mlfs_Æloc
 ((digest_arg));
 
-1867 
+1866 
 dige°_¨g
 ->
 sock_fd
  = sock_fd;
 
-1868 
+1867 
 dige°_¨g
 ->
 ˛i_addr
  = cli_addr;
 
-1869 
+1868 
 	`memmove
 (
 dige°_¨g
@@ -30635,15 +30681,15 @@ buf
 MAX_SOCK_BUF
 );
 
-1871 #ifde‡
+1870 #ifde‡
 CONCURRENT
 
 
-1872 i‡(
+1871 i‡(
 dev_id
  == 4)
 
-1873 
+1872 
 	`thpoﬁ_add_w‹k
 (
 thªad_poﬁ
@@ -30653,7 +30699,7 @@ h™dÀ_dige°_ªque°
 dige°_¨g
 );
 
-1876 
+1875 
 	`thpoﬁ_add_w‹k
 (
 thªad_poﬁ
@@ -30663,17 +30709,17 @@ h™dÀ_dige°_ªque°
 dige°_¨g
 );
 
-1878 
+1877 
 	`h™dÀ_dige°_ªque°
 ((*)
 dige°_¨g
 );
 
-1881 #ifde‡
+1880 #ifde‡
 MIGRATION
 
 
-1888 
+1887 
 	`åy_migøã_blocks
 (
 g_roŸ_dev
@@ -30681,41 +30727,41 @@ g_roŸ_dev
 g_ssd_dev
 , 0, 0);
 
-1892 
+1891 
 	`mlfs_öfo
 ("%s\n", "Huh?");
 
-1897 
+1896 
 	`˛o£
 (
 ïfd
 );
 
-1898 
+1897 
 	}
 }
 
-1900 
+1899 
 	$shutdown_fs
 ()
 
-1902 
+1901 
 	`¥ötf
 ("Finalize FS\n");
 
-1904 
+1903 
 	`devi˚_shutdown
 ();
 
-1906 
+1905 
 	}
 }
 
-1908 #ifde‡
+1907 #ifde‡
 USE_SLAB
 
 
-1909 
+1908 
 	$mlfs_¶ab_öô
 (
 uöt64_t
@@ -30723,13 +30769,13 @@ uöt64_t
 poﬁ_size
 )
 
-1911 
+1910 
 uöt8_t
  *
 poﬁ_•a˚
 ;
 
-1914 
+1913 
 poﬁ_•a˚
  = (
 uöt8_t
@@ -30743,7 +30789,7 @@ PROT_READ
 PROT_WRITE
 ,
 
-1915 
+1914 
 MAP_PRIVATE
 |
 MAP_ANONYMOUS
@@ -30751,13 +30797,13 @@ MAP_ANONYMOUS
 MAP_POPULATE
 , -1, 0);
 
-1917 
+1916 
 	`mlfs_as£π
 (
 poﬁ_•a˚
 );
 
-1919 i‡(
+1918 i‡(
 	`madvi£
 (
 poﬁ_•a˚
@@ -30767,11 +30813,11 @@ poﬁ_size
 MADV_HUGEPAGE
 ) < 0)
 
-1920 
+1919 
 	`∑nic
 ("cannot do madvise for hugeÖage\n");
 
-1922 
+1921 
 mlfs_¶ab_poﬁ
  = (
 ncx_¶ab_poﬁ_t
@@ -30779,7 +30825,7 @@ ncx_¶ab_poﬁ_t
 poﬁ_•a˚
 ;
 
-1923 
+1922 
 mlfs_¶ab_poﬁ
 ->
 addr
@@ -30787,13 +30833,13 @@ addr
 poﬁ_•a˚
 ;
 
-1924 
+1923 
 mlfs_¶ab_poﬁ
 ->
 mö_shi·
  = 3;
 
-1925 
+1924 
 mlfs_¶ab_poﬁ
 ->
 íd
@@ -30803,25 +30849,25 @@ poﬁ_•a˚
 poﬁ_size
 ;
 
-1927 
+1926 
 	`ncx_¶ab_öô
 (
 mlfs_¶ab_poﬁ
 );
 
-1928 
+1927 
 	}
 }
 
-1931 
+1930 
 	$sh¨ed_mem‹y_öô
 ()
 
-1933 
+1932 
 ªt
 ;
 
-1935 
+1934 
 shm_fd
  = 
 	`shm_›í
@@ -30833,15 +30879,15 @@ O_CREAT
 O_RDWR
 , 0666);
 
-1936 i‡(
+1935 i‡(
 shm_fd
  == -1)
 
-1937 
+1936 
 	`∑nic
 ("cannot create shared memory\n");
 
-1939 
+1938 
 ªt
  = 
 	`·runˇã
@@ -30851,15 +30897,15 @@ shm_fd
 SHM_SIZE
 );
 
-1940 i‡(
+1939 i‡(
 ªt
  == -1)
 
-1941 
+1940 
 	`∑nic
 ("cannot ftruncate shared memory\n");
 
-1943 
+1942 
 shm_ba£
  = (
 uöt8_t
@@ -30869,17 +30915,17 @@ uöt8_t
 SHM_START_ADDR
 ,
 
-1944 
+1943 
 SHM_SIZE
  + 4096,
 
-1945 
+1944 
 PROT_READ
 | 
 PROT_WRITE
 ,
 
-1946 
+1945 
 MAP_SHARED
  | 
 MAP_POPULATE
@@ -30887,27 +30933,27 @@ MAP_POPULATE
 MAP_FIXED
 ,
 
-1947 
+1946 
 shm_fd
 , 0);
 
-1949 
+1948 
 	`¥ötf
 ("shm mm≠ ba£ %p\n", 
 shm_ba£
 );
 
-1950 i‡(
+1949 i‡(
 shm_ba£
  =
 MAP_FAILED
 )
 
-1951 
+1950 
 	`∑nic
 ("cannot map shared memory\n");
 
-1954 
+1953 
 mlfs_¶ab_poﬁ_sh¨ed
  = (
 ncx_¶ab_poﬁ_t
@@ -30915,7 +30961,7 @@ ncx_¶ab_poﬁ_t
 shm_ba£
  + 4096);
 
-1955 
+1954 
 mlfs_¶ab_poﬁ_sh¨ed
 ->
 addr
@@ -30923,13 +30969,13 @@ addr
 shm_ba£
  + 4096;
 
-1956 
+1955 
 mlfs_¶ab_poﬁ_sh¨ed
 ->
 mö_shi·
  = 3;
 
-1957 
+1956 
 mlfs_¶ab_poﬁ_sh¨ed
 ->
 íd
@@ -30939,13 +30985,13 @@ shm_ba£
 SHM_SIZE
  - 4096;
 
-1959 
+1958 
 	`ncx_¶ab_öô
 (
 mlfs_¶ab_poﬁ_sh¨ed
 );
 
-1961 
+1960 
 b™dwidth_c⁄sum±i⁄
  = (
 uöt64_t
@@ -30953,7 +30999,7 @@ uöt64_t
 shm_ba£
 ;
 
-1962 
+1961 
 Ãu_hóds
  = (
 li°_hód
@@ -30961,25 +31007,25 @@ li°_hód
 shm_ba£
  + 128;
 
-1965 
+1964 
 	}
 }
 
-1967 
+1966 
 	$öô_devi˚_Ãu_li°
 ()
 
-1969 
+1968 
 i
 ;
 
-1971 
+1970 
 i
  = 1; i < 
 g_n_devi˚s
  + 1; i++) {
 
-1972 
+1971 
 	`mem£t
 (&
 g_Ãu
@@ -30989,7 +31035,7 @@ i
 Ãu
 ));
 
-1973 
+1972 
 	`INIT_LIST_HEAD
 (&
 g_Ãu
@@ -30999,7 +31045,7 @@ i
 Ãu_hód
 );
 
-1974 
+1973 
 g_Ãu_hash
 [
 i
@@ -31007,27 +31053,27 @@ i
 NULL
 ;
 
-1978 
+1977 
 	}
 }
 
-1980 
+1979 
 	$locks_öô
 ()
 
-1982 
+1981 
 ±hªad_muãx©å_t
  
 ©å
 ;
 
-1984 
+1983 
 	`±hªad_muãx©å_öô
 (&
 ©å
 );
 
-1985 
+1984 
 	`±hªad_muãx©å_£çsh¨ed
 (&
 ©å
@@ -31035,7 +31081,7 @@ NULL
 PTHREAD_PROCESS_SHARED
 );
 
-1987 
+1986 
 	`±hªad_muãx_öô
 (&
 block_bôm≠_muãx
@@ -31043,71 +31089,71 @@ block_bôm≠_muãx
 ©å
 );
 
-1988 
+1987 
 	}
 }
 
-1990 
+1989 
 	$öô_fs
 ()
 
-1992 
+1991 
 i
 ;
 
-1993 c⁄° *
+1992 c⁄° *
 ≥rf_¥ofûe
 ;
 
-1995 
+1994 
 g_ssd_dev
  = 2;
 
-1996 
+1995 
 g_hdd_dev
  = 3;
 
-1997 
+1996 
 g_log_dev
  = 4;
 
-1999 #ifde‡
+1998 #ifde‡
 USE_SLAB
 
 
-2000 
+1999 
 	`mlfs_¶ab_öô
 (3UL << 30);
 
-2003 
+2002 
 	`devi˚_öô
 ();
 
-2005 
+2004 
 	`öô_devi˚_Ãu_li°
 ();
 
-2007 
+2006 
 	`sh¨ed_mem‹y_öô
 ();
 
-2008 
+2007 
 	`ˇche_öô
 (
 g_roŸ_dev
 );
 
-2010 
+2009 
 	`locks_öô
 ();
 
-2012 
+2011 
 i
  = 0; i < 
 g_n_devi˚s
 ; i++)
 
-2013 
+2012 
 sb
 [
 i
@@ -31117,19 +31163,19 @@ i
 su≥r_block
 ));
 
-2015 
+2014 
 	`ªad_su≥rblock
 (
 g_roŸ_dev
 );
 
-2016 
+2015 
 	`ªad_roŸ_öode
 (
 g_roŸ_dev
 );
 
-2017 
+2016 
 	`bÆloc_öô
 (
 g_roŸ_dev
@@ -31137,17 +31183,17 @@ g_roŸ_dev
 sb
 [g_root_dev]);
 
-2019 #ifde‡
+2018 #ifde‡
 USE_SSD
 
 
-2020 
+2019 
 	`ªad_su≥rblock
 (
 g_ssd_dev
 );
 
-2021 
+2020 
 	`bÆloc_öô
 (
 g_ssd_dev
@@ -31155,17 +31201,17 @@ g_ssd_dev
 sb
 [g_ssd_dev]);
 
-2024 #ifde‡
+2023 #ifde‡
 USE_HDD
 
 
-2025 
+2024 
 	`ªad_su≥rblock
 (
 g_hdd_dev
 );
 
-2026 
+2025 
 	`bÆloc_öô
 (
 g_hdd_dev
@@ -31173,7 +31219,7 @@ g_hdd_dev
 sb
 [g_hdd_dev]);
 
-2029 
+2028 
 	`mem£t
 (&
 g_≥rf_°©s
@@ -31181,11 +31227,11 @@ g_≥rf_°©s
 kînfs_°©s_t
 ));
 
-2031 
+2030 
 öode_vîsi⁄_èbÀ
  =
 
-2032 (
+2031 (
 uöt16_t
  *)
 	`mlfs_zÆloc
@@ -31193,59 +31239,59 @@ uöt16_t
 NINODES
 );
 
-2034 
+2033 
 ≥rf_¥ofûe
  = 
 	`gëív
 ("MLFS_PROFILE");
 
-2036 i‡(
+2035 i‡(
 ≥rf_¥ofûe
 )
 
-2037 
+2036 
 íabÀ_≥rf_°©s
  = 1;
 
-2039 
+2038 
 íabÀ_≥rf_°©s
  = 0;
 
-2041 
+2040 
 	`mlfs_debug
 ("%s\n", "LIBFS is initialized");
 
-2043 
+2042 
 thªad_poﬁ
  = 
 	`thpoﬁ_öô
 (1);
 
-2045 
+2044 
 thªad_poﬁ_ssd
  = 
 	`thpoﬁ_öô
 (1);
 
-2046 #ifde‡
+2045 #ifde‡
 FCONCURRENT
 
 
-2047 
+2046 
 fûe_dige°_thªad_poﬁ
  = 
 	`thpoﬁ_öô
 (8);
 
-2050 
+2049 
 	`waô_f‹_evít
 ();
 
-2051 
+2050 
 	}
 }
 
-2053 
+2052 
 	$ˇche_öô
 (
 uöt8_t
@@ -31253,17 +31299,17 @@ uöt8_t
 dev
 )
 
-2055 
+2054 
 i
 ;
 
-2057 
+2056 
 i
  = 1; i < 
 g_n_devi˚s
  + 1; i++) {
 
-2058 
+2057 
 öode_hash
 [
 i
@@ -31271,7 +31317,7 @@ i
 NULL
 ;
 
-2059 
+2058 
 dúít_hash
 [
 i
@@ -31279,7 +31325,7 @@ i
 NULL
 ;
 
-2062 
+2061 
 	`±hªad_•ö_öô
 (&
 iˇche_•ölock
@@ -31287,7 +31333,7 @@ iˇche_•ölock
 PTHREAD_PROCESS_SHARED
 );
 
-2063 
+2062 
 	`±hªad_•ö_öô
 (&
 dˇche_•ölock
@@ -31295,11 +31341,11 @@ dˇche_•ölock
 PTHREAD_PROCESS_SHARED
 );
 
-2064 
+2063 
 	}
 }
 
-2066 
+2065 
 	$ªad_su≥rblock
 (
 uöt8_t
@@ -31307,17 +31353,17 @@ uöt8_t
 dev
 )
 
-2068 
+2067 
 ªt
 ;
 
-2069 
+2068 
 buf„r_hód
  *
 bh
 ;
 
-2071 
+2070 
 bh
  = 
 	`bh_gë_sync_IO
@@ -31327,7 +31373,7 @@ dev
 BH_NO_DATA_ALLOC
 );
 
-2072 
+2071 
 bh
 ->
 b_size
@@ -31335,7 +31381,7 @@ b_size
 g_block_size_byãs
 ;
 
-2073 
+2072 
 bh
 ->
 b_d©a
@@ -31345,33 +31391,33 @@ b_d©a
 g_block_size_byãs
 );
 
-2075 
+2074 
 	`bh_submô_ªad_sync_IO
 (
 bh
 );
 
-2076 
+2075 
 	`mlfs_io_waô
 (
 dev
 , 1);
 
-2078 i‡(!
+2077 i‡(!
 bh
 )
 
-2079 
+2078 
 	`∑nic
 ("cannotÑead superblock\n");
 
-2081 
+2080 
 	`mlfs_debug
 ("sizêo‡su≥rblock %ld\n", (
 disk_su≥rblock
 ));
 
-2083 
+2082 
 	`memmove
 (&
 disk_sb
@@ -31385,11 +31431,11 @@ b_d©a
 disk_su≥rblock
 ));
 
-2085 
+2084 
 	`mlfs_öfo
 ("superblock: size %luÇblocks %luÇinodes %u\n"
 
-2087 
+2086 
 disk_sb
 [
 dev
@@ -31397,7 +31443,7 @@ dev
 size
 ,
 
-2088 
+2087 
 disk_sb
 [
 dev
@@ -31405,7 +31451,7 @@ dev
 nd©ablocks
 ,
 
-2089 
+2088 
 disk_sb
 [
 dev
@@ -31413,7 +31459,7 @@ dev
 nöodes
 ,
 
-2090 
+2089 
 disk_sb
 [
 dev
@@ -31421,7 +31467,7 @@ dev
 öode_°¨t
 ,
 
-2091 
+2090 
 disk_sb
 [
 dev
@@ -31429,7 +31475,7 @@ dev
 bm≠_°¨t
 ,
 
-2092 
+2091 
 disk_sb
 [
 dev
@@ -31437,7 +31483,7 @@ dev
 d©ablock_°¨t
 ,
 
-2093 
+2092 
 disk_sb
 [
 dev
@@ -31445,7 +31491,7 @@ dev
 log_°¨t
 );
 
-2095 
+2094 
 sb
 [
 dev
@@ -31455,7 +31501,7 @@ dev
 disk_sb
 [dev];
 
-2097 
+2096 
 sb
 [
 dev
@@ -31465,7 +31511,7 @@ s_dúty_roŸ
 RB_ROOT
 ;
 
-2098 
+2097 
 sb
 [
 dev
@@ -31473,7 +31519,7 @@ dev
 œ°_block_Æloˇãd
  = 0;
 
-2102 
+2101 
 sb
 [
 dev
@@ -31485,7 +31531,7 @@ disk_sb
 size
  >> 18;
 
-2104 i‡(
+2103 i‡(
 disk_sb
 [
 dev
@@ -31493,7 +31539,7 @@ dev
 size
  % (1 << 18))
 
-2105 
+2104 
 sb
 [
 dev
@@ -31501,7 +31547,7 @@ dev
 n_∑πôi⁄
 ++;
 
-2108 
+2107 
 	`mlfs_öfo
 ("dev %u: # o‡£gmíà%u\n", 
 dev
@@ -31511,7 +31557,7 @@ sb
 n_∑πôi⁄
 );
 
-2109 
+2108 
 sb
 [
 dev
@@ -31523,7 +31569,7 @@ disk_sb
 nd©ablocks
 ;
 
-2110 
+2109 
 sb
 [
 dev
@@ -31535,7 +31581,7 @@ disk_sb
 d©ablock_°¨t
 ;
 
-2111 
+2110 
 sb
 [
 dev
@@ -31545,7 +31591,7 @@ s_bdev
 g_bdev
 [dev];
 
-2113 
+2112 
 	`mlfs_‰ì
 (
 bh
@@ -31553,13 +31599,13 @@ bh
 b_d©a
 );
 
-2114 
+2113 
 	`bh_ªÀa£
 (
 bh
 );
 
-2115 
+2114 
 	}
 }
 
@@ -33437,7 +33483,39 @@ dev
 g_roŸ_dev
 ) {
 
+76 
+dù
+->
+Àvñ
+ = 
+ù
+->level;
+
 77 
+dù
+->
+roŸ_blk
+ = 
+ù
+->root_blk;
+
+78 
+dù
+->
+buckë_blk0
+ = 
+ù
+->bucket_blk0;
+
+79 
+dù
+->
+buckë_blk1
+ = 
+ù
+->bucket_blk1;
+
+80 
 bh
 ->
 b_size
@@ -33445,7 +33523,7 @@ b_size
 döode
 );
 
-78 
+81 
 bh
 ->
 b_d©a
@@ -33455,7 +33533,7 @@ uöt8_t
 dù
 ;
 
-79 
+82 
 bh
 ->
 b_off£t
@@ -33469,7 +33547,7 @@ döode
 IPB
 );
 
-80 
+83 
 ªt
  = 
 	`mlfs_wrôe
@@ -33477,13 +33555,13 @@ IPB
 bh
 );
 
-81 
+84 
 	`mlfs_io_waô
 (
 dev
 , 0);
 
-83 
+86 
 bh
 ->
 b_size
@@ -33491,7 +33569,7 @@ b_size
 g_block_size_byãs
 ;
 
-84 
+87 
 bh
 ->
 b_d©a
@@ -33501,19 +33579,19 @@ b_d©a
 g_block_size_byãs
 );
 
-87 
+90 
 	`bh_submô_ªad_sync_IO
 (
 bh
 );
 
-88 
+91 
 	`mlfs_io_waô
 (
 dev
 , 1);
 
-90 
+93 
 	`memmove
 ((
 döode
@@ -33529,13 +33607,13 @@ b_d©a
 IPB
 ),
 
-91 
+94 
 dù
 , (
 döode
 ));
 
-93 
+96 
 ªt
  = 
 	`mlfs_wrôe
@@ -33543,13 +33621,13 @@ döode
 bh
 );
 
-94 
+97 
 	`mlfs_io_waô
 (
 dev
 , 0);
 
-96 
+99 
 	`mlfs_‰ì
 (
 bh
@@ -33557,15 +33635,15 @@ bh
 b_d©a
 );
 
-99  
+102  
 ªt
 ;
 
-100 
+103 
 	}
 }
 
-102 
+105 
 	$iupd©e
 (
 öode
@@ -33573,11 +33651,11 @@ b_d©a
 ù
 )
 
-104 
+107 
 	}
 }
 
-108 
+111 
 öode
 * 
 	$üŒoc
@@ -33593,39 +33671,39 @@ uöt32_t
 öode_ƒ
 )
 
-110 
+113 
 uöt32_t
  
 öum
 ;
 
-111 
+114 
 ªt
 ;
 
-112 
+115 
 buf„r_hód
  *
 bp
 ;
 
-113 
+116 
 döode
  
 dù
 ;
 
-114 
+117 
 öode
  *
 ù
 ;
 
-117 i‡(
+120 i‡(
 öode_ƒ
  == 0) {
 
-118 
+121 
 öum
  = 1; inum < 
 disk_sb
@@ -33635,7 +33713,7 @@ dev
 nöodes
 ; inum++) {
 
-119 
+122 
 	`ªad_⁄disk_öode
 (
 dev
@@ -33645,13 +33723,13 @@ dev
 dù
 );
 
-121 i‡(
+124 i‡(
 dù
 .
 ôy≥
  == 0) {
 
-122 
+125 
 	`mem£t
 (&
 dù
@@ -33659,7 +33737,7 @@ dù
 döode
 ));
 
-123 
+126 
 dù
 .
 ôy≥
@@ -33667,13 +33745,13 @@ dù
 ty≥
 ;
 
-124 
+127 
 dù
 .
 dev
  = dev;
 
-127 
+130 
 ù
  = 
 	`igë
@@ -33683,7 +33761,7 @@ dev
 öum
 );
 
-128 
+131 
 ù
 ->
 _döode
@@ -33691,7 +33769,7 @@ _döode
 döode
  *)ip;
 
-129 
+132 
 	`sync_öode_‰om_döode
 (
 ù
@@ -33699,7 +33777,7 @@ döode
 dù
 );
 
-130 
+133 
 ù
 ->
 Êags
@@ -33707,7 +33785,7 @@ dù
 I_VALID
 ;
 
-132 
+135 
 ù
 ->
 i_sb
@@ -33715,29 +33793,29 @@ i_sb
 sb
 ;
 
-133 
+136 
 ù
 ->
 i_gíî©i⁄
  = 0;
 
-134 
+137 
 ù
 ->
 i_d©a_dúty
  = 0;
 
-135 
+138 
 ù
 ->
 ∆ök
  = 1;
 
-137  
+140  
 ù
 ;
 
-142 
+145 
 ù
  = 
 	`iˇche_föd
@@ -33747,11 +33825,11 @@ dev
 öode_ƒ
 );
 
-144 i‡(!
+147 i‡(!
 ù
 )
 
-145 
+148 
 ù
  = 
 	`igë
@@ -33761,13 +33839,13 @@ dev
 öode_ƒ
 );
 
-147 
+150 
 ù
 ->
 i_ªf
 ++;
 
-149 
+152 
 ù
 ->
 _döode
@@ -33775,7 +33853,7 @@ _döode
 döode
  *)ip;
 
-151 i‡(!(
+154 i‡(!(
 ù
 ->
 Êags
@@ -33783,7 +33861,7 @@ döode
 I_VALID
 )) {
 
-152 
+155 
 	`ªad_⁄disk_öode
 (
 dev
@@ -33793,13 +33871,13 @@ dev
 dù
 );
 
-154 i‡(
+157 i‡(
 dù
 .
 ôy≥
  == 0) {
 
-155 
+158 
 	`mem£t
 (&
 dù
@@ -33807,7 +33885,7 @@ dù
 döode
 ));
 
-156 
+159 
 dù
 .
 ôy≥
@@ -33815,13 +33893,13 @@ dù
 ty≥
 ;
 
-157 
+160 
 dù
 .
 dev
  = dev;
 
-160 
+163 
 	`sync_öode_‰om_döode
 (
 ù
@@ -33829,7 +33907,7 @@ dev
 dù
 );
 
-161 
+164 
 ù
 ->
 Êags
@@ -33837,7 +33915,7 @@ dù
 I_VALID
 ;
 
-164 
+167 
 ù
 ->
 i_sb
@@ -33845,41 +33923,41 @@ i_sb
 sb
 ;
 
-165 
+168 
 ù
 ->
 i_gíî©i⁄
  = 0;
 
-166 
+169 
 ù
 ->
 i_d©a_dúty
  = 0;
 
-167 
+170 
 ù
 ->
 ∆ök
  = 1;
 
-169  
+172  
 ù
 ;
 
-172 
+175 
 	`∑nic
 ("ialloc:Ço inodes");
 
-174  
+177  
 NULL
 ;
 
-175 
+178 
 	}
 }
 
-180 
+183 
 öode
 * 
 	$igë
@@ -33893,13 +33971,13 @@ uöt32_t
 öum
 )
 
-182 
+185 
 öode
  *
 ù
 ;
 
-184 
+187 
 ù
  = 
 	`iˇche_föd
@@ -33909,21 +33987,21 @@ dev
 öum
 );
 
-186 i‡(
+189 i‡(
 ù
 ) {
 
-187 
+190 
 ù
 ->
 i_ªf
 ++;
 
-188  
+191  
 ù
 ;
 
-191 
+194 
 ù
  = 
 	`iˇche_Æloc_add
@@ -33933,15 +34011,15 @@ dev
 öum
 );
 
-193  
+196  
 ù
 ;
 
-194 
+197 
 	}
 }
 
-198 
+201 
 öode
 * 
 	$idup
@@ -33951,21 +34029,21 @@ dev
 ù
 )
 
-200 
+203 
 ù
 ->
 i_ªf
 ++;
 
-201  
+204  
 ù
 ;
 
-202 
+205 
 	}
 }
 
-206 
+209 
 	$ûock
 (
 öode
@@ -33973,11 +34051,11 @@ i_ªf
 ù
 )
 
-208 
+211 
 	}
 }
 
-211 
+214 
 	$iu∆ock
 (
 öode
@@ -33985,11 +34063,11 @@ i_ªf
 ù
 )
 
-213 
+216 
 	}
 }
 
-218 
+221 
 	$ùut
 (
 öode
@@ -33997,29 +34075,29 @@ i_ªf
 ù
 )
 
-220 
+223 
 ù
 ->
 i_ªf
 --;
 
-221 
+224 
 	}
 }
 
-223 
+226 
 	$idóŒoc
 (
 öode
  *inode)
 
-225 
+228 
 döode
  
 dù
 ;
 
-227 
+230 
 	`mlfs_as£π
 (
 öode
@@ -34027,7 +34105,7 @@ dù
 i_ªf
  < 2);
 
-228 
+231 
 	`mlfs_as£π
 (
 öode
@@ -34037,13 +34115,13 @@ i_ªf
 I_DELETING
 );
 
-230 i‡(
+233 i‡(
 öode
 ->
 i_ªf
  == 1 &&
 
-231 (
+234 (
 öode
 ->
 Êags
@@ -34051,13 +34129,13 @@ i_ªf
 I_VALID
 ) &&
 
-232 
+235 
 öode
 ->
 ∆ök
  == 0) {
 
-233 i‡(
+236 i‡(
 öode
 ->
 Êags
@@ -34065,11 +34143,11 @@ I_VALID
 I_BUSY
 )
 
-234 
+237 
 	`∑nic
 ("Inode mustÇot be busy!");
 
-236 
+239 
 öode
 ->
 Êags
@@ -34077,7 +34155,7 @@ I_BUSY
 I_BUSY
 ;
 
-239 
+242 
 	`ªad_⁄disk_öode
 (
 öode
@@ -34089,7 +34167,7 @@ dev
 dù
 );
 
-241 
+244 
 	`mlfs_as£π
 (
 öode
@@ -34099,31 +34177,31 @@ dù
 dù
 .itype);
 
-243 
+246 
 	`ûock
 (
 öode
 );
 
-244 
+247 
 öode
 ->
 size
  = 0;
 
-247 
+250 
 öode
 ->
 ôy≥
  = 0;
 
-249 
+252 
 	`iu∆ock
 (
 öode
 );
 
-251 
+254 
 	`mlfs_debug
 ("dñëê%u\n", 
 öode
@@ -34131,11 +34209,11 @@ size
 öum
 );
 
-254 
+257 
 	}
 }
 
-257 
+260 
 	$iu∆ockput
 (
 öode
@@ -34143,23 +34221,23 @@ size
 ù
 )
 
-259 
+262 
 	`iu∆ock
 (
 ù
 );
 
-260 
+263 
 	`ùut
 (
 ù
 );
 
-261 
+264 
 	}
 }
 
-268 
+271 
 	$ôrunc
 (
 öode
@@ -34167,11 +34245,11 @@ size
 ù
 )
 
-270 
+273 
 	`∑nic
 ("truncate isÇot supported\n");
 
-271 
+274 
 	}
 }
 
@@ -37268,8 +37346,6 @@ g_block_size_shi·
 568 
 öode
 ->
-_döode
-->
 roŸ_blk
  = 
 √wblock
@@ -37418,8 +37494,6 @@ buckës
 594 
 öode
 ->
-_döode
-->
 buckë_blk0
  = 
 √wblock
@@ -37515,8 +37589,6 @@ buckës
 
 608 
 öode
-->
-_döode
 ->
 buckë_blk1
  = 
@@ -38060,8 +38132,6 @@ NULL
 727 
 öode
 ->
-_döode
-->
 buckë_blk1
 , 
 Æloˇãd
@@ -38090,17 +38160,13 @@ NULL
 733 
 öode
 ->
-_döode
-->
 buckë_blk1
- = inode->_döode->
+ = inode->
 buckë_blk0
 ;
 
 734 
 öode
-->
-_döode
 ->
 buckë_blk0
  = 

@@ -449,6 +449,10 @@ int sync_inode_ext_tree(uint8_t dev, struct inode *inode)
 
 		pthread_mutex_lock(&inode->i_mutex);
 		memmove(inode->l1.addrs, dinode.l1_addrs, sizeof(addr_t) * (NDIRECT + 1));
+        inode->root_blk = dinode.root_blk;
+        inode->bucket_blk0 = dinode.bucket_blk0;
+        inode->bucket_blk1 = dinode.bucket_blk1;
+        inode->level = g_bdev[dev]->map_base_addr + (inode->root_blk << g_block_size_shift);
 #ifdef USE_SSD
 		memmove(inode->l2.addrs, dinode.l2_addrs, sizeof(addr_t) * (NDIRECT + 1));
 #endif
