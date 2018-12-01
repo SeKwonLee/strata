@@ -1633,9 +1633,10 @@ static void digest_log_from_replay_list(uint8_t from_dev, struct replay_list *re
 static int persist_dirty_objects_nvm(void) 
 {
 	struct rb_node *node;
-
+#ifndef MLFS_HASH
 	// flush extent tree changes
-	//sync_all_buffers(g_bdev[g_root_dev]);
+	sync_all_buffers(g_bdev[g_root_dev]);
+#endif
 
 	// save dirty inodes
 	for (node = rb_first(&sb[g_root_dev]->s_dirty_root); 
