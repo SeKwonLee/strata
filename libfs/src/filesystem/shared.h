@@ -165,13 +165,7 @@ struct dinode {
 
 	addr_t l1_addrs[NDIRECT+1];	//direct block addresses: 64 B
 	addr_t l2_addrs[NDIRECT+1];	
-	addr_t l3_addrs[NDIRECT-3];
-#ifdef MLFS_HASH
-    addr_t root_blk;
-    addr_t bucket_blk0;
-    addr_t bucket_blk1;
-    level_hash *level;
-#endif
+	addr_t l3_addrs[NDIRECT+1];
 }; // 256 bytes.
 
 #define setup_ondisk_inode(dip, dev, type) \
@@ -296,12 +290,6 @@ struct inode {
 	/* for testing */
 	struct db_handle *i_db; 
 	int (*i_writeback)(struct inode *inode);
-#ifdef MLFS_HASH
-    addr_t root_blk;
-    addr_t bucket_blk0;
-    addr_t bucket_blk1;
-    level_hash *level;
-#endif
 	///////////////////////////////////////////////////////////////////
 };
 

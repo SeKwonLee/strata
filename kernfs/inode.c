@@ -73,10 +73,7 @@ int write_ondisk_inode(uint8_t dev, struct inode *ip)
 	bh = bh_get_sync_IO(dev, inode_block, BH_NO_DATA_ALLOC);
 
 	if (dev == g_root_dev) {
-        dip->level = ip->level;
-        dip->root_blk = ip->root_blk;
-        dip->bucket_blk0 = ip->bucket_blk0;
-        dip->bucket_blk1 = ip->bucket_blk1;
+        // Store hash table blocks to disk inode
 		bh->b_size = sizeof(struct dinode);
 		bh->b_data = (uint8_t *)dip;
 		bh->b_offset = sizeof(struct dinode) * (ip->inum % IPB);

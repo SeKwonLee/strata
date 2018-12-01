@@ -88,7 +88,7 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = x86_64-pc-linux-gnu
 host_triplet = x86_64-pc-linux-gnu
-bin_PROGRAMS = filebench$(EXEEXT) filebench.mlfs
+bin_PROGRAMS = filebench$(EXEEXT)
 subdir = .
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/libtool.m4 \
@@ -264,14 +264,14 @@ distuninstallcheck_listfiles = find . -type f -print
 am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = ${SHELL} /home/yjkwon/mlfs/bench/filebench/missing aclocal-1.15
+ACLOCAL = ${SHELL} /home/sekwon/strata_sekwon/bench/filebench/missing aclocal-1.15
 ALLOCA = 
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
 AR = ar
-AUTOCONF = ${SHELL} /home/yjkwon/mlfs/bench/filebench/missing autoconf
-AUTOHEADER = ${SHELL} /home/yjkwon/mlfs/bench/filebench/missing autoheader
-AUTOMAKE = ${SHELL} /home/yjkwon/mlfs/bench/filebench/missing automake-1.15
+AUTOCONF = ${SHELL} /home/sekwon/strata_sekwon/bench/filebench/missing autoconf
+AUTOHEADER = ${SHELL} /home/sekwon/strata_sekwon/bench/filebench/missing autoheader
+AUTOMAKE = ${SHELL} /home/sekwon/strata_sekwon/bench/filebench/missing automake-1.15
 AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
@@ -308,7 +308,7 @@ LIPO =
 LN_S = ln -s
 LTLIBOBJS = 
 LT_SYS_LIBRARY_PATH = 
-MAKEINFO = ${SHELL} /home/yjkwon/mlfs/bench/filebench/missing makeinfo
+MAKEINFO = ${SHELL} /home/sekwon/strata_sekwon/bench/filebench/missing makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /bin/mkdir -p
 NM = /usr/bin/nm -B
@@ -334,10 +334,10 @@ STRIP = strip
 VERSION = 1.5-alpha3
 YACC = bison -y
 YFLAGS = 
-abs_builddir = /home/yjkwon/mlfs/bench/filebench
-abs_srcdir = /home/yjkwon/mlfs/bench/filebench
-abs_top_builddir = /home/yjkwon/mlfs/bench/filebench
-abs_top_srcdir = /home/yjkwon/mlfs/bench/filebench
+abs_builddir = /home/sekwon/strata_sekwon/bench/filebench
+abs_srcdir = /home/sekwon/strata_sekwon/bench/filebench
+abs_top_builddir = /home/sekwon/strata_sekwon/bench/filebench
+abs_top_srcdir = /home/sekwon/strata_sekwon/bench/filebench
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_DUMPBIN = 
@@ -366,7 +366,7 @@ host_vendor = pc
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/yjkwon/mlfs/bench/filebench/install-sh
+install_sh = ${SHELL} /home/sekwon/strata_sekwon/bench/filebench/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -402,58 +402,13 @@ filebench_SOURCES = eventgen.c fb_avl.c fb_localfs.c \
 		    misc.h procflow.h threadflow.h vars.h ioprio.h flag.h \
 		    fbtime.c fbtime.h \
 		    fb_cvar.c fb_cvar.h aslr.c aslr.h \
-		    cvars/mtwist/mtwist.c cvars/mtwist/mtwist.h \
-				mlfs_dummy.c
+		    cvars/mtwist/mtwist.c cvars/mtwist/mtwist.h
 
 EXTRA_DIST = LICENSE
 ACLOCAL_AMFLAGS = -I m4
 AM_YFLAGS = -d
 #AM_LDFLAGS = 
 AM_CFLAGS = -Wall -Wno-unknown-pragmas
-
-#####################################################################################
-# MLFS build setup
-CUR_DIR = $(shell pwd)
-SRC_ROOT = $(abspath ../../)
-GLIBC_DIR = $(SRC_ROOT)/shim/glibc-build/
-LIBFS_DIR = $(SRC_ROOT)/libfs/build/
-NVML_DIR = $(SRC_ROOT)/libfs/lib/nvml/src/nondebug/
-LIBSPDK_DIR = $(SRC_ROOT)/libfs/src/storage/spdk/
-LIBSPDK_INC= $(SRC_ROOT)/libfs/src/storage/spdk/
-MLFS_INCLUDES= $(LIBFS_DIR)/../src
-
-DPDK_DIR := $(abspath $(SRC_ROOT)/libfs/lib/dpdk-16.07/x86_64-native-linuxapp-gcc)
-SPDK_ROOT_DIR := $(abspath $(SRC_ROOT)/libfs/lib/spdk)
-
-# This cause problems.
-#include $(SPDK_ROOT_DIR)/mk/spdk.common.mk
-SPDK_LIBS += $(SPDK_ROOT_DIR)/build/lib/libspdk_nvme.a \
-             $(SPDK_ROOT_DIR)/build/lib/libspdk_util.a \
-             $(SPDK_ROOT_DIR)/build/lib/libspdk_log.a \
-             $(ENV_LIBS)
-
-CFLAGS += -I $(LIBSPDK_INC) -I $(MLFS_INCLUDES) -I $(DPDK_DIR)/include -g
-CXXFLAGS += -I $(LIBSPDK_INC) -I $(MLFS_INCLUDES) -I $(DPDK_DIR)/include -g
-
-MLFS_LDFLAGS = -Wl,-rpath=$(abspath $(GLIBC_DIR)) \
-		  -Wl,-rpath=$(abspath $(GLIBC_DIR))/rt \
-          -Wl,-rpath=$(abspath $(LIBFS_DIR)) \
-          -Wl,-rpath=$(abspath $(NVML_DIR)) \
-          -Wl,-rpath=$(abspath $(LIBSPDK_DIR)) \
-          -Wl,-rpath=/usr/local/lib \
-	  -Wl,-rpath=/usr/lib \
-		  -Wl,-rpath=/usr/lib/x86_64-linux-gnu/ \
-		  -Wl,-rpath=/lib/x86_64-linux-gnu/ \
-		  -Wl,-dynamic-linker=$(abspath $(GLIBC_DIR))/ld-linux-x86-64.so.2 \
-		  -L$(LIBFS_DIR)  \
-		  -L$(LIBSPDK_DIR)  \
-		  -lmlfs -lpthread -lrt -lspdk -lm
-
-LINK_MLFS = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
-	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
-	$(AM_LDFLAGS) $(LDFLAGS) -o  $(addsuffix .mlfs, $@) $(MLFS_LDFLAGS) -L$(LIBFS_DIR) -lmlfs
-#####################################################################################
-
 all: $(BUILT_SOURCES) config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
 
@@ -568,10 +523,9 @@ cvars/mtwist/$(DEPDIR)/$(am__dirstamp):
 cvars/mtwist/mtwist.$(OBJEXT): cvars/mtwist/$(am__dirstamp) \
 	cvars/mtwist/$(DEPDIR)/$(am__dirstamp)
 
-filebench$(EXEEXT): $(filebench_OBJECTS) $(filebench_DEPENDENCIES) $(EXTRA_filebench_DEPENDENCIES) mlfs_dummy.o
+filebench$(EXEEXT): $(filebench_OBJECTS) $(filebench_DEPENDENCIES) $(EXTRA_filebench_DEPENDENCIES) 
 	@rm -f filebench$(EXEEXT)
-	$(AM_V_CCLD)$(LINK) $(filebench_OBJECTS) $(filebench_LDADD) $(LIBS) mlfs_dummy.o
-	$(AM_V_CCLD)$(LINK_MLFS) $(filebench_OBJECTS) $(filebench_LDADD) $(LIBS)
+	$(AM_V_CCLD)$(LINK) $(filebench_OBJECTS) $(filebench_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)

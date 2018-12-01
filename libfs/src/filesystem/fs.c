@@ -449,10 +449,6 @@ int sync_inode_ext_tree(uint8_t dev, struct inode *inode)
 
 		pthread_mutex_lock(&inode->i_mutex);
 		memmove(inode->l1.addrs, dinode.l1_addrs, sizeof(addr_t) * (NDIRECT + 1));
-        inode->root_blk = dinode.root_blk;
-        inode->bucket_blk0 = dinode.bucket_blk0;
-        inode->bucket_blk1 = dinode.bucket_blk1;
-        inode->level = g_bdev[dev]->map_base_addr + (inode->root_blk << g_block_size_shift);
 #ifdef USE_SSD
 		memmove(inode->l2.addrs, dinode.l2_addrs, sizeof(addr_t) * (NDIRECT + 1));
 #endif
@@ -1202,7 +1198,7 @@ int do_aligned_read(struct inode *ip, uint8_t *dst, offset_t off, uint32_t io_si
 	uint32_t bitmap_size = (io_size >> g_block_size_shift), bitmap_pos;
 	struct cache_copy_list copy_list[bitmap_size];
 	bmap_req_t bmap_req;
-
+    
 	DECLARE_BITMAP(io_bitmap, bitmap_size);
 
 	bitmap_set(io_bitmap, 0, bitmap_size);

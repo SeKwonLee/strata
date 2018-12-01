@@ -1,4 +1,5 @@
 #include "extents.h"
+#include <libpmem.h>
 
 /*
 Function: F_HASH()
@@ -358,6 +359,9 @@ uint8_t level_insert(level_hash *level, uint8_t *key, uint8_t *value)
                 level->buckets[i][f_idx].slot[j].key = int_key;
                 level->buckets[i][f_idx].slot[j].value = int_val;
                 level->buckets[i][f_idx].token[j] = 1;
+                pmem_persist(&level->buckets[i][f_idx].slot[j], sizeof(entry));
+                pmem_persist(&level->buckets[i][f_idx].token[j], sizeof(uint8_t));
+
                 level->level_item_num[i] ++;
                 return 0;
             }
@@ -366,6 +370,9 @@ uint8_t level_insert(level_hash *level, uint8_t *key, uint8_t *value)
                 level->buckets[i][s_idx].slot[j].key = int_key;
                 level->buckets[i][s_idx].slot[j].value = int_val;
                 level->buckets[i][s_idx].token[j] = 1;
+                pmem_persist(&level->buckets[i][s_idx].slot[j], sizeof(entry));
+                pmem_persist(&level->buckets[i][s_idx].token[j], sizeof(uint8_t));
+
                 level->level_item_num[i] ++;
                 return 0;
             }
@@ -376,6 +383,8 @@ uint8_t level_insert(level_hash *level, uint8_t *key, uint8_t *value)
             level->buckets[i][f_idx].slot[empty_location].key = int_key;
             level->buckets[i][f_idx].slot[empty_location].value = int_val;
             level->buckets[i][f_idx].token[empty_location] = 1;
+            pmem_persist(&level->buckets[i][f_idx].slot[empty_location], sizeof(entry));
+            pmem_persist(&level->buckets[i][f_idx].token[empty_location], sizeof(uint8_t));
             level->level_item_num[i] ++;
             return 0;
 
@@ -387,6 +396,8 @@ uint8_t level_insert(level_hash *level, uint8_t *key, uint8_t *value)
                 level->buckets[i][s_idx].slot[empty_location].key = int_key;
                 level->buckets[i][s_idx].slot[empty_location].value = int_val;
                 level->buckets[i][s_idx].token[empty_location] = 1;
+                pmem_persist(&level->buckets[i][s_idx].slot[empty_location], sizeof(entry));
+                pmem_persist(&level->buckets[i][s_idx].token[empty_location], sizeof(uint8_t));
                 level->level_item_num[i] ++;
                 return 0;
             }
@@ -402,6 +413,8 @@ uint8_t level_insert(level_hash *level, uint8_t *key, uint8_t *value)
             level->buckets[1][f_idx].slot[empty_location].key = int_key;
             level->buckets[1][f_idx].slot[empty_location].value = int_val;
             level->buckets[1][f_idx].token[empty_location] = 1;
+            pmem_persist(&level->buckets[1][f_idx].slot[empty_location], sizeof(entry));
+            pmem_persist(&level->buckets[1][f_idx].token[empty_location], sizeof(uint8_t));
             level->level_item_num[1] ++;
             return 0;
         }
@@ -411,6 +424,8 @@ uint8_t level_insert(level_hash *level, uint8_t *key, uint8_t *value)
             level->buckets[1][s_idx].slot[empty_location].key = int_key;
             level->buckets[1][s_idx].slot[empty_location].value = int_val;
             level->buckets[1][s_idx].token[empty_location] = 1;
+            pmem_persist(&level->buckets[1][s_idx].slot[empty_location], sizeof(entry));
+            pmem_persist(&level->buckets[1][s_idx].token[empty_location], sizeof(uint8_t));
             level->level_item_num[1] ++;
             return 0;
         }
@@ -451,6 +466,9 @@ int try_movement(level_hash *level, uint64_t idx, uint64_t level_num)
                 level->buckets[level_num][jdx].slot[j].value = value;
                 level->buckets[level_num][jdx].token[j] = 1;
                 level->buckets[level_num][idx].token[i] = 0;
+                pmem_persist(&level->buckets[level_num][jdx].slot[j], sizeof(entry));
+                pmem_persist(&level->buckets[level_num][jdx].token[j], sizeof(uint8_t));
+                pmem_persist(&level->buckets[level_num][idx].token[i], sizeof(uint8_t));
                 return i;
             }
         }       
@@ -490,6 +508,9 @@ int b2t_movement(level_hash *level, uint64_t idx)
                 level->buckets[0][f_idx].slot[j].value = value;
                 level->buckets[0][f_idx].token[j] = 1;
                 level->buckets[1][idx].token[i] = 0;
+                pmem_persist(&level->buckets[0][f_idx].slot[j], sizeof(entry));
+                pmem_persist(&level->buckets[0][f_idx].token[j], sizeof(uint8_t));
+                pmem_persist(&level->buckets[1][idx].token[i], sizeof(uint8_t));
                 level->level_item_num[0] ++;
                 level->level_item_num[1] --;
                 return i;
@@ -500,6 +521,9 @@ int b2t_movement(level_hash *level, uint64_t idx)
                 level->buckets[0][s_idx].slot[j].value = value;
                 level->buckets[0][s_idx].token[j] = 1;
                 level->buckets[1][idx].token[i] = 0;
+                pmem_persist(&level->buckets[0][s_idx].slot[j], sizeof(entry));
+                pmem_persist(&level->buckets[0][s_idx].token[j], sizeof(uint8_t));
+                pmem_persist(&level->buckets[1][idx].token[i], sizeof(uint8_t));
                 level->level_item_num[0] ++;
                 level->level_item_num[1] --;
                 return i;
@@ -565,13 +589,11 @@ extern level_hash *mlfs_level_init(uint64_t level_size,
 
     newblock = mlfs_new_data_blocks(handle, inode, goal, flags, &allocated, &err);
     level_hash *level = g_bdev[handle->dev]->map_base_addr + (newblock << g_block_size_shift);
-    inode->root_blk = newblock;
+    inode->l1.addrs[5] = newblock;
     if (!level)
     {
         printf("The level hash table initialization fails:1\n");
         exit(1);
-    } else {
-        memset(level, 0, sizeof(level_hash));
     }
 
     level->level_size = level_size;
@@ -590,8 +612,8 @@ extern level_hash *mlfs_level_init(uint64_t level_size,
 
     newblock = mlfs_new_data_blocks(handle, inode, goal, flags, &allocated, &err);
     level->buckets[0] = g_bdev[handle->dev]->map_base_addr + (newblock << g_block_size_shift);
-    memset(level->buckets[0], 0, sizeof(level_bucket) * pow(2, level_size));
-    inode->bucket_blk0 = newblock;
+    pmem_memset_persist(level->buckets[0], 0, sizeof(level_bucket) * pow(2, level_size));
+    inode->l1.addrs[6] = newblock;
 
     bucket_size = sizeof(level_bucket) * pow(2, level_size - 1);
 	if (bucket_size < g_block_size_bytes)
@@ -604,8 +626,8 @@ extern level_hash *mlfs_level_init(uint64_t level_size,
 
     newblock = mlfs_new_data_blocks(handle, inode, goal, flags, &allocated, &err);
     level->buckets[1] = g_bdev[handle->dev]->map_base_addr + (newblock << g_block_size_shift);
-    memset(level->buckets[1], 0, sizeof(level_bucket) * pow(2, level_size - 1));
-    inode->bucket_blk1 = newblock;
+    pmem_memset_persist(level->buckets[1], 0, sizeof(level_bucket) * pow(2, level_size - 1));
+    inode->l1.addrs[7] = newblock;
 
     level->level_item_num[0] = 0;
     level->level_item_num[1] = 0;
@@ -616,6 +638,9 @@ extern level_hash *mlfs_level_init(uint64_t level_size,
         printf("The level hash table initialization fails:2\n");
         exit(1);
     }
+
+    pmem_persist(g_bdev[handle->dev]->map_base_addr + 
+            ((inode->l1.addrs[5]) << g_block_size_shift), sizeof(level_hash));
 
 //    printf("Level hashing: ASSOC_NUM %d, KEY_LEN %d, VALUE_LEN %d \n", ASSOC_NUM, KEY_LEN, VALUE_LEN);
 //    printf("The number of top-level buckets: %d\n", level->addr_capacity);
@@ -653,8 +678,6 @@ extern void mlfs_level_resize(level_hash *level, handle_t *handle,
     level_bucket *newBuckets = g_bdev[g_root_dev]->map_base_addr + (newblock << g_block_size_shift);
     memset(newBuckets, 0, level->addr_capacity * pow(2, level->level_size + 1));
 
-//    level->addr_capacity = pow(2, level->level_size + 1);
-//    level_bucket *newBuckets = calloc(level->addr_capacity, sizeof(level_bucket));
     if (!newBuckets) {
         printf("The resizing fails: 2\n");
         exit(1);
@@ -686,6 +709,10 @@ extern void mlfs_level_resize(level_hash *level, handle_t *handle,
                         newBuckets[f_idx].slot[j].key = key;
                         newBuckets[f_idx].slot[j].value = value;
                         newBuckets[f_idx].token[j] = 1;
+                        pmem_persist(&newBuckets[f_idx].slot[j].key, sizeof(uint32_t));
+                        pmem_persist(&newBuckets[f_idx].slot[j].value, sizeof(uint64_t));
+                        pmem_persist(&newBuckets[f_idx].token[j], sizeof(uint8_t));
+
                         insertSuccess = 1;
                         new_level_item_num ++;
                         break;
@@ -695,6 +722,10 @@ extern void mlfs_level_resize(level_hash *level, handle_t *handle,
                         newBuckets[s_idx].slot[j].key = key;
                         newBuckets[s_idx].slot[j].value = value;
                         newBuckets[s_idx].token[j] = 1;
+                        pmem_persist(&newBuckets[s_idx].slot[j].key, sizeof(uint32_t));
+                        pmem_persist(&newBuckets[s_idx].slot[j].value, sizeof(uint64_t));
+                        pmem_persist(&newBuckets[s_idx].token[j], sizeof(uint8_t));
+
                         insertSuccess = 1;
                         new_level_item_num ++;
                         break;
@@ -706,6 +737,7 @@ extern void mlfs_level_resize(level_hash *level, handle_t *handle,
                 }
                 
                 level->buckets[1][old_idx].token[i] == 0;
+                pmem_persist(&level->buckets[1][old_idx].token[i], sizeof(uint8_t));
             }
         }
     }
@@ -724,14 +756,14 @@ extern void mlfs_level_resize(level_hash *level, handle_t *handle,
 	}
 
     mlfs_free_blocks(handle, inode, NULL,
-        inode->bucket_blk1, allocated, 0);
+        inode->l1.addrs[7], allocated, 0);
 
     level->buckets[1] = level->buckets[0];
     level->buckets[0] = newBuckets;
     newBuckets = NULL;
 
-    inode->bucket_blk1 = inode->bucket_blk0;
-    inode->bucket_blk0 = newblock;
+    inode->l1.addrs[7] = inode->l1.addrs[6];
+    inode->l1.addrs[6] = newblock;
     
     level->level_item_num[1] = level->level_item_num[0];
     level->level_item_num[0] = new_level_item_num;
