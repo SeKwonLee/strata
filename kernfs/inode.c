@@ -77,6 +77,7 @@ int write_ondisk_inode(uint8_t dev, struct inode *ip)
 		bh->b_size = sizeof(struct dinode);
 		bh->b_data = (uint8_t *)dip;
 		bh->b_offset = sizeof(struct dinode) * (ip->inum % IPB);
+
 		ret = mlfs_write(bh);
 		mlfs_io_wait(dev, 0);
 	} else {

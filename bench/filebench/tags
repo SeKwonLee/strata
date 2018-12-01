@@ -4,9 +4,9 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-ACLOCAL	Makefile	/^ACLOCAL = ${SHELL} \/home\/yjkwon\/project\/mlfs\/bench\/filebench\/missing aclocal-1.15$/;"	m
-ACLOCAL	cvars/Makefile	/^ACLOCAL = ${SHELL} \/home\/yjkwon\/project\/mlfs\/bench\/filebench\/missing aclocal-1.15$/;"	m
-ACLOCAL	workloads/Makefile	/^ACLOCAL = ${SHELL} \/home\/yjkwon\/project\/mlfs\/bench\/filebench\/missing aclocal-1.15$/;"	m
+ACLOCAL	Makefile	/^ACLOCAL = ${SHELL} \/home\/sekwon\/strata\/bench\/filebench\/missing aclocal-1.15$/;"	m
+ACLOCAL	cvars/Makefile	/^ACLOCAL = ${SHELL} \/home\/sekwon\/strata\/bench\/filebench\/missing aclocal-1.15$/;"	m
+ACLOCAL	workloads/Makefile	/^ACLOCAL = ${SHELL} \/home\/sekwon\/strata\/bench\/filebench\/missing aclocal-1.15$/;"	m
 ACLOCAL_AMFLAGS	Makefile	/^ACLOCAL_AMFLAGS = -I m4$/;"	m
 ACLOCAL_M4	Makefile	/^ACLOCAL_M4 = $(top_srcdir)\/aclocal.m4$/;"	m
 ACLOCAL_M4	cvars/Makefile	/^ACLOCAL_M4 = $(top_srcdir)\/aclocal.m4$/;"	m
@@ -57,15 +57,15 @@ ATTRIBUTE	cvars/mtwist/rdcctest.cc	3;"	d	file:
 ATTRIBUTE	cvars/mtwist/rdcctest.cc	5;"	d	file:
 ATTRIBUTE	cvars/mtwist/rdtest.c	3;"	d	file:
 ATTRIBUTE	cvars/mtwist/rdtest.c	5;"	d	file:
-AUTOCONF	Makefile	/^AUTOCONF = ${SHELL} \/home\/yjkwon\/project\/mlfs\/bench\/filebench\/missing autoconf$/;"	m
-AUTOCONF	cvars/Makefile	/^AUTOCONF = ${SHELL} \/home\/yjkwon\/project\/mlfs\/bench\/filebench\/missing autoconf$/;"	m
-AUTOCONF	workloads/Makefile	/^AUTOCONF = ${SHELL} \/home\/yjkwon\/project\/mlfs\/bench\/filebench\/missing autoconf$/;"	m
-AUTOHEADER	Makefile	/^AUTOHEADER = ${SHELL} \/home\/yjkwon\/project\/mlfs\/bench\/filebench\/missing autoheader$/;"	m
-AUTOHEADER	cvars/Makefile	/^AUTOHEADER = ${SHELL} \/home\/yjkwon\/project\/mlfs\/bench\/filebench\/missing autoheader$/;"	m
-AUTOHEADER	workloads/Makefile	/^AUTOHEADER = ${SHELL} \/home\/yjkwon\/project\/mlfs\/bench\/filebench\/missing autoheader$/;"	m
-AUTOMAKE	Makefile	/^AUTOMAKE = ${SHELL} \/home\/yjkwon\/project\/mlfs\/bench\/filebench\/missing automake-1.15$/;"	m
-AUTOMAKE	cvars/Makefile	/^AUTOMAKE = ${SHELL} \/home\/yjkwon\/project\/mlfs\/bench\/filebench\/missing automake-1.15$/;"	m
-AUTOMAKE	workloads/Makefile	/^AUTOMAKE = ${SHELL} \/home\/yjkwon\/project\/mlfs\/bench\/filebench\/missing automake-1.15$/;"	m
+AUTOCONF	Makefile	/^AUTOCONF = ${SHELL} \/home\/sekwon\/strata\/bench\/filebench\/missing autoconf$/;"	m
+AUTOCONF	cvars/Makefile	/^AUTOCONF = ${SHELL} \/home\/sekwon\/strata\/bench\/filebench\/missing autoconf$/;"	m
+AUTOCONF	workloads/Makefile	/^AUTOCONF = ${SHELL} \/home\/sekwon\/strata\/bench\/filebench\/missing autoconf$/;"	m
+AUTOHEADER	Makefile	/^AUTOHEADER = ${SHELL} \/home\/sekwon\/strata\/bench\/filebench\/missing autoheader$/;"	m
+AUTOHEADER	cvars/Makefile	/^AUTOHEADER = ${SHELL} \/home\/sekwon\/strata\/bench\/filebench\/missing autoheader$/;"	m
+AUTOHEADER	workloads/Makefile	/^AUTOHEADER = ${SHELL} \/home\/sekwon\/strata\/bench\/filebench\/missing autoheader$/;"	m
+AUTOMAKE	Makefile	/^AUTOMAKE = ${SHELL} \/home\/sekwon\/strata\/bench\/filebench\/missing automake-1.15$/;"	m
+AUTOMAKE	cvars/Makefile	/^AUTOMAKE = ${SHELL} \/home\/sekwon\/strata\/bench\/filebench\/missing automake-1.15$/;"	m
+AUTOMAKE	workloads/Makefile	/^AUTOMAKE = ${SHELL} \/home\/sekwon\/strata\/bench\/filebench\/missing automake-1.15$/;"	m
 AVD_INVALID	vars.h	/^	AVD_INVALID = 0,	\/* avd is empty *\/$/;"	e	enum:avd_type
 AVD_IS_BOOL	vars.h	81;"	d
 AVD_IS_INT	vars.h	83;"	d
@@ -110,8 +110,8 @@ AWK	workloads/Makefile	/^AWK = gawk$/;"	m
 BEGIN	parser_lex.c	125;"	d	file:
 BIT_WIDTH	cvars/mtwist/mtwist.c	549;"	d	file:
 BUILT_SOURCES	Makefile	/^BUILT_SOURCES = parser_gram.h$/;"	m
-B_FALSE	filebench.h	/^typedef enum { B_FALSE, B_TRUE } boolean_t;$/;"	e	enum:__anon6
-B_TRUE	filebench.h	/^typedef enum { B_FALSE, B_TRUE } boolean_t;$/;"	e	enum:__anon6
+B_FALSE	filebench.h	/^typedef enum { B_FALSE, B_TRUE } boolean_t;$/;"	e	enum:__anon5
+B_TRUE	filebench.h	/^typedef enum { B_FALSE, B_TRUE } boolean_t;$/;"	e	enum:__anon5
 CC	Makefile	/^CC = gcc$/;"	m
 CC	cvars/Makefile	/^CC = gcc$/;"	m
 CC	workloads/Makefile	/^CC = gcc$/;"	m
@@ -120,7 +120,7 @@ CCDEPMODE	cvars/Makefile	/^CCDEPMODE = depmode=gcc3$/;"	m
 CCDEPMODE	workloads/Makefile	/^CCDEPMODE = depmode=gcc3$/;"	m
 CCLD	Makefile	/^CCLD = $(CC)$/;"	m
 CCLD	cvars/Makefile	/^CCLD = $(CC)$/;"	m
-CFLAGS	Makefile	/^CFLAGS = -g -O0$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -g -O2$/;"	m
 CFLAGS	cvars/Makefile	/^CFLAGS = -g -O2$/;"	m
 CFLAGS	workloads/Makefile	/^CFLAGS = -g -O2$/;"	m
 CHILDBIT	fb_avl.c	937;"	d	file:
@@ -216,8 +216,8 @@ ETAGS	cvars/Makefile	/^ETAGS = etags$/;"	m
 EXEEXT	Makefile	/^EXEEXT = $/;"	m
 EXEEXT	cvars/Makefile	/^EXEEXT = $/;"	m
 EXEEXT	workloads/Makefile	/^EXEEXT = $/;"	m
-EXIT_SUCCESS	parser_gram.c	571;"	d	file:
-EXIT_SUCCESS	parser_gram.c	599;"	d	file:
+EXIT_SUCCESS	parser_gram.c	573;"	d	file:
+EXIT_SUCCESS	parser_gram.c	601;"	d	file:
 EXTRA_DIST	Makefile	/^EXTRA_DIST = LICENSE$/;"	m
 EXTRA_DIST	workloads/Makefile	/^EXTRA_DIST = $(workloads_DATA)$/;"	m
 FALSE	filebench.h	78;"	d
@@ -238,11 +238,11 @@ FB_FTRUNC	fsplug.h	137;"	d
 FB_LINK	fsplug.h	140;"	d
 FB_LSEEK	fsplug.h	101;"	d
 FB_MKDIR	fsplug.h	110;"	d
-FB_MODE_CVARS	parser_gram.c	3879;"	d	file:
-FB_MODE_HELP	parser_gram.c	3876;"	d	file:
-FB_MODE_MASTER	parser_gram.c	3877;"	d	file:
-FB_MODE_NONE	parser_gram.c	3875;"	d	file:
-FB_MODE_WORKER	parser_gram.c	3878;"	d	file:
+FB_MODE_CVARS	parser_gram.c	3887;"	d	file:
+FB_MODE_HELP	parser_gram.c	3884;"	d	file:
+FB_MODE_MASTER	parser_gram.c	3885;"	d	file:
+FB_MODE_NONE	parser_gram.c	3883;"	d	file:
+FB_MODE_WORKER	parser_gram.c	3886;"	d	file:
 FB_OPEN	fsplug.h	86;"	d
 FB_OPENDIR	fsplug.h	116;"	d
 FB_PREAD	fsplug.h	89;"	d
@@ -339,438 +339,442 @@ FLOW_TYPE_IO	flowop.h	111;"	d
 FLOW_TYPE_OTHER	flowop.h	115;"	d
 FLOW_TYPE_SYNC	flowop.h	113;"	d
 FSA_ALLDONE	parser_gram.c	/^    FSA_ALLDONE = 354,$/;"	e	enum:yytokentype	file:
-FSA_ALLDONE	parser_gram.c	396;"	d	file:
+FSA_ALLDONE	parser_gram.c	397;"	d	file:
 FSA_ALLDONE	parser_gram.h	/^    FSA_ALLDONE = 354,$/;"	e	enum:yytokentype
-FSA_ALLDONE	parser_gram.h	252;"	d
+FSA_ALLDONE	parser_gram.h	253;"	d
 FSA_BLOCKING	parser_gram.c	/^    FSA_BLOCKING = 322,$/;"	e	enum:yytokentype	file:
-FSA_BLOCKING	parser_gram.c	364;"	d	file:
+FSA_BLOCKING	parser_gram.c	365;"	d	file:
 FSA_BLOCKING	parser_gram.h	/^    FSA_BLOCKING = 322,$/;"	e	enum:yytokentype
-FSA_BLOCKING	parser_gram.h	220;"	d
+FSA_BLOCKING	parser_gram.h	221;"	d
 FSA_CLIENT	parser_gram.c	/^    FSA_CLIENT = 345,$/;"	e	enum:yytokentype	file:
-FSA_CLIENT	parser_gram.c	387;"	d	file:
+FSA_CLIENT	parser_gram.c	388;"	d	file:
 FSA_CLIENT	parser_gram.h	/^    FSA_CLIENT = 345,$/;"	e	enum:yytokentype
-FSA_CLIENT	parser_gram.h	243;"	d
+FSA_CLIENT	parser_gram.h	244;"	d
 FSA_DIRDEPTHRV	parser_gram.c	/^    FSA_DIRDEPTHRV = 330,$/;"	e	enum:yytokentype	file:
-FSA_DIRDEPTHRV	parser_gram.c	372;"	d	file:
+FSA_DIRDEPTHRV	parser_gram.c	373;"	d	file:
 FSA_DIRDEPTHRV	parser_gram.h	/^    FSA_DIRDEPTHRV = 330,$/;"	e	enum:yytokentype
-FSA_DIRDEPTHRV	parser_gram.h	228;"	d
+FSA_DIRDEPTHRV	parser_gram.h	229;"	d
 FSA_DIRECTIO	parser_gram.c	/^    FSA_DIRECTIO = 324,$/;"	e	enum:yytokentype	file:
-FSA_DIRECTIO	parser_gram.c	366;"	d	file:
+FSA_DIRECTIO	parser_gram.c	367;"	d	file:
 FSA_DIRECTIO	parser_gram.h	/^    FSA_DIRECTIO = 324,$/;"	e	enum:yytokentype
-FSA_DIRECTIO	parser_gram.h	222;"	d
+FSA_DIRECTIO	parser_gram.h	223;"	d
 FSA_DIRGAMMA	parser_gram.c	/^    FSA_DIRGAMMA = 331,$/;"	e	enum:yytokentype	file:
-FSA_DIRGAMMA	parser_gram.c	373;"	d	file:
+FSA_DIRGAMMA	parser_gram.c	374;"	d	file:
 FSA_DIRGAMMA	parser_gram.h	/^    FSA_DIRGAMMA = 331,$/;"	e	enum:yytokentype
-FSA_DIRGAMMA	parser_gram.h	229;"	d
+FSA_DIRGAMMA	parser_gram.h	230;"	d
 FSA_DIRWIDTH	parser_gram.c	/^    FSA_DIRWIDTH = 325,$/;"	e	enum:yytokentype	file:
-FSA_DIRWIDTH	parser_gram.c	367;"	d	file:
+FSA_DIRWIDTH	parser_gram.c	368;"	d	file:
 FSA_DIRWIDTH	parser_gram.h	/^    FSA_DIRWIDTH = 325,$/;"	e	enum:yytokentype
-FSA_DIRWIDTH	parser_gram.h	223;"	d
+FSA_DIRWIDTH	parser_gram.h	224;"	d
 FSA_DSYNC	parser_gram.c	/^    FSA_DSYNC = 317,$/;"	e	enum:yytokentype	file:
-FSA_DSYNC	parser_gram.c	359;"	d	file:
+FSA_DSYNC	parser_gram.c	360;"	d	file:
 FSA_DSYNC	parser_gram.h	/^    FSA_DSYNC = 317,$/;"	e	enum:yytokentype
-FSA_DSYNC	parser_gram.h	215;"	d
+FSA_DSYNC	parser_gram.h	216;"	d
 FSA_ENTRIES	parser_gram.c	/^    FSA_ENTRIES = 329,$/;"	e	enum:yytokentype	file:
-FSA_ENTRIES	parser_gram.c	371;"	d	file:
+FSA_ENTRIES	parser_gram.c	372;"	d	file:
 FSA_ENTRIES	parser_gram.h	/^    FSA_ENTRIES = 329,$/;"	e	enum:yytokentype
-FSA_ENTRIES	parser_gram.h	227;"	d
+FSA_ENTRIES	parser_gram.h	228;"	d
 FSA_FD	parser_gram.c	/^    FSA_FD = 326,$/;"	e	enum:yytokentype	file:
-FSA_FD	parser_gram.c	368;"	d	file:
+FSA_FD	parser_gram.c	369;"	d	file:
 FSA_FD	parser_gram.h	/^    FSA_FD = 326,$/;"	e	enum:yytokentype
-FSA_FD	parser_gram.h	224;"	d
+FSA_FD	parser_gram.h	225;"	d
 FSA_FILENAME	parser_gram.c	/^    FSA_FILENAME = 312,$/;"	e	enum:yytokentype	file:
-FSA_FILENAME	parser_gram.c	354;"	d	file:
+FSA_FILENAME	parser_gram.c	355;"	d	file:
 FSA_FILENAME	parser_gram.h	/^    FSA_FILENAME = 312,$/;"	e	enum:yytokentype
-FSA_FILENAME	parser_gram.h	210;"	d
+FSA_FILENAME	parser_gram.h	211;"	d
 FSA_FIRSTDONE	parser_gram.c	/^    FSA_FIRSTDONE = 355,$/;"	e	enum:yytokentype	file:
-FSA_FIRSTDONE	parser_gram.c	397;"	d	file:
+FSA_FIRSTDONE	parser_gram.c	398;"	d	file:
 FSA_FIRSTDONE	parser_gram.h	/^    FSA_FIRSTDONE = 355,$/;"	e	enum:yytokentype
-FSA_FIRSTDONE	parser_gram.h	253;"	d
+FSA_FIRSTDONE	parser_gram.h	254;"	d
 FSA_HIGHWATER	parser_gram.c	/^    FSA_HIGHWATER = 323,$/;"	e	enum:yytokentype	file:
-FSA_HIGHWATER	parser_gram.c	365;"	d	file:
+FSA_HIGHWATER	parser_gram.c	366;"	d	file:
 FSA_HIGHWATER	parser_gram.h	/^    FSA_HIGHWATER = 323,$/;"	e	enum:yytokentype
-FSA_HIGHWATER	parser_gram.h	221;"	d
+FSA_HIGHWATER	parser_gram.h	222;"	d
 FSA_INDEXED	parser_gram.c	/^    FSA_INDEXED = 335,$/;"	e	enum:yytokentype	file:
-FSA_INDEXED	parser_gram.c	377;"	d	file:
+FSA_INDEXED	parser_gram.c	378;"	d	file:
 FSA_INDEXED	parser_gram.h	/^    FSA_INDEXED = 335,$/;"	e	enum:yytokentype
-FSA_INDEXED	parser_gram.h	233;"	d
+FSA_INDEXED	parser_gram.h	234;"	d
 FSA_INSTANCES	parser_gram.c	/^    FSA_INSTANCES = 316,$/;"	e	enum:yytokentype	file:
-FSA_INSTANCES	parser_gram.c	358;"	d	file:
+FSA_INSTANCES	parser_gram.c	359;"	d	file:
 FSA_INSTANCES	parser_gram.h	/^    FSA_INSTANCES = 316,$/;"	e	enum:yytokentype
-FSA_INSTANCES	parser_gram.h	214;"	d
+FSA_INSTANCES	parser_gram.h	215;"	d
 FSA_IOPRIO	parser_gram.c	/^    FSA_IOPRIO = 359,$/;"	e	enum:yytokentype	file:
-FSA_IOPRIO	parser_gram.c	401;"	d	file:
+FSA_IOPRIO	parser_gram.c	402;"	d	file:
 FSA_IOPRIO	parser_gram.h	/^    FSA_IOPRIO = 359,$/;"	e	enum:yytokentype
-FSA_IOPRIO	parser_gram.h	257;"	d
+FSA_IOPRIO	parser_gram.h	258;"	d
 FSA_IOSIZE	parser_gram.c	/^    FSA_IOSIZE = 311,$/;"	e	enum:yytokentype	file:
-FSA_IOSIZE	parser_gram.c	353;"	d	file:
+FSA_IOSIZE	parser_gram.c	354;"	d	file:
 FSA_IOSIZE	parser_gram.h	/^    FSA_IOSIZE = 311,$/;"	e	enum:yytokentype
-FSA_IOSIZE	parser_gram.h	209;"	d
+FSA_IOSIZE	parser_gram.h	210;"	d
 FSA_ITERS	parser_gram.c	/^    FSA_ITERS = 319,$/;"	e	enum:yytokentype	file:
-FSA_ITERS	parser_gram.c	361;"	d	file:
+FSA_ITERS	parser_gram.c	362;"	d	file:
 FSA_ITERS	parser_gram.h	/^    FSA_ITERS = 319,$/;"	e	enum:yytokentype
-FSA_ITERS	parser_gram.h	217;"	d
+FSA_ITERS	parser_gram.h	218;"	d
 FSA_LATHIST	parser_gram.c	/^    FSA_LATHIST = 357,$/;"	e	enum:yytokentype	file:
-FSA_LATHIST	parser_gram.c	399;"	d	file:
+FSA_LATHIST	parser_gram.c	400;"	d	file:
 FSA_LATHIST	parser_gram.h	/^    FSA_LATHIST = 357,$/;"	e	enum:yytokentype
-FSA_LATHIST	parser_gram.h	255;"	d
+FSA_LATHIST	parser_gram.h	256;"	d
 FSA_LEAFDIRS	parser_gram.c	/^    FSA_LEAFDIRS = 334,$/;"	e	enum:yytokentype	file:
-FSA_LEAFDIRS	parser_gram.c	376;"	d	file:
+FSA_LEAFDIRS	parser_gram.c	377;"	d	file:
 FSA_LEAFDIRS	parser_gram.h	/^    FSA_LEAFDIRS = 334,$/;"	e	enum:yytokentype
-FSA_LEAFDIRS	parser_gram.h	232;"	d
+FSA_LEAFDIRS	parser_gram.h	233;"	d
 FSA_LVAR_ASSIGN	parser_gram.c	/^    FSA_LVAR_ASSIGN = 353,$/;"	e	enum:yytokentype	file:
-FSA_LVAR_ASSIGN	parser_gram.c	395;"	d	file:
+FSA_LVAR_ASSIGN	parser_gram.c	396;"	d	file:
 FSA_LVAR_ASSIGN	parser_gram.h	/^    FSA_LVAR_ASSIGN = 353,$/;"	e	enum:yytokentype
-FSA_LVAR_ASSIGN	parser_gram.h	251;"	d
+FSA_LVAR_ASSIGN	parser_gram.h	252;"	d
 FSA_MASTER	parser_gram.c	/^    FSA_MASTER = 344,$/;"	e	enum:yytokentype	file:
-FSA_MASTER	parser_gram.c	386;"	d	file:
+FSA_MASTER	parser_gram.c	387;"	d	file:
 FSA_MASTER	parser_gram.h	/^    FSA_MASTER = 344,$/;"	e	enum:yytokentype
-FSA_MASTER	parser_gram.h	242;"	d
+FSA_MASTER	parser_gram.h	243;"	d
 FSA_MAX	parser_gram.c	/^    FSA_MAX = 343,$/;"	e	enum:yytokentype	file:
-FSA_MAX	parser_gram.c	385;"	d	file:
+FSA_MAX	parser_gram.c	386;"	d	file:
 FSA_MAX	parser_gram.h	/^    FSA_MAX = 343,$/;"	e	enum:yytokentype
-FSA_MAX	parser_gram.h	241;"	d
+FSA_MAX	parser_gram.h	242;"	d
 FSA_MEMSIZE	parser_gram.c	/^    FSA_MEMSIZE = 307,$/;"	e	enum:yytokentype	file:
-FSA_MEMSIZE	parser_gram.c	349;"	d	file:
+FSA_MEMSIZE	parser_gram.c	350;"	d	file:
 FSA_MEMSIZE	parser_gram.h	/^    FSA_MEMSIZE = 307,$/;"	e	enum:yytokentype
-FSA_MEMSIZE	parser_gram.h	205;"	d
+FSA_MEMSIZE	parser_gram.h	206;"	d
 FSA_MIN	parser_gram.c	/^    FSA_MIN = 342,$/;"	e	enum:yytokentype	file:
-FSA_MIN	parser_gram.c	384;"	d	file:
+FSA_MIN	parser_gram.c	385;"	d	file:
 FSA_MIN	parser_gram.h	/^    FSA_MIN = 342,$/;"	e	enum:yytokentype
-FSA_MIN	parser_gram.h	240;"	d
+FSA_MIN	parser_gram.h	241;"	d
+FSA_MLFS_DEV_ID	parser_gram.c	/^    FSA_MLFS_DEV_ID = 363$/;"	e	enum:yytokentype	file:
+FSA_MLFS_DEV_ID	parser_gram.c	406;"	d	file:
+FSA_MLFS_DEV_ID	parser_gram.h	/^    FSA_MLFS_DEV_ID = 363$/;"	e	enum:yytokentype
+FSA_MLFS_DEV_ID	parser_gram.h	262;"	d
 FSA_NAME	parser_gram.c	/^    FSA_NAME = 314,$/;"	e	enum:yytokentype	file:
-FSA_NAME	parser_gram.c	356;"	d	file:
+FSA_NAME	parser_gram.c	357;"	d	file:
 FSA_NAME	parser_gram.h	/^    FSA_NAME = 314,$/;"	e	enum:yytokentype
-FSA_NAME	parser_gram.h	212;"	d
+FSA_NAME	parser_gram.h	213;"	d
 FSA_NICE	parser_gram.c	/^    FSA_NICE = 320,$/;"	e	enum:yytokentype	file:
-FSA_NICE	parser_gram.c	362;"	d	file:
+FSA_NICE	parser_gram.c	363;"	d	file:
 FSA_NICE	parser_gram.h	/^    FSA_NICE = 320,$/;"	e	enum:yytokentype
-FSA_NICE	parser_gram.h	218;"	d
+FSA_NICE	parser_gram.h	219;"	d
 FSA_NOREADAHEAD	parser_gram.c	/^    FSA_NOREADAHEAD = 358,$/;"	e	enum:yytokentype	file:
-FSA_NOREADAHEAD	parser_gram.c	400;"	d	file:
+FSA_NOREADAHEAD	parser_gram.c	401;"	d	file:
 FSA_NOREADAHEAD	parser_gram.h	/^    FSA_NOREADAHEAD = 358,$/;"	e	enum:yytokentype
-FSA_NOREADAHEAD	parser_gram.h	256;"	d
-FSA_NOUSESTATS	parser_gram.c	/^    FSA_NOUSESTATS = 362$/;"	e	enum:yytokentype	file:
-FSA_NOUSESTATS	parser_gram.c	404;"	d	file:
-FSA_NOUSESTATS	parser_gram.h	/^    FSA_NOUSESTATS = 362$/;"	e	enum:yytokentype
-FSA_NOUSESTATS	parser_gram.h	260;"	d
+FSA_NOREADAHEAD	parser_gram.h	257;"	d
+FSA_NOUSESTATS	parser_gram.c	/^    FSA_NOUSESTATS = 362,$/;"	e	enum:yytokentype	file:
+FSA_NOUSESTATS	parser_gram.c	405;"	d	file:
+FSA_NOUSESTATS	parser_gram.h	/^    FSA_NOUSESTATS = 362,$/;"	e	enum:yytokentype
+FSA_NOUSESTATS	parser_gram.h	261;"	d
 FSA_PARALLOC	parser_gram.c	/^    FSA_PARALLOC = 304,$/;"	e	enum:yytokentype	file:
-FSA_PARALLOC	parser_gram.c	346;"	d	file:
+FSA_PARALLOC	parser_gram.c	347;"	d	file:
 FSA_PARALLOC	parser_gram.h	/^    FSA_PARALLOC = 304,$/;"	e	enum:yytokentype
-FSA_PARALLOC	parser_gram.h	202;"	d
+FSA_PARALLOC	parser_gram.h	203;"	d
 FSA_PARAMETERS	parser_gram.c	/^    FSA_PARAMETERS = 361,$/;"	e	enum:yytokentype	file:
-FSA_PARAMETERS	parser_gram.c	403;"	d	file:
+FSA_PARAMETERS	parser_gram.c	404;"	d	file:
 FSA_PARAMETERS	parser_gram.h	/^    FSA_PARAMETERS = 361,$/;"	e	enum:yytokentype
-FSA_PARAMETERS	parser_gram.h	259;"	d
+FSA_PARAMETERS	parser_gram.h	260;"	d
 FSA_PATH	parser_gram.c	/^    FSA_PATH = 305,$/;"	e	enum:yytokentype	file:
-FSA_PATH	parser_gram.c	347;"	d	file:
+FSA_PATH	parser_gram.c	348;"	d	file:
 FSA_PATH	parser_gram.h	/^    FSA_PATH = 305,$/;"	e	enum:yytokentype
-FSA_PATH	parser_gram.h	203;"	d
+FSA_PATH	parser_gram.h	204;"	d
 FSA_PREALLOC	parser_gram.c	/^    FSA_PREALLOC = 303,$/;"	e	enum:yytokentype	file:
-FSA_PREALLOC	parser_gram.c	345;"	d	file:
+FSA_PREALLOC	parser_gram.c	346;"	d	file:
 FSA_PREALLOC	parser_gram.h	/^    FSA_PREALLOC = 303,$/;"	e	enum:yytokentype
-FSA_PREALLOC	parser_gram.h	201;"	d
+FSA_PREALLOC	parser_gram.h	202;"	d
 FSA_RANDGAMMA	parser_gram.c	/^    FSA_RANDGAMMA = 340,$/;"	e	enum:yytokentype	file:
-FSA_RANDGAMMA	parser_gram.c	382;"	d	file:
+FSA_RANDGAMMA	parser_gram.c	383;"	d	file:
 FSA_RANDGAMMA	parser_gram.h	/^    FSA_RANDGAMMA = 340,$/;"	e	enum:yytokentype
-FSA_RANDGAMMA	parser_gram.h	238;"	d
+FSA_RANDGAMMA	parser_gram.h	239;"	d
 FSA_RANDMEAN	parser_gram.c	/^    FSA_RANDMEAN = 341,$/;"	e	enum:yytokentype	file:
-FSA_RANDMEAN	parser_gram.c	383;"	d	file:
+FSA_RANDMEAN	parser_gram.c	384;"	d	file:
 FSA_RANDMEAN	parser_gram.h	/^    FSA_RANDMEAN = 341,$/;"	e	enum:yytokentype
-FSA_RANDMEAN	parser_gram.h	239;"	d
+FSA_RANDMEAN	parser_gram.h	240;"	d
 FSA_RANDOM	parser_gram.c	/^    FSA_RANDOM = 315,$/;"	e	enum:yytokentype	file:
-FSA_RANDOM	parser_gram.c	357;"	d	file:
+FSA_RANDOM	parser_gram.c	358;"	d	file:
 FSA_RANDOM	parser_gram.h	/^    FSA_RANDOM = 315,$/;"	e	enum:yytokentype
-FSA_RANDOM	parser_gram.h	213;"	d
+FSA_RANDOM	parser_gram.h	214;"	d
 FSA_RANDSEED	parser_gram.c	/^    FSA_RANDSEED = 339,$/;"	e	enum:yytokentype	file:
-FSA_RANDSEED	parser_gram.c	381;"	d	file:
+FSA_RANDSEED	parser_gram.c	382;"	d	file:
 FSA_RANDSEED	parser_gram.h	/^    FSA_RANDSEED = 339,$/;"	e	enum:yytokentype
-FSA_RANDSEED	parser_gram.h	237;"	d
+FSA_RANDSEED	parser_gram.h	238;"	d
 FSA_RANDSRC	parser_gram.c	/^    FSA_RANDSRC = 337,$/;"	e	enum:yytokentype	file:
-FSA_RANDSRC	parser_gram.c	379;"	d	file:
+FSA_RANDSRC	parser_gram.c	380;"	d	file:
 FSA_RANDSRC	parser_gram.h	/^    FSA_RANDSRC = 337,$/;"	e	enum:yytokentype
-FSA_RANDSRC	parser_gram.h	235;"	d
+FSA_RANDSRC	parser_gram.h	236;"	d
 FSA_RANDTABLE	parser_gram.c	/^    FSA_RANDTABLE = 336,$/;"	e	enum:yytokentype	file:
-FSA_RANDTABLE	parser_gram.c	378;"	d	file:
+FSA_RANDTABLE	parser_gram.c	379;"	d	file:
 FSA_RANDTABLE	parser_gram.h	/^    FSA_RANDTABLE = 336,$/;"	e	enum:yytokentype
-FSA_RANDTABLE	parser_gram.h	234;"	d
+FSA_RANDTABLE	parser_gram.h	235;"	d
 FSA_RATE	parser_gram.c	/^    FSA_RATE = 308,$/;"	e	enum:yytokentype	file:
-FSA_RATE	parser_gram.c	350;"	d	file:
+FSA_RATE	parser_gram.c	351;"	d	file:
 FSA_RATE	parser_gram.h	/^    FSA_RATE = 308,$/;"	e	enum:yytokentype
-FSA_RATE	parser_gram.h	206;"	d
+FSA_RATE	parser_gram.h	207;"	d
 FSA_READONLY	parser_gram.c	/^    FSA_READONLY = 309,$/;"	e	enum:yytokentype	file:
-FSA_READONLY	parser_gram.c	351;"	d	file:
+FSA_READONLY	parser_gram.c	352;"	d	file:
 FSA_READONLY	parser_gram.h	/^    FSA_READONLY = 309,$/;"	e	enum:yytokentype
-FSA_READONLY	parser_gram.h	207;"	d
+FSA_READONLY	parser_gram.h	208;"	d
 FSA_REUSE	parser_gram.c	/^    FSA_REUSE = 306,$/;"	e	enum:yytokentype	file:
-FSA_REUSE	parser_gram.c	348;"	d	file:
+FSA_REUSE	parser_gram.c	349;"	d	file:
 FSA_REUSE	parser_gram.h	/^    FSA_REUSE = 306,$/;"	e	enum:yytokentype
-FSA_REUSE	parser_gram.h	204;"	d
+FSA_REUSE	parser_gram.h	205;"	d
 FSA_ROTATEFD	parser_gram.c	/^    FSA_ROTATEFD = 328,$/;"	e	enum:yytokentype	file:
-FSA_ROTATEFD	parser_gram.c	370;"	d	file:
+FSA_ROTATEFD	parser_gram.c	371;"	d	file:
 FSA_ROTATEFD	parser_gram.h	/^    FSA_ROTATEFD = 328,$/;"	e	enum:yytokentype
-FSA_ROTATEFD	parser_gram.h	226;"	d
+FSA_ROTATEFD	parser_gram.h	227;"	d
 FSA_ROUND	parser_gram.c	/^    FSA_ROUND = 338,$/;"	e	enum:yytokentype	file:
-FSA_ROUND	parser_gram.c	380;"	d	file:
+FSA_ROUND	parser_gram.c	381;"	d	file:
 FSA_ROUND	parser_gram.h	/^    FSA_ROUND = 338,$/;"	e	enum:yytokentype
-FSA_ROUND	parser_gram.h	236;"	d
+FSA_ROUND	parser_gram.h	237;"	d
 FSA_SIZE	parser_gram.c	/^    FSA_SIZE = 302,$/;"	e	enum:yytokentype	file:
-FSA_SIZE	parser_gram.c	344;"	d	file:
+FSA_SIZE	parser_gram.c	345;"	d	file:
 FSA_SIZE	parser_gram.h	/^    FSA_SIZE = 302,$/;"	e	enum:yytokentype
-FSA_SIZE	parser_gram.h	200;"	d
+FSA_SIZE	parser_gram.h	201;"	d
 FSA_SRCFD	parser_gram.c	/^    FSA_SRCFD = 327,$/;"	e	enum:yytokentype	file:
-FSA_SRCFD	parser_gram.c	369;"	d	file:
+FSA_SRCFD	parser_gram.c	370;"	d	file:
 FSA_SRCFD	parser_gram.h	/^    FSA_SRCFD = 327,$/;"	e	enum:yytokentype
-FSA_SRCFD	parser_gram.h	225;"	d
+FSA_SRCFD	parser_gram.h	226;"	d
 FSA_TARGET	parser_gram.c	/^    FSA_TARGET = 318,$/;"	e	enum:yytokentype	file:
-FSA_TARGET	parser_gram.c	360;"	d	file:
+FSA_TARGET	parser_gram.c	361;"	d	file:
 FSA_TARGET	parser_gram.h	/^    FSA_TARGET = 318,$/;"	e	enum:yytokentype
-FSA_TARGET	parser_gram.h	216;"	d
+FSA_TARGET	parser_gram.h	217;"	d
 FSA_TIMEOUT	parser_gram.c	/^    FSA_TIMEOUT = 356,$/;"	e	enum:yytokentype	file:
-FSA_TIMEOUT	parser_gram.c	398;"	d	file:
+FSA_TIMEOUT	parser_gram.c	399;"	d	file:
 FSA_TIMEOUT	parser_gram.h	/^    FSA_TIMEOUT = 356,$/;"	e	enum:yytokentype
-FSA_TIMEOUT	parser_gram.h	254;"	d
+FSA_TIMEOUT	parser_gram.h	255;"	d
 FSA_TRUSTTREE	parser_gram.c	/^    FSA_TRUSTTREE = 310,$/;"	e	enum:yytokentype	file:
-FSA_TRUSTTREE	parser_gram.c	352;"	d	file:
+FSA_TRUSTTREE	parser_gram.c	353;"	d	file:
 FSA_TRUSTTREE	parser_gram.h	/^    FSA_TRUSTTREE = 310,$/;"	e	enum:yytokentype
-FSA_TRUSTTREE	parser_gram.h	208;"	d
+FSA_TRUSTTREE	parser_gram.h	209;"	d
 FSA_TYPE	parser_gram.c	/^    FSA_TYPE = 333,$/;"	e	enum:yytokentype	file:
-FSA_TYPE	parser_gram.c	375;"	d	file:
+FSA_TYPE	parser_gram.c	376;"	d	file:
 FSA_TYPE	parser_gram.h	/^    FSA_TYPE = 333,$/;"	e	enum:yytokentype
-FSA_TYPE	parser_gram.h	231;"	d
+FSA_TYPE	parser_gram.h	232;"	d
 FSA_USEISM	parser_gram.c	/^    FSA_USEISM = 332,$/;"	e	enum:yytokentype	file:
-FSA_USEISM	parser_gram.c	374;"	d	file:
+FSA_USEISM	parser_gram.c	375;"	d	file:
 FSA_USEISM	parser_gram.h	/^    FSA_USEISM = 332,$/;"	e	enum:yytokentype
-FSA_USEISM	parser_gram.h	230;"	d
+FSA_USEISM	parser_gram.h	231;"	d
 FSA_VALUE	parser_gram.c	/^    FSA_VALUE = 321,$/;"	e	enum:yytokentype	file:
-FSA_VALUE	parser_gram.c	363;"	d	file:
+FSA_VALUE	parser_gram.c	364;"	d	file:
 FSA_VALUE	parser_gram.h	/^    FSA_VALUE = 321,$/;"	e	enum:yytokentype
-FSA_VALUE	parser_gram.h	219;"	d
+FSA_VALUE	parser_gram.h	220;"	d
 FSA_WRITEONLY	parser_gram.c	/^    FSA_WRITEONLY = 360,$/;"	e	enum:yytokentype	file:
-FSA_WRITEONLY	parser_gram.c	402;"	d	file:
+FSA_WRITEONLY	parser_gram.c	403;"	d	file:
 FSA_WRITEONLY	parser_gram.h	/^    FSA_WRITEONLY = 360,$/;"	e	enum:yytokentype
-FSA_WRITEONLY	parser_gram.h	258;"	d
+FSA_WRITEONLY	parser_gram.h	259;"	d
 FSA_WSS	parser_gram.c	/^    FSA_WSS = 313,$/;"	e	enum:yytokentype	file:
-FSA_WSS	parser_gram.c	355;"	d	file:
+FSA_WSS	parser_gram.c	356;"	d	file:
 FSA_WSS	parser_gram.h	/^    FSA_WSS = 313,$/;"	e	enum:yytokentype
-FSA_WSS	parser_gram.h	211;"	d
+FSA_WSS	parser_gram.h	212;"	d
 FSC_CREATE	parser_gram.c	/^    FSC_CREATE = 262,$/;"	e	enum:yytokentype	file:
-FSC_CREATE	parser_gram.c	304;"	d	file:
+FSC_CREATE	parser_gram.c	305;"	d	file:
 FSC_CREATE	parser_gram.h	/^    FSC_CREATE = 262,$/;"	e	enum:yytokentype
-FSC_CREATE	parser_gram.h	160;"	d
+FSC_CREATE	parser_gram.h	161;"	d
 FSC_DEBUG	parser_gram.c	/^    FSC_DEBUG = 261,$/;"	e	enum:yytokentype	file:
-FSC_DEBUG	parser_gram.c	303;"	d	file:
+FSC_DEBUG	parser_gram.c	304;"	d	file:
 FSC_DEBUG	parser_gram.h	/^    FSC_DEBUG = 261,$/;"	e	enum:yytokentype
-FSC_DEBUG	parser_gram.h	159;"	d
+FSC_DEBUG	parser_gram.h	160;"	d
 FSC_DEFINE	parser_gram.c	/^    FSC_DEFINE = 259,$/;"	e	enum:yytokentype	file:
-FSC_DEFINE	parser_gram.c	301;"	d	file:
+FSC_DEFINE	parser_gram.c	302;"	d	file:
 FSC_DEFINE	parser_gram.h	/^    FSC_DEFINE = 259,$/;"	e	enum:yytokentype
-FSC_DEFINE	parser_gram.h	157;"	d
+FSC_DEFINE	parser_gram.h	158;"	d
 FSC_DIGEST	parser_gram.c	/^    FSC_DIGEST = 265,$/;"	e	enum:yytokentype	file:
-FSC_DIGEST	parser_gram.c	307;"	d	file:
+FSC_DIGEST	parser_gram.c	308;"	d	file:
 FSC_DIGEST	parser_gram.h	/^    FSC_DIGEST = 265,$/;"	e	enum:yytokentype
-FSC_DIGEST	parser_gram.h	163;"	d
+FSC_DIGEST	parser_gram.h	164;"	d
 FSC_DOMULTISYNC	parser_gram.c	/^    FSC_DOMULTISYNC = 273,$/;"	e	enum:yytokentype	file:
-FSC_DOMULTISYNC	parser_gram.c	315;"	d	file:
+FSC_DOMULTISYNC	parser_gram.c	316;"	d	file:
 FSC_DOMULTISYNC	parser_gram.h	/^    FSC_DOMULTISYNC = 273,$/;"	e	enum:yytokentype
-FSC_DOMULTISYNC	parser_gram.h	171;"	d
+FSC_DOMULTISYNC	parser_gram.h	172;"	d
 FSC_ECHO	parser_gram.c	/^    FSC_ECHO = 268,$/;"	e	enum:yytokentype	file:
-FSC_ECHO	parser_gram.c	310;"	d	file:
+FSC_ECHO	parser_gram.c	311;"	d	file:
 FSC_ECHO	parser_gram.h	/^    FSC_ECHO = 268,$/;"	e	enum:yytokentype
-FSC_ECHO	parser_gram.h	166;"	d
+FSC_ECHO	parser_gram.h	167;"	d
 FSC_ENABLE	parser_gram.c	/^    FSC_ENABLE = 272,$/;"	e	enum:yytokentype	file:
-FSC_ENABLE	parser_gram.c	314;"	d	file:
+FSC_ENABLE	parser_gram.c	315;"	d	file:
 FSC_ENABLE	parser_gram.h	/^    FSC_ENABLE = 272,$/;"	e	enum:yytokentype
-FSC_ENABLE	parser_gram.h	170;"	d
+FSC_ENABLE	parser_gram.h	171;"	d
 FSC_EVENTGEN	parser_gram.c	/^    FSC_EVENTGEN = 267,$/;"	e	enum:yytokentype	file:
-FSC_EVENTGEN	parser_gram.c	309;"	d	file:
+FSC_EVENTGEN	parser_gram.c	310;"	d	file:
 FSC_EVENTGEN	parser_gram.h	/^    FSC_EVENTGEN = 267,$/;"	e	enum:yytokentype
-FSC_EVENTGEN	parser_gram.h	165;"	d
+FSC_EVENTGEN	parser_gram.h	166;"	d
 FSC_LIST	parser_gram.c	/^    FSC_LIST = 258,$/;"	e	enum:yytokentype	file:
-FSC_LIST	parser_gram.c	300;"	d	file:
+FSC_LIST	parser_gram.c	301;"	d	file:
 FSC_LIST	parser_gram.h	/^    FSC_LIST = 258,$/;"	e	enum:yytokentype
-FSC_LIST	parser_gram.h	156;"	d
+FSC_LIST	parser_gram.h	157;"	d
 FSC_PSRUN	parser_gram.c	/^    FSC_PSRUN = 270,$/;"	e	enum:yytokentype	file:
-FSC_PSRUN	parser_gram.c	312;"	d	file:
+FSC_PSRUN	parser_gram.c	313;"	d	file:
 FSC_PSRUN	parser_gram.h	/^    FSC_PSRUN = 270,$/;"	e	enum:yytokentype
-FSC_PSRUN	parser_gram.h	168;"	d
+FSC_PSRUN	parser_gram.h	169;"	d
 FSC_QUIT	parser_gram.c	/^    FSC_QUIT = 260,$/;"	e	enum:yytokentype	file:
-FSC_QUIT	parser_gram.c	302;"	d	file:
+FSC_QUIT	parser_gram.c	303;"	d	file:
 FSC_QUIT	parser_gram.h	/^    FSC_QUIT = 260,$/;"	e	enum:yytokentype
-FSC_QUIT	parser_gram.h	158;"	d
+FSC_QUIT	parser_gram.h	159;"	d
 FSC_RUN	parser_gram.c	/^    FSC_RUN = 269,$/;"	e	enum:yytokentype	file:
-FSC_RUN	parser_gram.c	311;"	d	file:
+FSC_RUN	parser_gram.c	312;"	d	file:
 FSC_RUN	parser_gram.h	/^    FSC_RUN = 269,$/;"	e	enum:yytokentype
-FSC_RUN	parser_gram.h	167;"	d
+FSC_RUN	parser_gram.h	168;"	d
 FSC_SET	parser_gram.c	/^    FSC_SET = 264,$/;"	e	enum:yytokentype	file:
-FSC_SET	parser_gram.c	306;"	d	file:
+FSC_SET	parser_gram.c	307;"	d	file:
 FSC_SET	parser_gram.h	/^    FSC_SET = 264,$/;"	e	enum:yytokentype
-FSC_SET	parser_gram.h	162;"	d
+FSC_SET	parser_gram.h	163;"	d
 FSC_SLEEP	parser_gram.c	/^    FSC_SLEEP = 263,$/;"	e	enum:yytokentype	file:
-FSC_SLEEP	parser_gram.c	305;"	d	file:
+FSC_SLEEP	parser_gram.c	306;"	d	file:
 FSC_SLEEP	parser_gram.h	/^    FSC_SLEEP = 263,$/;"	e	enum:yytokentype
-FSC_SLEEP	parser_gram.h	161;"	d
+FSC_SLEEP	parser_gram.h	162;"	d
 FSC_SYSTEM	parser_gram.c	/^    FSC_SYSTEM = 266,$/;"	e	enum:yytokentype	file:
-FSC_SYSTEM	parser_gram.c	308;"	d	file:
+FSC_SYSTEM	parser_gram.c	309;"	d	file:
 FSC_SYSTEM	parser_gram.h	/^    FSC_SYSTEM = 266,$/;"	e	enum:yytokentype
-FSC_SYSTEM	parser_gram.h	164;"	d
+FSC_SYSTEM	parser_gram.h	165;"	d
 FSC_VERSION	parser_gram.c	/^    FSC_VERSION = 271,$/;"	e	enum:yytokentype	file:
-FSC_VERSION	parser_gram.c	313;"	d	file:
+FSC_VERSION	parser_gram.c	314;"	d	file:
 FSC_VERSION	parser_gram.h	/^    FSC_VERSION = 271,$/;"	e	enum:yytokentype
-FSC_VERSION	parser_gram.h	169;"	d
+FSC_VERSION	parser_gram.h	170;"	d
 FSE_BUSY	fileset.h	42;"	d
 FSE_CVAR	parser_gram.c	/^    FSE_CVAR = 290,$/;"	e	enum:yytokentype	file:
-FSE_CVAR	parser_gram.c	332;"	d	file:
+FSE_CVAR	parser_gram.c	333;"	d	file:
 FSE_CVAR	parser_gram.h	/^    FSE_CVAR = 290,$/;"	e	enum:yytokentype
-FSE_CVAR	parser_gram.h	188;"	d
+FSE_CVAR	parser_gram.h	189;"	d
 FSE_EXISTS	fileset.h	41;"	d
 FSE_FILE	parser_gram.c	/^    FSE_FILE = 284,$/;"	e	enum:yytokentype	file:
-FSE_FILE	parser_gram.c	326;"	d	file:
+FSE_FILE	parser_gram.c	327;"	d	file:
 FSE_FILE	parser_gram.h	/^    FSE_FILE = 284,$/;"	e	enum:yytokentype
-FSE_FILE	parser_gram.h	182;"	d
+FSE_FILE	parser_gram.h	183;"	d
 FSE_FILES	parser_gram.c	/^    FSE_FILES = 285,$/;"	e	enum:yytokentype	file:
-FSE_FILES	parser_gram.c	327;"	d	file:
+FSE_FILES	parser_gram.c	328;"	d	file:
 FSE_FILES	parser_gram.h	/^    FSE_FILES = 285,$/;"	e	enum:yytokentype
-FSE_FILES	parser_gram.h	183;"	d
+FSE_FILES	parser_gram.h	184;"	d
 FSE_FILESET	parser_gram.c	/^    FSE_FILESET = 286,$/;"	e	enum:yytokentype	file:
-FSE_FILESET	parser_gram.c	328;"	d	file:
+FSE_FILESET	parser_gram.c	329;"	d	file:
 FSE_FILESET	parser_gram.h	/^    FSE_FILESET = 286,$/;"	e	enum:yytokentype
-FSE_FILESET	parser_gram.h	184;"	d
+FSE_FILESET	parser_gram.h	185;"	d
 FSE_FLOWOP	parser_gram.c	/^    FSE_FLOWOP = 289,$/;"	e	enum:yytokentype	file:
-FSE_FLOWOP	parser_gram.c	331;"	d	file:
+FSE_FLOWOP	parser_gram.c	332;"	d	file:
 FSE_FLOWOP	parser_gram.h	/^    FSE_FLOWOP = 289,$/;"	e	enum:yytokentype
-FSE_FLOWOP	parser_gram.h	187;"	d
+FSE_FLOWOP	parser_gram.h	188;"	d
 FSE_FREE	fileset.h	40;"	d
 FSE_MAXPATHLEN	fileset.h	35;"	d
 FSE_MAXTID	fileset.h	33;"	d
 FSE_MODE	parser_gram.c	/^    FSE_MODE = 292,$/;"	e	enum:yytokentype	file:
-FSE_MODE	parser_gram.c	334;"	d	file:
+FSE_MODE	parser_gram.c	335;"	d	file:
 FSE_MODE	parser_gram.h	/^    FSE_MODE = 292,$/;"	e	enum:yytokentype
-FSE_MODE	parser_gram.h	190;"	d
+FSE_MODE	parser_gram.h	191;"	d
 FSE_MULTI	parser_gram.c	/^    FSE_MULTI = 293,$/;"	e	enum:yytokentype	file:
-FSE_MULTI	parser_gram.c	335;"	d	file:
+FSE_MULTI	parser_gram.c	336;"	d	file:
 FSE_MULTI	parser_gram.h	/^    FSE_MULTI = 293,$/;"	e	enum:yytokentype
-FSE_MULTI	parser_gram.h	191;"	d
+FSE_MULTI	parser_gram.h	192;"	d
 FSE_OFFSETOF	fileset.h	61;"	d
 FSE_PROC	parser_gram.c	/^    FSE_PROC = 287,$/;"	e	enum:yytokentype	file:
-FSE_PROC	parser_gram.c	329;"	d	file:
+FSE_PROC	parser_gram.c	330;"	d	file:
 FSE_PROC	parser_gram.h	/^    FSE_PROC = 287,$/;"	e	enum:yytokentype
-FSE_PROC	parser_gram.h	185;"	d
+FSE_PROC	parser_gram.h	186;"	d
 FSE_RAND	parser_gram.c	/^    FSE_RAND = 291,$/;"	e	enum:yytokentype	file:
-FSE_RAND	parser_gram.c	333;"	d	file:
+FSE_RAND	parser_gram.c	334;"	d	file:
 FSE_RAND	parser_gram.h	/^    FSE_RAND = 291,$/;"	e	enum:yytokentype
-FSE_RAND	parser_gram.h	189;"	d
+FSE_RAND	parser_gram.h	190;"	d
 FSE_REUSING	fileset.h	43;"	d
 FSE_SYSTEM	parsertypes.h	35;"	d
 FSE_THRD_WAITNG	fileset.h	44;"	d
 FSE_THREAD	parser_gram.c	/^    FSE_THREAD = 288,$/;"	e	enum:yytokentype	file:
-FSE_THREAD	parser_gram.c	330;"	d	file:
+FSE_THREAD	parser_gram.c	331;"	d	file:
 FSE_THREAD	parser_gram.h	/^    FSE_THREAD = 288,$/;"	e	enum:yytokentype
-FSE_THREAD	parser_gram.h	186;"	d
+FSE_THREAD	parser_gram.h	187;"	d
 FSE_TYPE_DIR	fileset.h	37;"	d
 FSE_TYPE_FILE	fileset.h	36;"	d
 FSE_TYPE_LEAFDIR	fileset.h	38;"	d
 FSE_TYPE_MASK	fileset.h	39;"	d
 FSK_ASSIGN	parser_gram.c	/^    FSK_ASSIGN = 299,$/;"	e	enum:yytokentype	file:
-FSK_ASSIGN	parser_gram.c	341;"	d	file:
+FSK_ASSIGN	parser_gram.c	342;"	d	file:
 FSK_ASSIGN	parser_gram.h	/^    FSK_ASSIGN = 299,$/;"	e	enum:yytokentype
-FSK_ASSIGN	parser_gram.h	197;"	d
+FSK_ASSIGN	parser_gram.h	198;"	d
 FSK_CLOSELST	parser_gram.c	/^    FSK_CLOSELST = 296,$/;"	e	enum:yytokentype	file:
-FSK_CLOSELST	parser_gram.c	338;"	d	file:
+FSK_CLOSELST	parser_gram.c	339;"	d	file:
 FSK_CLOSELST	parser_gram.h	/^    FSK_CLOSELST = 296,$/;"	e	enum:yytokentype
-FSK_CLOSELST	parser_gram.h	194;"	d
+FSK_CLOSELST	parser_gram.h	195;"	d
 FSK_CLOSEPAR	parser_gram.c	/^    FSK_CLOSEPAR = 298,$/;"	e	enum:yytokentype	file:
-FSK_CLOSEPAR	parser_gram.c	340;"	d	file:
+FSK_CLOSEPAR	parser_gram.c	341;"	d	file:
 FSK_CLOSEPAR	parser_gram.h	/^    FSK_CLOSEPAR = 298,$/;"	e	enum:yytokentype
-FSK_CLOSEPAR	parser_gram.h	196;"	d
+FSK_CLOSEPAR	parser_gram.h	197;"	d
 FSK_IN	parser_gram.c	/^    FSK_IN = 300,$/;"	e	enum:yytokentype	file:
-FSK_IN	parser_gram.c	342;"	d	file:
+FSK_IN	parser_gram.c	343;"	d	file:
 FSK_IN	parser_gram.h	/^    FSK_IN = 300,$/;"	e	enum:yytokentype
-FSK_IN	parser_gram.h	198;"	d
+FSK_IN	parser_gram.h	199;"	d
 FSK_OPENLST	parser_gram.c	/^    FSK_OPENLST = 295,$/;"	e	enum:yytokentype	file:
-FSK_OPENLST	parser_gram.c	337;"	d	file:
+FSK_OPENLST	parser_gram.c	338;"	d	file:
 FSK_OPENLST	parser_gram.h	/^    FSK_OPENLST = 295,$/;"	e	enum:yytokentype
-FSK_OPENLST	parser_gram.h	193;"	d
+FSK_OPENLST	parser_gram.h	194;"	d
 FSK_OPENPAR	parser_gram.c	/^    FSK_OPENPAR = 297,$/;"	e	enum:yytokentype	file:
-FSK_OPENPAR	parser_gram.c	339;"	d	file:
+FSK_OPENPAR	parser_gram.c	340;"	d	file:
 FSK_OPENPAR	parser_gram.h	/^    FSK_OPENPAR = 297,$/;"	e	enum:yytokentype
-FSK_OPENPAR	parser_gram.h	195;"	d
+FSK_OPENPAR	parser_gram.h	196;"	d
 FSK_QUOTE	parser_gram.c	/^    FSK_QUOTE = 301,$/;"	e	enum:yytokentype	file:
-FSK_QUOTE	parser_gram.c	343;"	d	file:
+FSK_QUOTE	parser_gram.c	344;"	d	file:
 FSK_QUOTE	parser_gram.h	/^    FSK_QUOTE = 301,$/;"	e	enum:yytokentype
-FSK_QUOTE	parser_gram.h	199;"	d
+FSK_QUOTE	parser_gram.h	200;"	d
 FSK_SEPLST	parser_gram.c	/^    FSK_SEPLST = 294,$/;"	e	enum:yytokentype	file:
-FSK_SEPLST	parser_gram.c	336;"	d	file:
+FSK_SEPLST	parser_gram.c	337;"	d	file:
 FSK_SEPLST	parser_gram.h	/^    FSK_SEPLST = 294,$/;"	e	enum:yytokentype
-FSK_SEPLST	parser_gram.h	192;"	d
+FSK_SEPLST	parser_gram.h	193;"	d
 FSS_GAMMA	parser_gram.c	/^    FSS_GAMMA = 348,$/;"	e	enum:yytokentype	file:
-FSS_GAMMA	parser_gram.c	390;"	d	file:
+FSS_GAMMA	parser_gram.c	391;"	d	file:
 FSS_GAMMA	parser_gram.h	/^    FSS_GAMMA = 348,$/;"	e	enum:yytokentype
-FSS_GAMMA	parser_gram.h	246;"	d
+FSS_GAMMA	parser_gram.h	247;"	d
 FSS_MEAN	parser_gram.c	/^    FSS_MEAN = 349,$/;"	e	enum:yytokentype	file:
-FSS_MEAN	parser_gram.c	391;"	d	file:
+FSS_MEAN	parser_gram.c	392;"	d	file:
 FSS_MEAN	parser_gram.h	/^    FSS_MEAN = 349,$/;"	e	enum:yytokentype
-FSS_MEAN	parser_gram.h	247;"	d
+FSS_MEAN	parser_gram.h	248;"	d
 FSS_MIN	parser_gram.c	/^    FSS_MIN = 350,$/;"	e	enum:yytokentype	file:
-FSS_MIN	parser_gram.c	392;"	d	file:
+FSS_MIN	parser_gram.c	393;"	d	file:
 FSS_MIN	parser_gram.h	/^    FSS_MIN = 350,$/;"	e	enum:yytokentype
-FSS_MIN	parser_gram.h	248;"	d
+FSS_MIN	parser_gram.h	249;"	d
 FSS_ROUND	parser_gram.c	/^    FSS_ROUND = 352,$/;"	e	enum:yytokentype	file:
-FSS_ROUND	parser_gram.c	394;"	d	file:
+FSS_ROUND	parser_gram.c	395;"	d	file:
 FSS_ROUND	parser_gram.h	/^    FSS_ROUND = 352,$/;"	e	enum:yytokentype
-FSS_ROUND	parser_gram.h	250;"	d
+FSS_ROUND	parser_gram.h	251;"	d
 FSS_SEED	parser_gram.c	/^    FSS_SEED = 347,$/;"	e	enum:yytokentype	file:
-FSS_SEED	parser_gram.c	389;"	d	file:
+FSS_SEED	parser_gram.c	390;"	d	file:
 FSS_SEED	parser_gram.h	/^    FSS_SEED = 347,$/;"	e	enum:yytokentype
-FSS_SEED	parser_gram.h	245;"	d
+FSS_SEED	parser_gram.h	246;"	d
 FSS_SRC	parser_gram.c	/^    FSS_SRC = 351,$/;"	e	enum:yytokentype	file:
-FSS_SRC	parser_gram.c	393;"	d	file:
+FSS_SRC	parser_gram.c	394;"	d	file:
 FSS_SRC	parser_gram.h	/^    FSS_SRC = 351,$/;"	e	enum:yytokentype
-FSS_SRC	parser_gram.h	249;"	d
+FSS_SRC	parser_gram.h	250;"	d
 FSS_TYPE	parser_gram.c	/^    FSS_TYPE = 346,$/;"	e	enum:yytokentype	file:
-FSS_TYPE	parser_gram.c	388;"	d	file:
+FSS_TYPE	parser_gram.c	389;"	d	file:
 FSS_TYPE	parser_gram.h	/^    FSS_TYPE = 346,$/;"	e	enum:yytokentype
-FSS_TYPE	parser_gram.h	244;"	d
+FSS_TYPE	parser_gram.h	245;"	d
 FSV_RAND48	parser_gram.c	/^    FSV_RAND48 = 283,$/;"	e	enum:yytokentype	file:
-FSV_RAND48	parser_gram.c	325;"	d	file:
+FSV_RAND48	parser_gram.c	326;"	d	file:
 FSV_RAND48	parser_gram.h	/^    FSV_RAND48 = 283,$/;"	e	enum:yytokentype
-FSV_RAND48	parser_gram.h	181;"	d
+FSV_RAND48	parser_gram.h	182;"	d
 FSV_RANDTAB	parser_gram.c	/^    FSV_RANDTAB = 281,$/;"	e	enum:yytokentype	file:
-FSV_RANDTAB	parser_gram.c	323;"	d	file:
+FSV_RANDTAB	parser_gram.c	324;"	d	file:
 FSV_RANDTAB	parser_gram.h	/^    FSV_RANDTAB = 281,$/;"	e	enum:yytokentype
-FSV_RANDTAB	parser_gram.h	179;"	d
+FSV_RANDTAB	parser_gram.h	180;"	d
 FSV_RANDUNI	parser_gram.c	/^    FSV_RANDUNI = 280,$/;"	e	enum:yytokentype	file:
-FSV_RANDUNI	parser_gram.c	322;"	d	file:
+FSV_RANDUNI	parser_gram.c	323;"	d	file:
 FSV_RANDUNI	parser_gram.h	/^    FSV_RANDUNI = 280,$/;"	e	enum:yytokentype
-FSV_RANDUNI	parser_gram.h	178;"	d
+FSV_RANDUNI	parser_gram.h	179;"	d
 FSV_STRING	parser_gram.c	/^    FSV_STRING = 274,$/;"	e	enum:yytokentype	file:
-FSV_STRING	parser_gram.c	316;"	d	file:
+FSV_STRING	parser_gram.c	317;"	d	file:
 FSV_STRING	parser_gram.h	/^    FSV_STRING = 274,$/;"	e	enum:yytokentype
-FSV_STRING	parser_gram.h	172;"	d
+FSV_STRING	parser_gram.h	173;"	d
 FSV_URAND	parser_gram.c	/^    FSV_URAND = 282,$/;"	e	enum:yytokentype	file:
-FSV_URAND	parser_gram.c	324;"	d	file:
+FSV_URAND	parser_gram.c	325;"	d	file:
 FSV_URAND	parser_gram.h	/^    FSV_URAND = 282,$/;"	e	enum:yytokentype
-FSV_URAND	parser_gram.h	180;"	d
+FSV_URAND	parser_gram.h	181;"	d
 FSV_VAL_BOOLEAN	parser_gram.c	/^    FSV_VAL_BOOLEAN = 277,$/;"	e	enum:yytokentype	file:
-FSV_VAL_BOOLEAN	parser_gram.c	319;"	d	file:
+FSV_VAL_BOOLEAN	parser_gram.c	320;"	d	file:
 FSV_VAL_BOOLEAN	parser_gram.h	/^    FSV_VAL_BOOLEAN = 277,$/;"	e	enum:yytokentype
-FSV_VAL_BOOLEAN	parser_gram.h	175;"	d
+FSV_VAL_BOOLEAN	parser_gram.h	176;"	d
 FSV_VAL_NEGINT	parser_gram.c	/^    FSV_VAL_NEGINT = 276,$/;"	e	enum:yytokentype	file:
-FSV_VAL_NEGINT	parser_gram.c	318;"	d	file:
+FSV_VAL_NEGINT	parser_gram.c	319;"	d	file:
 FSV_VAL_NEGINT	parser_gram.h	/^    FSV_VAL_NEGINT = 276,$/;"	e	enum:yytokentype
-FSV_VAL_NEGINT	parser_gram.h	174;"	d
+FSV_VAL_NEGINT	parser_gram.h	175;"	d
 FSV_VAL_POSINT	parser_gram.c	/^    FSV_VAL_POSINT = 275,$/;"	e	enum:yytokentype	file:
-FSV_VAL_POSINT	parser_gram.c	317;"	d	file:
+FSV_VAL_POSINT	parser_gram.c	318;"	d	file:
 FSV_VAL_POSINT	parser_gram.h	/^    FSV_VAL_POSINT = 275,$/;"	e	enum:yytokentype
-FSV_VAL_POSINT	parser_gram.h	173;"	d
+FSV_VAL_POSINT	parser_gram.h	174;"	d
 FSV_VARIABLE	parser_gram.c	/^    FSV_VARIABLE = 278,$/;"	e	enum:yytokentype	file:
-FSV_VARIABLE	parser_gram.c	320;"	d	file:
+FSV_VARIABLE	parser_gram.c	321;"	d	file:
 FSV_VARIABLE	parser_gram.h	/^    FSV_VARIABLE = 278,$/;"	e	enum:yytokentype
-FSV_VARIABLE	parser_gram.h	176;"	d
+FSV_VARIABLE	parser_gram.h	177;"	d
 FSV_WHITESTRING	parser_gram.c	/^    FSV_WHITESTRING = 279,$/;"	e	enum:yytokentype	file:
-FSV_WHITESTRING	parser_gram.c	321;"	d	file:
+FSV_WHITESTRING	parser_gram.c	322;"	d	file:
 FSV_WHITESTRING	parser_gram.h	/^    FSV_WHITESTRING = 279,$/;"	e	enum:yytokentype
-FSV_WHITESTRING	parser_gram.h	177;"	d
+FSV_WHITESTRING	parser_gram.h	178;"	d
 GAMMA	cvars/cvar-gamma.c	23;"	d	file:
 GAMMA_DEFAULT	cvars/cvar-gamma.c	26;"	d	file:
 GB	filebench.h	173;"	d
@@ -977,15 +981,15 @@ LT_OBJDIR	config.h	366;"	d
 LT_SYS_LIBRARY_PATH	Makefile	/^LT_SYS_LIBRARY_PATH = $/;"	m
 LT_SYS_LIBRARY_PATH	cvars/Makefile	/^LT_SYS_LIBRARY_PATH = $/;"	m
 LT_SYS_LIBRARY_PATH	workloads/Makefile	/^LT_SYS_LIBRARY_PATH = $/;"	m
-MAKEINFO	Makefile	/^MAKEINFO = ${SHELL} \/home\/yjkwon\/project\/mlfs\/bench\/filebench\/missing makeinfo$/;"	m
-MAKEINFO	cvars/Makefile	/^MAKEINFO = ${SHELL} \/home\/yjkwon\/project\/mlfs\/bench\/filebench\/missing makeinfo$/;"	m
-MAKEINFO	workloads/Makefile	/^MAKEINFO = ${SHELL} \/home\/yjkwon\/project\/mlfs\/bench\/filebench\/missing makeinfo$/;"	m
+MAKEINFO	Makefile	/^MAKEINFO = ${SHELL} \/home\/sekwon\/strata\/bench\/filebench\/missing makeinfo$/;"	m
+MAKEINFO	cvars/Makefile	/^MAKEINFO = ${SHELL} \/home\/sekwon\/strata\/bench\/filebench\/missing makeinfo$/;"	m
+MAKEINFO	workloads/Makefile	/^MAKEINFO = ${SHELL} \/home\/sekwon\/strata\/bench\/filebench\/missing makeinfo$/;"	m
 MANIFEST_TOOL	Makefile	/^MANIFEST_TOOL = :$/;"	m
 MANIFEST_TOOL	cvars/Makefile	/^MANIFEST_TOOL = :$/;"	m
 MANIFEST_TOOL	workloads/Makefile	/^MANIFEST_TOOL = :$/;"	m
 MATRIX_A	cvars/mtwist/mtwist.c	539;"	d	file:
 MATRIX_MULTIPLY	cvars/mtwist/mtwist.c	571;"	d	file:
-MAXREAP	fb_localfs.c	349;"	d	file:
+MAXREAP	fb_localfs.c	350;"	d	file:
 MAX_CMD_HIST	filebench.h	184;"	d
 MAX_LINE_LEN	filebench.h	183;"	d
 MAX_PARALLOC_THREADS	fileset.c	72;"	d	file:
@@ -1074,7 +1078,7 @@ PARAM_OFFSET	cvars/mtwist/rdtest.c	94;"	d	file:
 PATH_SEPARATOR	Makefile	/^PATH_SEPARATOR = :$/;"	m
 PATH_SEPARATOR	cvars/Makefile	/^PATH_SEPARATOR = :$/;"	m
 PATH_SEPARATOR	workloads/Makefile	/^PATH_SEPARATOR = :$/;"	m
-PERIOD_DEFAULT	parser_gram.c	5105;"	d	file:
+PERIOD_DEFAULT	parser_gram.c	5121;"	d	file:
 PF_TAB_SIZE	fb_random.h	55;"	d
 POST_INSTALL	Makefile	/^POST_INSTALL = :$/;"	m
 POST_INSTALL	cvars/Makefile	/^POST_INSTALL = :$/;"	m
@@ -1091,7 +1095,7 @@ PRE_INSTALL	workloads/Makefile	/^PRE_INSTALL = :$/;"	m
 PRE_UNINSTALL	Makefile	/^PRE_UNINSTALL = :$/;"	m
 PRE_UNINSTALL	cvars/Makefile	/^PRE_UNINSTALL = :$/;"	m
 PRE_UNINSTALL	workloads/Makefile	/^PRE_UNINSTALL = :$/;"	m
-PROGRAMS	Makefile	/^PROGRAMS = $(bin_PROGRAMS) $/;"	m
+PROGRAMS	Makefile	/^PROGRAMS = $(bin_PROGRAMS)$/;"	m
 RANDISTRS_H	cvars/mtwist/randistrs.h	2;"	d
 RAND_PARAM_GAMMA	fb_random.h	94;"	d
 RAND_PARAM_MEAN	fb_random.h	93;"	d
@@ -1178,7 +1182,7 @@ SUBDIRS	Makefile	/^SUBDIRS = workloads cvars$/;"	m
 THREADFLOW_DEFAULTMEM	threadflow.h	75;"	d
 THREADFLOW_MAXFD	threadflow.h	43;"	d
 THREADFLOW_USEISM	threadflow.h	44;"	d
-TIMED_RUNTIME_DEFAULT	parser_gram.c	5104;"	d	file:
+TIMED_RUNTIME_DEFAULT	parser_gram.c	5120;"	d	file:
 TIMESPEC_TO_HRTIME	flowop.c	134;"	d	file:
 TIME_WITH_SYS_TIME	config.h	404;"	d
 TIMING_LOOPS	cvars/mtwist/mtcctest.cc	63;"	d	file:
@@ -1190,7 +1194,7 @@ UINT16_MAX	parser_lex.c	80;"	d	file:
 UINT32_MAX	parser_lex.c	83;"	d	file:
 UINT8_MAX	parser_lex.c	77;"	d	file:
 UPPER_MASK	cvars/mtwist/mtwist.c	557;"	d	file:
-USAGE	parser_gram.c	3833;"	d	file:
+USAGE	parser_gram.c	3841;"	d	file:
 USAGE_LEN	cvars/cvar-erlang.h	33;"	d
 USAGE_LEN	cvars/cvar-exponential.h	30;"	d
 USAGE_LEN	cvars/cvar-gamma.c	19;"	d	file:
@@ -1244,87 +1248,87 @@ YFLAGS	Makefile	/^YFLAGS = $/;"	m
 YFLAGS	cvars/Makefile	/^YFLAGS = $/;"	m
 YFLAGS	workloads/Makefile	/^YFLAGS = $/;"	m
 YLWRAP	Makefile	/^YLWRAP = $(top_srcdir)\/ylwrap$/;"	m
-YYABORT	parser_gram.c	1111;"	d	file:
-YYACCEPT	parser_gram.c	1110;"	d	file:
-YYBACKUP	parser_gram.c	1117;"	d	file:
+YYABORT	parser_gram.c	1113;"	d	file:
+YYACCEPT	parser_gram.c	1112;"	d	file:
+YYBACKUP	parser_gram.c	1119;"	d	file:
 YYBISON	parser_gram.c	44;"	d	file:
 YYBISON_VERSION	parser_gram.c	47;"	d	file:
-YYCASE_	parser_gram.c	1458;"	d	file:
-YYCASE_	parser_gram.c	1468;"	d	file:
-YYCOPY	parser_gram.c	663;"	d	file:
-YYCOPY	parser_gram.c	666;"	d	file:
-YYCOPY_NEEDED	parser_gram.c	638;"	d	file:
+YYCASE_	parser_gram.c	1460;"	d	file:
+YYCASE_	parser_gram.c	1470;"	d	file:
+YYCOPY	parser_gram.c	665;"	d	file:
+YYCOPY	parser_gram.c	668;"	d	file:
+YYCOPY_NEEDED	parser_gram.c	640;"	d	file:
 YYDEBUG	parser_gram.c	181;"	d	file:
 YYDEBUG	parser_gram.h	37;"	d
-YYDPRINTF	parser_gram.c	1148;"	d	file:
-YYDPRINTF	parser_gram.c	1263;"	d	file:
-YYEMPTY	parser_gram.c	1107;"	d	file:
-YYEOF	parser_gram.c	1108;"	d	file:
-YYERRCODE	parser_gram.c	1136;"	d	file:
-YYERROR	parser_gram.c	1112;"	d	file:
+YYDPRINTF	parser_gram.c	1150;"	d	file:
+YYDPRINTF	parser_gram.c	1265;"	d	file:
+YYEMPTY	parser_gram.c	1109;"	d	file:
+YYEOF	parser_gram.c	1110;"	d	file:
+YYERRCODE	parser_gram.c	1138;"	d	file:
+YYERROR	parser_gram.c	1114;"	d	file:
 YYERROR_VERBOSE	parser_gram.c	169;"	d	file:
 YYERROR_VERBOSE	parser_gram.c	170;"	d	file:
 YYERROR_VERBOSE	parser_gram.c	172;"	d	file:
-YYFINAL	parser_gram.c	679;"	d	file:
-YYFPRINTF	parser_gram.c	1145;"	d	file:
-YYFREE	parser_gram.c	609;"	d	file:
-YYINITDEPTH	parser_gram.c	1272;"	d	file:
-YYLAST	parser_gram.c	681;"	d	file:
-YYMALLOC	parser_gram.c	603;"	d	file:
-YYMAXDEPTH	parser_gram.c	1283;"	d	file:
-YYMAXUTOK	parser_gram.c	695;"	d	file:
-YYNNTS	parser_gram.c	686;"	d	file:
-YYNRULES	parser_gram.c	688;"	d	file:
-YYNSTATES	parser_gram.c	690;"	d	file:
-YYNTOKENS	parser_gram.c	684;"	d	file:
-YYPACT_NINF	parser_gram.c	842;"	d	file:
-YYPOPSTACK	parser_gram.c	1583;"	d	file:
+YYFINAL	parser_gram.c	681;"	d	file:
+YYFPRINTF	parser_gram.c	1147;"	d	file:
+YYFREE	parser_gram.c	611;"	d	file:
+YYINITDEPTH	parser_gram.c	1274;"	d	file:
+YYLAST	parser_gram.c	683;"	d	file:
+YYMALLOC	parser_gram.c	605;"	d	file:
+YYMAXDEPTH	parser_gram.c	1285;"	d	file:
+YYMAXUTOK	parser_gram.c	697;"	d	file:
+YYNNTS	parser_gram.c	688;"	d	file:
+YYNRULES	parser_gram.c	690;"	d	file:
+YYNSTATES	parser_gram.c	692;"	d	file:
+YYNTOKENS	parser_gram.c	686;"	d	file:
+YYPACT_NINF	parser_gram.c	844;"	d	file:
+YYPOPSTACK	parser_gram.c	1585;"	d	file:
 YYPULL	parser_gram.c	59;"	d	file:
 YYPURE	parser_gram.c	53;"	d	file:
 YYPUSH	parser_gram.c	56;"	d	file:
-YYRECOVERING	parser_gram.c	1115;"	d	file:
-YYSIZE_MAXIMUM	parser_gram.c	482;"	d	file:
-YYSIZE_T	parser_gram.c	471;"	d	file:
+YYRECOVERING	parser_gram.c	1117;"	d	file:
+YYSIZE_MAXIMUM	parser_gram.c	484;"	d	file:
 YYSIZE_T	parser_gram.c	473;"	d	file:
-YYSIZE_T	parser_gram.c	476;"	d	file:
+YYSIZE_T	parser_gram.c	475;"	d	file:
 YYSIZE_T	parser_gram.c	478;"	d	file:
+YYSIZE_T	parser_gram.c	480;"	d	file:
 YYSKELETON_NAME	parser_gram.c	50;"	d	file:
-YYSTACK_ALLOC	parser_gram.c	557;"	d	file:
-YYSTACK_ALLOC	parser_gram.c	561;"	d	file:
-YYSTACK_ALLOC	parser_gram.c	566;"	d	file:
-YYSTACK_ALLOC	parser_gram.c	589;"	d	file:
-YYSTACK_ALLOC_MAXIMUM	parser_gram.c	586;"	d	file:
-YYSTACK_ALLOC_MAXIMUM	parser_gram.c	592;"	d	file:
-YYSTACK_BYTES	parser_gram.c	634;"	d	file:
-YYSTACK_FREE	parser_gram.c	580;"	d	file:
-YYSTACK_FREE	parser_gram.c	590;"	d	file:
-YYSTACK_GAP_MAXIMUM	parser_gram.c	630;"	d	file:
-YYSTACK_RELOCATE	parser_gram.c	645;"	d	file:
+YYSTACK_ALLOC	parser_gram.c	559;"	d	file:
+YYSTACK_ALLOC	parser_gram.c	563;"	d	file:
+YYSTACK_ALLOC	parser_gram.c	568;"	d	file:
+YYSTACK_ALLOC	parser_gram.c	591;"	d	file:
+YYSTACK_ALLOC_MAXIMUM	parser_gram.c	588;"	d	file:
+YYSTACK_ALLOC_MAXIMUM	parser_gram.c	594;"	d	file:
+YYSTACK_BYTES	parser_gram.c	636;"	d	file:
+YYSTACK_FREE	parser_gram.c	582;"	d	file:
+YYSTACK_FREE	parser_gram.c	592;"	d	file:
+YYSTACK_GAP_MAXIMUM	parser_gram.c	632;"	d	file:
+YYSTACK_RELOCATE	parser_gram.c	647;"	d	file:
 YYSTATE	parser_lex.c	132;"	d	file:
 YYSTYPE	parser_gram.c	/^typedef union YYSTYPE YYSTYPE;$/;"	t	typeref:union:YYSTYPE	file:
 YYSTYPE	parser_gram.c	/^union YYSTYPE$/;"	u	file:
 YYSTYPE	parser_gram.h	/^typedef union YYSTYPE YYSTYPE;$/;"	t	typeref:union:YYSTYPE
 YYSTYPE	parser_gram.h	/^union YYSTYPE$/;"	u
-YYSTYPE_IS_DECLARED	parser_gram.c	427;"	d	file:
-YYSTYPE_IS_DECLARED	parser_gram.h	283;"	d
-YYSTYPE_IS_TRIVIAL	parser_gram.c	426;"	d	file:
-YYSTYPE_IS_TRIVIAL	parser_gram.h	282;"	d
+YYSTYPE_IS_DECLARED	parser_gram.c	429;"	d	file:
+YYSTYPE_IS_DECLARED	parser_gram.h	285;"	d
+YYSTYPE_IS_TRIVIAL	parser_gram.c	428;"	d	file:
+YYSTYPE_IS_TRIVIAL	parser_gram.h	284;"	d
 YYTABLES_NAME	parser_lex.c	3021;"	d	file:
-YYTABLE_NINF	parser_gram.c	847;"	d	file:
-YYTERROR	parser_gram.c	1135;"	d	file:
+YYTABLE_NINF	parser_gram.c	849;"	d	file:
+YYTERROR	parser_gram.c	1137;"	d	file:
 YYTEXT_POINTER	config.h	417;"	d
 YYTOKENTYPE	parser_gram.c	189;"	d	file:
 YYTOKENTYPE	parser_gram.h	45;"	d
-YYTRANSLATE	parser_gram.c	697;"	d	file:
-YYUNDEFTOK	parser_gram.c	694;"	d	file:
-YYUSE	parser_gram.c	525;"	d	file:
+YYTRANSLATE	parser_gram.c	699;"	d	file:
+YYUNDEFTOK	parser_gram.c	696;"	d	file:
 YYUSE	parser_gram.c	527;"	d	file:
-YY_	parser_gram.c	488;"	d	file:
-YY_	parser_gram.c	492;"	d	file:
-YY_ATTRIBUTE	parser_gram.c	500;"	d	file:
+YYUSE	parser_gram.c	529;"	d	file:
+YY_	parser_gram.c	490;"	d	file:
+YY_	parser_gram.c	494;"	d	file:
 YY_ATTRIBUTE	parser_gram.c	502;"	d	file:
-YY_ATTRIBUTE_PURE	parser_gram.c	507;"	d	file:
-YY_ATTRIBUTE_UNUSED	parser_gram.c	511;"	d	file:
+YY_ATTRIBUTE	parser_gram.c	504;"	d	file:
+YY_ATTRIBUTE_PURE	parser_gram.c	509;"	d	file:
+YY_ATTRIBUTE_UNUSED	parser_gram.c	513;"	d	file:
 YY_AT_BOL	parser_lex.c	340;"	d	file:
 YY_BREAK	parser_lex.c	1300;"	d	file:
 YY_BUFFER_EOF_PENDING	parser_lex.c	256;"	d	file:
@@ -1348,17 +1352,17 @@ YY_FLEX_MAJOR_VERSION	parser_lex.c	9;"	d	file:
 YY_FLEX_MINOR_VERSION	parser_lex.c	10;"	d	file:
 YY_FLEX_SUBMINOR_VERSION	parser_lex.c	11;"	d	file:
 YY_FLUSH_BUFFER	parser_lex.c	308;"	d	file:
-YY_IGNORE_MAYBE_UNINITIALIZED_BEGIN	parser_gram.c	532;"	d	file:
-YY_IGNORE_MAYBE_UNINITIALIZED_BEGIN	parser_gram.c	542;"	d	file:
-YY_IGNORE_MAYBE_UNINITIALIZED_END	parser_gram.c	536;"	d	file:
-YY_IGNORE_MAYBE_UNINITIALIZED_END	parser_gram.c	543;"	d	file:
-YY_INITIAL_VALUE	parser_gram.c	539;"	d	file:
-YY_INITIAL_VALUE	parser_gram.c	546;"	d	file:
+YY_IGNORE_MAYBE_UNINITIALIZED_BEGIN	parser_gram.c	534;"	d	file:
+YY_IGNORE_MAYBE_UNINITIALIZED_BEGIN	parser_gram.c	544;"	d	file:
+YY_IGNORE_MAYBE_UNINITIALIZED_END	parser_gram.c	538;"	d	file:
+YY_IGNORE_MAYBE_UNINITIALIZED_END	parser_gram.c	545;"	d	file:
+YY_INITIAL_VALUE	parser_gram.c	541;"	d	file:
+YY_INITIAL_VALUE	parser_gram.c	548;"	d	file:
 YY_INPUT	parser_lex.c	1228;"	d	file:
 YY_INT_ALIGNED	parser_lex.c	4;"	d	file:
 YY_LESS_LINENO	parser_lex.c	177;"	d	file:
 YY_LINENO_REWIND_TO	parser_lex.c	178;"	d	file:
-YY_LOCATION_PRINT	parser_gram.c	1156;"	d	file:
+YY_LOCATION_PRINT	parser_gram.c	1158;"	d	file:
 YY_MORE_ADJ	parser_lex.c	1075;"	d	file:
 YY_NEW_FILE	parser_lex.c	138;"	d	file:
 YY_NULL	parser_lex.c	112;"	d	file:
@@ -1367,21 +1371,21 @@ YY_NULLPTR	parser_gram.c	163;"	d	file:
 YY_NUM_RULES	parser_lex.c	381;"	d	file:
 YY_READ_BUF_SIZE	parser_lex.c	1210;"	d	file:
 YY_READ_BUF_SIZE	parser_lex.c	1212;"	d	file:
-YY_REDUCE_PRINT	parser_gram.c	1253;"	d	file:
-YY_REDUCE_PRINT	parser_gram.c	1266;"	d	file:
+YY_REDUCE_PRINT	parser_gram.c	1255;"	d	file:
+YY_REDUCE_PRINT	parser_gram.c	1268;"	d	file:
 YY_RESTORE_YY_MORE_OFFSET	parser_lex.c	1076;"	d	file:
 YY_RULE_SETUP	parser_lex.c	1303;"	d	file:
 YY_SC_TO_UI	parser_lex.c	119;"	d	file:
 YY_SKIP_YYWRAP	parser_lex.c	345;"	d	file:
-YY_STACK_PRINT	parser_gram.c	1222;"	d	file:
-YY_STACK_PRINT	parser_gram.c	1265;"	d	file:
+YY_STACK_PRINT	parser_gram.c	1224;"	d	file:
+YY_STACK_PRINT	parser_gram.c	1267;"	d	file:
 YY_START	parser_lex.c	131;"	d	file:
 YY_START_STACK_INCR	parser_lex.c	1270;"	d	file:
 YY_STATE_BUF_SIZE	parser_lex.c	157;"	d	file:
 YY_STATE_EOF	parser_lex.c	135;"	d	file:
 YY_STRUCT_YY_BUFFER_STATE	parser_lex.c	197;"	d	file:
-YY_SYMBOL_PRINT	parser_gram.c	1160;"	d	file:
-YY_SYMBOL_PRINT	parser_gram.c	1264;"	d	file:
+YY_SYMBOL_PRINT	parser_gram.c	1162;"	d	file:
+YY_SYMBOL_PRINT	parser_gram.c	1266;"	d	file:
 YY_TYPEDEF_YY_BUFFER_STATE	parser_lex.c	160;"	d	file:
 YY_TYPEDEF_YY_SIZE_T	parser_lex.c	165;"	d	file:
 YY_USER_ACTION	parser_lex.c	1295;"	d	file:
@@ -1413,8 +1417,8 @@ _FB_STATS_H	stats.h	27;"	d
 _FB_THREADFLOW_H	threadflow.h	27;"	d
 _FB_UTILS_H	utils.h	27;"	d
 _MULTI_CLIENT_SYNC_H	multi_client_sync.h	27;"	d
-_Noreturn	parser_gram.c	517;"	d	file:
 _Noreturn	parser_gram.c	519;"	d	file:
+_Noreturn	parser_gram.c	521;"	d	file:
 _RAND_ERLANG_H	cvars/cvar-erlang.h	11;"	d
 _RAND_EXPONENTIAL_H	cvars/cvar-exponential.h	11;"	d
 _RAND_LOGNORMAL_H	cvars/cvar-lognormal.h	11;"	d
@@ -1430,18 +1434,18 @@ __STDC_LIMIT_MACROS	parser_lex.c	39;"	d	file:
 __V	filebench.h	57;"	d
 __V	filebench.h	63;"	d
 __var_to_string	vars.c	/^__var_to_string(var_t *var)$/;"	f	file:
-abs_builddir	Makefile	/^abs_builddir = \/home\/yjkwon\/project\/mlfs\/bench\/filebench$/;"	m
-abs_builddir	cvars/Makefile	/^abs_builddir = \/home\/yjkwon\/project\/mlfs\/bench\/filebench\/cvars$/;"	m
-abs_builddir	workloads/Makefile	/^abs_builddir = \/home\/yjkwon\/project\/mlfs\/bench\/filebench\/workloads$/;"	m
-abs_srcdir	Makefile	/^abs_srcdir = \/home\/yjkwon\/project\/mlfs\/bench\/filebench$/;"	m
-abs_srcdir	cvars/Makefile	/^abs_srcdir = \/home\/yjkwon\/project\/mlfs\/bench\/filebench\/cvars$/;"	m
-abs_srcdir	workloads/Makefile	/^abs_srcdir = \/home\/yjkwon\/project\/mlfs\/bench\/filebench\/workloads$/;"	m
-abs_top_builddir	Makefile	/^abs_top_builddir = \/home\/yjkwon\/project\/mlfs\/bench\/filebench$/;"	m
-abs_top_builddir	cvars/Makefile	/^abs_top_builddir = \/home\/yjkwon\/project\/mlfs\/bench\/filebench$/;"	m
-abs_top_builddir	workloads/Makefile	/^abs_top_builddir = \/home\/yjkwon\/project\/mlfs\/bench\/filebench$/;"	m
-abs_top_srcdir	Makefile	/^abs_top_srcdir = \/home\/yjkwon\/project\/mlfs\/bench\/filebench$/;"	m
-abs_top_srcdir	cvars/Makefile	/^abs_top_srcdir = \/home\/yjkwon\/project\/mlfs\/bench\/filebench$/;"	m
-abs_top_srcdir	workloads/Makefile	/^abs_top_srcdir = \/home\/yjkwon\/project\/mlfs\/bench\/filebench$/;"	m
+abs_builddir	Makefile	/^abs_builddir = \/home\/sekwon\/strata\/bench\/filebench$/;"	m
+abs_builddir	cvars/Makefile	/^abs_builddir = \/home\/sekwon\/strata\/bench\/filebench\/cvars$/;"	m
+abs_builddir	workloads/Makefile	/^abs_builddir = \/home\/sekwon\/strata\/bench\/filebench\/workloads$/;"	m
+abs_srcdir	Makefile	/^abs_srcdir = \/home\/sekwon\/strata\/bench\/filebench$/;"	m
+abs_srcdir	cvars/Makefile	/^abs_srcdir = \/home\/sekwon\/strata\/bench\/filebench\/cvars$/;"	m
+abs_srcdir	workloads/Makefile	/^abs_srcdir = \/home\/sekwon\/strata\/bench\/filebench\/workloads$/;"	m
+abs_top_builddir	Makefile	/^abs_top_builddir = \/home\/sekwon\/strata\/bench\/filebench$/;"	m
+abs_top_builddir	cvars/Makefile	/^abs_top_builddir = \/home\/sekwon\/strata\/bench\/filebench$/;"	m
+abs_top_builddir	workloads/Makefile	/^abs_top_builddir = \/home\/sekwon\/strata\/bench\/filebench$/;"	m
+abs_top_srcdir	Makefile	/^abs_top_srcdir = \/home\/sekwon\/strata\/bench\/filebench$/;"	m
+abs_top_srcdir	cvars/Makefile	/^abs_top_srcdir = \/home\/sekwon\/strata\/bench\/filebench$/;"	m
+abs_top_srcdir	workloads/Makefile	/^abs_top_srcdir = \/home\/sekwon\/strata\/bench\/filebench$/;"	m
 ac_ct_AR	Makefile	/^ac_ct_AR = ar$/;"	m
 ac_ct_AR	cvars/Makefile	/^ac_ct_AR = ar$/;"	m
 ac_ct_AR	workloads/Makefile	/^ac_ct_AR = ar$/;"	m
@@ -1481,7 +1485,7 @@ alloc_cvar_lib_info	fb_cvar.c	/^alloc_cvar_lib_info(const char *filename)$/;"	f	
 alloc_list	parser_gram.c	/^alloc_list()$/;"	f	file:
 alloc_lvar_attr	parser_gram.c	/^alloc_lvar_attr(var_t *var)$/;"	f	file:
 alloc_probtabent	parser_gram.c	/^alloc_probtabent(void)$/;"	f	file:
-alloca	parser_gram.c	564;"	d	file:
+alloca	parser_gram.c	566;"	d	file:
 am__CONFIG_DISTCLEAN_FILES	Makefile	/^am__CONFIG_DISTCLEAN_FILES = config.status config.cache config.log \\$/;"	m
 am__DIST_COMMON	Makefile	/^am__DIST_COMMON = $(srcdir)\/Makefile.in $(srcdir)\/config.h.in AUTHORS \\$/;"	m
 am__DIST_COMMON	cvars/Makefile	/^am__DIST_COMMON = $(srcdir)\/Makefile.in $(top_srcdir)\/depcomp$/;"	m
@@ -1680,7 +1684,7 @@ avd_type	vars.h	/^	avd_type_t avd_type;$/;"	m	struct:avd
 avd_type	vars.h	/^typedef enum avd_type {$/;"	g
 avd_type_t	vars.h	/^} avd_type_t;$/;"	t	typeref:enum:avd_type
 avd_update	vars.c	/^avd_update(avd_t *avdp, var_t *lvar_list)$/;"	f
-avd_val	vars.h	/^	} avd_val;$/;"	m	struct:avd	typeref:union:avd::__anon4
+avd_val	vars.h	/^	} avd_val;$/;"	m	struct:avd	typeref:union:avd::__anon1
 avd_var_alloc	vars.c	/^avd_var_alloc(char *varname)$/;"	f
 avl_add	fb_avl.c	/^avl_add(avl_tree_t *tree, void *new_node)$/;"	f
 avl_balance	fb_avl.h	/^	short avl_balance;		\/* balance value: -1, 0, +1 *\/$/;"	m	struct:avl_node
@@ -1718,16 +1722,16 @@ avl_update	fb_avl.c	/^avl_update(avl_tree_t *t, void *obj)$/;"	f
 avl_update_gt	fb_avl.c	/^avl_update_gt(avl_tree_t *t, void *obj)$/;"	f
 avl_update_lt	fb_avl.c	/^avl_update_lt(avl_tree_t *t, void *obj)$/;"	f
 avl_walk	fb_avl.c	/^avl_walk(avl_tree_t *tree, void	*oldnode, int left)$/;"	f
-b	parsertypes.h	/^	unsigned char b;$/;"	m	union:__anon3
+b	parsertypes.h	/^	unsigned char b;$/;"	m	union:__anon6
 bestseed	cvars/mtwist/mtwist.h	/^	void		bestseed()	\/\/ Choose best seed from random input$/;"	f	class:mt_prng
 bin_PROGRAMS	Makefile	/^bin_PROGRAMS = filebench$(EXEEXT) filebench.mlfs$/;"	m
 bindir	Makefile	/^bindir = ${exec_prefix}\/bin$/;"	m
 bindir	cvars/Makefile	/^bindir = ${exec_prefix}\/bin$/;"	m
 bindir	workloads/Makefile	/^bindir = ${exec_prefix}\/bin$/;"	m
-boolean	vars.h	/^		boolean_t	boolean;$/;"	m	union:var::__anon5
-boolean_t	filebench.h	/^typedef enum { B_FALSE, B_TRUE } boolean_t;$/;"	t	typeref:enum:__anon6
-boolptr	vars.h	/^		boolean_t	*boolptr;$/;"	m	union:avd::__anon4
-boolval	vars.h	/^		boolean_t	boolval;$/;"	m	union:avd::__anon4
+boolean	vars.h	/^		boolean_t	boolean;$/;"	m	union:var::__anon2
+boolean_t	filebench.h	/^typedef enum { B_FALSE, B_TRUE } boolean_t;$/;"	t	typeref:enum:__anon5
+boolptr	vars.h	/^		boolean_t	*boolptr;$/;"	m	union:avd::__anon1
+boolval	vars.h	/^		boolean_t	boolval;$/;"	m	union:avd::__anon1
 build	Makefile	/^build = x86_64-pc-linux-gnu$/;"	m
 build	cvars/Makefile	/^build = x86_64-pc-linux-gnu$/;"	m
 build	workloads/Makefile	/^build = x86_64-pc-linux-gnu$/;"	m
@@ -1786,7 +1790,7 @@ controlstats_zeroed	flowop.c	/^static int controlstats_zeroed = 0;$/;"	v	file:
 correct_values	cvars/mtwist/mtcctest.cc	/^static unsigned long	correct_values[] =$/;"	v	file:
 correct_values	cvars/mtwist/mttest.c	/^static uint32_t	correct_values[] =$/;"	v	file:
 create_command	parser_gram.y	/^create_command: FSC_CREATE FSE_FILES$/;"	l
-cutoff	cvars/mtwist/randistrs.h	/^    double*		cutoff;		\/* Table of probability cutoffs *\/$/;"	m	struct:__anon2
+cutoff	cvars/mtwist/randistrs.h	/^    double*		cutoff;		\/* Table of probability cutoffs *\/$/;"	m	struct:__anon4
 cvar	fb_cvar.h	/^typedef struct cvar {$/;"	s
 cvar_alloc	fb_cvar.c	/^cvar_alloc(void)$/;"	f
 cvar_alloc_handle	cvars/cvar-erlang.c	/^void *cvar_alloc_handle(const char *cvar_parameters,$/;"	f
@@ -1867,8 +1871,8 @@ cvar_version	cvars/cvar-triangular.c	/^const char *cvar_version()$/;"	f
 cvar_version	cvars/cvar-uniform.c	/^const char *cvar_version()$/;"	f
 cvar_version	cvars/cvar-weibull.c	/^const char *cvar_version()$/;"	f
 cvar_version	fb_cvar.h	/^	const char *(*cvar_version)(void);$/;"	m	struct:cvar_operations
-cvarptr	vars.h	/^		struct cvar	*cvarptr;$/;"	m	union:avd::__anon4	typeref:struct:avd::__anon4::cvar
-cvarptr	vars.h	/^		struct cvar 	*cvarptr;$/;"	m	union:var::__anon5	typeref:struct:var::__anon5::cvar
+cvarptr	vars.h	/^		struct cvar	*cvarptr;$/;"	m	union:avd::__anon1	typeref:struct:avd::__anon1::cvar
+cvarptr	vars.h	/^		struct cvar 	*cvarptr;$/;"	m	union:var::__anon2	typeref:struct:var::__anon2::cvar
 cvars_mode	parser_gram.c	/^cvars_mode(struct fbparams *fbparams)$/;"	f	file:
 cvartype	parser_gram.c	/^	char *cvartype;$/;"	m	struct:fbparams	file:
 datadir	Makefile	/^datadir = ${datarootdir}$/;"	m
@@ -1877,9 +1881,9 @@ datadir	workloads/Makefile	/^datadir = ${datarootdir}$/;"	m
 datarootdir	Makefile	/^datarootdir = ${prefix}\/share$/;"	m
 datarootdir	cvars/Makefile	/^datarootdir = ${prefix}\/share$/;"	m
 datarootdir	workloads/Makefile	/^datarootdir = ${prefix}\/share$/;"	m
-dbl	vars.h	/^		double		dbl;$/;"	m	union:var::__anon5
-dblptr	vars.h	/^		double		*dblptr;$/;"	m	union:avd::__anon4
-dblval	vars.h	/^		double		dblval;$/;"	m	union:avd::__anon4
+dbl	vars.h	/^		double		dbl;$/;"	m	union:var::__anon2
+dblptr	vars.h	/^		double		*dblptr;$/;"	m	union:avd::__anon1
+dblval	vars.h	/^		double		dblval;$/;"	m	union:avd::__anon1
 debug	filebench.h	/^int debug;$/;"	v
 debug_command	parser_gram.y	/^debug_command: FSC_DEBUG FSV_VAL_POSINT$/;"	l
 default_src	cvars/cvar-gamma.c	/^default_src(unsigned short *xi)$/;"	f	file:
@@ -2241,7 +2245,7 @@ fs_stime	stats.h	/^	hrtime_t	fs_stime;$/;"	m	struct:flowstats
 fs_thrd_wait_cv	fileset.h	/^	pthread_cond_t	fs_thrd_wait_cv; \/* per fileset file busy wait cv *\/$/;"	m	struct:fileset
 fs_total_lat	stats.h	/^	hrtime_t	fs_total_lat;$/;"	m	struct:flowstats
 fs_trust_tree	fileset.h	/^	avd_t		fs_trust_tree;	\/* Attr *\/$/;"	m	struct:fileset
-fs_u	parsertypes.h	/^} fs_u;$/;"	t	typeref:union:__anon3
+fs_u	parsertypes.h	/^} fs_u;$/;"	t	typeref:union:__anon6
 fs_wbytes	stats.h	/^	uint64_t	fs_wbytes;	\/* Number of bytes written *\/$/;"	m	struct:flowstats
 fs_wcount	stats.h	/^	uint64_t	fs_wcount;	\/* Number of write ops *\/$/;"	m	struct:flowstats
 fs_writeonly	fileset.h	/^	avd_t		fs_writeonly;	\/* Attr *\/$/;"	m	struct:fileset
@@ -2589,7 +2593,7 @@ hrtime_t	fbtime.h	/^typedef uint64_t hrtime_t;$/;"	t
 htmldir	Makefile	/^htmldir = ${docdir}$/;"	m
 htmldir	cvars/Makefile	/^htmldir = ${docdir}$/;"	m
 htmldir	workloads/Makefile	/^htmldir = ${docdir}$/;"	m
-i	parsertypes.h	/^	int64_t i;$/;"	m	union:__anon3
+i	parsertypes.h	/^	int64_t i;$/;"	m	union:__anon6
 includedir	Makefile	/^includedir = ${prefix}\/include$/;"	m
 includedir	cvars/Makefile	/^includedir = ${prefix}\/include$/;"	m
 includedir	workloads/Makefile	/^includedir = ${prefix}\/include$/;"	m
@@ -2606,10 +2610,10 @@ init_cvar_library_ops	fb_cvar.c	/^init_cvar_library_ops(cvar_library_t *c)$/;"	f
 init_fbparams	parser_gram.c	/^init_fbparams(struct fbparams *fbparams)$/;"	f	file:
 init_fs	mlfs_dummy.c	/^void init_fs(void) {$/;"	f
 init_fs_with_mem	mlfs_dummy.c	/^void init_fs_with_mem(unsigned long memsize) {$/;"	f
-initialized	cvars/mtwist/mtwist.h	/^    int			initialized;	\/* NZ if state was initialized *\/$/;"	m	struct:__anon1
-install_sh	Makefile	/^install_sh = ${SHELL} \/home\/yjkwon\/project\/mlfs\/bench\/filebench\/install-sh$/;"	m
-install_sh	cvars/Makefile	/^install_sh = ${SHELL} \/home\/yjkwon\/project\/mlfs\/bench\/filebench\/install-sh$/;"	m
-install_sh	workloads/Makefile	/^install_sh = ${SHELL} \/home\/yjkwon\/project\/mlfs\/bench\/filebench\/install-sh$/;"	m
+initialized	cvars/mtwist/mtwist.h	/^    int			initialized;	\/* NZ if state was initialized *\/$/;"	m	struct:__anon3
+install_sh	Makefile	/^install_sh = ${SHELL} \/home\/sekwon\/strata\/bench\/filebench\/install-sh$/;"	m
+install_sh	cvars/Makefile	/^install_sh = ${SHELL} \/home\/sekwon\/strata\/bench\/filebench\/install-sh$/;"	m
+install_sh	workloads/Makefile	/^install_sh = ${SHELL} \/home\/sekwon\/strata\/bench\/filebench\/install-sh$/;"	m
 install_sh_DATA	Makefile	/^install_sh_DATA = $(install_sh) -c -m 644$/;"	m
 install_sh_DATA	cvars/Makefile	/^install_sh_DATA = $(install_sh) -c -m 644$/;"	m
 install_sh_DATA	workloads/Makefile	/^install_sh_DATA = $(install_sh) -c -m 644$/;"	m
@@ -2621,9 +2625,9 @@ install_sh_SCRIPT	cvars/Makefile	/^install_sh_SCRIPT = $(install_sh) -c$/;"	m
 install_sh_SCRIPT	workloads/Makefile	/^install_sh_SCRIPT = $(install_sh) -c$/;"	m
 instance	parser_gram.c	/^	int instance;$/;"	m	struct:fbparams	file:
 int_empirical	cvars/mtwist/randistrs.h	/^	size_t	int_empirical(mt_prng& rng)$/;"	f	class:mt_empirical_distribution
-integer	vars.h	/^		uint64_t	integer;$/;"	m	union:var::__anon5
-intptr	vars.h	/^		uint64_t	*intptr;$/;"	m	union:avd::__anon4
-intval	vars.h	/^		uint64_t	intval;$/;"	m	union:avd::__anon4
+integer	vars.h	/^		uint64_t	integer;$/;"	m	union:var::__anon2
+intptr	vars.h	/^		uint64_t	*intptr;$/;"	m	union:avd::__anon1
+intval	vars.h	/^		uint64_t	intval;$/;"	m	union:avd::__anon1
 ioprio_get	ioprio.c	/^static inline int ioprio_get(int which, int who)$/;"	f	file:
 ioprio_set	ioprio.c	/^static inline int ioprio_set(int which, int who, int ioprio)$/;"	f	file:
 ipc_attach	ipc.c	/^ipc_attach(void *shmaddr, char *shmpath)$/;"	f
@@ -2757,6 +2761,7 @@ mkinstalldirs	cvars/Makefile	/^mkinstalldirs = $(install_sh) -d$/;"	m
 mkinstalldirs	workloads/Makefile	/^mkinstalldirs = $(install_sh) -d$/;"	m
 mlfs	filebench.h	/^int mlfs;$/;"	v
 mlfs	parser_gram.c	/^int mlfs = 0;$/;"	v
+mlfs_dev_id	procflow.h	/^	int		mlfs_dev_id;$/;"	m	struct:procflow
 mmap64	filebench.h	112;"	d
 mode	cvars/cvar-triangular.h	/^	double mode;$/;"	m	struct:handle
 mt_32_to_double	cvars/mtwist/mtwist.c	/^double			mt_32_to_double;$/;"	v
@@ -2786,7 +2791,7 @@ mt_seed	cvars/mtwist/mtwist.c	/^uint32_t mt_seed(void)$/;"	f
 mt_seed32	cvars/mtwist/mtwist.c	/^void mt_seed32($/;"	f
 mt_seed32new	cvars/mtwist/mtwist.c	/^void mt_seed32new($/;"	f
 mt_seedfull	cvars/mtwist/mtwist.c	/^void mt_seedfull($/;"	f
-mt_state	cvars/mtwist/mtwist.h	/^			mt_state;$/;"	t	typeref:struct:__anon1
+mt_state	cvars/mtwist/mtwist.h	/^			mt_state;$/;"	t	typeref:struct:__anon3
 mts_bestseed	cvars/mtwist/mtwist.c	/^void mts_bestseed($/;"	f
 mts_devseed	cvars/mtwist/mtwist.c	/^static uint32_t mts_devseed($/;"	f	file:
 mts_drand	cvars/mtwist/mtwist.c	/^double mts_drand($/;"	f
@@ -2806,7 +2811,7 @@ multisync_command	parser_gram.y	/^multisync_command: FSC_DOMULTISYNC multisync_o
 multisync_op	parser_gram.y	/^multisync_op: FSA_VALUE FSK_ASSIGN attr_value$/;"	l
 my_pid	procflow.c	/^pid_t my_pid;$/;"	v
 my_procflow	procflow.c	/^procflow_t *my_procflow = NULL;$/;"	v
-n	cvars/mtwist/randistrs.h	/^    size_t		n;		\/* Number of probabilities given *\/$/;"	m	struct:__anon2
+n	cvars/mtwist/randistrs.h	/^    size_t		n;		\/* Number of probabilities given *\/$/;"	m	struct:__anon4
 name	parser_gram.y	/^name: FSV_STRING;$/;"	l
 next	cvars/cvar_tokens.h	/^	struct cvar_token *next;$/;"	m	struct:cvar_token	typeref:struct:cvar_token::cvar_token
 next	fb_cvar.h	/^	struct cvar *next;$/;"	m	struct:cvar	typeref:struct:cvar::cvar
@@ -2950,8 +2955,8 @@ randdist_init	parser_gram.y	/^randdist_init:$/;"	l
 randdist_t	fb_random.h	/^} randdist_t;$/;"	t	typeref:struct:randdist
 randfunc	fb_random.h	/^typedef struct randfunc {$/;"	s
 randfunc_t	fb_random.h	/^} randfunc_t;$/;"	t	typeref:struct:randfunc
-randptr	vars.h	/^		struct randdist *randptr;$/;"	m	union:avd::__anon4	typeref:struct:avd::__anon4::randdist
-randptr	vars.h	/^		struct randdist *randptr;$/;"	m	union:var::__anon5	typeref:struct:var::__anon5::randdist
+randptr	vars.h	/^		struct randdist *randptr;$/;"	m	union:avd::__anon1	typeref:struct:avd::__anon1::randdist
+randptr	vars.h	/^		struct randdist *randptr;$/;"	m	union:var::__anon2	typeref:struct:var::__anon2::randdist
 randsrc_name	parser_gram.y	/^randsrc_name:$/;"	l
 randtype_name	parser_gram.y	/^randtype_name:$/;"	l
 randvar_attr_name	parser_gram.y	/^randvar_attr_name:$/;"	l
@@ -2962,7 +2967,7 @@ randvar_attr_typop	parser_gram.y	/^randvar_attr_typop: randtype_name$/;"	l
 rate	cvars/cvar-erlang.h	/^	double rate;$/;"	m	struct:handle
 rd_continuous_empirical	cvars/mtwist/randistrs.c	/^double rd_continuous_empirical($/;"	f
 rd_double_empirical	cvars/mtwist/randistrs.c	/^double rd_double_empirical($/;"	f
-rd_empirical_control	cvars/mtwist/randistrs.h	/^			rd_empirical_control;$/;"	t	typeref:struct:__anon2
+rd_empirical_control	cvars/mtwist/randistrs.h	/^			rd_empirical_control;$/;"	t	typeref:struct:__anon4
 rd_empirical_free	cvars/mtwist/randistrs.c	/^void rd_empirical_free($/;"	f
 rd_empirical_setup	cvars/mtwist/randistrs.c	/^rd_empirical_control* rd_empirical_setup($/;"	f
 rd_erlang	cvars/mtwist/randistrs.c	/^double rd_erlang($/;"	f
@@ -3001,7 +3006,7 @@ rds_normal	cvars/mtwist/randistrs.c	/^double rds_normal($/;"	f
 rds_triangular	cvars/mtwist/randistrs.c	/^double rds_triangular($/;"	f
 rds_uniform	cvars/mtwist/randistrs.c	/^double rds_uniform($/;"	f
 rds_weibull	cvars/mtwist/randistrs.c	/^double rds_weibull($/;"	f
-remap	cvars/mtwist/randistrs.h	/^    size_t*		remap;		\/* Table of where to remap to *\/$/;"	m	struct:__anon2
+remap	cvars/mtwist/randistrs.h	/^    size_t*		remap;		\/* Table of where to remap to *\/$/;"	m	struct:__anon4
 report_clock_timing	cvars/mtwist/mttest.c	/^static void report_clock_timing($/;"	f	file:
 report_timing	cvars/mtwist/mtcctest.cc	/^static void report_timing($/;"	f	file:
 report_timing	cvars/mtwist/mttest.c	/^static void report_timing($/;"	f	file:
@@ -3032,7 +3037,7 @@ runstatedir	Makefile	/^runstatedir = ${localstatedir}\/run$/;"	m
 runstatedir	cvars/Makefile	/^runstatedir = ${localstatedir}\/run$/;"	m
 runstatedir	workloads/Makefile	/^runstatedir = ${localstatedir}\/run$/;"	m
 rwlockattr	ipc.c	/^static pthread_rwlockattr_t *rwlockattr = NULL;$/;"	v	file:
-s	parsertypes.h	/^	char *s;$/;"	m	union:__anon3
+s	parsertypes.h	/^	char *s;$/;"	m	union:__anon6
 sample_count	flowop_library.c	/^	uint64_t sample_count;$/;"	m	struct:testrandvar_priv	file:
 sbindir	Makefile	/^sbindir = ${exec_prefix}\/sbin$/;"	m
 sbindir	cvars/Makefile	/^sbindir = ${exec_prefix}\/sbin$/;"	m
@@ -3134,7 +3139,7 @@ shm_var_loc_list	ipc.h	/^	var_t		*shm_var_loc_list;	\/* variables local to compo
 shmaddr	parser_gram.c	/^	char *shmaddr;$/;"	m	struct:fbparams	file:
 shmpath	ipc.c	/^char shmpath[128] = "\/tmp\/filebench-shm-XXXXXX";$/;"	v
 shmpath	parser_gram.c	/^	char *shmpath;$/;"	m	struct:fbparams	file:
-short	parser_gram.c	442;"	d	file:
+short	parser_gram.c	444;"	d	file:
 shutdown_fs	mlfs_dummy.c	/^void shutdown_fs(void) {$/;"	f
 sigignore	filebench.h	/^static inline int sigignore(int sig) {$/;"	f
 sigma	cvars/cvar-normal.h	/^	double sigma;$/;"	m	struct:handle
@@ -3152,14 +3157,14 @@ state	cvars/cvar-triangular.h	/^	mt_state state;$/;"	m	struct:handle
 state	cvars/cvar-uniform.h	/^	mt_state state;$/;"	m	struct:handle
 state	cvars/cvar-weibull.h	/^	mt_state state;$/;"	m	struct:handle
 state	cvars/mtwist/mtwist.h	/^	mt_state	state;		\/\/ Current state of the PRNG$/;"	m	class:mt_prng
-stateptr	cvars/mtwist/mtwist.h	/^    int			stateptr;	\/* Next state entry to be used *\/$/;"	m	struct:__anon1
-statevec	cvars/mtwist/mtwist.h	/^    uint32_t		statevec[MT_STATE_SIZE];$/;"	m	struct:__anon1
+stateptr	cvars/mtwist/mtwist.h	/^    int			stateptr;	\/* Next state entry to be used *\/$/;"	m	struct:__anon3
+statevec	cvars/mtwist/mtwist.h	/^    uint32_t		statevec[MT_STATE_SIZE];$/;"	m	struct:__anon3
 stats_add	stats.c	/^stats_add(struct flowstats *a, struct flowstats *b)$/;"	f	file:
 stats_clear	stats.c	/^stats_clear(void)$/;"	f
 stats_snap	stats.c	/^stats_snap(void)$/;"	f
-string	vars.h	/^		char		*string;$/;"	m	union:var::__anon5
-strptr	vars.h	/^		char		**strptr;$/;"	m	union:avd::__anon4
-strval	vars.h	/^		char		*strval;$/;"	m	union:avd::__anon4
+string	vars.h	/^		char		*string;$/;"	m	union:var::__anon2
+strptr	vars.h	/^		char		**strptr;$/;"	m	union:avd::__anon1
+strval	vars.h	/^		char		*strval;$/;"	m	union:avd::__anon1
 subdir	Makefile	/^subdir = .$/;"	m
 subdir	cvars/Makefile	/^subdir = cvars$/;"	m
 subdir	workloads/Makefile	/^subdir = workloads$/;"	m
@@ -3256,7 +3261,7 @@ usage_exit	parser_gram.c	/^usage_exit(int ret, const char *msg)$/;"	f	file:
 used	cvars/cvar_tokens.h	/^	int used; \/* Non-zero if the token is used *\/$/;"	m	struct:cvar_token
 val_sum	flowop_library.c	/^	double val_sum;$/;"	m	struct:testrandvar_priv	file:
 value	cvars/cvar_tokens.h	/^	char *value;$/;"	m	struct:cvar_token
-values	cvars/mtwist/randistrs.h	/^    double*		values;		\/* Float values to return *\/$/;"	m	struct:__anon2
+values	cvars/mtwist/randistrs.h	/^    double*		values;		\/* Float values to return *\/$/;"	m	struct:__anon4
 var	vars.h	/^typedef struct var {$/;"	s
 var_alloc	vars.c	/^var_alloc(char *name)$/;"	f	file:
 var_assign_boolean	vars.c	/^var_assign_boolean(char *name, boolean_t bool)$/;"	f
@@ -3286,8 +3291,8 @@ var_type	vars.h	/^	var_type_t	var_type;$/;"	m	struct:var
 var_type	vars.h	/^typedef enum var_type {$/;"	g
 var_type_t	vars.h	/^} var_type_t;$/;"	t	typeref:enum:var_type
 var_update_comp_lvars	vars.c	/^var_update_comp_lvars(var_t *newlvar, var_t *proto_comp_vars,$/;"	f
-var_val	vars.h	/^	} var_val;$/;"	m	struct:var	typeref:union:var::__anon5
-varptr	vars.h	/^		struct var	*varptr;	\/*$/;"	m	union:avd::__anon4	typeref:struct:avd::__anon4::var
+var_val	vars.h	/^	} var_val;$/;"	m	struct:var	typeref:union:var::__anon2
+varptr	vars.h	/^		struct var	*varptr;	\/*$/;"	m	union:avd::__anon1	typeref:struct:avd::__anon1::var
 version_command	parser_gram.y	/^version_command: FSC_VERSION$/;"	l
 wait_flag	flag.h	/^static inline void wait_flag(flag_t *flag)$/;"	f
 wait_on_digesting	mlfs_dummy.c	/^void wait_on_digesting(void)$/;"	f
@@ -3363,7 +3368,7 @@ yyalloc	parser_gram.c	/^union yyalloc$/;"	u	file:
 yyalloc	parser_lex.c	/^void *yyalloc (yy_size_t  size )$/;"	f
 yychar	parser_gram.c	/^int yychar;$/;"	v
 yycheck	parser_gram.c	/^static const yytype_uint16 yycheck[] =$/;"	v	file:
-yyclearin	parser_gram.c	1106;"	d	file:
+yyclearin	parser_gram.c	1108;"	d	file:
 yyconst	parser_lex.c	106;"	d	file:
 yyconst	parser_lex.c	108;"	d	file:
 yydebug	parser_gram.c	/^int yydebug;$/;"	v
@@ -3371,7 +3376,7 @@ yydefact	parser_gram.c	/^static const yytype_uint8 yydefact[] =$/;"	v	file:
 yydefgoto	parser_gram.c	/^static const yytype_int16 yydefgoto[] =$/;"	v	file:
 yydestruct	parser_gram.c	/^yydestruct (const char *yymsg, int yytype, YYSTYPE *yyvaluep)$/;"	f	file:
 yyensure_buffer_stack	parser_lex.c	/^static void yyensure_buffer_stack (void)$/;"	f	file:
-yyerrok	parser_gram.c	1105;"	d	file:
+yyerrok	parser_gram.c	1107;"	d	file:
 yyerror	parser_lex.c	/^yyerror(char *s)$/;"	f
 yyfree	parser_lex.c	/^void yyfree (void * ptr )$/;"	f
 yyget_debug	parser_lex.c	/^int yyget_debug  (void)$/;"	f
@@ -3393,7 +3398,7 @@ yymore	parser_lex.c	1074;"	d	file:
 yynerrs	parser_gram.c	/^int yynerrs;$/;"	v
 yyout	parser_lex.c	/^FILE *yyin = (FILE *) 0, *yyout = (FILE *) 0;$/;"	v
 yypact	parser_gram.c	/^static const yytype_int16 yypact[] =$/;"	v	file:
-yypact_value_is_default	parser_gram.c	844;"	d	file:
+yypact_value_is_default	parser_gram.c	846;"	d	file:
 yyparse	parser_gram.c	/^yyparse (void)$/;"	f
 yypgoto	parser_gram.c	/^static const yytype_int16 yypgoto[] =$/;"	v	file:
 yypop_buffer_state	parser_lex.c	/^void yypop_buffer_state (void)$/;"	f
@@ -3410,12 +3415,12 @@ yyset_out	parser_lex.c	/^void yyset_out (FILE *  _out_str )$/;"	f
 yyss_alloc	parser_gram.c	/^  yytype_int16 yyss_alloc;$/;"	m	union:yyalloc	file:
 yystos	parser_gram.c	/^static const yytype_uint8 yystos[] =$/;"	v	file:
 yystpcpy	parser_gram.c	/^yystpcpy (char *yydest, const char *yysrc)$/;"	f	file:
-yystpcpy	parser_gram.c	1307;"	d	file:
+yystpcpy	parser_gram.c	1309;"	d	file:
 yystrlen	parser_gram.c	/^yystrlen (const char *yystr)$/;"	f	file:
-yystrlen	parser_gram.c	1291;"	d	file:
+yystrlen	parser_gram.c	1293;"	d	file:
 yysyntax_error	parser_gram.c	/^yysyntax_error (YYSIZE_T *yymsg_alloc, char **yymsg,$/;"	f	file:
 yytable	parser_gram.c	/^static const yytype_uint16 yytable[] =$/;"	v	file:
-yytable_value_is_error	parser_gram.c	849;"	d	file:
+yytable_value_is_error	parser_gram.c	851;"	d	file:
 yyterminate	parser_lex.c	1265;"	d	file:
 yytext	parser_lex.c	/^char *yytext;$/;"	v
 yytext_ptr	parser_lex.c	359;"	d	file:

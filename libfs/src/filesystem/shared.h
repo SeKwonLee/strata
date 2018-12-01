@@ -8,9 +8,7 @@
 #include "ds/bitmap.h"
 #include "ds/khash.h"
 
-#ifdef MLFS_HASH
 #include "ds/level_hashing.h"
-#endif
 
 #ifdef __cplusplus
 extern "C" {

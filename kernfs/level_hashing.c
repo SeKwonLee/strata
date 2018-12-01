@@ -271,11 +271,12 @@ uint8_t level_delete(level_hash *level, uint8_t *key)
     uint64_t s_hash = S_HASH(level, key);
     uint64_t f_idx = F_IDX(f_hash, level->addr_capacity);
     uint64_t s_idx = S_IDX(s_hash, level->addr_capacity);
-    
+
     uint64_t i, j;
     for(i = 0; i < 2; i ++){
         for(j = 0; j < ASSOC_NUM; j ++){
-            if (level->buckets[i][f_idx].token[j] == 1&&strcmp(level->buckets[i][f_idx].slot[j].key, key) == 0)
+            if (level->buckets[i][f_idx].token[j] == 1
+                    &&strcmp(level->buckets[i][f_idx].slot[j].key, key) == 0)
             {
                 level->buckets[i][f_idx].token[j] = 0;
                 level->level_item_num[i] --;
@@ -283,7 +284,8 @@ uint8_t level_delete(level_hash *level, uint8_t *key)
             }
         }
         for(j = 0; j < ASSOC_NUM; j ++){
-            if (level->buckets[i][s_idx].token[j] == 1&&strcmp(level->buckets[i][s_idx].slot[j].key, key) == 0)
+            if (level->buckets[i][s_idx].token[j] == 1
+                    &&strcmp(level->buckets[i][s_idx].slot[j].key, key) == 0)
             {
                 level->buckets[i][s_idx].token[j] = 0;
                 level->level_item_num[i] --;
@@ -545,33 +547,6 @@ void level_destroy(level_hash *level)
     level = NULL;
 }
 
-static void mlfs_buffer_sync(uint8_t to_dev, uint8_t *data,
-        mlfs_fsblk_t blk_num, uint32_t size, uint32_t offset) {
-    int ret;
-    struct buffer_head *bh_data;
-    mlfs_lblk_t nr_blocks = 0;
-
-	if (size < g_block_size_bytes)
-		nr_blocks = 1;
-	else {
-		nr_blocks = (size >> g_block_size_shift);
-		if (size % g_block_size_bytes != 0) 
-			nr_blocks++;
-	}
-
-    // update data block
-    bh_data = bh_get_sync_IO(to_dev, blk_num, BH_NO_DATA_ALLOC);
-
-    bh_data->b_data = data;
-    bh_data->b_size = nr_blocks * g_block_size_bytes;
-    bh_data->b_offset = offset;
-
-    ret = mlfs_write(bh_data);
-    mlfs_assert(!ret);
-    clear_buffer_uptodate(bh_data);
-    bh_release(bh_data);
-}
-
 extern level_hash *mlfs_level_init(uint64_t level_size,
         handle_t *handle, struct inode *inode, unsigned int flags)
 {
@@ -590,10 +565,10 @@ extern level_hash *mlfs_level_init(uint64_t level_size,
     newblock = mlfs_new_data_blocks(handle, inode, goal, flags, &allocated, &err);
     level_hash *level = g_bdev[handle->dev]->map_base_addr + (newblock << g_block_size_shift);
     inode->l1.addrs[5] = newblock;
-    if (!level)
+    if (newblock == 0)
     {
         printf("The level hash table initialization fails:1\n");
-        exit(1);
+        return NULL;
     }
 
     level->level_size = level_size;
@@ -633,19 +608,19 @@ extern level_hash *mlfs_level_init(uint64_t level_size,
     level->level_item_num[1] = 0;
     level->level_resize = 0;
     
-    if (!level->buckets[0] || !level->buckets[1])
+    if (inode->l1.addrs[6] == 0 || inode->l1.addrs[7] == 0)
     {
         printf("The level hash table initialization fails:2\n");
-        exit(1);
+        return NULL;
     }
 
     pmem_persist(g_bdev[handle->dev]->map_base_addr + 
             ((inode->l1.addrs[5]) << g_block_size_shift), sizeof(level_hash));
 
 //    printf("Level hashing: ASSOC_NUM %d, KEY_LEN %d, VALUE_LEN %d \n", ASSOC_NUM, KEY_LEN, VALUE_LEN);
-//    printf("The number of top-level buckets: %d\n", level->addr_capacity);
-//    printf("The number of all buckets: %d\n", level->total_capacity);
-//    printf("The number of all entries: %d\n", level->total_capacity*ASSOC_NUM);
+//    printf("The number of top-level buckets: %lu\n", level->addr_capacity);
+//    printf("The number of all buckets: %lu\n", level->total_capacity);
+//    printf("The number of all entries: %lu\n", level->total_capacity*ASSOC_NUM);
 //    printf("The level hash table initialization succeeds!\n");
 
     return level;
@@ -675,10 +650,10 @@ extern void mlfs_level_resize(level_hash *level, handle_t *handle,
 	}
 
     newblock = mlfs_new_data_blocks(handle, inode, goal, flags, &allocated, &err);
-    level_bucket *newBuckets = g_bdev[g_root_dev]->map_base_addr + (newblock << g_block_size_shift);
-    memset(newBuckets, 0, level->addr_capacity * pow(2, level->level_size + 1));
+    level_bucket *newBuckets = g_bdev[handle->dev]->map_base_addr + (newblock << g_block_size_shift);
+    pmem_memset_persist(newBuckets, 0, level->addr_capacity * pow(2, level->level_size + 1));
 
-    if (!newBuckets) {
+    if (newblock == 0) {
         printf("The resizing fails: 2\n");
         exit(1);
     }
@@ -733,9 +708,9 @@ extern void mlfs_level_resize(level_hash *level, handle_t *handle,
                 }
                 if(!insertSuccess){
                     printf("The resizing fails: 3\n");
-                    exit(1);                    
+                    exit(1);
                 }
-                
+
                 level->buckets[1][old_idx].token[i] == 0;
                 pmem_persist(&level->buckets[1][old_idx].token[i], sizeof(uint8_t));
             }
@@ -755,8 +730,7 @@ extern void mlfs_level_resize(level_hash *level, handle_t *handle,
 			allocated++;
 	}
 
-    mlfs_free_blocks(handle, inode, NULL,
-        inode->l1.addrs[7], allocated, 0);
+    mlfs_free_blocks(handle, inode, NULL, inode->l1.addrs[7], allocated, 0);
 
     level->buckets[1] = level->buckets[0];
     level->buckets[0] = newBuckets;
@@ -768,5 +742,82 @@ extern void mlfs_level_resize(level_hash *level, handle_t *handle,
     level->level_item_num[1] = level->level_item_num[0];
     level->level_item_num[0] = new_level_item_num;
     level->level_resize ++;
+
+//    printf("size of all buckets: %lu\n", level->total_capacity * sizeof(level_bucket));
+//    printf("number of all buckets: %lu\n", level->total_capacity);
 }
 
+extern uint8_t mlfs_level_delete(level_hash *level, uint8_t *key, 
+        handle_t *handle, struct inode *inode)
+{
+    uint64_t f_hash = F_HASH(level, key);
+    uint64_t s_hash = S_HASH(level, key);
+    uint64_t f_idx = F_IDX(f_hash, level->addr_capacity);
+    uint64_t s_idx = S_IDX(s_hash, level->addr_capacity);
+
+    uint32_t int_key = atoi(key);
+
+    uint64_t i, j;
+    for(i = 0; i < 2; i ++){
+        for(j = 0; j < ASSOC_NUM; j ++){
+            if (level->buckets[i][f_idx].token[j] == 1
+                    &&level->buckets[i][f_idx].slot[j].key == int_key)
+            {
+                level->buckets[i][f_idx].token[j] = 0;
+                pmem_persist(&level->buckets[i][f_idx].token[j], sizeof(uint8_t));
+                mlfs_free_blocks(handle, inode, NULL, 
+                        level->buckets[i][f_idx].slot[j].value, 1, 0);
+                level->level_item_num[i]--;
+                return 0;
+            }
+        }
+        for(j = 0; j < ASSOC_NUM; j ++){
+            if (level->buckets[i][s_idx].token[j] == 1
+                    &&level->buckets[i][s_idx].slot[j].key == int_key)
+            {
+                level->buckets[i][s_idx].token[j] = 0;
+                pmem_persist(&level->buckets[i][s_idx].token[j], sizeof(uint8_t));
+                mlfs_free_blocks(handle, inode, NULL, 
+                        level->buckets[i][s_idx].slot[j].value, 1, 0);
+                level->level_item_num[i]--;
+                return 0;
+            }
+        }
+        f_idx = F_IDX(f_hash, level->addr_capacity / 2);
+        s_idx = S_IDX(s_hash, level->addr_capacity / 2);
+    }
+
+    return 1;
+}
+
+extern void mlfs_level_destroy(level_hash *level, handle_t *handle, struct inode *inode)
+{
+    mlfs_lblk_t allocated = 0;
+    unsigned long new_bucket_size;
+
+    new_bucket_size = ((uint64_t)pow(2, level->level_size)) * sizeof(level_bucket);
+	if (new_bucket_size < g_block_size_bytes)
+		allocated = 1;
+	else {
+		allocated = (new_bucket_size >> g_block_size_shift);
+		if ((new_bucket_size) % g_block_size_bytes != 0)
+			allocated++;
+	}
+    mlfs_free_blocks(handle, inode, NULL, inode->l1.addrs[6], allocated, 0);
+    inode->l1.addrs[6] = 0;
+
+    new_bucket_size = ((uint64_t)pow(2, level->level_size-1)) * sizeof(level_bucket);
+	if (new_bucket_size < g_block_size_bytes)
+		allocated = 1;
+	else {
+		allocated = (new_bucket_size >> g_block_size_shift);
+		if ((new_bucket_size) % g_block_size_bytes != 0)
+			allocated++;
+	}
+    mlfs_free_blocks(handle, inode, NULL, inode->l1.addrs[7], allocated, 0);
+    inode->l1.addrs[7] = 0;
+
+    mlfs_free_blocks(handle, inode, NULL, inode->l1.addrs[5], 1, 0);
+    inode->l1.addrs[5] = 0;
+    level = NULL;
+}

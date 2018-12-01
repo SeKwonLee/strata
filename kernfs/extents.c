@@ -17,6 +17,7 @@ level_hash *mlfs_level_init(uint64_t level_size,
 uint64_t level_dynamic_query(level_hash *level, uint8_t *key);
 uint8_t* level_static_query(level_hash *level, uint8_t *key);
 uint8_t level_insert(level_hash *level, uint8_t *key, uint8_t *value);
+uint8_t mlfs_level_delete(level_hash *level, uint8_t *key, handle_t *handle, struct inode *inode);
 #endif
 
 /*
@@ -390,10 +391,11 @@ int mlfs_ext_tree_init(handle_t *handle, struct inode *inode)
 	eh->eh_entries = 0;
 	eh->eh_magic = cpu_to_le16(MLFS_EXT_MAGIC);
 	eh->eh_max = cpu_to_le16(mlfs_ext_space_root(inode, 0));
-
-    level_hash *level = mlfs_level_init(16, handle,
+#ifdef MLFS_HASH
+    level_hash *level = mlfs_level_init(4, handle,
             inode, MLFS_GET_BLOCKS_CREATE);
     assert(level!=NULL);
+#endif
     mlfs_mark_inode_dirty(inode);
 	return 0;
 }
@@ -2454,6 +2456,25 @@ static int inline mlfs_ext_more_to_rm(struct mlfs_ext_path *path)
 int mlfs_ext_remove_space(handle_t *handle, struct inode *inode, 
 		mlfs_lblk_t start, mlfs_lblk_t end)
 {
+#ifdef MLFS_HASH
+	struct super_block *sb = get_inode_sb(handle->dev, inode);
+	int i = 0, err = 0;
+    int key[16];
+
+    if (inode->l1.addrs[5] == 0)
+        return err;
+
+    level_hash *level = g_bdev[handle->dev]->map_base_addr + (inode->l1.addrs[5] << g_block_size_shift);
+    level->buckets[0] = g_bdev[handle->dev]->map_base_addr + (inode->l1.addrs[6] << g_block_size_shift);
+    level->buckets[1] = g_bdev[handle->dev]->map_base_addr + (inode->l1.addrs[7] << g_block_size_shift);
+
+    for (i = start; i <= end; i++) {
+        snprintf(key, 16, "%lu", i);
+        err = mlfs_level_delete(level, key, handle, inode);
+        assert(err==0);
+    }
+
+#else
 	struct super_block *sb = get_inode_sb(handle->dev, inode);
 	int depth = ext_depth(handle, inode);
 	struct mlfs_ext_path *path;
@@ -2650,7 +2671,7 @@ out:
 		mlfs_ext_drop_refs(path);
 		mlfs_free(path);
 	}
-
+#endif
 	return err;
 }
 
@@ -2760,22 +2781,6 @@ int mlfs_ext_get_blocks(handle_t *handle, struct inode *inode,
     // flag == MLFS_GET_BLOCKS_CREATE (0x0001)
 #ifdef MLFS_HASH
     if (handle->dev == g_root_dev) {
-#if 0
-        if (inode->level == NULL) {
-            assert(inode->level != NULL);
-            inode->level = mlfs_level_init(16, handle,
-                    inode, flags);
-            assert(inode->level != NULL);
-        }
-
-        if (inode->level == NULL) {
-            struct dinode dip;
-            read_ondisk_inode(g_root_dev, inode->inum, &dip);
-            mlfs_assert(dip.itype != 0);
-            sync_inode_from_dinode(inode, &dip);
-            mlfs_assert(dip.dev != 0);
-        }
-#endif
         assert(inode->l1.addrs[5] != 0);
 
         uint8_t key[16];
@@ -2783,6 +2788,7 @@ int mlfs_ext_get_blocks(handle_t *handle, struct inode *inode,
         level_hash *level = g_bdev[handle->dev]->map_base_addr + (inode->l1.addrs[5] << g_block_size_shift);
         level->buckets[0] = g_bdev[handle->dev]->map_base_addr + (inode->l1.addrs[6] << g_block_size_shift);
         level->buckets[1] = g_bdev[handle->dev]->map_base_addr + (inode->l1.addrs[7] << g_block_size_shift);
+
         newblock = level_dynamic_query(level, key);
 
         if (flags == MLFS_GET_BLOCKS_CREATE && newblock == 0) {

@@ -77,7 +77,7 @@ flowop.o: flowop.c /usr/include/stdc-predef.h config.h \
  fileset.h threadflow.h flowop.h fb_random.h ipc.h ioprio.h \
  /usr/include/x86_64-linux-gnu/asm/unistd.h \
  /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
- /home/yjkwon/strata/libfs/build//../src/mlfs/mlfs_interface.h
+ /home/sekwon/strata_sekwon/libfs/build//../src/mlfs/mlfs_interface.h
 
 /usr/include/stdc-predef.h:
 
@@ -311,4 +311,4 @@ ioprio.h:
 
 /usr/include/x86_64-linux-gnu/asm/unistd_64.h:
 
-/home/yjkwon/strata/libfs/build//../src/mlfs/mlfs_interface.h:
+/home/sekwon/strata_sekwon/libfs/build//../src/mlfs/mlfs_interface.h:

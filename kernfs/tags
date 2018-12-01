@@ -62,13 +62,13 @@ BIT_WORD	ds/bitops.h	15;"	d
 BLOCKS_PER_LRU_ENTRY	migrate.h	12;"	d
 BLOCKS_TO_LRU_ENTRIES	migrate.h	13;"	d
 BLOCK_SIZE	storage/spdk/common.h	19;"	d
-BLOOM_HEAD	shared.h	319;"	d
-BMAP_GET	shared.h	193;"	d
-BMAP_GET_NO_ALLOC	shared.h	192;"	d
-BMAP_SET	shared.h	194;"	d
+BLOOM_HEAD	shared.h	317;"	d
+BMAP_GET	shared.h	191;"	d
+BMAP_GET_NO_ALLOC	shared.h	190;"	d
+BMAP_SET	shared.h	192;"	d
 BPB	fs.h	329;"	d
 BUFFER_FNS	io/buffer_head.h	100;"	d
-BUG_ON	extents.c	47;"	d	file:
+BUG_ON	extents.c	48;"	d	file:
 BUILD_DIR	Makefile	/^BUILD_DIR := $(addprefix build\/, $(SUBDIR))$/;"	m
 BYTE	ds/xxhash.c	/^    typedef uint8_t  BYTE;$/;"	t	file:
 BYTE	ds/xxhash.c	/^    typedef unsigned char      BYTE;$/;"	t	file:
@@ -77,12 +77,12 @@ CC	tests/Makefile	/^CC=gcc$/;"	m
 CHECK_BINSEARCH__	extents.h	29;"	d
 COMPILER_BARRIER	global/defs.h	126;"	d
 CONDVAR_NAME_SIZE	concurrency/synchronization.h	45;"	d
-CONFIG_EXTENT_TEST	extents.c	34;"	d	file:
+CONFIG_EXTENT_TEST	extents.c	35;"	d	file:
 CONFIG_X86_64	ds/bitops_arch.h	19;"	d
 CONST_MASK	ds/bitops_arch.h	144;"	d
 CONST_MASK_ADDR	ds/bitops_arch.h	140;"	d
 CONST_MASK_ADDR	ds/bitops_arch.h	142;"	d
-CREATE	fs.c	29;"	d	file:
+CREATE	fs.c	33;"	d	file:
 CUCKOO_DIR	Makefile	/^CUCKOO_DIR := $(abspath $(LIBFS_DIR)\/lib\/libcuckoo)$/;"	m
 CUCKOO_DIR	tests/Makefile	/^CUCKOO_DIR := $(abspath $(LIBFS_DIR)\/lib\/cuckoofilter)$/;"	m
 CUCKOO_FILTER_DIR	Makefile	/^CUCKOO_FILTER_DIR := $(abspath $(LIBFS_DIR)\/lib\/cuckoofilter)$/;"	m
@@ -102,7 +102,7 @@ DECLTYPE	ds/uthash.h	54;"	d
 DECLTYPE	ds/uthash.h	56;"	d
 DECLTYPE_ASSIGN	ds/uthash.h	60;"	d
 DECLTYPE_ASSIGN	ds/uthash.h	66;"	d
-DIRBITMAP_SIZE	shared.h	196;"	d
+DIRBITMAP_SIZE	shared.h	194;"	d
 DIRSIZ	global/global.h	54;"	d
 DISABLE_BACKTRACE	mlfs/kerncompat.h	39;"	d
 DIV_ROUND_CLOSEST	mlfs/kerncompat.h	343;"	d
@@ -110,8 +110,8 @@ DIV_ROUND_UP	mlfs/kerncompat.h	314;"	d
 DIV_ROUND_UP_SECTOR_T	mlfs/kerncompat.h	319;"	d
 DIV_ROUND_UP_SECTOR_T	mlfs/kerncompat.h	321;"	d
 DIV_ROUND_UP_ULL	mlfs/kerncompat.h	315;"	d
-DI_INVALID	shared.h	184;"	d
-DI_VALID	shared.h	185;"	d
+DI_INVALID	shared.h	182;"	d
+DI_VALID	shared.h	183;"	d
 DPDK_DIR	Makefile	/^DPDK_DIR := $(abspath $(LIBFS_DIR)\/lib\/dpdk-16.07\/x86_64-native-linuxapp-gcc)$/;"	m
 DPDK_DIR	tests/Makefile	/^DPDK_DIR := $(abspath $(LIBFS_DIR)\/lib\/dpdk-16.07\/x86_64-native-linuxapp-gcc)$/;"	m
 DRAM_BANDWIDTH_MB	storage/storage_dax.c	/^uint32_t DRAM_BANDWIDTH_MB = 63000;$/;"	v
@@ -132,7 +132,7 @@ EXT_INDEX_SIZE	extents.h	221;"	d
 EXT_INIT_MAX_LEN	extents.h	217;"	d
 EXT_LAST_EXTENT	extents.h	231;"	d
 EXT_LAST_INDEX	extents.h	233;"	d
-EXT_MAX_BLOCKS	extents.c	310;"	d	file:
+EXT_MAX_BLOCKS	extents.c	311;"	d	file:
 EXT_MAX_EXTENT	extents.h	235;"	d
 EXT_MAX_INDEX	extents.h	237;"	d
 EXT_UNWRITTEN_MAX_LEN	extents.h	218;"	d
@@ -250,11 +250,11 @@ IS_ALIGNED	global/util.h	49;"	d
 IS_ERR	mlfs/kerncompat.h	/^static inline long IS_ERR(const void *ptr)$/;"	f
 IS_ERR_VALUE	mlfs/kerncompat.h	441;"	d
 IS_IMMEDIATE	ds/bitops_arch.h	138;"	d
-I_BUSY	shared.h	177;"	d
-I_DELETING	shared.h	180;"	d
-I_DIRTY	shared.h	179;"	d
-I_RESYNC	shared.h	181;"	d
-I_VALID	shared.h	178;"	d
+I_BUSY	shared.h	175;"	d
+I_DELETING	shared.h	178;"	d
+I_DIRTY	shared.h	177;"	d
+I_RESYNC	shared.h	179;"	d
+I_VALID	shared.h	176;"	d
 JEMALLOC_DIR	Makefile	/^JEMALLOC_DIR := $(abspath $(LIBFS_DIR)\/lib\/jemalloc-4.5.0)$/;"	m
 KEY_LEN	ds/level_hashing.h	11;"	d
 KHASH_DECLARE	ds/khash.h	357;"	d
@@ -269,7 +269,7 @@ KHASH_SET_INIT_STR	ds/khash.h	616;"	d
 LD_FLAGS	Makefile	/^LD_FLAGS = -lpthread -lm -L$(NVML_DIR)\/nondebug\/ -lpmem -lrt$/;"	m
 LD_FLAGS	tests/Makefile	/^LD_FLAGS = -lpthread -lm -L$(NVML_DIR)\/nondebug\/ -lpmem -lrt$/;"	m
 LD_FLAGS_CXX	tests/Makefile	/^LD_FLAGS_CXX = -lpthread -L$(NVML_DIR)\/nondebug\/ -lpmem -lrt$/;"	m
-LH_COMMIT_MAGIC	shared.h	94;"	d
+LH_COMMIT_MAGIC	shared.h	92;"	d
 LIBFS_DIR	Makefile	/^LIBFS_DIR := $(CURDIR)\/..\/libfs$/;"	m
 LIBFS_DIR	tests/Makefile	/^LIBFS_DIR := $(CURDIR)\/..\/..\/libfs$/;"	m
 LIBSPDK_DIR	Makefile	/^LIBSPDK_DIR := $(abspath $(LIBFS_DIR)\/src\/storage\/spdk\/)$/;"	m
@@ -295,42 +295,42 @@ LOCK_PREFIX	ds/bitops_arch.h	25;"	d
 LOG_LEVEL	global/ncx_core.h	22;"	d
 LOG_PATH	global/defs.h	14;"	d
 LRU_ENTRY_SIZE	slru.h	23;"	d
-LRU_HEADS	shared.h	318;"	d
+LRU_HEADS	shared.h	316;"	d
 LV_ALERT	global/ncx_log.h	8;"	d
 LV_DEBUG	global/ncx_log.h	5;"	d
 LV_ERROR	global/ncx_log.h	7;"	d
 LV_INFO	global/ncx_log.h	6;"	d
 LV_TRACE	global/ncx_log.h	4;"	d
-L_TYPE_DIR_ADD	shared.h	86;"	d
-L_TYPE_DIR_DEL	shared.h	88;"	d
-L_TYPE_DIR_RENAME	shared.h	87;"	d
-L_TYPE_FILE	shared.h	91;"	d
-L_TYPE_INODE_CREATE	shared.h	89;"	d
-L_TYPE_INODE_UPDATE	shared.h	90;"	d
-L_TYPE_UNLINK	shared.h	92;"	d
+L_TYPE_DIR_ADD	shared.h	84;"	d
+L_TYPE_DIR_DEL	shared.h	86;"	d
+L_TYPE_DIR_RENAME	shared.h	85;"	d
+L_TYPE_FILE	shared.h	89;"	d
+L_TYPE_INODE_CREATE	shared.h	87;"	d
+L_TYPE_INODE_UPDATE	shared.h	88;"	d
+L_TYPE_UNLINK	shared.h	90;"	d
 MAXFILE	global/global.h	47;"	d
 MAX_BACKTRACE	mlfs/kerncompat.h	57;"	d
-MAX_CMD_BUF	shared.h	310;"	d
+MAX_CMD_BUF	shared.h	308;"	d
 MAX_ERRNO	mlfs/kerncompat.h	440;"	d
-MAX_EVENTS	fs.c	1785;"	d	file:
+MAX_EVENTS	fs.c	1836;"	d	file:
 MAX_FIFO_BUF	tests/fifo_cli.c	7;"	d	file:
 MAX_PATH	global/global.h	51;"	d
-MAX_SOCK_BUF	shared.h	309;"	d
+MAX_SOCK_BUF	shared.h	307;"	d
 MEM_MODULE	ds/xxhash.c	527;"	d	file:
 MIN_MIGRATE_ENTRY	migrate.h	11;"	d
 MLFS_DEP_OBJS	storage/spdk/Makefile	/^MLFS_DEP_OBJS = $(MLFS_DIR)\/..\/build\/global\/util.o$/;"	m
 MLFS_DIR	storage/spdk/Makefile	/^MLFS_DIR := $(abspath $(CURDIR)\/..\/..\/)$/;"	m
-MLFS_ERROR_INODE	extents.c	39;"	d	file:
+MLFS_ERROR_INODE	extents.c	40;"	d	file:
 MLFS_EXTENT_TAIL_OFFSET	extents.h	99;"	d
-MLFS_EXT_DATA_VALID1	extents.c	31;"	d	file:
-MLFS_EXT_DATA_VALID2	extents.c	32;"	d	file:
+MLFS_EXT_DATA_VALID1	extents.c	32;"	d	file:
+MLFS_EXT_DATA_VALID2	extents.c	33;"	d	file:
 MLFS_EXT_MAGIC	extents.h	97;"	d
-MLFS_EXT_MARK_UNWRIT1	extents.c	28;"	d	file:
-MLFS_EXT_MARK_UNWRIT2	extents.c	29;"	d	file:
-MLFS_EXT_MAY_ZEROOUT	extents.c	25;"	d	file:
+MLFS_EXT_MARK_UNWRIT1	extents.c	29;"	d	file:
+MLFS_EXT_MARK_UNWRIT2	extents.c	30;"	d	file:
+MLFS_EXT_MAY_ZEROOUT	extents.c	26;"	d	file:
 MLFS_EX_FORCE_CACHE	extents.h	173;"	d
 MLFS_EX_NOCACHE	extents.h	172;"	d
-MLFS_FLAGS	Makefile	/^MLFS_FLAGS = -DKERNFS -DMLFS_HASH -DMLFS_INFO$/;"	m
+MLFS_FLAGS	Makefile	/^MLFS_FLAGS = -DKERNFS -DMLFS_HASH #-DMLFS_INFO$/;"	m
 MLFS_FREE_BLOCKS_FORGET	extents.h	179;"	d
 MLFS_FREE_BLOCKS_METADATA	extents.h	178;"	d
 MLFS_FREE_BLOCKS_NOFREE_FIRST_CLUSTER	extents.h	182;"	d
@@ -392,16 +392,16 @@ NELEM	extents.h	372;"	d
 NELEM	global/defs.h	136;"	d
 NINDIRECT	global/global.h	41;"	d
 NINODES	global/global.h	36;"	d
-NOCREATE	fs.c	28;"	d	file:
+NOCREATE	fs.c	32;"	d	file:
 NO_DECLTYPE	ds/uthash.h	49;"	d
 NO_DECLTYPE	ds/uthash.h	53;"	d
 NO_INITIALIZE	balloc.c	356;"	d	file:
 NO_OF_CHARS	global/util.c	63;"	d	file:
 NS2CYCLE	storage/storage_dax.c	22;"	d	file:
-NTYPE_D	fs.c	65;"	d	file:
-NTYPE_F	fs.c	66;"	d	file:
-NTYPE_I	fs.c	64;"	d	file:
-NTYPE_U	fs.c	67;"	d	file:
+NTYPE_D	fs.c	69;"	d	file:
+NTYPE_F	fs.c	70;"	d	file:
+NTYPE_I	fs.c	68;"	d	file:
+NTYPE_U	fs.c	71;"	d	file:
 NUMBER64_1	ds/hash.c	3;"	d	file:
 NUMBER64_2	ds/hash.c	4;"	d	file:
 NUMBER64_3	ds/hash.c	5;"	d	file:
@@ -430,7 +430,7 @@ PRIME64_4	ds/xxhash.c	/^static const U64 PRIME64_4 =  9650029242287828579ULL;$/;
 PRIME64_5	ds/xxhash.c	/^static const U64 PRIME64_5 =  2870177450012600261ULL;$/;"	v	file:
 PTR_ERR	mlfs/kerncompat.h	/^static inline long PTR_ERR(const void *ptr)$/;"	f
 Q_DEPTH	storage/spdk/async.c	15;"	d	file:
-RANGENODE_PER_PAGE	shared.h	19;"	d
+RANGENODE_PER_PAGE	shared.h	17;"	d
 RB_BLACK	ds/rbtree_augmented.h	97;"	d
 RB_CLEAR_NODE	ds/rbtree.h	60;"	d
 RB_DECLARE_CALLBACKS	ds/rbtree_augmented.h	62;"	d
@@ -463,7 +463,7 @@ SPIN_TRY_COUNT	concurrency/locks.c	56;"	d	file:
 SRC	Makefile	/^SRC	:= $(foreach sdir, $(SRC_DIR), $(wildcard $(sdir)\/*.c))$/;"	m
 SRC	Makefile	/^SRC := $(filter-out %mkfs.c %kernf.c,$(SRC))$/;"	m
 SRC_DIR	Makefile	/^SRC_DIR   := $(addprefix , $(SUBDIR))$/;"	m
-SRV_SOCK_PATH	shared.h	307;"	d
+SRV_SOCK_PATH	shared.h	305;"	d
 STORAGE_ENGINE	Makefile	/^STORAGE_ENGINE := $(wildcard $(LIBFS_DIR)\/build\/storage\/*.o)$/;"	m
 SUBDIR	Makefile	/^SUBDIR	:= io cache concurrency global ds mlfs storage .$/;"	m
 S_HASH	level_hashing.c	/^uint64_t S_HASH(level_hash *level, const uint8_t *key) {$/;"	f
@@ -478,9 +478,9 @@ TYPEOF	global/util.h	11;"	d
 TYPEOF	global/util.h	9;"	d
 TYPEOF	mlfs/kerncompat.h	462;"	d
 TYPEOF	mlfs/kerncompat.h	464;"	d
-T_DEV	shared.h	189;"	d
-T_DIR	shared.h	187;"	d
-T_FILE	shared.h	188;"	d
+T_DEV	shared.h	187;"	d
+T_DIR	shared.h	185;"	d
+T_FILE	shared.h	186;"	d
 U16	ds/xxhash.c	/^    typedef uint16_t U16;$/;"	t	file:
 U16	ds/xxhash.c	/^    typedef unsigned short     U16;$/;"	t	file:
 U32	ds/xxhash.c	/^    typedef uint32_t U32;$/;"	t	file:
@@ -795,7 +795,7 @@ __una_u64	mlfs/kerncompat.h	/^struct __una_u64 { __le64 x; } __attribute__((__pa
 __write_once_size	mlfs/kerncompat.h	/^static __always_inline void __write_once_size(volatile void *p, void *res, int size)$/;"	f
 _dinode	shared.h	/^	struct dinode *_dinode;$/;"	m	struct:inode	typeref:struct:inode::dinode
 _find_next_bit	ds/bitmap.c	/^static unsigned long _find_next_bit(const unsigned long *addr,$/;"	f	file:
-_min	fs.c	23;"	d	file:
+_min	fs.c	27;"	d	file:
 _panic	global/util.c	/^void _panic()$/;"	f
 _utarray_eltptr	ds/utarray.h	121;"	d
 add_buffer_to_ioqueue	io/block_io.c	/^static void add_buffer_to_ioqueue(struct buffer_head *bh)$/;"	f	file:
@@ -1188,7 +1188,7 @@ dev	extents.h	/^	uint8_t dev;$/;"	m	struct:mlfs_extent_handle
 dev	shared.h	/^	uint8_t dev;		\/\/ Device id for multi-level storage$/;"	m	struct:dinode
 dev	shared.h	/^	uint8_t dev;        \/\/ Device id for multi-level storage$/;"	m	struct:inode
 dev	shared.h	/^	uint8_t dev;$/;"	m	struct:lru_key
-dev_size	storage/storage.h	/^static uint64_t dev_size[g_n_devices + 1] = {0UL, 21474836480UL, 0UL, 0UL, 1073741824UL};$/;"	v
+dev_size	storage/storage.h	/^static uint64_t dev_size[g_n_devices + 1] = {0UL, 21474836480UL, 0UL, 0UL, 1650458624UL};$/;"	v
 device_init	io/block_io.c	/^void device_init(void)$/;"	f
 device_read	io/block_io.c	/^static int device_read(uint8_t dev, addr_t blocknr, int count, int blk_size,$/;"	f	file:
 device_shutdown	io/block_io.c	/^void device_shutdown(void)$/;"	f
@@ -1761,7 +1761,6 @@ mlfs_alloc_shared	global/mem.h	/^static inline void *mlfs_alloc_shared(size_t si
 mlfs_assert	global/defs.h	108;"	d
 mlfs_assert	global/defs.h	75;"	d
 mlfs_assert	global/defs.h	90;"	d
-mlfs_buffer_sync	level_hashing.c	/^static void mlfs_buffer_sync(uint8_t to_dev, uint8_t *data,$/;"	f	file:
 mlfs_build_blocknode_map	balloc.c	/^int mlfs_build_blocknode_map(struct super_block *sb,$/;"	f
 mlfs_can_extents_be_merged	extents.c	/^int mlfs_can_extents_be_merged(struct inode *inode, struct mlfs_extent *ex1,$/;"	f
 mlfs_cond_signal	concurrency/condvar.c	/^void mlfs_cond_signal(void *channel)$/;"	f
@@ -1871,12 +1870,14 @@ mlfs_insert_range_node	balloc.c	/^static int mlfs_insert_range_node(struct super
 mlfs_io_wait	io/block_io.c	/^int mlfs_io_wait(uint8_t dev, int read)$/;"	f
 mlfs_kernfs_stats	fs.h	/^typedef struct mlfs_kernfs_stats {$/;"	s
 mlfs_lblk_t	global/types.h	/^typedef uint32_t mlfs_lblk_t;$/;"	t
+mlfs_level_delete	level_hashing.c	/^extern uint8_t mlfs_level_delete(level_hash *level, uint8_t *key, $/;"	f
+mlfs_level_destroy	level_hashing.c	/^extern void mlfs_level_destroy(level_hash *level, handle_t *handle, struct inode *inode)$/;"	f
 mlfs_level_init	level_hashing.c	/^extern level_hash *mlfs_level_init(uint64_t level_size,$/;"	f
 mlfs_level_resize	level_hashing.c	/^extern void mlfs_level_resize(level_hash *level, handle_t *handle, $/;"	f
 mlfs_log	global/defs.h	18;"	d
 mlfs_log	global/defs.h	25;"	d
-mlfs_lsm_debug	extents.c	36;"	d	file:
-mlfs_lsm_info	extents.c	37;"	d	file:
+mlfs_lsm_debug	extents.c	37;"	d	file:
+mlfs_lsm_info	extents.c	38;"	d	file:
 mlfs_map_blocks	extents.h	/^struct mlfs_map_blocks {$/;"	s
 mlfs_mark_inode_dirty	extents.c	/^int mlfs_mark_inode_dirty(struct inode *inode) $/;"	f
 mlfs_muffled	global/defs.h	28;"	d
@@ -2171,7 +2172,7 @@ seq	ds/rbtree_latch.h	/^	seqcount_t	seq;$/;"	m	struct:latch_tree_root
 set_bit	ds/bitops_arch.h	/^set_bit(long nr, volatile unsigned long *addr)$/;"	f
 set_mask_bits	ds/bitops.h	213;"	d
 set_periodic_timer	concurrency/timer.c	/^void set_periodic_timer(long delay) $/;"	f
-setup_ondisk_inode	shared.h	171;"	d
+setup_ondisk_inode	shared.h	169;"	d
 shared_free_list	shared.h	/^	struct free_list shared_free_list;$/;"	m	struct:super_block	typeref:struct:super_block::free_list
 shared_memory_init	fs.c	/^static void shared_memory_init(void)$/;"	f	file:
 shifting_hash	ds/hash.c	11;"	d	file:
@@ -2246,7 +2247,7 @@ super_block	shared.h	/^struct super_block$/;"	s
 sync	slru.h	/^	uint8_t sync;$/;"	m	struct:lru_node
 sync_all_buffers	io/block_io.c	/^void sync_all_buffers(struct block_device *bdev)$/;"	f
 sync_dirty_buffer	io/block_io.c	/^static int sync_dirty_buffer(struct buffer_head *bh)$/;"	f	file:
-sync_inode_from_dinode	shared.h	303;"	d
+sync_inode_from_dinode	shared.h	301;"	d
 sync_writeback_buffers	io/block_io.c	/^void sync_writeback_buffers(struct block_device *bdev)$/;"	f
 sys_futex	concurrency/synchronization.h	102;"	d
 sz	ds/utarray.h	/^    size_t sz;$/;"	m	struct:__anon4

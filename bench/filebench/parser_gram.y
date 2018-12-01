@@ -1677,7 +1677,7 @@ main(int argc, char *argv[])
 
 		if (shell_mlfs) {
 			mlfs = 1;
-			printf("initialize mlfs\n");
+            printf("initialize mlfs\n");
 			if (mode == FB_MODE_MASTER)
 				init_fs();
 			else if (mode == FB_MODE_WORKER)

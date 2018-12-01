@@ -79,7 +79,7 @@ procflow.o: procflow.c /usr/include/stdc-predef.h /usr/include/signal.h \
  /usr/include/dirent.h /usr/include/x86_64-linux-gnu/bits/dirent.h flag.h \
  vars.h fb_cvar.h fb_avl.h stats.h fbtime.h procflow.h misc.h fsplug.h \
  fileset.h threadflow.h flowop.h fb_random.h ipc.h eventgen.h \
- /home/yjkwon/strata/libfs/build//../src/mlfs/mlfs_interface.h
+ /home/sekwon/strata_sekwon/libfs/build//../src/mlfs/mlfs_interface.h
 
 /usr/include/stdc-predef.h:
 
@@ -319,4 +319,4 @@ ipc.h:
 
 eventgen.h:
 
-/home/yjkwon/strata/libfs/build//../src/mlfs/mlfs_interface.h:
+/home/sekwon/strata_sekwon/libfs/build//../src/mlfs/mlfs_interface.h:

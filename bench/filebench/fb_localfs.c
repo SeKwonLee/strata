@@ -44,6 +44,7 @@
 
 #include "filebench.h"
 #include "fsplug.h"
+#include "mlfs/mlfs_interface.h"
 
 #ifdef HAVE_AIO
 #include <aio.h>

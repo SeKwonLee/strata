@@ -20,6 +20,10 @@
 #include "migrate.h"
 #include "thpool.h"
 
+#ifdef MLFS_HASH
+void mlfs_level_destroy(level_hash *level, handle_t *handle, struct inode *inode);
+#endif
+
 #define _min(a, b) ({\
 		__typeof__(a) _a = a;\
 		__typeof__(b) _b = b;\
@@ -188,6 +192,7 @@ void show_kernfs_stats(void)
 
 void show_storage_stats(void)
 {
+#ifdef MLFS_INFO
 	printf("------------------------------ storage stats\n");
 	printf("NVM - %.2f %% used (%.2f / %.2f GB) - # of used blocks %lu\n", 
 			(100.0 * (float)sb[g_root_dev]->used_blocks) /
@@ -195,6 +200,7 @@ void show_storage_stats(void)
 			(float)(sb[g_root_dev]->used_blocks << g_block_size_shift) / (1 << 30),
 			(float)(disk_sb[g_root_dev].ndatablocks << g_block_size_shift) / (1 << 30),
 			sb[g_root_dev]->used_blocks);
+#endif
 
 #ifdef USE_SSD
 	printf("SSD - %.2f %% used (%.2f / %.2f GB) - # of used blocks %lu\n", 
@@ -508,13 +514,10 @@ int digest_file(uint8_t from_dev, uint8_t to_dev, uint32_t file_inum,
 	nr_digested_blocks = 0;
 	cur_offset = offset;
 	offset_in_block = offset % g_block_size_bytes;
-
+#ifdef MLFS_HASH
     uint32_t length_ = length;
 
-	// case 1. a single block writing: small size (< 4KB) 
-	// or a heading block of unaligned starting offset.
     while (nr_digested_blocks < nr_blocks) {
-        //	if ((length < g_block_size_bytes) || offset_in_block != 0) {
         int _len = _min(length_, (uint32_t)g_block_size_bytes - offset_in_block);
 
         map.m_lblk = (cur_offset >> g_block_size_shift);
@@ -546,7 +549,6 @@ int digest_file(uint8_t from_dev, uint8_t to_dev, uint32_t file_inum,
         };
         update_slru_list_from_digest(to_dev, k, v);
 #endif
-        //mlfs_debug("File data : %s\n", bh_data->b_data);
 
         ret = mlfs_write(bh_data);
         mlfs_assert(!ret);
@@ -563,12 +565,59 @@ int digest_file(uint8_t from_dev, uint8_t to_dev, uint32_t file_inum,
         data += _len;
         offset_in_block = cur_offset % g_block_size_bytes;
         length_ -= _len;
-        //	}
     }
-
     assert(length_ == 0);
+#else
+	// case 1. a single block writing: small size (< 4KB) 
+	// or a heading block of unaligned starting offset.
+	if ((length < g_block_size_bytes) || offset_in_block != 0) {
+		int _len = _min(length, (uint32_t)g_block_size_bytes - offset_in_block);
 
-#if 0
+		map.m_lblk = (cur_offset >> g_block_size_shift);
+		map.m_pblk = 0;
+		map.m_len = 1;
+		map.m_flags = 0;
+
+		ret = mlfs_ext_get_blocks(&handle, file_inode, &map, 
+				MLFS_GET_BLOCKS_CREATE);
+
+		mlfs_assert(ret == 1);
+
+		bh_data = bh_get_sync_IO(to_dev, map.m_pblk, BH_NO_DATA_ALLOC); 
+
+		mlfs_assert(bh_data);
+
+		bh_data->b_data = data + offset_in_block;
+		bh_data->b_size = _len;
+		bh_data->b_offset = offset_in_block;
+
+#ifdef MIGRATION
+		lru_key_t k = {
+		  .dev = to_dev,
+		  .block = map.m_pblk,
+		};
+		lru_val_t v = {
+		  .inum = file_inum,
+		  .lblock = map.m_lblk,
+		};
+		update_slru_list_from_digest(to_dev, k, v);
+#endif
+		//mlfs_debug("File data : %s\n", bh_data->b_data);
+
+		ret = mlfs_write(bh_data);
+		mlfs_assert(!ret);
+
+		bh_release(bh_data);
+
+		mlfs_debug("inum %d, offset %lu len %u (dev %d:%lu) -> (dev %d:%lu)\n", 
+				file_inode->inum, cur_offset, _len, 
+				from_dev, blknr, to_dev, map.m_pblk);
+
+		nr_digested_blocks++;
+		cur_offset += _len;
+		data += _len;
+	}
+
 	// case 2. multiple trial of block writing.
 	// when extent tree has holes in a certain offset (due to data migration),
 	// an extent is split at the hole. Kernfs should call mlfs_ext_get_blocks()
@@ -914,6 +963,12 @@ int digest_unlink(uint8_t from_dev, uint8_t to_dev, uint32_t inum)
 	} else {
 		panic("unsupported inode type\n");
 	}
+
+#ifdef MLFS_HASH
+    handle_t handle = {.dev = to_dev};
+    level_hash *level = g_bdev[handle.dev]->map_base_addr + (inode->l1.addrs[5] << g_block_size_shift);
+    mlfs_level_destroy(level, &handle, inode);
+#endif
 
 	memset(inode->_dinode, 0, sizeof(struct dinode));
 

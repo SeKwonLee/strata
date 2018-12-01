@@ -4206,7 +4206,7 @@ main(int argc, char *argv[])
 
 		if (shell_mlfs) {
 			mlfs = 1;
-			printf("initialize mlfs\n");
+            printf("initialize mlfs\n");
 			if (mode == FB_MODE_MASTER)
 				init_fs();
 			else if (mode == FB_MODE_WORKER)
@@ -5256,10 +5256,10 @@ parser_run_variable(cmd_t *cmd)
 
 	parser_fileset_create(cmd);
 
-	if (mlfs) {
-	  while(make_digest_request_async(100) == -EBUSY);
-		wait_on_digesting();
-	}
+    if (mlfs) {
+        while(make_digest_request_async(100) == -EBUSY);
+        wait_on_digesting();
+    }
 
 	proc_create();
 

@@ -2,7 +2,7 @@
 
 PATH=$PATH:.
 
-STRATA=../../..
+STRATA=/home/sekwon/strata
 
 export LD_LIBRARY_PATH=$STRATA/libfs/lib/nvml/src/nondebug/:$STRATA/libfs/build:$STRATA/libfs/src/storage/spdk/:$STRATA/shim/glibc-build/rt/:$STRATA/libfs/lib/libspdk/libspdk/
 

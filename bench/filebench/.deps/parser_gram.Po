@@ -86,7 +86,7 @@ parser_gram.o: parser_gram.c /usr/include/stdc-predef.h \
  vars.h fb_cvar.h fb_avl.h stats.h fbtime.h procflow.h misc.h fsplug.h \
  fileset.h threadflow.h flowop.h fb_random.h ipc.h utils.h eventgen.h \
  aslr.h filebench.h multi_client_sync.h \
- /home/yjkwon/strata/libfs/build//../src/mlfs/mlfs_interface.h
+ /home/sekwon/strata_sekwon/libfs/build//../src/mlfs/mlfs_interface.h
 
 /usr/include/stdc-predef.h:
 
@@ -348,4 +348,4 @@ filebench.h:
 
 multi_client_sync.h:
 
-/home/yjkwon/strata/libfs/build//../src/mlfs/mlfs_interface.h:
+/home/sekwon/strata_sekwon/libfs/build//../src/mlfs/mlfs_interface.h:
