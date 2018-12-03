@@ -1,3 +1,5 @@
+#ifdef MLFS_HASH
+#ifdef LEVEL_HASH
 #include "hash.h"
 
 #define NUMBER64_1 11400714785074694791ULL
@@ -154,3 +156,5 @@ uint64_t hash(const void *data, uint64_t length, uint64_t seed)
     }
     return string_key_hash_computation(data, length, seed, 0);
 }
+#endif
+#endif

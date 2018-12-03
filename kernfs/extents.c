@@ -10,14 +10,27 @@
 #endif
 
 #ifdef MLFS_HASH
+#ifdef LEVEL_HASH
 void mlfs_level_resize(level_hash *level, handle_t *handle,
         struct inode *inode, unsigned int flags);
 level_hash *mlfs_level_init(uint64_t level_size,
         handle_t *handle, struct inode *inode, unsigned int flags);
-uint64_t level_dynamic_query(level_hash *level, uint8_t *key);
-uint8_t* level_static_query(level_hash *level, uint8_t *key);
-uint8_t level_insert(level_hash *level, uint8_t *key, uint8_t *value);
-uint8_t mlfs_level_delete(level_hash *level, uint8_t *key, handle_t *handle, struct inode *inode);
+//uint64_t level_dynamic_query(level_hash *level, uint8_t *key);
+uint64_t level_dynamic_query(level_hash *level, uint32_t key);
+//uint8_t level_insert(level_hash *level, uint8_t *key, uint8_t *value);
+uint8_t level_insert(level_hash *level, uint32_t key, uint64_t value);
+//uint8_t mlfs_level_delete(level_hash *level, uint8_t *key, handle_t *handle, struct inode *inode);
+uint8_t mlfs_level_delete(level_hash *level, uint32_t key, handle_t *handle, struct inode *inode);
+#else
+cuckoo_hash *mlfs_cuckoo_init(uint32_t levels, handle_t *handle, 
+        struct inode *inode, unsigned int flags);
+int mlfs_cuckoo_resize(cuckoo_hash *cuckoo, handle_t *handle, 
+        struct inode *inode, unsigned int flags);
+uint64_t cuckoo_query(cuckoo_hash *cuckoo, uint32_t key);
+int mlfs_cuckoo_delete(cuckoo_hash *cuckoo, uint32_t key, 
+        handle_t *handle, struct inode *inode);
+uint8_t cuckoo_insert(cuckoo_hash *cuckoo, uint32_t key, uint64_t value);
+#endif
 #endif
 
 /*
@@ -392,9 +405,15 @@ int mlfs_ext_tree_init(handle_t *handle, struct inode *inode)
 	eh->eh_magic = cpu_to_le16(MLFS_EXT_MAGIC);
 	eh->eh_max = cpu_to_le16(mlfs_ext_space_root(inode, 0));
 #ifdef MLFS_HASH
+#ifdef LEVEL_HASH
     level_hash *level = mlfs_level_init(4, handle,
             inode, MLFS_GET_BLOCKS_CREATE);
     assert(level!=NULL);
+#else
+    cuckoo_hash *cuckoo = mlfs_cuckoo_init(4, handle,
+            inode, MLFS_GET_BLOCKS_CREATE);
+    assert(cuckoo!=NULL);
+#endif
 #endif
     mlfs_mark_inode_dirty(inode);
 	return 0;
@@ -2459,21 +2478,28 @@ int mlfs_ext_remove_space(handle_t *handle, struct inode *inode,
 #ifdef MLFS_HASH
 	struct super_block *sb = get_inode_sb(handle->dev, inode);
 	int i = 0, err = 0;
-    int key[16];
+    uint32_t key;
 
     if (inode->l1.addrs[5] == 0)
         return err;
-
+#ifdef LEVEL_HASH
     level_hash *level = g_bdev[handle->dev]->map_base_addr + (inode->l1.addrs[5] << g_block_size_shift);
     level->buckets[0] = g_bdev[handle->dev]->map_base_addr + (inode->l1.addrs[6] << g_block_size_shift);
     level->buckets[1] = g_bdev[handle->dev]->map_base_addr + (inode->l1.addrs[7] << g_block_size_shift);
+#else
+    cuckoo_hash *cuckoo = g_bdev[handle->dev]->map_base_addr + (inode->l1.addrs[5] << g_block_size_shift);
+    cuckoo->buckets = g_bdev[handle->dev]->map_base_addr + (inode->l1.addrs[6] << g_block_size_shift);
+#endif
 
     for (i = start; i <= end; i++) {
-        snprintf(key, 16, "%lu", i);
+        key = i;
+#ifdef LEVEL_HASH
         err = mlfs_level_delete(level, key, handle, inode);
+#else
+        err = mlfs_cuckoo_delete(cuckoo, key, handle, inode);
+#endif
         assert(err==0);
     }
-
 #else
 	struct super_block *sb = get_inode_sb(handle->dev, inode);
 	int depth = ext_depth(handle, inode);
@@ -2783,13 +2809,31 @@ int mlfs_ext_get_blocks(handle_t *handle, struct inode *inode,
     if (handle->dev == g_root_dev) {
         assert(inode->l1.addrs[5] != 0);
 
-        uint8_t key[16];
-        snprintf(key, 16, "%lu", map->m_lblk);
+        uint32_t key = map->m_lblk;
+#ifdef LEVEL_HASH
         level_hash *level = g_bdev[handle->dev]->map_base_addr + (inode->l1.addrs[5] << g_block_size_shift);
         level->buckets[0] = g_bdev[handle->dev]->map_base_addr + (inode->l1.addrs[6] << g_block_size_shift);
         level->buckets[1] = g_bdev[handle->dev]->map_base_addr + (inode->l1.addrs[7] << g_block_size_shift);
+#else
+        cuckoo_hash *cuckoo = g_bdev[handle->dev]->map_base_addr + (inode->l1.addrs[5] << g_block_size_shift);
+        cuckoo->buckets = g_bdev[handle->dev]->map_base_addr + (inode->l1.addrs[6] << g_block_size_shift);
+#endif
 
+#ifdef KERNFS
+        if (enable_perf_stats) 
+            tsc_start = asm_rdtscp();
+#endif
+
+#ifdef LEVEL_HASH
         newblock = level_dynamic_query(level, key);
+#else
+        newblock = cuckoo_query(cuckoo, key);
+#endif
+
+#ifdef KERNFS
+        if (enable_perf_stats) 
+            g_perf_stats.path_search_tsc += (asm_rdtscp() - tsc_start);
+#endif
 
         if (flags == MLFS_GET_BLOCKS_CREATE && newblock == 0) {
             newblock = 0;
@@ -2802,16 +2846,20 @@ int mlfs_ext_get_blocks(handle_t *handle, struct inode *inode,
                 goto hash_out;
             }
 
-            uint8_t value[15];
-            snprintf(key, 16, "%lu", map->m_lblk);
-            snprintf(value, 15, "%lu", newblock);
-
+            uint64_t value = newblock;
+#ifdef LEVEL_HASH
             if (level_insert(level, key, value)) {
                 mlfs_level_resize(level, handle, inode, flags);
                 level_insert(level, key, value);
+                mlfs_mark_inode_dirty(inode);
             }
-
-            mlfs_mark_inode_dirty(inode);
+#else
+            if (!cuckoo_insert(cuckoo, key, value)) {
+                if (cuckoo->occupied > cuckoo->entry_num*0.85)
+                    mlfs_cuckoo_resize(cuckoo, handle, inode, flags);
+                mlfs_mark_inode_dirty(inode);
+            }
+#endif
         } else {
             allocated = 1;
         }
@@ -2824,7 +2872,6 @@ hash_out:
         map->m_pblk = newblock;
         map->m_len = allocated;
         return allocated;
-        //return err ? err : allocated;
     } else {
 #endif
         create = flags & MLFS_GET_BLOCKS_CREATE_DATA;

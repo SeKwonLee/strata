@@ -1,3 +1,5 @@
+#ifdef MLFS_HASH
+#ifdef LEVEL_HASH
 #include "extents.h"
 #include <libpmem.h>
 
@@ -172,13 +174,13 @@ Function: level_dynamic_query()
         Lookup a key-value item in level hash table via danamic search scheme;
         First search the level with more items;
 */
-uint64_t level_dynamic_query(level_hash *level, uint8_t *key)
+//uint64_t level_dynamic_query(level_hash *level, uint8_t *key)
+uint64_t level_dynamic_query(level_hash *level, uint32_t key)
 {
-    
-    uint64_t f_hash = F_HASH(level, key);
-    uint64_t s_hash = S_HASH(level, key);
+    uint64_t f_hash = key;//F_HASH(level, key);
+    uint64_t s_hash = key;//S_HASH(level, key);
 
-    uint32_t int_key = atoi(key);
+    uint32_t int_key = key;//atoi(key);
 
     uint64_t i, j, f_idx, s_idx;
     if(level->level_item_num[0] > level->level_item_num[1]){
@@ -338,18 +340,19 @@ uint8_t level_update(level_hash *level, uint8_t *key, uint8_t *new_value)
 Function: level_insert() 
         Insert a key-value item into level hash table;
 */
-uint8_t level_insert(level_hash *level, uint8_t *key, uint8_t *value)
+//uint8_t level_insert(level_hash *level, uint8_t *key, uint8_t *value)
+uint8_t level_insert(level_hash *level, uint32_t key, uint64_t value)
 {
-    uint64_t f_hash = F_HASH(level, key);
-    uint64_t s_hash = S_HASH(level, key);
+    uint64_t f_hash = key;//F_HASH(level, key);
+    uint64_t s_hash = key;//S_HASH(level, key);
     uint64_t f_idx = F_IDX(f_hash, level->addr_capacity);
     uint64_t s_idx = S_IDX(s_hash, level->addr_capacity);
 
+    uint32_t int_key = key;//atoi(key);
+    uint64_t int_val = value;//atoi(value);
+
     uint64_t i, j;
     int empty_location;
-
-    uint32_t int_key = atoi(key);
-    uint64_t int_val = atoi(value);
 
     for(i = 0; i < 2; i ++){
         for(j = 0; j < ASSOC_NUM; j ++){        
@@ -389,7 +392,6 @@ uint8_t level_insert(level_hash *level, uint8_t *key, uint8_t *value)
             pmem_persist(&level->buckets[i][f_idx].token[empty_location], sizeof(uint8_t));
             level->level_item_num[i] ++;
             return 0;
-
         }
         
         if(i == 1){
@@ -443,16 +445,16 @@ Function: try_movement()
 int try_movement(level_hash *level, uint64_t idx, uint64_t level_num)
 {
     uint64_t i, j, jdx;
-    uint8_t str_key[KEY_LEN];
+//    uint8_t str_key[KEY_LEN];
 
     for(i = 0; i < ASSOC_NUM; i ++){
         uint32_t key = level->buckets[level_num][idx].slot[i].key;
         uint64_t value = level->buckets[level_num][idx].slot[i].value;
 
-        snprintf(str_key, KEY_LEN, "%lu", key);
+//        snprintf(str_key, KEY_LEN, "%lu", key);
 
-        uint64_t f_hash = F_HASH(level, str_key);
-        uint64_t s_hash = S_HASH(level, str_key);
+        uint64_t f_hash = key;//F_HASH(level, str_key);
+        uint64_t s_hash = key;//S_HASH(level, str_key);
         uint64_t f_idx = F_IDX(f_hash, level->addr_capacity/(1+level_num));
         uint64_t s_idx = S_IDX(s_hash, level->addr_capacity/(1+level_num));
         
@@ -491,15 +493,15 @@ int b2t_movement(level_hash *level, uint64_t idx)
     uint64_t s_idx, f_idx;
     
     uint64_t i, j;
-    uint8_t str_key[KEY_LEN];
+//    uint8_t str_key[KEY_LEN];
     for(i = 0; i < ASSOC_NUM; i ++){
         key = level->buckets[1][idx].slot[i].key;
         value = level->buckets[1][idx].slot[i].value;
 
-        snprintf(str_key, KEY_LEN, "%lu", key);
+//        snprintf(str_key, KEY_LEN, "%lu", key);
 
-        f_hash = F_HASH(level, str_key);
-        s_hash = S_HASH(level, str_key);
+        f_hash = key;//F_HASH(level, str_key);
+        s_hash = key;//S_HASH(level, str_key);
         f_idx = F_IDX(f_hash, level->addr_capacity);
         s_idx = S_IDX(s_hash, level->addr_capacity);
     
@@ -614,8 +616,7 @@ extern level_hash *mlfs_level_init(uint64_t level_size,
         return NULL;
     }
 
-    pmem_persist(g_bdev[handle->dev]->map_base_addr + 
-            ((inode->l1.addrs[5]) << g_block_size_shift), sizeof(level_hash));
+    pmem_persist(level, sizeof(level_hash));
 
 //    printf("Level hashing: ASSOC_NUM %d, KEY_LEN %d, VALUE_LEN %d \n", ASSOC_NUM, KEY_LEN, VALUE_LEN);
 //    printf("The number of top-level buckets: %lu\n", level->addr_capacity);
@@ -651,16 +652,17 @@ extern void mlfs_level_resize(level_hash *level, handle_t *handle,
 
     newblock = mlfs_new_data_blocks(handle, inode, goal, flags, &allocated, &err);
     level_bucket *newBuckets = g_bdev[handle->dev]->map_base_addr + (newblock << g_block_size_shift);
-    pmem_memset_persist(newBuckets, 0, level->addr_capacity * pow(2, level->level_size + 1));
+    pmem_memset_persist(newBuckets, 0, level->addr_capacity * sizeof(level_bucket));
 
     if (newblock == 0) {
         printf("The resizing fails: 2\n");
         exit(1);
     }
+
     uint64_t new_level_item_num = 0;
     
     uint64_t old_idx;
-    uint8_t str_key[KEY_LEN];
+//    uint8_t str_key[KEY_LEN];
     for (old_idx = 0; old_idx < pow(2, level->level_size - 1); old_idx ++) {
         uint64_t i, j;
         for(i = 0; i < ASSOC_NUM; i ++){
@@ -669,10 +671,12 @@ extern void mlfs_level_resize(level_hash *level, handle_t *handle,
                 uint32_t key = level->buckets[1][old_idx].slot[i].key;
                 uint64_t value = level->buckets[1][old_idx].slot[i].value;
 
-                snprintf(str_key, KEY_LEN, "%lu", key);
+                //snprintf(str_key, KEY_LEN, "%lu", key);
 
-                uint64_t f_idx = F_IDX(F_HASH(level, str_key), level->addr_capacity);
-                uint64_t s_idx = S_IDX(S_HASH(level, str_key), level->addr_capacity);
+                //uint64_t f_idx = F_IDX(F_HASH(level, str_key), level->addr_capacity);
+                //uint64_t s_idx = S_IDX(S_HASH(level, str_key), level->addr_capacity);
+                uint64_t f_idx = F_IDX(key, level->addr_capacity);
+                uint64_t s_idx = S_IDX(key, level->addr_capacity);
 
                 uint8_t insertSuccess = 0;
                 for(j = 0; j < ASSOC_NUM; j ++){                            
@@ -684,8 +688,7 @@ extern void mlfs_level_resize(level_hash *level, handle_t *handle,
                         newBuckets[f_idx].slot[j].key = key;
                         newBuckets[f_idx].slot[j].value = value;
                         newBuckets[f_idx].token[j] = 1;
-                        pmem_persist(&newBuckets[f_idx].slot[j].key, sizeof(uint32_t));
-                        pmem_persist(&newBuckets[f_idx].slot[j].value, sizeof(uint64_t));
+                        pmem_persist(&newBuckets[f_idx].slot[j], sizeof(entry));
                         pmem_persist(&newBuckets[f_idx].token[j], sizeof(uint8_t));
 
                         insertSuccess = 1;
@@ -697,8 +700,7 @@ extern void mlfs_level_resize(level_hash *level, handle_t *handle,
                         newBuckets[s_idx].slot[j].key = key;
                         newBuckets[s_idx].slot[j].value = value;
                         newBuckets[s_idx].token[j] = 1;
-                        pmem_persist(&newBuckets[s_idx].slot[j].key, sizeof(uint32_t));
-                        pmem_persist(&newBuckets[s_idx].slot[j].value, sizeof(uint64_t));
+                        pmem_persist(&newBuckets[s_idx].slot[j], sizeof(entry));
                         pmem_persist(&newBuckets[s_idx].token[j], sizeof(uint8_t));
 
                         insertSuccess = 1;
@@ -712,7 +714,6 @@ extern void mlfs_level_resize(level_hash *level, handle_t *handle,
                 }
 
                 level->buckets[1][old_idx].token[i] == 0;
-                pmem_persist(&level->buckets[1][old_idx].token[i], sizeof(uint8_t));
             }
         }
     }
@@ -747,15 +748,17 @@ extern void mlfs_level_resize(level_hash *level, handle_t *handle,
 //    printf("number of all buckets: %lu\n", level->total_capacity);
 }
 
-extern uint8_t mlfs_level_delete(level_hash *level, uint8_t *key, 
+//extern uint8_t mlfs_level_delete(level_hash *level, uint8_t *key, 
+//        handle_t *handle, struct inode *inode)
+extern uint8_t mlfs_level_delete(level_hash *level, uint32_t key, 
         handle_t *handle, struct inode *inode)
 {
-    uint64_t f_hash = F_HASH(level, key);
-    uint64_t s_hash = S_HASH(level, key);
+    uint64_t f_hash = key;//F_HASH(level, key);
+    uint64_t s_hash = key;//S_HASH(level, key);
     uint64_t f_idx = F_IDX(f_hash, level->addr_capacity);
     uint64_t s_idx = S_IDX(s_hash, level->addr_capacity);
 
-    uint32_t int_key = atoi(key);
+    uint32_t int_key = key;//atoi(key);
 
     uint64_t i, j;
     for(i = 0; i < 2; i ++){
@@ -821,3 +824,5 @@ extern void mlfs_level_destroy(level_hash *level, handle_t *handle, struct inode
     inode->l1.addrs[5] = 0;
     level = NULL;
 }
+#endif
+#endif

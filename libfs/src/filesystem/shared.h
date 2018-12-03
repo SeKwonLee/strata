@@ -8,7 +8,13 @@
 #include "ds/bitmap.h"
 #include "ds/khash.h"
 
+#ifdef MLFS_HASH
+#ifdef LEVEL_HASH
 #include "ds/level_hashing.h"
+#else
+#include "ds/bucketized_cuckoo.h"
+#endif
+#endif
 
 #ifdef __cplusplus
 extern "C" {

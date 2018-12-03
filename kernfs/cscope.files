@@ -8,6 +8,7 @@
 ./migrate.c
 ./fs.c
 ./balloc.c
+./bucketized_cuckoo.c
 ./tests/fifo_cli.c
 ./tests/kernfs.c
 ./tests/extent_test.cc

@@ -1,3 +1,5 @@
+#ifdef MLFS_HASH
+#ifdef LEVEL_HASH
 #include <stdlib.h>
 #include <stdint.h>
 #include <stdio.h>
@@ -35,11 +37,13 @@ typedef struct level_hash {               // A Level hash table
 
 level_hash *level_init(uint64_t level_size);     
 
-uint8_t level_insert(level_hash *level, uint8_t *key, uint8_t *value);          
+//uint8_t level_insert(level_hash *level, uint8_t *key, uint8_t *value);          
+uint8_t level_insert(level_hash *level, uint32_t key, uint64_t value);          
 
 uint8_t* level_static_query(level_hash *level, uint8_t *key);
 
-uint64_t level_dynamic_query(level_hash *level, uint8_t *key);
+//uint64_t level_dynamic_query(level_hash *level, uint8_t *key);
+uint64_t level_dynamic_query(level_hash *level, uint32_t key);
 
 uint8_t level_delete(level_hash *level, uint8_t*key);
 
@@ -52,3 +56,5 @@ int try_movement(level_hash *level, uint64_t idx, uint64_t level_num);
 int b2t_movement(level_hash *level, uint64_t idx);
 
 void level_destroy(level_hash *level);
+#endif
+#endif

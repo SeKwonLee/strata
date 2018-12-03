@@ -3563,6 +3563,7 @@
 ./src/filesystem/extents_bh.h
 ./src/filesystem/extents.c
 ./src/filesystem/fs.c
+./src/filesystem/bucketized_cuckoo.c
 ./src/filesystem/extents_bh.c
 ./src/filesystem/file.c
 ./src/filesystem/slru.c
@@ -3586,7 +3587,9 @@
 ./src/ds/xxhash.h
 ./src/ds/rbtree.c
 ./src/ds/stdatomic.h
+./src/ds/hash_bch.h
 ./src/ds/rbtree_augmented.h
+./src/ds/hash_bch.c
 ./src/ds/level_hashing.h
 ./src/ds/rbtree_latch.h
 ./src/ds/bitops.h
@@ -3596,6 +3599,7 @@
 ./src/ds/hash.c
 ./src/ds/bitrev.c
 ./src/ds/khash.h
+./src/ds/bucketized_cuckoo.h
 ./src/ds/rbtree.h
 ./src/ds/xxhash.c
 ./src/ds/uthash.h

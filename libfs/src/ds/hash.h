@@ -1,3 +1,5 @@
+#ifdef MLFS_HASH
+#ifdef LEVEL_HASH
 #include <stdint.h>
 
 /*
@@ -8,5 +10,5 @@ Function: hash()
         the second hash funciton.
 */
 uint64_t hash(const void *data, uint64_t length, uint64_t seed);
-
-
+#endif
+#endif

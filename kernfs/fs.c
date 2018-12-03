@@ -21,7 +21,11 @@
 #include "thpool.h"
 
 #ifdef MLFS_HASH
+#ifdef LEVEL_HASH
 void mlfs_level_destroy(level_hash *level, handle_t *handle, struct inode *inode);
+#else
+void mlfs_cuckoo_destroy(cuckoo_hash *cuckoo, handle_t *handle, struct inode *inode);
+#endif
 #endif
 
 #define _min(a, b) ({\
@@ -966,8 +970,13 @@ int digest_unlink(uint8_t from_dev, uint8_t to_dev, uint32_t inum)
 
 #ifdef MLFS_HASH
     handle_t handle = {.dev = to_dev};
+#ifdef LEVEL_HASH
     level_hash *level = g_bdev[handle.dev]->map_base_addr + (inode->l1.addrs[5] << g_block_size_shift);
     mlfs_level_destroy(level, &handle, inode);
+#else
+    cuckoo_hash *cuckoo = g_bdev[handle.dev]->map_base_addr + (inode->l1.addrs[5] << g_block_size_shift);
+    mlfs_cuckoo_destroy(cuckoo, &handle, inode);
+#endif
 #endif
 
 	memset(inode->_dinode, 0, sizeof(struct dinode));
@@ -2087,6 +2096,10 @@ void init_fs(void)
 		(uint16_t *)mlfs_zalloc(sizeof(uint16_t) * NINODES); 
 
 	perf_profile = getenv("MLFS_PROFILE");
+
+#ifdef MLFS_INFO
+    perf_profile = 1;
+#endif
 
 	if (perf_profile)
 		enable_perf_stats = 1;
