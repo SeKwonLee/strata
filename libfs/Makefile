@@ -48,13 +48,16 @@ LD_FLAGS = -lpthread -lm -L$(NVML_DIR)/nondebug/ -lpmem -lrt #-Wl,-fuse-ld=gold
 #MLFS_FLAGS = -DLIBFS
 MLFS_FLAGS = -DLIBFS #-DMLFS_INFO
 #MLFS_FLAGS += -DCONCURRENT
-MLFS_FLAGS += -DMLFS_HASH
-MLFS_FLAGS += -DLEVEL_HASH
 MLFS_FLAGS += -DINVALIDATION
 MLFS_FLAGS += -DKLIB_HASH
 #MLFS_FLAGS += -DUSE_SSD
 #MLFS_FLAGS += -DUSE_HDD
 #MLFS_FLAGS += -DMLFS_LOG
+
+#########Configurations for Hash tables#############
+MLFS_FLAGS += -DMLFS_HASH
+MLFS_FLAGS += -DLEVEL_HASH
+####################################################
 
 #DEBUG = -g3 -O0 
 #DEBUG = -O0 -gdwarf-2 -g3 -rdynamic

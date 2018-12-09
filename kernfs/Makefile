@@ -42,8 +42,6 @@ LD_FLAGS = -lpthread -lm -L$(NVML_DIR)/nondebug/ -lpmem -lrt
 MLFS_FLAGS = -DKERNFS #-DMLFS_INFO
 #MLFS_FLAGS = -DKERNFS
 MLFS_FLAGS += -DBALLOC
-MLFS_FLAGS += -DMLFS_HASH
-MLFS_FLAGS += -DLEVEL_HASH
 #MLFS_FLAGS += -DDIGEST_OPT
 #MLFS_FLAGS += -DIOMERGE
 #MLFS_FLAGS += -DCONCURRENT
@@ -52,6 +50,11 @@ MLFS_FLAGS += -DLEVEL_HASH
 #MLFS_FLAGS += -DUSE_HDD
 #MLFS_FLAGS += -DMIGRATION
 #MLFS_FLAGS += -DEXPERIMENTAL
+
+###############Hash table configurations##############
+MLFS_FLAGS += -DMLFS_HASH
+MLFS_FLAGS += -DLEVEL_HASH
+######################################################
 
 #DEBUG = -g -O0 
 #DEBUG = -g -Ofast

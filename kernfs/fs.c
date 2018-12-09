@@ -1789,6 +1789,9 @@ static void handle_digest_request(void *arg)
 		mlfs_debug("digest command: dev_id %u, digest_blkno %lx, digest_count %u\n",
 				dev_id, digest_blkno, digest_count);
 
+#ifdef MLFS_INFO
+        uint64_t tsc_start_ = asm_rdtscp();
+#else
 		if (enable_perf_stats) {
 			g_perf_stats.digest_time_tsc = asm_rdtscp();
 			g_perf_stats.path_search_tsc = 0;
@@ -1800,12 +1803,18 @@ static void handle_digest_request(void *arg)
 			g_perf_stats.n_digest_skipped = 0;
 			g_perf_stats.n_digest = 0;
 		}
-
+#endif
 		digest_count = digest_logs(dev_id, digest_count, &digest_blkno, &rotated);
 
+#ifdef MLFS_INFO        
 		if (enable_perf_stats)	
-			g_perf_stats.digest_time_tsc = 
+			g_perf_stats.digest_time_tsc += 
+				(asm_rdtscp() - tsc_start_);
+#else
+		if (enable_perf_stats)	
+			g_perf_stats.digest_time_tsc += 
 				(asm_rdtscp() - g_perf_stats.digest_time_tsc);
+#endif
 
 		mlfs_debug("-- Total used block %d\n", 
 				bitmap_weight((uint64_t *)sb[g_root_dev].s_blk_bitmap->bitmap,
@@ -2097,14 +2106,25 @@ void init_fs(void)
 
 	perf_profile = getenv("MLFS_PROFILE");
 
-#ifdef MLFS_INFO
-    perf_profile = 1;
-#endif
-
 	if (perf_profile)
 		enable_perf_stats = 1;
 	else
 		enable_perf_stats = 0;
+
+#ifdef MLFS_INFO
+    enable_perf_stats = 1;
+    if (enable_perf_stats) {
+        g_perf_stats.digest_time_tsc = 0;
+        g_perf_stats.path_search_tsc = 0;
+        g_perf_stats.replay_time_tsc = 0;
+        g_perf_stats.apply_time_tsc= 0;
+        g_perf_stats.digest_dir_tsc = 0;
+        g_perf_stats.digest_file_tsc = 0;
+        g_perf_stats.digest_inode_tsc = 0;
+        g_perf_stats.n_digest_skipped = 0;
+        g_perf_stats.n_digest = 0;
+    }
+#endif
 
 	mlfs_debug("%s\n", "LIBFS is initialized");
 

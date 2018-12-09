@@ -177,11 +177,15 @@ MLFS_FLAGS += -DINVALIDATION
 MLFS_FLAGS += -DUSE_SSD
 #MLFS_FLAGS += -DUSE_HDD
 #MLFS_FLAGS += -DMLFS_LOG
+#MLFS_FLAGS += -DMLFS_HASH
+#MLFS_FLAGS += -DLEVEL_HASH
 ~~~~
 
 `DCONCURRENT` - allow parallelism in libfs <br/>
 `DKLIB_HASH` - use klib hashing for log hash table <br/>
 `DUSE_SSD`, `DUSE_HDD` - make LibFS to use SSD and HDD <br/>
+`DMLFS_HASH`, `DMLFS_HASH` - make LibFS to use hash tables instead of extent tree when reading inode blocks in KernelFS <br/>
+`DLEVEL_HASH`, `DLEVEL_HASH` - make LibFS to use Level hashing instaed of BCH (Bucketized Cuckoo hash) <br/>
 
 ###### 2. KernelFS configuration ######
 ~~~
@@ -195,6 +199,8 @@ MLFS_FLAGS += -DBALLOC
 #MLFS_FLAGS += -DUSE_HDD
 #MLFS_FLAGS += -DMIGRATION
 #MLFS_FLAGS += -DEXPERIMENTAL
+#MLFS_FLAGS += -DMLFS_HASH
+#MLFS_FALGS += -DLEVEL_HASH
 ~~~
 
 `DBALLOC` - use new block allocator (use it always) <br/>
@@ -202,6 +208,8 @@ MLFS_FLAGS += -DBALLOC
 `DIOMERGE` - use io merging <br/>
 `DCONCURRENT` - allow concurrent digest <br/>
 `DMIGRATION` - allow data migration. It requires turning on `DUSE_SSD` <br/>
+`DMLFS_HASH`, `DMLFS_HASH` - make KernelFS to use hash tables instead of extent tree for indexing inode blocks <br/>
+`DLEVEL_HASH`, `DLEVEL_HASH` - make KernelFS to use Level hashing instaed of BCH (Bucketized Cuckoo hash) <br/>
 
 For debugging, DIGEST_OPT, DIOMERGE, DCONCURRENT is disabled for now
 

@@ -322,13 +322,15 @@ void init_fs(void)
 		initialized = 1;
 
 		perf_profile = getenv("MLFS_PROFILE");
-#ifdef MLFS_INFO
-        perf_profile = 1;
-#endif
+
 		if (perf_profile) 
 			enable_perf_stats = 1;		
 		else
 			enable_perf_stats = 0;
+
+#ifdef MLFS_INFO
+        enable_perf_stats = 1;
+#endif
 
 		memset(&g_perf_stats, 0, sizeof(libfs_stat_t));
 

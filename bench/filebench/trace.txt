@@ -1,0 +1,6 @@
+[sekwonlee] unsupported inode type = 0
+[sekwonlee] unsupported inode type = 0
+[sekwonlee] unsupported inode type = 0
+[sekwonlee] unsupported inode type = 0
+[sekwonlee] unsupported inode type = 0
+385.518: IO Summary: 8215311 ops 61946.621 ops/s 5632/11263 rd/wr 1460.5mb/s   0.0ms/op
