@@ -1,6 +1,7 @@
 A Stint with Hash tables in Strata
 ==================================
 Se Kwon Lee, Manu Viswanadhan, Hochan Lee, Kartik Sathyanarayanan
+
 [Paper](https://github.com/SeKwonLee/strata/tree/master/documents/paper.pdf) [Poster](https://github.com/SeKwonLee/strata/tree/master/documents/poster.pdf)
 
 ### Abstract ###
