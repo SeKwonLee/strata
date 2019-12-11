@@ -14,3 +14,17 @@ libfs/src/storage/spdk/sync.o
 
 # Don't commit unzipped jemalloc.
 libfs/lib/jemalloc-4.5.0
+
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.gz
+*.thm
+
+*cscope.out
+*cscope.files
+*tags
+
+*DS_Store
