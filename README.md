@@ -2,7 +2,7 @@ A Stint with Hash tables in Strata
 ==================================
 Se Kwon Lee, Manu Viswanadhan, Hochan Lee, Kartik Sathyanarayanan
 
-[Paper](https://github.com/SeKwonLee/strata/tree/master/documents/paper.pdf) [Poster](https://github.com/SeKwonLee/strata/tree/master/documents/poster.pdf)
+[[Paper](https://github.com/SeKwonLee/strata/tree/master/documents/paper.pdf)], [[Poster](https://github.com/SeKwonLee/strata/tree/master/documents/poster.pdf)]
 
 ### Abstract ###
 Due to the block-oriented nature of most storage devices, file systems have relied on block-oriented indexing structures, such as extent trees. With the arrival of Non-Volatile Memory (which is byte-addressable), it is now possible to use finer-grained indexing structures, such as hash tables. Strata is a recently proposed file system that efficiently unifies the management of multi-layered storage including NVM, SSD, and HDD. In this project, the extent tree implementation in the NVM portion of Strata to index physical blocks is replaced with a hash table and its performance evaluated.
